@@ -1,0 +1,190 @@
+/* line 14, /usr/local/lib/ruby/gems/1.9.1/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, /usr/local/lib/ruby/gems/1.9.1/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, /usr/local/lib/ruby/gems/1.9.1/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, /usr/local/lib/ruby/gems/1.9.1/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, /usr/local/lib/ruby/gems/1.9.1/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, /usr/local/lib/ruby/gems/1.9.1/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, /usr/local/lib/ruby/gems/1.9.1/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, /usr/local/lib/ruby/gems/1.9.1/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 10 */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #dddddd;
+  background: #222222;
+  margin: 0px 80px;
+}
+
+/* line 18 */
+a {
+  color: #007998;
+  text-decoration: none;
+}
+/* line 22 */
+a:hover {
+  color: white;
+}
+
+/* line 25 */
+h1 {
+  display: inline;
+  float: left;
+  font-size: 3em;
+  margin-top: 26px;
+}
+/* line 30 */
+h1 .secondary {
+  color: #007998;
+}
+
+/* line 33 */
+#nav {
+  display: inline;
+  float: right;
+  font-size: 1em;
+  background: #111111;
+  padding: 0px 10px 0px 10px;
+}
+/* line 39 */
+#nav li {
+  display: inline;
+  float: left;
+  margin: 0px 5px;
+  padding: 44px 0px 22px 0px;
+  border-bottom: solid 5px #111111;
+}
+/* line 45 */
+#nav li a {
+  color: #dddddd;
+}
+/* line 48 */
+#nav li a:hover {
+  color: #007998;
+}
+/* line 51 */
+#nav li.selected {
+  border-bottom: solid 5px #007998;
+}
+
+/* line 54 */
+#content {
+  clear: both;
+}
+/* line 57 */
+#content .project_thumb {
+  display: inline;
+  float: left;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  position: relative;
+  background: #1c1c1c;
+  padding: 6px;
+}
+/* line 64 */
+#content .project_thumb:hover {
+  background: #007998;
+}
+/* line 67 */
+#content .project_thumb:hover .tag {
+  left: -6px;
+}
+/* line 70 */
+#content .project_thumb:hover .tag_shadow {
+  left: 0px;
+}
+/* line 73 */
+#content .project_thumb .tag {
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  position: absolute;
+  color: #222222;
+  background: white;
+  left: 0px;
+  bottom: 15px;
+  border-left: solid 6px #007998;
+  padding: 4px 6px 4px 6px;
+}
+/* line 83 */
+#content .project_thumb .tag_shadow {
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  opacity: 0.3;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  position: absolute;
+  color: black;
+  background: black;
+  left: 6px;
+  bottom: 11px;
+  padding: 4px 10px 4px 6px;
+}

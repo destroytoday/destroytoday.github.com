@@ -1,0 +1,4 @@
+- @layout = "folio_grid"
+- Dir.glob('./src/pages/folio/*') do |file|
+- 	filename = file[file.rindex('/') + 1..-1]
+	= partial('project_thumb', :locals => {:name => filename}) unless filename =~ /index/
