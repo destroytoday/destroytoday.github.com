@@ -126,14 +126,14 @@ h1 .secondary {
 #content .project_thumb {
   display: inline;
   float: left;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.25s;
-  -webkit-transition-duration: 0.25s;
-  -o-transition-duration: 0.25s;
-  transition-duration: 0.25s;
+  -moz-transition-property: background;
+  -webkit-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.35s;
+  -webkit-transition-duration: 0.35s;
+  -o-transition-duration: 0.35s;
+  transition-duration: 0.35s;
   position: relative;
   background: #1c1c1c;
   padding: 6px;
@@ -152,10 +152,10 @@ h1 .secondary {
 }
 /* line 73 */
 #content .project_thumb .tag {
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
+  -moz-transition-property: left;
+  -webkit-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
   -moz-transition-duration: 0.25s;
   -webkit-transition-duration: 0.25s;
   -o-transition-duration: 0.25s;
@@ -170,10 +170,10 @@ h1 .secondary {
 }
 /* line 83 */
 #content .project_thumb .tag_shadow {
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
+  -moz-transition-property: left;
+  -webkit-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
   -moz-transition-duration: 0.25s;
   -webkit-transition-duration: 0.25s;
   -o-transition-duration: 0.25s;
