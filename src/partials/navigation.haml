@@ -1,7 +1,0 @@
-#nav
-	%ul
-		- ['About', 'Folio', 'Blog', 'Contact'].each do |section|
-			- if @section == section
-				%li{:class => 'selected'}= link section
-			- else
-				%li= link section

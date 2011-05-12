@@ -1,0 +1,21 @@
+@import "compass/reset"
+@import "compass/utilities/general/clearfix"
+@import "compass/utilities/general/float"
+
+$project_thumb_width: 200
+
+body
+	font:
+		family: Helvetica
+		size: 1em
+	color: #333
+	background: #FFF
+	
+.project_thumb 
+	.color_blocks
+		width: $project_thumb_width + px
+	
+		.color_block
+			+float-left
+			width: $project_thumb_width / 4 + px
+			height: 5px

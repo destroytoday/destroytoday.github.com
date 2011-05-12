@@ -1,0 +1,8 @@
+<div class="project_thumb">
+	<img src="images/{{ post.thumb }}" width="200" height="200" />
+	<div class="color_blocks">
+		{% for color in post.colors %}
+			<div class="color_block" style="background: #{{ color }}">&nbsp;</div>
+		{% endfor %}
+	</div>
+</div>
