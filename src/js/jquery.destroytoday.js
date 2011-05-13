@@ -4,6 +4,7 @@ $(document).ready(function()
 	
 	$('.project_thumb').each(function(index)
 	{
+		$(this).children('.color_blocks').css('top', $(this).children('img').height());
 		$(this).children('.title').css('top', $(this).children('img').height() + 5);
 	});
 	
