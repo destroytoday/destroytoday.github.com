@@ -20,5 +20,5 @@ task :preview do
 end
 
 task :tidy do
-	system("for i in ./site/*.html; do [ -e $i ] && tidy -im ${i}; done")
+	system("for i in ./site/*.html; do [ -e $i ] && tidy -imqcb ${i}; done")
 end

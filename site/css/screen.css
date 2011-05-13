@@ -58,26 +58,64 @@ a img {
   border: none;
 }
 
-/* line 7, ../../src/_css/screen.sass */
+/* line 11, ../../src/_css/screen.sass */
 body {
-  font-family: Helvetica;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1em;
+  font-weight: 300;
   color: #333333;
   background: white;
+  margin: 0px 80px 0px 80px;
 }
 
-/* line 15, ../../src/_css/screen.sass */
-.project_thumb .color_blocks {
-  overflow: hidden;
-  *zoom: 1;
+/* line 20, ../../src/_css/screen.sass */
+#header {
+  margin: 0px 0px 40px 0px;
+}
+
+/* line 23, ../../src/_css/screen.sass */
+h1 {
+  margin: 80px 0px 0px 0px;
+}
+/* line 26, ../../src/_css/screen.sass */
+h1 .destroy_color_block {
+  color: #222222;
+  background: #222222;
+}
+/* line 30, ../../src/_css/screen.sass */
+h1 .today_color_block {
+  color: #007998;
+  background: #007998;
+}
+
+/* line 34, ../../src/_css/screen.sass */
+img {
+  display: block;
+}
+
+/* line 37, ../../src/_css/screen.sass */
+.project_thumb {
+  position: relative;
   width: 200px;
 }
-/* line 19, ../../src/_css/screen.sass */
+/* line 41, ../../src/_css/screen.sass */
+.project_thumb .color_blocks {
+  position: absolute;
+  width: 200px;
+  height: 10px;
+}
+/* line 46, ../../src/_css/screen.sass */
 .project_thumb .color_blocks .color_block {
-  overflow: hidden;
-  *zoom: 1;
   display: inline;
   float: left;
   width: 50px;
-  height: 5px;
+  height: 100%;
+}
+/* line 51, ../../src/_css/screen.sass */
+.project_thumb .title {
+  position: absolute;
+  clear: both;
+  padding: 6px 0px 0px 0px;
+  width: 200px;
+  background: white;
 }

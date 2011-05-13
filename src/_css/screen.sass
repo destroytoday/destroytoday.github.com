@@ -2,20 +2,55 @@
 @import "compass/utilities/general/clearfix"
 @import "compass/utilities/general/float"
 
+// colors
+$dark_grey: #222
+$blue: #007998
+
 $project_thumb_width: 200
 
 body
 	font:
-		family: Helvetica
+		family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 		size: 1em
+		weight: 300
 	color: #333
 	background: #FFF
+	margin: 0px 80px 0px 80px
+
+#header
+	margin: 0px 0px 40px 0px
+
+h1
+	margin: 80px 0px 0px 0px
+
+	.destroy_color_block
+		color: $dark_grey
+		background: $dark_grey
+		
+	.today_color_block
+		color: $blue
+		background: $blue
+
+img
+	display: block
 	
-.project_thumb 
+.project_thumb
+	position: relative
+	width: $project_thumb_width + px
+	
 	.color_blocks
+		position: absolute
 		width: $project_thumb_width + px
+		height: 10px
 	
 		.color_block
 			+float-left
 			width: $project_thumb_width / 4 + px
-			height: 5px
+			height: 100%
+			
+	.title
+		position: absolute
+		clear: both
+		padding: 6px 0px 0px 0px
+		width: $project_thumb_width + px
+		background: #FFF
