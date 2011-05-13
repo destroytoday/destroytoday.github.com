@@ -95,23 +95,26 @@ img {
 
 /* line 37, ../../src/_css/screen.sass */
 .project_thumb {
+  display: inline;
+  float: left;
   position: relative;
   width: 200px;
+  margin: 0px 30px 30px 0px;
 }
-/* line 41, ../../src/_css/screen.sass */
+/* line 43, ../../src/_css/screen.sass */
 .project_thumb .color_blocks {
   position: absolute;
   width: 200px;
   height: 10px;
 }
-/* line 46, ../../src/_css/screen.sass */
+/* line 48, ../../src/_css/screen.sass */
 .project_thumb .color_blocks .color_block {
   display: inline;
   float: left;
   width: 50px;
   height: 100%;
 }
-/* line 51, ../../src/_css/screen.sass */
+/* line 53, ../../src/_css/screen.sass */
 .project_thumb .title {
   position: absolute;
   clear: both;
