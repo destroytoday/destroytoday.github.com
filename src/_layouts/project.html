@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{% for image in page.images %}
+<div class="project">
+	<div class="image">
+		<img src="/images/{{page.category}}/{{page.type}}/{{image}}" />
+	</div>
+	<div class="metadata">
+		<h2>{{page.title}}</h2>
+		<p>{{page.content}}</p>
+		<div class="thumbs">
+			{% for image in page.images %}
+				<div class="thumb">
+					<img src="/images/{{page.category}}/{{page.type}}/{{image | replace: '_', '_sm_thumb_'}}" width="40" height="40" />
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endfor %}

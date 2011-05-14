@@ -1,5 +1,5 @@
 <div class="project_thumb">
-	<a href="{{post.url}}"><img src="images/{{post.thumb}}" width="200" height="200" alt="{{post.title}}" /></a>
+	<a href="{{post.url}}"><img src="images/{{post.category}}/{{post.type}}/{{post.thumb}}" width="200" height="200" alt="{{post.title}}" /></a>
 	<div class="color_blocks" onclick="document.location='{{post.url}}'">
 		{% for color in post.colors %}
 			<div class="color_block" style="width: {{100.0 | divided_by:post.colors.size}}%; background: #{{color}}">&nbsp;</div>

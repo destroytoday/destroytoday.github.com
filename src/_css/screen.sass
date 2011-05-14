@@ -27,6 +27,7 @@ a
 	text-decoration: none
 	
 #header
+	clear: both
 	margin: 0px 0px 40px 0px
 
 h1
@@ -78,3 +79,27 @@ img
 			font-size: 0.8em
 			line-height: 1.4em
 			color: #999
+			
+.project
+	+float-left
+	margin: 0px 0px 30px 0px
+
+	.image
+		+float-left
+		width: 600px
+		
+	.metadata
+		+float-left
+		width: 300px
+		margin: 0px 0px 0px 30px
+	
+		h2
+			font-size: 2.25em
+			margin: -6px 0px 13px 0px
+			
+		.thumbs
+			margin: 30px 0px 0px 0px
+			
+			.thumb
+				+float-left
+				margin: 0px 3px 3px 0px
