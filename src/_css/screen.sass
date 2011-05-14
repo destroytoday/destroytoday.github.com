@@ -1,6 +1,7 @@
 @import "compass/reset"
 @import "compass/utilities/general/clearfix"
 @import "compass/utilities/general/float"
+@import "compass/css3"
 
 // colors
 $dark_grey: #222
@@ -33,11 +34,11 @@ a
 h1
 	margin: 80px 0px 0px 0px
 
-	.destroy_color_block
+	a.destroy_color_block
 		color: $dark_grey
 		background: $dark_grey
 		
-	.today_color_block
+	a.today_color_block
 		color: $blue
 		background: $blue
 
@@ -83,10 +84,29 @@ img
 .project
 	+float-left
 	margin: 0px 0px 30px 0px
-
+	
 	.image
 		+float-left
+		position: relative
 		width: 600px
+		
+		.prev
+			background: url("/images/assets/spacer.gif") repeat scroll 0 0 transparent
+			position: absolute
+			left: 0
+			top: 0
+			width: 50%
+			height: 100%
+			
+		.next
+			@extend .prev
+			left: 50%
+			
+		.arrow
+			position: absolute
+			left: 50%
+			top: 50%
+			margin: -45px 0px 0px -30px
 		
 	.metadata
 		+float-left

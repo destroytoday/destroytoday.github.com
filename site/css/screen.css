@@ -58,7 +58,7 @@ a img {
   border: none;
 }
 
-/* line 9, ../../src/_css/screen.sass */
+/* line 10, ../../src/_css/screen.sass */
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1em;
@@ -68,50 +68,50 @@ body {
   margin: 0px 80px 0px 80px;
 }
 
-/* line 18, ../../src/_css/screen.sass */
+/* line 19, ../../src/_css/screen.sass */
 ::selection {
   color: white;
   background: #007998;
 }
 
-/* line 22, ../../src/_css/screen.sass */
+/* line 23, ../../src/_css/screen.sass */
 ::-moz-selection {
   color: white;
   background: #007998;
 }
 
-/* line 26, ../../src/_css/screen.sass */
+/* line 27, ../../src/_css/screen.sass */
 a {
   text-decoration: none;
 }
 
-/* line 29, ../../src/_css/screen.sass */
+/* line 30, ../../src/_css/screen.sass */
 #header {
   clear: both;
   margin: 0px 0px 40px 0px;
 }
 
-/* line 33, ../../src/_css/screen.sass */
+/* line 34, ../../src/_css/screen.sass */
 h1 {
   margin: 80px 0px 0px 0px;
 }
-/* line 36, ../../src/_css/screen.sass */
-h1 .destroy_color_block {
+/* line 37, ../../src/_css/screen.sass */
+h1 a.destroy_color_block {
   color: #222222;
   background: #222222;
 }
-/* line 40, ../../src/_css/screen.sass */
-h1 .today_color_block {
+/* line 41, ../../src/_css/screen.sass */
+h1 a.today_color_block {
   color: #007998;
   background: #007998;
 }
 
-/* line 44, ../../src/_css/screen.sass */
+/* line 45, ../../src/_css/screen.sass */
 img {
   display: block;
 }
 
-/* line 47, ../../src/_css/screen.sass */
+/* line 48, ../../src/_css/screen.sass */
 .project_thumb {
   display: inline;
   float: left;
@@ -119,7 +119,7 @@ img {
   width: 200px;
   margin: 0px 30px 30px 0px;
 }
-/* line 53, ../../src/_css/screen.sass */
+/* line 54, ../../src/_css/screen.sass */
 .project_thumb .color_blocks {
   position: absolute;
   width: 100%;
@@ -127,13 +127,13 @@ img {
   cursor: pointer;
   cursor: hand;
 }
-/* line 60, ../../src/_css/screen.sass */
+/* line 61, ../../src/_css/screen.sass */
 .project_thumb .color_blocks .color_block {
   display: inline;
   float: left;
   height: 100%;
 }
-/* line 64, ../../src/_css/screen.sass */
+/* line 65, ../../src/_css/screen.sass */
 .project_thumb .metadata {
   position: absolute;
   clear: both;
@@ -141,16 +141,16 @@ img {
   width: 100%;
   background: white;
 }
-/* line 71, ../../src/_css/screen.sass */
+/* line 72, ../../src/_css/screen.sass */
 .project_thumb .metadata .title {
   display: inline;
   float: left;
 }
-/* line 74, ../../src/_css/screen.sass */
+/* line 75, ../../src/_css/screen.sass */
 .project_thumb .metadata .title a {
   color: #333333;
 }
-/* line 77, ../../src/_css/screen.sass */
+/* line 78, ../../src/_css/screen.sass */
 .project_thumb .metadata .type {
   display: inline;
   float: right;
@@ -159,35 +159,56 @@ img {
   color: #999999;
 }
 
-/* line 83, ../../src/_css/screen.sass */
+/* line 84, ../../src/_css/screen.sass */
 .project {
   display: inline;
   float: left;
   margin: 0px 0px 30px 0px;
 }
-/* line 87, ../../src/_css/screen.sass */
+/* line 88, ../../src/_css/screen.sass */
 .project .image {
   display: inline;
   float: left;
+  position: relative;
   width: 600px;
 }
-/* line 91, ../../src/_css/screen.sass */
+/* line 93, ../../src/_css/screen.sass */
+.project .image .prev, .project .image .next {
+  background: url("/images/assets/spacer.gif") repeat scroll 0 0 transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+/* line 101, ../../src/_css/screen.sass */
+.project .image .next {
+  left: 50%;
+}
+/* line 105, ../../src/_css/screen.sass */
+.project .image .arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -45px 0px 0px -30px;
+}
+/* line 111, ../../src/_css/screen.sass */
 .project .metadata {
   display: inline;
   float: left;
   width: 300px;
   margin: 0px 0px 0px 30px;
 }
-/* line 96, ../../src/_css/screen.sass */
+/* line 116, ../../src/_css/screen.sass */
 .project .metadata h2 {
   font-size: 2.25em;
   margin: -6px 0px 13px 0px;
 }
-/* line 100, ../../src/_css/screen.sass */
+/* line 120, ../../src/_css/screen.sass */
 .project .metadata .thumbs {
   margin: 30px 0px 0px 0px;
 }
-/* line 103, ../../src/_css/screen.sass */
+/* line 123, ../../src/_css/screen.sass */
 .project .metadata .thumbs .thumb {
   display: inline;
   float: left;
