@@ -6,8 +6,6 @@
 $dark_grey: #222
 $blue: #007998
 
-$project_thumb_width: 200
-
 body
 	font:
 		family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
@@ -16,7 +14,15 @@ body
 	color: #333
 	background: #FFF
 	margin: 0px 80px 0px 80px
+	
+::selection
+	color: #FFF
+	background: #007998
 
+::-moz-selection
+	color: #FFF
+	background: #007998
+	
 #header
 	margin: 0px 0px 40px 0px
 
@@ -37,22 +43,30 @@ img
 .project_thumb
 	+float-left
 	position: relative
-	width: $project_thumb_width + px
+	width: 200px
 	margin: 0px 30px 30px 0px
 	
 	.color_blocks
 		position: absolute
-		width: $project_thumb_width + px
+		width: 100%
 		height: 10px
 	
 		.color_block
 			+float-left
-			width: $project_thumb_width / 4 + px
 			height: 100%
 			
-	.title
+	.metadata
 		position: absolute
 		clear: both
 		padding: 6px 0px 0px 0px
-		width: $project_thumb_width + px
+		width: 100%
 		background: #FFF
+		
+		.title
+			+float-left
+		
+		.type
+			+float-right
+			font-size: 0.8em
+			line-height: 1.4em
+			color: #999

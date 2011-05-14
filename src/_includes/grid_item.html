@@ -1,9 +1,12 @@
 <div class="project_thumb">
-	<img src="images/{{ post.thumb }}" width="200" height="200" />
+	<img src="images/{{post.thumb}}" width="200" height="200" alt="{{post.title}}" />
 	<div class="color_blocks">
 		{% for color in post.colors %}
-			<div class="color_block" style="background: #{{ color }}">&nbsp;</div>
+			<div class="color_block" style="width: {{100.0 | divided_by:post.colors.size}}%; background: #{{color}}">&nbsp;</div>
 		{% endfor %}
 	</div>
-	<div class="title">{{ post.title }}</div>
+	<div class="metadata">
+		<div class="title">{{post.title}}</div>
+		<div class="type">{{post.type}}</div>
+	</div>
 </div>

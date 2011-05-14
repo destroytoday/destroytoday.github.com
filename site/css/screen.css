@@ -58,7 +58,7 @@ a img {
   border: none;
 }
 
-/* line 11, ../../src/_css/screen.sass */
+/* line 9, ../../src/_css/screen.sass */
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1em;
@@ -68,32 +68,44 @@ body {
   margin: 0px 80px 0px 80px;
 }
 
-/* line 20, ../../src/_css/screen.sass */
+/* line 18, ../../src/_css/screen.sass */
+::selection {
+  color: white;
+  background: #007998;
+}
+
+/* line 22, ../../src/_css/screen.sass */
+::-moz-selection {
+  color: white;
+  background: #007998;
+}
+
+/* line 26, ../../src/_css/screen.sass */
 #header {
   margin: 0px 0px 40px 0px;
 }
 
-/* line 23, ../../src/_css/screen.sass */
+/* line 29, ../../src/_css/screen.sass */
 h1 {
   margin: 80px 0px 0px 0px;
 }
-/* line 26, ../../src/_css/screen.sass */
+/* line 32, ../../src/_css/screen.sass */
 h1 .destroy_color_block {
   color: #222222;
   background: #222222;
 }
-/* line 30, ../../src/_css/screen.sass */
+/* line 36, ../../src/_css/screen.sass */
 h1 .today_color_block {
   color: #007998;
   background: #007998;
 }
 
-/* line 34, ../../src/_css/screen.sass */
+/* line 40, ../../src/_css/screen.sass */
 img {
   display: block;
 }
 
-/* line 37, ../../src/_css/screen.sass */
+/* line 43, ../../src/_css/screen.sass */
 .project_thumb {
   display: inline;
   float: left;
@@ -101,24 +113,36 @@ img {
   width: 200px;
   margin: 0px 30px 30px 0px;
 }
-/* line 43, ../../src/_css/screen.sass */
+/* line 49, ../../src/_css/screen.sass */
 .project_thumb .color_blocks {
   position: absolute;
-  width: 200px;
+  width: 100%;
   height: 10px;
 }
-/* line 48, ../../src/_css/screen.sass */
+/* line 54, ../../src/_css/screen.sass */
 .project_thumb .color_blocks .color_block {
   display: inline;
   float: left;
-  width: 50px;
   height: 100%;
 }
-/* line 53, ../../src/_css/screen.sass */
-.project_thumb .title {
+/* line 58, ../../src/_css/screen.sass */
+.project_thumb .metadata {
   position: absolute;
   clear: both;
   padding: 6px 0px 0px 0px;
-  width: 200px;
+  width: 100%;
   background: white;
+}
+/* line 65, ../../src/_css/screen.sass */
+.project_thumb .metadata .title {
+  display: inline;
+  float: left;
+}
+/* line 68, ../../src/_css/screen.sass */
+.project_thumb .metadata .type {
+  display: inline;
+  float: right;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  color: #999999;
 }
