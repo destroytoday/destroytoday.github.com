@@ -4,13 +4,13 @@ $(document).ready(function()
 	
 	$('.project_thumb').each(function(index)
 	{
-		$(this).children('.color_blocks').css('top', $(this).children('img').height());
-		$(this).children('.metadata').css('top', $(this).children('img').height() + 5);
+		$(this).children('.color_blocks').css('top', $(this).children('a').children('img').height());
+		$(this).children('.metadata').css('top', $(this).children('a').children('img').height() + 5);
 	});
 	
 	$('.project_thumb').mouseenter(function(event)
 	{
-		var image = $(event.currentTarget).children('img');
+		var image = $(event.currentTarget).children('a').children('img');
 		var color_blocks = $(event.currentTarget).children('.color_blocks');
 		
 		color_blocks.stop();
@@ -27,7 +27,7 @@ $(document).ready(function()
 
 	$('.project_thumb').mouseleave(function(event)
 	{
-		var image = $(event.currentTarget).children('img');
+		var image = $(event.currentTarget).children('a').children('img');
 		var color_blocks = $(event.currentTarget).children('.color_blocks');
 		
 		color_blocks.stop();
