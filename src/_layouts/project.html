@@ -1,10 +1,15 @@
 ---
 layout: default
 ---
-{% for image in page.images %}
 <div class="project">
 	<div class="image">
-		<img src="/images/{{page.category}}/{{page.type}}/{{image}}" />
+		<div class="images">
+			{% assign show = true %}
+			{% for image in page.images %}
+				<img {% if show %}class="selected"{% endif %} src="/images/{{page.category}}/{{page.type}}/{{image}}" />
+				{% assign show = false %}
+			{% endfor %}
+		</div>
 		<div class="prev">
 			<img class="arrow" src="/images/assets/prev_arrow_lg.gif" width="60" height="90" alt="prev" />
 		</div>
@@ -16,12 +21,14 @@ layout: default
 		<h2>{{page.title}}</h2>
 		<p>{{page.content}}</p>
 		<div class="thumbs">
+			{% assign selected = true %}
 			{% for image in page.images %}
-				<div class="thumb">
+				<div class="thumb {% if selected %}selected{% else %}unselected{% endif %}">
 					<img src="/images/{{page.category}}/{{page.type}}/{{image | replace: '_', '_sm_thumb_'}}" width="40" height="40" />
+					<div class="overlay">&nbsp;</div>
 				</div>
+				{% assign selected = false %}
 			{% endfor %}
 		</div>
 	</div>
 </div>
-{% endfor %}

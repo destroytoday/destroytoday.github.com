@@ -88,7 +88,14 @@ img
 	.image
 		+float-left
 		position: relative
-		width: 600px
+		//width: 600px
+		
+		.images
+			img
+				display: none
+				
+			.selected
+				display: block
 		
 		.prev
 			background: url("/images/assets/spacer.gif") repeat scroll 0 0 transparent
@@ -98,15 +105,24 @@ img
 			width: 50%
 			height: 100%
 			
+			.arrow
+				position: absolute
+				display: none
+				left: 80px
+				top: 50%
+				margin: -45px 0px 0px 0px
+			
 		.next
 			@extend .prev
 			left: 50%
 			
-		.arrow
-			position: absolute
-			left: 50%
-			top: 50%
-			margin: -45px 0px 0px -30px
+			.arrow
+				position: absolute
+				display: none
+				left: auto
+				right: 80px
+				top: 50%
+				margin: -45px 0px 0px 0px
 		
 	.metadata
 		+float-left
@@ -122,4 +138,19 @@ img
 			
 			.thumb
 				+float-left
+				position: relative
 				margin: 0px 3px 3px 0px
+				
+				.overlay
+					position: absolute
+					left: 0px
+					top: 0px
+					width: 40px
+					height: 40px
+				
+			.unselected .overlay
+				display: none
+			
+			.selected .overlay
+				display: block
+				background: url("/images/assets/sm_thumb_selected.gif") repeat scroll 0 0 transparent
