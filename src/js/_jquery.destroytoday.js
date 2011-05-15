@@ -164,6 +164,34 @@ function project_goto(current, next)
 
 	next_thumb.removeClass('unselected');
 	next_thumb.addClass('selected');
+	
+	var next_width = next.width();
+
+	if (next_width > 0)
+	{
+		project_resize_to_image(next);
+	}
+	else
+	{
+		next.load(function()
+		{
+			project_resize_to_image(next);
+		});
+	}
+}
+
+function project_resize_to_image(image)
+{
+	$('.project .image').stop();
+	
+	$('.project .image').animate(
+	{
+		width: image.width()
+	},
+	{
+		duration: 400,
+		easing: 'easeInOutQuad'
+	});
 }
 
 function project_goto_index(index)
