@@ -4,6 +4,14 @@ $(document).ready(function()
 {
 	jQuery.easing.def = 'easeInOutCubic';
 	
+	$(window).hashchange(function()
+	{
+		parseHash();
+
+		if (hashTable.n)
+			project_goto_index(hashTable.n);
+	});
+	
 	$('.project_thumb').each(function(index)
 	{
 		$(this).children('.color_blocks').css('top', $(this).children('a').children('img').height());
@@ -74,8 +82,6 @@ function parseHash()
 		if (assignment.length > 1)
 			hashTable[assignment[0]] = assignment[1];
 	}
-	
-	console.log(hashTable);
 }
 
 function project_direction_mouseenterHandler(event)
@@ -152,10 +158,10 @@ function project_goto(current, next)
 	
 	current.removeClass('selected');
 	next.addClass('selected');
-	
+
 	current_thumb.removeClass('selected');
 	current_thumb.addClass('unselected');
-	
+
 	next_thumb.removeClass('unselected');
 	next_thumb.addClass('selected');
 }
