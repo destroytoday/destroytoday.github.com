@@ -1,0 +1,12 @@
+<div class="project_thumb">
+	<a href="{{project.url}}"><img src="/images/{{project.category}}/{{project.title | downcase | escape_once}}/{{project.thumb}}" width="200" height="200" alt="{{project.title}}" /></a>
+	<div class="color_blocks" onclick="document.location='{{project.url}}'">
+		{% for color in project.colors %}
+			<div class="color_block" style="width: {{100.0 | divided_by:project.colors.size}}%; background: #{{color}}">&nbsp;</div>
+		{% endfor %}
+	</div>
+	<div class="metadata">
+		<div class="title"><a href="{{project.url}}">{{project.title}}</a></div>
+		<div class="type">{{project.type}}</div>
+	</div>
+</div>

@@ -24,7 +24,18 @@ body
 	color: #FFF
 	background: #007998
 	
+// ie6 warning
+#_l
+	display: none
+		
+#_d
+	width: 660px
+	
+	li
+		+float-left
+	
 a
+	color: $blue
 	text-decoration: none
 	
 #header
@@ -81,14 +92,17 @@ img
 			line-height: 1.4em
 			color: #999
 			
+.projects
+	clear: both
+	margin: 0px 0px 40px 0px
+			
 .project
 	+float-left
-	margin: 0px 0px 30px 0px
+	margin: 0px 0px 40px 0px
 	
 	.image
 		+float-left
 		position: relative
-		//width: 600px
 		
 		.images
 			img
@@ -106,10 +120,13 @@ img
 			height: 100%
 			
 			.arrow
+				background: url("/images/assets/prev_arrow_lg.gif") no-repeat scroll 0 0 transparent
 				position: absolute
 				display: none
-				left: 80px
+				left: 30%
 				top: 50%
+				width: 60px
+				height: 90px
 				margin: -45px 0px 0px 0px
 			
 		.next
@@ -117,11 +134,14 @@ img
 			left: 50%
 			
 			.arrow
+				background: url("/images/assets/next_arrow_lg.gif") no-repeat scroll 0 0 transparent
 				position: absolute
 				display: none
 				left: auto
-				right: 80px
+				right: 30%
 				top: 50%
+				width: 60px
+				height: 90px
 				margin: -45px 0px 0px 0px
 		
 	.metadata
@@ -153,4 +173,4 @@ img
 			
 			.selected .overlay
 				display: block
-				background: url("/images/assets/sm_thumb_selected.gif") repeat scroll 0 0 transparent
+				background: url("/images/assets/sm_thumb_selected.gif") no-repeat scroll 0 0 transparent

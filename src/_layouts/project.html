@@ -6,29 +6,30 @@ layout: default
 		<div class="images">
 			{% assign show = true %}
 			{% for image in page.images %}
-				<img {% if show %}class="selected"{% endif %} src="/images/{{page.category}}/{{page.type}}/{{image}}" />
+				<img {% if show %}class="selected"{% endif %} src="/images/{{page.category}}/{{page.title | downcase | escape_once}}/{{image}}" />
 				{% assign show = false %}
 			{% endfor %}
 		</div>
 		<div class="prev">
-			<img class="arrow" src="/images/assets/prev_arrow_lg.gif" width="60" height="90" alt="prev" />
+			<div class="arrow"></div>
 		</div>
 		<div class="next">
-			<img class="arrow" src="/images/assets/next_arrow_lg.gif" width="60" height="89" alt="next" />
+			<div class="arrow"></div>
 		</div>
 	</div>
 	<div class="metadata">
 		<h2>{{page.title}}</h2>
-		<p>{{page.content}}</p>
+		<div>{{content}}</div>
 		<div class="thumbs">
 			{% assign selected = true %}
 			{% for image in page.images %}
 				<div class="thumb {% if selected %}selected{% else %}unselected{% endif %}">
-					<a href="#n={{forloop.index}}"><img src="/images/{{page.category}}/{{page.type}}/{{image | replace: '_', '_sm_thumb_'}}" width="40" height="40" /></a>
-					<div class="overlay">&nbsp;</div>
+					<a href="#n={{forloop.index}}"><img src="/images/{{page.category}}/{{page.title | downcase | escape_once}}/{{image | replace: '_', '_sm_thumb_'}}" width="40" height="40" /></a>
+					<div class="overlay"></div>
 				</div>
 				{% assign selected = false %}
 			{% endfor %}
 		</div>
 	</div>
 </div>
+{% include projects.html %}

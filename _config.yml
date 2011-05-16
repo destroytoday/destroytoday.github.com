@@ -1,2 +1,4 @@
 source: ./src
 destination: ./site
+permalink: /:categories/:title
+markdown: rdiscount

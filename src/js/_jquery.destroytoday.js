@@ -69,6 +69,8 @@ $(document).ready(function()
 	
 	if (hashTable.n)
 		project_goto_index(hashTable.n);
+	else
+		project_resize_to_image($('.project .image:first-child'));
 });
 
 function parseHash()
