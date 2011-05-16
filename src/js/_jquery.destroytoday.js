@@ -70,7 +70,7 @@ $(document).ready(function()
 	if (hashTable.n)
 		project_goto_index(hashTable.n);
 	else
-		project_resize_to_image($('.project .image:first-child'));
+		project_resize_to_image($('.project .image:first-child'))
 });
 
 function parseHash()
@@ -151,10 +151,11 @@ function project_next()
 function project_goto(current, next)
 {
 	var images = $('.project .image .images');
-	var current_index = images.children('img').index(current) + 1;
-	var next_index = images.children('img').index(next) + 1;
-	var current_thumb = $('.project .metadata .thumbs .thumb:nth-child(' + current_index + ')');
-	var next_thumb = $('.project .metadata .thumbs .thumb:nth-child(' + next_index + ')');
+	var current_index = images.children('img').index(current);
+	var next_index = images.children('img').index(next);
+
+	var current_thumb = $('.project .metadata .thumbs .thumb:nth-child(' + (parseInt(current_index) + 1) + ')');
+	var next_thumb = $('.project .metadata .thumbs .thumb:nth-child(' + (parseInt(next_index) + 1) + ')');
 	
 	document.location.hash = 'n=' + next_index;
 	
@@ -203,8 +204,8 @@ function project_goto_index(index)
 	
 	if (current.length == 0)
 		current = images.children('img').first();
-	
-	var next = $('.project .image .images img:nth-child(' + index + ')');
+
+	var next = $('.project .image .images img:nth-child(' + (parseInt(index) + 1) + ')');
 
 	project_goto(current, next);
 }

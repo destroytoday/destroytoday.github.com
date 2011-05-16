@@ -24,7 +24,7 @@ layout: default
 			{% assign selected = true %}
 			{% for image in page.images %}
 				<div class="thumb {% if selected %}selected{% else %}unselected{% endif %}">
-					<a href="#n={{forloop.index}}"><img src="/images/{{page.category}}/{{page.title | downcase | escape_once}}/{{image | replace: '_', '_sm_thumb_'}}" width="40" height="40" /></a>
+					<a href="#n={{forloop.index | minus:1}}"><img src="/images/{{page.category}}/{{page.title | downcase | escape_once}}/{{image | replace: '_', '_sm_thumb_'}}" width="40" height="40" /></a>
 					<div class="overlay"></div>
 				</div>
 				{% assign selected = false %}
