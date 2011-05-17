@@ -168,7 +168,7 @@ function project_goto(current, next)
 	next_thumb.removeClass('unselected');
 	next_thumb.addClass('selected');
 	
-	var next_width = next.width();
+	/*var next_width = next.width();
 
 	if (next_width > 0)
 	{
@@ -180,10 +180,10 @@ function project_goto(current, next)
 		{
 			project_resize_to_image(next);
 		});
-	}
+	}*/
 }
 
-function project_resize_to_image(image)
+/*function project_resize_to_image(image)
 {
 	$('.project .image').stop();
 	
@@ -195,7 +195,7 @@ function project_resize_to_image(image)
 		duration: 400,
 		easing: 'easeInOutQuad'
 	});
-}
+}*/
 
 function project_goto_index(index)
 {

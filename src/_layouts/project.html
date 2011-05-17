@@ -2,19 +2,21 @@
 layout: default
 ---
 <div class="project">
-	<div class="image">
-		<div class="images">
-			{% assign show = true %}
-			{% for image in page.images %}
-				<img {% if show %}class="selected"{% endif %} src="/images/{{page.category}}/{{page.title | downcase | escape_once}}/{{image}}" />
-				{% assign show = false %}
-			{% endfor %}
-		</div>
-		<div class="prev">
-			<div class="arrow"></div>
-		</div>
-		<div class="next">
-			<div class="arrow"></div>
+	<div class="container">
+		<div class="image">
+			<div class="images">
+				{% assign show = true %}
+				{% for image in page.images %}
+					<img {% if show %}class="selected"{% endif %} src="/images/{{page.category}}/{{page.title | downcase | escape_once}}/{{image}}" />
+					{% assign show = false %}
+				{% endfor %}
+			</div>
+			<div class="prev">
+				<div class="arrow"></div>
+			</div>
+			<div class="next">
+				<div class="arrow"></div>
+			</div>
 		</div>
 	</div>
 	<div class="metadata">

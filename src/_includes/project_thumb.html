@@ -1,9 +1,16 @@
 <div class="project_thumb">
 	<a href="{{project.url}}"><img src="/images/{{project.category}}/{{project.title | downcase | escape_once}}/{{project.thumb}}" width="200" height="200" alt="{{project.title}}" /></a>
 	<div class="color_blocks" onclick="document.location='{{project.url}}'">
-		{% for color in project.colors %}
-			<div class="color_block" style="width: {{100.0 | divided_by:project.colors.size}}%; background: #{{color}}"></div>
-		{% endfor %}
+		{% case project.colors.size %} 
+		{% when 3 %} 
+			<div class="color_block" style="width: 33%; background: #{{project.colors[0]}}"></div>
+			<div class="color_block" style="width: 33%; background: #{{project.colors[1]}}"></div>
+			<div class="color_block" style="width: 34%; background: #{{project.colors[2]}}"></div>
+		{% else %}
+			{% for color in project.colors %}
+				<div class="color_block" style="width: {{100.0 | divided_by:project.colors.size}}%; background: #{{color}}"></div>
+			{% endfor %}
+		{% endcase %}
 	</div>
 	<div class="metadata">
 		<div class="title"><a href="{{project.url}}">{{project.title}}</a></div>

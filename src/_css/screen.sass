@@ -101,49 +101,53 @@ img
 	margin: 0px 0px 40px 0px
 	min-width: 930px
 	
-	.image
+	.container
 		+float-left
-		position: relative
+		width: 600px
+
+		.image
+			+float-left
+			position: relative
 		
-		.images
-			img
-				display: none
+			.images
+				img
+					display: none
 				
-			.selected
-				display: block
+				.selected
+					display: block
 		
-		.prev
-			background: url("/images/assets/spacer.gif") repeat scroll 0 0 transparent
-			position: absolute
-			left: 0
-			top: 0
-			width: 50%
-			height: 100%
-			
-			.arrow
-				background: url("/images/assets/prev_arrow_lg.gif") no-repeat scroll 0 0 transparent
+			.prev
+				background: url("/images/assets/spacer.gif") repeat scroll 0 0 transparent
 				position: absolute
-				display: none
-				left: 30%
-				top: 50%
-				width: 60px
-				height: 90px
-				margin: -45px 0px 0px 0px
+				left: 0
+				top: 0
+				width: 50%
+				height: 100%
 			
-		.next
-			@extend .prev
-			left: 50%
+				.arrow
+					background: url("/images/assets/prev_arrow_lg.gif") no-repeat scroll 0 0 transparent
+					position: absolute
+					display: none
+					left: 30%
+					top: 50%
+					width: 60px
+					height: 90px
+					margin: -45px 0px 0px 0px
 			
-			.arrow
-				background: url("/images/assets/next_arrow_lg.gif") no-repeat scroll 0 0 transparent
-				position: absolute
-				display: none
-				left: auto
-				right: 30%
-				top: 50%
-				width: 60px
-				height: 90px
-				margin: -45px 0px 0px 0px
+			.next
+				@extend .prev
+				left: 50%
+			
+				.arrow
+					background: url("/images/assets/next_arrow_lg.gif") no-repeat scroll 0 0 transparent
+					position: absolute
+					display: none
+					left: auto
+					right: 30%
+					top: 50%
+					width: 60px
+					height: 90px
+					margin: -45px 0px 0px 0px
 		
 	.metadata
 		+float-left
