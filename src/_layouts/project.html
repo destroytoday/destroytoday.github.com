@@ -3,11 +3,11 @@ layout: default
 ---
 <div class="project">
 	<div class="container">
-		<div class="image">
+		<div class="viewport">
 			<div class="images">
 				{% assign show = true %}
 				{% for image in page.images %}
-					<img {% if show %}class="selected"{% endif %} src="/images/{{page.category}}/{{page.title | downcase | escape_once}}/{{image}}" />
+					<div class="image{% if show %} selected{% endif %}"><img src="/images/{{page.category}}/{{page.title | downcase | escape_once}}/{{image}}" /></div>
 					{% assign show = false %}
 				{% endfor %}
 			</div>

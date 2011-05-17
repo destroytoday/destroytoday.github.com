@@ -54,15 +54,15 @@ $(document).ready(function()
 	
 	// project prev arrow
 	
-	$('.project .image .prev').mouseenter(project_direction_mouseenterHandler);
-	$('.project .image .prev').mouseleave(project_direction_mouseleaveHandler);
-	$('.project .image .prev').click(project_prev);
+	$('.project .container .viewport .prev').mouseenter(project_direction_mouseenterHandler);
+	$('.project .container .viewport .prev').mouseleave(project_direction_mouseleaveHandler);
+	$('.project .container .viewport .prev').click(project_prev);
 	
 	// project next arrow
 	
-	$('.project .image .next').mouseenter(project_direction_mouseenterHandler);
-	$('.project .image .next').mouseleave(project_direction_mouseleaveHandler);
-	$('.project .image .next').click(project_next);
+	$('.project .container .viewport .next').mouseenter(project_direction_mouseenterHandler);
+	$('.project .container .viewport .next').mouseleave(project_direction_mouseleaveHandler);
+	$('.project .container .viewport .next').click(project_next);
 	$(document).keyup(project_keyupHandler);
 	
 	parseHash();
@@ -88,7 +88,7 @@ function parseHash()
 
 function project_direction_mouseenterHandler(event)
 {
-	var numThumbs = $('.project .image .images').children('img').size();
+	var numThumbs = $('.project .container .viewport .images').children('.image').size();
 		
 	if (numThumbs > 1)
 	{
@@ -118,41 +118,41 @@ function project_keyupHandler(event)
 
 function project_prev()
 {
-	var images = $('.project .image .images');
+	var images = $('.project .container .viewport .images');
 	var current = images.children('.selected');
 	
 	if (current.length == 0)
-		current = images.children('img').first();
+		current = images.children('.image').first();
 	
-	var next = current.prev('img');
+	var next = current.prev('.image');
 
 	if (next.length == 0)
-		next = images.children('img').last();
+		next = images.children('.image').last();
 
 	project_goto(current, next);
 }
 
 function project_next()
 {
-	var images = $('.project .image .images');
+	var images = $('.project .container .viewport .images');
 	var current = images.children('.selected');
 	
 	if (current.length == 0)
-		current = images.children('img').first();
+		current = images.children('.image').first();
 	
-	var next = current.next('img');
+	var next = current.next('.image');
 
 	if (next.length == 0)
-		next = images.children('img').first();
+		next = images.children('.image').first();
 	
 	project_goto(current, next);
 }
 
 function project_goto(current, next)
 {
-	var images = $('.project .image .images');
-	var current_index = images.children('img').index(current);
-	var next_index = images.children('img').index(next);
+	var images = $('.project .container .viewport .images');
+	var current_index = images.children('.image').index(current);
+	var next_index = images.children('.image').index(next);
 
 	var current_thumb = $('.project .metadata .thumbs .thumb:nth-child(' + (parseInt(current_index) + 1) + ')');
 	var next_thumb = $('.project .metadata .thumbs .thumb:nth-child(' + (parseInt(next_index) + 1) + ')');
@@ -199,13 +199,13 @@ function project_goto(current, next)
 
 function project_goto_index(index)
 {
-	var images = $('.project .image .images');
+	var images = $('.project .container .viewport .images');
 	var current = images.children('.selected');
 	
 	if (current.length == 0)
 		current = images.children('img').first();
 
-	var next = $('.project .image .images img:nth-child(' + (parseInt(index) + 1) + ')');
+	var next = $('.project .container .viewport .images .image:nth-child(' + (parseInt(index) + 1) + ')');
 
 	project_goto(current, next);
 }

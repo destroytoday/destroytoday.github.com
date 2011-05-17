@@ -195,21 +195,21 @@ img {
   width: 600px;
 }
 /* line 108, ../../src/_css/screen.sass */
-.project .container .image {
+.project .container .viewport {
   display: inline;
   float: left;
   position: relative;
 }
 /* line 113, ../../src/_css/screen.sass */
-.project .container .image .images img {
+.project .container .viewport .images .image {
   display: none;
 }
 /* line 116, ../../src/_css/screen.sass */
-.project .container .image .images .selected {
+.project .container .viewport .images .selected {
   display: block;
 }
 /* line 119, ../../src/_css/screen.sass */
-.project .container .image .prev, .project .container .image .next {
+.project .container .viewport .prev, .project .container .viewport .next {
   background: url("/images/assets/spacer.gif") repeat scroll 0 0 transparent;
   position: absolute;
   left: 0;
@@ -218,7 +218,7 @@ img {
   height: 100%;
 }
 /* line 127, ../../src/_css/screen.sass */
-.project .container .image .prev .arrow, .project .container .image .next .arrow {
+.project .container .viewport .prev .arrow, .project .container .viewport .next .arrow {
   background: url("/images/assets/prev_arrow_lg.gif") no-repeat scroll 0 0 transparent;
   position: absolute;
   display: none;
@@ -229,11 +229,11 @@ img {
   margin: -45px 0px 0px 0px;
 }
 /* line 137, ../../src/_css/screen.sass */
-.project .container .image .next {
+.project .container .viewport .next {
   left: 50%;
 }
 /* line 141, ../../src/_css/screen.sass */
-.project .container .image .next .arrow {
+.project .container .viewport .next .arrow {
   background: url("/images/assets/next_arrow_lg.gif") no-repeat scroll 0 0 transparent;
   position: absolute;
   display: none;
