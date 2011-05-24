@@ -1,3 +1,0 @@
-h1. destroytoday.com
-
-This is my website.
