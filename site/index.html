@@ -20,6 +20,14 @@
 </script>
 <!--[if lte IE 6]><script src="/js/ie6warning.js" type="text/javascript"></script><script type="text/javascript">window.onload=function(){e("/images/assets/ie6warning/")}</script><![endif]-->
 
+  <script type="text/javascript" src=
+  "http://use.typekit.com/aeu3zes.js">
+</script>
+  <script type="text/javascript">
+//<![CDATA[
+  try{Typekit.load();}catch(e){}
+  //]]>
+  </script>
   <style type="text/css">
 /*<![CDATA[*/
   div.c7 {width: 34%; background: #EEEEEE}
@@ -34,60 +42,78 @@
 </head>
 
 <body>
-  <div id="header">
-    <h1><a href="/" class="destroy_color_block">Destroy</a><a href=
-    "/" class="today_color_block">Today</a></h1>
-  </div>
-
-  <div class="projects">
-    <div class="project_thumb">
-      <a href="/folio/profile"><img src=
-      "/images/folio/profile/profile_lg_thumb.jpg" width="200"
-      height="200" alt="Profile" /></a>
-
-      <div class="color_blocks" onclick=
-      "document.location='/folio/profile'">
-        <div class="color_block c1"></div>
-
-        <div class="color_block c2"></div>
-
-        <div class="color_block c3"></div>
-
-        <div class="color_block c4"></div>
+  <div id="page">
+    <div id="header">
+      <div id="identity">
+        <h1><a href="/" class="destroy">destroy</a><a href="/"
+        class="today">today</a></h1>
       </div>
 
-      <div class="metadata">
-        <div class="title">
-          <a href="/folio/profile">Profile</a>
-        </div>
+      <div id="navigation">
+        <ul>
+          <li>Home</li>
 
-        <div class="type">
-          photo
-        </div>
+          <li>About</li>
+
+          <li class="selected">Folio</li>
+
+          <li>Lab</li>
+
+          <li>Contact</li>
+        </ul>
       </div>
     </div>
 
-    <div class="project_thumb">
-      <a href="/folio/process"><img src=
-      "/images/folio/process/process_lg_thumb.jpg" width="200"
-      height="200" alt="Process" /></a>
+    <div class="projects">
+      <div class="project_thumb">
+        <a href="/folio/profile"><img src=
+        "/images/folio/profile/profile_lg_thumb.jpg" width="200"
+        height="200" alt="Profile" /></a>
 
-      <div class="color_blocks" onclick=
-      "document.location='/folio/process'">
-        <div class="color_block c5"></div>
+        <div class="color_blocks" onclick=
+        "document.location='/folio/profile'">
+          <div class="color_block c1"></div>
 
-        <div class="color_block c6"></div>
+          <div class="color_block c2"></div>
 
-        <div class="color_block c7"></div>
-      </div>
+          <div class="color_block c3"></div>
 
-      <div class="metadata">
-        <div class="title">
-          <a href="/folio/process">Process</a>
+          <div class="color_block c4"></div>
         </div>
 
-        <div class="type">
-          print
+        <div class="metadata">
+          <div class="title">
+            <a href="/folio/profile">Profile</a>
+          </div>
+
+          <div class="type">
+            photo
+          </div>
+        </div>
+      </div>
+
+      <div class="project_thumb">
+        <a href="/folio/process"><img src=
+        "/images/folio/process/process_lg_thumb.jpg" width="200"
+        height="200" alt="Process" /></a>
+
+        <div class="color_blocks" onclick=
+        "document.location='/folio/process'">
+          <div class="color_block c5"></div>
+
+          <div class="color_block c6"></div>
+
+          <div class="color_block c7"></div>
+        </div>
+
+        <div class="metadata">
+          <div class="title">
+            <a href="/folio/process">Process</a>
+          </div>
+
+          <div class="type">
+            print
+          </div>
         </div>
       </div>
     </div>
