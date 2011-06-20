@@ -1,0 +1,252 @@
+@import "compass/reset"
+@import "compass/utilities/general/clearfix"
+@import "compass/utilities/general/float"
+@import "compass/css3"
+
+// variables
+$background-color: #FFF !default
+$text-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif !default
+$text-color: #333 !default
+$text-weight: 300 !default
+
+$identity-font: "museo-sans-1", "museo-sans-2", $text-font !default
+$identity-weight: 700 !default
+$identity-destroy-color: #333 !default
+$identity-today-color: #007998 !default
+
+$header-font: $identity-font !default
+$header-weight: 700 !default
+$header-color: #333 !default
+$tag-color: #999 !default
+
+$link-color: #007998 !default
+$link-hover-color: #007998 !default
+
+$nav-font: $identity-font !default
+$nav-color: #333 !default
+$nav-weight: 500 !default
+$nav-selected-color: #007998 !default
+$nav-selected-weight: 700 !default
+
+$thumbnail-title-weight: 500 !default
+
+body
+	font:
+		family: $text-font
+		size: 1em
+		weight: $text-weight
+	color: $text-color
+	background: $background-color
+	margin: 0px 80px 0px 80px
+	
+::selection
+	color: #FFF
+	background: #007998
+
+::-moz-selection
+	color: #FFF
+	background: #007998
+	
+// ie6 warning
+#_l
+	display: none
+		
+#_d
+	width: 660px
+	
+	li
+		+float-left
+	
+a
+	color: $link-color
+	text-decoration: none
+	
+#page
+	margin: 0px auto 0px auto
+	width: 900px
+	
+#header
+	clear: both
+	height: 72px
+
+	#identity
+		+float-left
+		margin: 12px 0px 0px 0px
+		
+		h1
+			font:
+				family: $identity-font
+				weight: $identity-weight
+		
+			a.destroy
+				color: $identity-destroy-color
+		
+			a.today
+				margin-left: 0.0625em
+				color: $identity-today-color
+		
+	#navigation
+		+float-right
+		font-family: $nav-font
+	
+		ul
+			li
+				+float-left
+				margin: 12px 8px 0px 0px
+				font-size: 0.75em
+				
+				a
+					color: $nav-color
+					font-weight: $nav-weight
+					
+					&:hover
+						color: $nav-selected-color
+				
+				&.selected
+					margin-top: 0px
+					padding-top: 8px
+					border-top: solid 4px $nav-selected-color
+					
+					a
+						color: $nav-selected-color
+						font-weight: $nav-selected-weight
+
+img
+	display: block
+	
+p
+	margin: 0px 0px 12px 0px
+	
+	a
+		&:hover
+			text-decoration: underline
+	
+.project_thumb
+	+float-left
+	position: relative
+	width: 200px
+	margin: 0px 33px 50px 0px
+	
+	.color_blocks
+		position: absolute
+		width: 100%
+		height: 10px
+		cursor: pointer
+		cursor: hand
+	
+		.color_block
+			+float-left
+			height: 100%
+			
+	.metadata
+		position: absolute
+		clear: both
+		padding: 10px 0px 0px 0px
+		width: 100%
+		background: $background-color
+		font-weight: $thumbnail-title-weight
+		
+		.title
+			+float-left
+			
+			a
+				color: $text-color
+		
+		.type
+			+float-right
+			font-size: 0.8em
+			font-style: italic
+			line-height: 1.4em
+			color: $tag-color
+			
+.projects
+	clear: both
+	margin: 0px 0px 40px 0px
+			
+.project
+	+float-left
+	margin: 0px 0px 40px 0px
+	min-width: 930px
+	
+	.container
+		+float-left
+		width: 600px
+
+		.viewport
+			+float-left
+			position: relative
+		
+			.images
+				.image
+					display: none
+				
+				.selected
+					display: block
+		
+			.prev
+				background: url("/images/assets/spacer.gif") repeat scroll 0 0 transparent
+				position: absolute
+				left: 0
+				top: 0
+				width: 50%
+				height: 100%
+			
+				.arrow
+					background: url("/images/assets/prev_arrow_lg.gif") no-repeat scroll 0 0 transparent
+					position: absolute
+					display: none
+					left: 30%
+					top: 50%
+					width: 60px
+					height: 90px
+					margin: -45px 0px 0px 0px
+			
+			.next
+				@extend .prev
+				left: 50%
+			
+				.arrow
+					background: url("/images/assets/next_arrow_lg.gif") no-repeat scroll 0 0 transparent
+					position: absolute
+					display: none
+					left: auto
+					right: 30%
+					top: 50%
+					width: 60px
+					height: 90px
+					margin: -45px 0px 0px 0px
+		
+	.metadata
+		+float-left
+		width: 300px
+		margin: 0px 0px 0px 30px
+	
+		h2
+			font:
+				family: $header-font
+				size: 2.25em
+				weight: $header-weight
+				
+			margin: -6px 0px 13px 0px
+			
+		.thumbs
+			margin: 30px 0px 0px 0px
+			
+			.thumb
+				+float-left
+				position: relative
+				margin: 0px 3px 3px 0px
+				
+				.overlay
+					position: absolute
+					left: 0px
+					top: 0px
+					width: 40px
+					height: 40px
+				
+			.unselected .overlay
+				display: none
+			
+			.selected .overlay
+				display: block
+				background: url("/images/assets/sm_thumb_selected.gif") no-repeat scroll 0 0 transparent

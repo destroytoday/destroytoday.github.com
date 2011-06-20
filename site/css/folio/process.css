@@ -1,4 +1,4 @@
-/* line 17, ../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,173 +20,173 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, ../../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 115, ../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 115, ../../../../../../.rvm/gems/ruby-1.8.7-p334/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 33, ../../src/_css/_master.sass */
+/* line 33, ../../../src/_css/_master.sass */
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   font-size: 1em;
   font-weight: 300;
-  color: #333333;
-  background: white;
+  color: #eeeeee;
+  background: #222222;
   margin: 0px 80px 0px 80px;
 }
 
-/* line 42, ../../src/_css/_master.sass */
+/* line 42, ../../../src/_css/_master.sass */
 ::selection {
   color: white;
   background: #007998;
 }
 
-/* line 46, ../../src/_css/_master.sass */
+/* line 46, ../../../src/_css/_master.sass */
 ::-moz-selection {
   color: white;
   background: #007998;
 }
 
-/* line 51, ../../src/_css/_master.sass */
+/* line 51, ../../../src/_css/_master.sass */
 #_l {
   display: none;
 }
 
-/* line 54, ../../src/_css/_master.sass */
+/* line 54, ../../../src/_css/_master.sass */
 #_d {
   width: 660px;
 }
-/* line 57, ../../src/_css/_master.sass */
+/* line 57, ../../../src/_css/_master.sass */
 #_d li {
   display: inline;
   float: left;
 }
 
-/* line 60, ../../src/_css/_master.sass */
+/* line 60, ../../../src/_css/_master.sass */
 a {
   color: #007998;
   text-decoration: none;
 }
 
-/* line 64, ../../src/_css/_master.sass */
+/* line 64, ../../../src/_css/_master.sass */
 #page {
   margin: 0px auto 0px auto;
   width: 900px;
 }
 
-/* line 68, ../../src/_css/_master.sass */
+/* line 68, ../../../src/_css/_master.sass */
 #header {
   clear: both;
   height: 72px;
 }
-/* line 72, ../../src/_css/_master.sass */
+/* line 72, ../../../src/_css/_master.sass */
 #header #identity {
   display: inline;
   float: left;
   margin: 12px 0px 0px 0px;
 }
-/* line 76, ../../src/_css/_master.sass */
+/* line 76, ../../../src/_css/_master.sass */
 #header #identity h1 {
   font-family: "museo-sans-1", "museo-sans-2", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
-/* line 81, ../../src/_css/_master.sass */
+/* line 81, ../../../src/_css/_master.sass */
 #header #identity h1 a.destroy {
-  color: #333333;
+  color: #eeeeee;
 }
-/* line 84, ../../src/_css/_master.sass */
+/* line 84, ../../../src/_css/_master.sass */
 #header #identity h1 a.today {
   margin-left: 0.063em;
   color: #007998;
 }
-/* line 88, ../../src/_css/_master.sass */
+/* line 88, ../../../src/_css/_master.sass */
 #header #navigation {
   display: inline;
   float: right;
   font-family: "museo-sans-1", "museo-sans-2", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
 }
-/* line 93, ../../src/_css/_master.sass */
+/* line 93, ../../../src/_css/_master.sass */
 #header #navigation ul li {
   display: inline;
   float: left;
   margin: 12px 8px 0px 0px;
   font-size: 0.75em;
 }
-/* line 98, ../../src/_css/_master.sass */
+/* line 98, ../../../src/_css/_master.sass */
 #header #navigation ul li a {
-  color: #333333;
-  font-weight: 500;
-}
-/* line 102, ../../src/_css/_master.sass */
-#header #navigation ul li a:hover {
   color: #007998;
+  font-weight: 300;
 }
-/* line 105, ../../src/_css/_master.sass */
+/* line 102, ../../../src/_css/_master.sass */
+#header #navigation ul li a:hover {
+  color: white;
+}
+/* line 105, ../../../src/_css/_master.sass */
 #header #navigation ul li.selected {
   margin-top: 0px;
   padding-top: 8px;
-  border-top: solid 4px #007998;
+  border-top: solid 4px white;
 }
-/* line 110, ../../src/_css/_master.sass */
+/* line 110, ../../../src/_css/_master.sass */
 #header #navigation ul li.selected a {
-  color: #007998;
-  font-weight: 700;
+  color: white;
+  font-weight: 300;
 }
 
-/* line 114, ../../src/_css/_master.sass */
+/* line 114, ../../../src/_css/_master.sass */
 img {
   display: block;
 }
 
-/* line 117, ../../src/_css/_master.sass */
+/* line 117, ../../../src/_css/_master.sass */
 p {
   margin: 0px 0px 12px 0px;
 }
-/* line 121, ../../src/_css/_master.sass */
+/* line 121, ../../../src/_css/_master.sass */
 p a:hover {
   text-decoration: underline;
 }
 
-/* line 124, ../../src/_css/_master.sass */
+/* line 124, ../../../src/_css/_master.sass */
 .project_thumb {
   display: inline;
   float: left;
@@ -194,7 +194,7 @@ p a:hover {
   width: 200px;
   margin: 0px 33px 50px 0px;
 }
-/* line 130, ../../src/_css/_master.sass */
+/* line 130, ../../../src/_css/_master.sass */
 .project_thumb .color_blocks {
   position: absolute;
   width: 100%;
@@ -202,74 +202,74 @@ p a:hover {
   cursor: pointer;
   cursor: hand;
 }
-/* line 137, ../../src/_css/_master.sass */
+/* line 137, ../../../src/_css/_master.sass */
 .project_thumb .color_blocks .color_block {
   display: inline;
   float: left;
   height: 100%;
 }
-/* line 141, ../../src/_css/_master.sass */
+/* line 141, ../../../src/_css/_master.sass */
 .project_thumb .metadata {
   position: absolute;
   clear: both;
   padding: 10px 0px 0px 0px;
   width: 100%;
-  background: white;
-  font-weight: 500;
+  background: #222222;
+  font-weight: 300;
 }
-/* line 149, ../../src/_css/_master.sass */
+/* line 149, ../../../src/_css/_master.sass */
 .project_thumb .metadata .title {
   display: inline;
   float: left;
 }
-/* line 152, ../../src/_css/_master.sass */
+/* line 152, ../../../src/_css/_master.sass */
 .project_thumb .metadata .title a {
-  color: #333333;
+  color: #eeeeee;
 }
-/* line 155, ../../src/_css/_master.sass */
+/* line 155, ../../../src/_css/_master.sass */
 .project_thumb .metadata .type {
   display: inline;
   float: right;
   font-size: 0.8em;
   font-style: italic;
   line-height: 1.4em;
-  color: #999999;
+  color: #666666;
 }
 
-/* line 162, ../../src/_css/_master.sass */
+/* line 162, ../../../src/_css/_master.sass */
 .projects {
   clear: both;
   margin: 0px 0px 40px 0px;
 }
 
-/* line 166, ../../src/_css/_master.sass */
+/* line 166, ../../../src/_css/_master.sass */
 .project {
   display: inline;
   float: left;
   margin: 0px 0px 40px 0px;
   min-width: 930px;
 }
-/* line 171, ../../src/_css/_master.sass */
+/* line 171, ../../../src/_css/_master.sass */
 .project .container {
   display: inline;
   float: left;
   width: 600px;
 }
-/* line 175, ../../src/_css/_master.sass */
+/* line 175, ../../../src/_css/_master.sass */
 .project .container .viewport {
   display: inline;
   float: left;
   position: relative;
 }
-/* line 180, ../../src/_css/_master.sass */
+/* line 180, ../../../src/_css/_master.sass */
 .project .container .viewport .images .image {
   display: none;
 }
-/* line 183, ../../src/_css/_master.sass */
+/* line 183, ../../../src/_css/_master.sass */
 .project .container .viewport .images .selected {
   display: block;
 }
-/* line 186, ../../src/_css/_master.sass */
+/* line 186, ../../../src/_css/_master.sass */
 .project .container .viewport .prev, .project .container .viewport .next {
   background: url("/images/assets/spacer.gif") repeat scroll 0 0 transparent;
   position: absolute;
@@ -278,7 +278,7 @@ p a:hover {
   width: 50%;
   height: 100%;
 }
-/* line 194, ../../src/_css/_master.sass */
+/* line 194, ../../../src/_css/_master.sass */
 .project .container .viewport .prev .arrow, .project .container .viewport .next .arrow {
   background: url("/images/assets/prev_arrow_lg.gif") no-repeat scroll 0 0 transparent;
   position: absolute;
@@ -289,11 +289,11 @@ p a:hover {
   height: 90px;
   margin: -45px 0px 0px 0px;
 }
-/* line 204, ../../src/_css/_master.sass */
+/* line 204, ../../../src/_css/_master.sass */
 .project .container .viewport .next {
   left: 50%;
 }
-/* line 208, ../../src/_css/_master.sass */
+/* line 208, ../../../src/_css/_master.sass */
 .project .container .viewport .next .arrow {
   background: url("/images/assets/next_arrow_lg.gif") no-repeat scroll 0 0 transparent;
   position: absolute;
@@ -305,32 +305,32 @@ p a:hover {
   height: 90px;
   margin: -45px 0px 0px 0px;
 }
-/* line 219, ../../src/_css/_master.sass */
+/* line 219, ../../../src/_css/_master.sass */
 .project .metadata {
   display: inline;
   float: left;
   width: 300px;
   margin: 0px 0px 0px 30px;
 }
-/* line 224, ../../src/_css/_master.sass */
+/* line 224, ../../../src/_css/_master.sass */
 .project .metadata h2 {
   font-family: "museo-sans-1", "museo-sans-2", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   font-size: 2.25em;
-  font-weight: 700;
+  font-weight: 300;
   margin: -6px 0px 13px 0px;
 }
-/* line 232, ../../src/_css/_master.sass */
+/* line 232, ../../../src/_css/_master.sass */
 .project .metadata .thumbs {
   margin: 30px 0px 0px 0px;
 }
-/* line 235, ../../src/_css/_master.sass */
+/* line 235, ../../../src/_css/_master.sass */
 .project .metadata .thumbs .thumb {
   display: inline;
   float: left;
   position: relative;
   margin: 0px 3px 3px 0px;
 }
-/* line 240, ../../src/_css/_master.sass */
+/* line 240, ../../../src/_css/_master.sass */
 .project .metadata .thumbs .thumb .overlay {
   position: absolute;
   left: 0px;
@@ -338,11 +338,11 @@ p a:hover {
   width: 40px;
   height: 40px;
 }
-/* line 247, ../../src/_css/_master.sass */
+/* line 247, ../../../src/_css/_master.sass */
 .project .metadata .thumbs .unselected .overlay {
   display: none;
 }
-/* line 250, ../../src/_css/_master.sass */
+/* line 250, ../../../src/_css/_master.sass */
 .project .metadata .thumbs .selected .overlay {
   display: block;
   background: url("/images/assets/sm_thumb_selected.gif") no-repeat scroll 0 0 transparent;
