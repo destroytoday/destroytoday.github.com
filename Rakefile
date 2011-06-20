@@ -1,5 +1,3 @@
-desc "Launch preview environment"
-
 task :default => [:compress, :jekyll, :compass, :tidy]
 
 task :compress do
@@ -21,4 +19,8 @@ end
 
 task :tidy do
 	system("for i in ./site/*.html; do [ -e $i ] && tidy -imqcb ${i}; done")
+end
+
+task :deploy do
+	system("git push beanstalk master")
 end

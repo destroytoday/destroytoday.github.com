@@ -71,122 +71,123 @@ body {
   font-weight: 300;
   color: #eeeeee;
   background: #222222;
-  margin: 0px 80px 0px 80px;
+  margin: 0px 0px 0px 0px;
+  min-width: 980px;
 }
 
-/* line 42, ../../../src/_css/_master.sass */
+/* line 43, ../../../src/_css/_master.sass */
 ::selection {
   color: white;
   background: #007998;
 }
 
-/* line 46, ../../../src/_css/_master.sass */
+/* line 47, ../../../src/_css/_master.sass */
 ::-moz-selection {
   color: white;
   background: #007998;
 }
 
-/* line 51, ../../../src/_css/_master.sass */
+/* line 52, ../../../src/_css/_master.sass */
 #_l {
   display: none;
 }
 
-/* line 54, ../../../src/_css/_master.sass */
+/* line 55, ../../../src/_css/_master.sass */
 #_d {
   width: 660px;
 }
-/* line 57, ../../../src/_css/_master.sass */
+/* line 58, ../../../src/_css/_master.sass */
 #_d li {
   display: inline;
   float: left;
 }
 
-/* line 60, ../../../src/_css/_master.sass */
+/* line 61, ../../../src/_css/_master.sass */
 a {
   color: #007998;
   text-decoration: none;
 }
 
-/* line 64, ../../../src/_css/_master.sass */
+/* line 65, ../../../src/_css/_master.sass */
 #page {
   margin: 0px auto 0px auto;
   width: 900px;
 }
 
-/* line 68, ../../../src/_css/_master.sass */
+/* line 69, ../../../src/_css/_master.sass */
 #header {
   clear: both;
   height: 72px;
 }
-/* line 72, ../../../src/_css/_master.sass */
+/* line 73, ../../../src/_css/_master.sass */
 #header #identity {
   display: inline;
   float: left;
   margin: 12px 0px 0px 0px;
 }
-/* line 76, ../../../src/_css/_master.sass */
+/* line 77, ../../../src/_css/_master.sass */
 #header #identity h1 {
   font-family: "museo-sans-1", "museo-sans-2", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   font-weight: 500;
 }
-/* line 81, ../../../src/_css/_master.sass */
+/* line 82, ../../../src/_css/_master.sass */
 #header #identity h1 a.destroy {
   color: #eeeeee;
 }
-/* line 84, ../../../src/_css/_master.sass */
+/* line 85, ../../../src/_css/_master.sass */
 #header #identity h1 a.today {
   margin-left: 0.063em;
   color: #007998;
 }
-/* line 88, ../../../src/_css/_master.sass */
+/* line 89, ../../../src/_css/_master.sass */
 #header #navigation {
   display: inline;
   float: right;
   font-family: "museo-sans-1", "museo-sans-2", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
 }
-/* line 93, ../../../src/_css/_master.sass */
+/* line 94, ../../../src/_css/_master.sass */
 #header #navigation ul li {
   display: inline;
   float: left;
   margin: 12px 8px 0px 0px;
   font-size: 0.75em;
 }
-/* line 98, ../../../src/_css/_master.sass */
+/* line 99, ../../../src/_css/_master.sass */
 #header #navigation ul li a {
   color: #007998;
   font-weight: 300;
 }
-/* line 102, ../../../src/_css/_master.sass */
+/* line 103, ../../../src/_css/_master.sass */
 #header #navigation ul li a:hover {
   color: white;
 }
-/* line 105, ../../../src/_css/_master.sass */
+/* line 106, ../../../src/_css/_master.sass */
 #header #navigation ul li.selected {
   margin-top: 0px;
   padding-top: 8px;
   border-top: solid 4px white;
 }
-/* line 110, ../../../src/_css/_master.sass */
+/* line 111, ../../../src/_css/_master.sass */
 #header #navigation ul li.selected a {
   color: white;
   font-weight: 300;
 }
 
-/* line 114, ../../../src/_css/_master.sass */
+/* line 115, ../../../src/_css/_master.sass */
 img {
   display: block;
 }
 
-/* line 117, ../../../src/_css/_master.sass */
+/* line 118, ../../../src/_css/_master.sass */
 p {
   margin: 0px 0px 12px 0px;
 }
-/* line 121, ../../../src/_css/_master.sass */
+/* line 122, ../../../src/_css/_master.sass */
 p a:hover {
   text-decoration: underline;
 }
 
-/* line 124, ../../../src/_css/_master.sass */
+/* line 125, ../../../src/_css/_master.sass */
 .project_thumb {
   display: inline;
   float: left;
@@ -194,7 +195,7 @@ p a:hover {
   width: 200px;
   margin: 0px 33px 50px 0px;
 }
-/* line 130, ../../../src/_css/_master.sass */
+/* line 131, ../../../src/_css/_master.sass */
 .project_thumb .color_blocks {
   position: absolute;
   width: 100%;
@@ -202,13 +203,13 @@ p a:hover {
   cursor: pointer;
   cursor: hand;
 }
-/* line 137, ../../../src/_css/_master.sass */
+/* line 138, ../../../src/_css/_master.sass */
 .project_thumb .color_blocks .color_block {
   display: inline;
   float: left;
   height: 100%;
 }
-/* line 141, ../../../src/_css/_master.sass */
+/* line 142, ../../../src/_css/_master.sass */
 .project_thumb .metadata {
   position: absolute;
   clear: both;
@@ -217,16 +218,16 @@ p a:hover {
   background: #222222;
   font-weight: 300;
 }
-/* line 149, ../../../src/_css/_master.sass */
+/* line 150, ../../../src/_css/_master.sass */
 .project_thumb .metadata .title {
   display: inline;
   float: left;
 }
-/* line 152, ../../../src/_css/_master.sass */
+/* line 153, ../../../src/_css/_master.sass */
 .project_thumb .metadata .title a {
   color: #eeeeee;
 }
-/* line 155, ../../../src/_css/_master.sass */
+/* line 156, ../../../src/_css/_master.sass */
 .project_thumb .metadata .type {
   display: inline;
   float: right;
@@ -236,40 +237,40 @@ p a:hover {
   color: #666666;
 }
 
-/* line 162, ../../../src/_css/_master.sass */
+/* line 163, ../../../src/_css/_master.sass */
 .projects {
   clear: both;
   margin: 0px 0px 40px 0px;
 }
 
-/* line 166, ../../../src/_css/_master.sass */
+/* line 167, ../../../src/_css/_master.sass */
 .project {
   display: inline;
   float: left;
   margin: 0px 0px 40px 0px;
-  min-width: 930px;
+  min-width: 900px;
 }
-/* line 171, ../../../src/_css/_master.sass */
+/* line 172, ../../../src/_css/_master.sass */
 .project .container {
   display: inline;
   float: left;
   width: 600px;
 }
-/* line 175, ../../../src/_css/_master.sass */
+/* line 176, ../../../src/_css/_master.sass */
 .project .container .viewport {
   display: inline;
   float: left;
   position: relative;
 }
-/* line 180, ../../../src/_css/_master.sass */
+/* line 181, ../../../src/_css/_master.sass */
 .project .container .viewport .images .image {
   display: none;
 }
-/* line 183, ../../../src/_css/_master.sass */
+/* line 184, ../../../src/_css/_master.sass */
 .project .container .viewport .images .selected {
   display: block;
 }
-/* line 186, ../../../src/_css/_master.sass */
+/* line 187, ../../../src/_css/_master.sass */
 .project .container .viewport .prev, .project .container .viewport .next {
   background: url("/images/assets/spacer.gif") repeat scroll 0 0 transparent;
   position: absolute;
@@ -278,7 +279,7 @@ p a:hover {
   width: 50%;
   height: 100%;
 }
-/* line 194, ../../../src/_css/_master.sass */
+/* line 195, ../../../src/_css/_master.sass */
 .project .container .viewport .prev .arrow, .project .container .viewport .next .arrow {
   background: url("/images/assets/prev_arrow_lg.gif") no-repeat scroll 0 0 transparent;
   position: absolute;
@@ -289,11 +290,11 @@ p a:hover {
   height: 90px;
   margin: -45px 0px 0px 0px;
 }
-/* line 204, ../../../src/_css/_master.sass */
+/* line 205, ../../../src/_css/_master.sass */
 .project .container .viewport .next {
   left: 50%;
 }
-/* line 208, ../../../src/_css/_master.sass */
+/* line 209, ../../../src/_css/_master.sass */
 .project .container .viewport .next .arrow {
   background: url("/images/assets/next_arrow_lg.gif") no-repeat scroll 0 0 transparent;
   position: absolute;
@@ -305,32 +306,32 @@ p a:hover {
   height: 90px;
   margin: -45px 0px 0px 0px;
 }
-/* line 219, ../../../src/_css/_master.sass */
+/* line 220, ../../../src/_css/_master.sass */
 .project .metadata {
   display: inline;
   float: left;
   width: 300px;
   margin: 0px 0px 0px 30px;
 }
-/* line 224, ../../../src/_css/_master.sass */
+/* line 225, ../../../src/_css/_master.sass */
 .project .metadata h2 {
   font-family: "museo-sans-1", "museo-sans-2", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   font-size: 2.25em;
   font-weight: 300;
   margin: -6px 0px 13px 0px;
 }
-/* line 232, ../../../src/_css/_master.sass */
+/* line 233, ../../../src/_css/_master.sass */
 .project .metadata .thumbs {
   margin: 30px 0px 0px 0px;
 }
-/* line 235, ../../../src/_css/_master.sass */
+/* line 236, ../../../src/_css/_master.sass */
 .project .metadata .thumbs .thumb {
   display: inline;
   float: left;
   position: relative;
   margin: 0px 3px 3px 0px;
 }
-/* line 240, ../../../src/_css/_master.sass */
+/* line 241, ../../../src/_css/_master.sass */
 .project .metadata .thumbs .thumb .overlay {
   position: absolute;
   left: 0px;
@@ -338,11 +339,11 @@ p a:hover {
   width: 40px;
   height: 40px;
 }
-/* line 247, ../../../src/_css/_master.sass */
+/* line 248, ../../../src/_css/_master.sass */
 .project .metadata .thumbs .unselected .overlay {
   display: none;
 }
-/* line 250, ../../../src/_css/_master.sass */
+/* line 251, ../../../src/_css/_master.sass */
 .project .metadata .thumbs .selected .overlay {
   display: block;
   background: url("/images/assets/sm_thumb_selected.gif") no-repeat scroll 0 0 transparent;
