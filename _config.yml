@@ -1,5 +1,4 @@
 source: ./src
 destination: ./site
 permalink: /:categories/:title
-markdown: rdiscount
 sections: [about, blog, folio, lab, contact]

@@ -6,19 +6,11 @@
 		
 		<link href="/css/folio/destroytwitter.css" rel="stylesheet" type="text/css" />
 		
-		
-		<script src="/js/jquery-1.5.2.min.js" type="text/javascript"></script>
-		<script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
-		<script src="/js/jquery.hashchange.min.js" type="text/javascript"></script>
-		<script src="/js/jquery.destroytoday.min.js" type="text/javascript"></script>
-		<!--[if lte IE 6]><script src="/js/ie6warning.js" type="text/javascript"></script><script type="text/javascript">window.onload=function(){e("/images/assets/ie6warning/")}</script><![endif]-->
-		<script type="text/javascript" src="http://use.typekit.com/aeu3zes.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
 	
 	<body>
 		<div id="page">
-			<div id="header">
+			<div id="top">
 			  <div id="identity">
 	  			<h1>
 	  				<a href="/" class="destroy">destroy</a><a href="/" class="today">today</a>
@@ -50,11 +42,40 @@
 					</ul>
 				</div>
 			</div>
-			<div id="destroytwitter">
-  <div id="header"></div>
+			<div class='container_4' id='destroytwitter'>
+  <div class='grid_4' id='header'></div>
+  <div class='alpha grid_2'>
+    <p>When I first signed up for Twitter in 2008, I didn't see the point. Why would I want to know what people were doing? After a few months, I looked into it again, but this time I discovered its value as a networking tool. I could easily and casually engage with others in the design/dev community, even if they are leaps and bounds above me.</p>
+  </div>
+  <div class='omega grid_2'>
+    <p>Completely turned off by the Twitter website, I tried a few of the available apps that utilized its API. None of them felt right to me. The ones that looked great didn't have great features. And the ones with great features didn't look great. Because of this, I decided to make my own Twitter app, <a href="http://destroytwitter.com">DestroyTwitter</a>.</p>
+  </div>
+  <div class='alpha grid_2' id='lightweight_img'></div>
+  <div class='omega grid_2'>
+    <div id='lightweight_text'>
+      <p>I consider Twitter to be a background service, like instant messaging, so I focused heavily on an intuitive UX. Users should be able to tweet and get back to business in a matter of seconds. Better yet, they should be able to do so without even touching the mouse.</p>
+      
+      <p>Because a Twitter app is persistent, open for hours or even days at a time, performance is key. I used every trick in the book to keep memory and CPU usage as low as possible. Even though it runs on AIR, it rivals native apps in terms of performance.</p>
+    </div>
+  </div>
+  <div class='alpha grid_2'>
+    <div id='filters_text'>
+      <p>Once I implemented the expected features (tweeting, streaming, etc), I started adding features that I found useful. Tired of event tweeters and check-in services, I developed filtering. It allows users to hide tweets based on their user, source, or keywords. Filtering also provides users with a drama-free way to unfollow people.</p>
+      
+      <p>Along with filtering, I added other features that were new to Twitter apps. Auto-completing usernames introduced a dead simple way to reference users without the need to memorize the exact spelling. In-app image viewing let users see linked photos without opening a new browser window. These features help users tweet efficiently and consume content easily.</p>
+    </div>
+  </div>
+  <div class='omega grid_2' id='filters_img'></div>
 </div>
 
-
 		</div>
+		
+		<script src="/js/jquery-1.5.2.min.js" type="text/javascript"></script>
+		<script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
+		<script src="/js/jquery.hashchange.min.js" type="text/javascript"></script>
+		<script src="/js/jquery.destroytoday.min.js" type="text/javascript"></script>
+		<!--[if lte IE 6]><script src="/js/ie6warning.js" type="text/javascript"></script><script type="text/javascript">window.onload=function(){e("/images/assets/ie6warning/")}</script><![endif]-->
+		<script type="text/javascript" src="http://use.typekit.com/aeu3zes.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</body>
 </html>

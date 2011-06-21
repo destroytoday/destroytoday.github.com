@@ -22,7 +22,7 @@ $tag-color: #999 !default
 $link-color: #007998 !default
 $link-hover-color: #007998 !default
 
-$nav-font: $identity-font !default
+$nav-font: "Helvetica Neue", sans-serif !default
 $nav-color: #333 !default
 $nav-weight: 500 !default
 $nav-selected-color: #007998 !default
@@ -57,18 +57,33 @@ body
 	
 	li
 		+float-left
+		
+img
+	display: block
+
+p
+	font-size: 0.875em
+	line-height: 1.375em
+	margin: 0px 0px 12px 0px
+
+	a:hover
+		text-decoration: underline
 	
 a
 	color: $link-color
 	text-decoration: none
 	
+.vertically_centered
+	display: table-cell
+	vertical-align: middle
+	
 #page
 	margin: 0px auto 0px auto
 	width: 900px
 	
-#header
+#top
 	clear: both
-	height: 72px
+	height: 42px
 
 	#identity
 		+float-left
@@ -112,16 +127,6 @@ a
 						color: $nav-selected-color
 						font-weight: $nav-selected-weight
 
-img
-	display: block
-	
-p
-	margin: 0px 0px 12px 0px
-	
-	a
-		&:hover
-			text-decoration: underline
-	
 .project_thumb
 	+float-left
 	position: relative
@@ -161,8 +166,9 @@ p
 			color: $tag-color
 			
 .projects
+	+clearfix
 	clear: both
-	margin: 0px 0px 40px 0px
+	margin: 30px 0px 40px 0px
 			
 .project
 	+float-left
@@ -251,3 +257,117 @@ p
 			.selected .overlay
 				display: block
 				background: url("/images/assets/sm_thumb_selected.gif") no-repeat scroll 0 0 transparent
+				
+//--------------------------------------
+//  Grid
+//--------------------------------------
+
+//
+//	Variable Grid System.
+//	Learn more ~ http://www.spry-soft.com/grids/
+//	Based on 960 Grid System - http://960.gs/
+//
+//	Licensed under GPL and MIT.
+//
+
+.container_4 
+	margin-left: auto
+	margin-right: auto
+	width: 900px
+
+.grid_1,
+.grid_2,
+.grid_3
+	display: inline
+	float: left
+	position: relative
+	margin-left: 16px
+	margin-right: 17px
+	
+.grid_4
+	@extend .grid_3
+	@extend .alpha
+	@extend .omega
+	
+.alpha 
+	margin-left: 0
+
+.omega 
+	margin-right: 0
+
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4 
+	position: relative
+
+.container_4 .grid_1 
+	width: 200px
+
+.container_4 .grid_2 
+	width: 433px
+
+.container_4 .grid_3 
+	width: 666px
+
+.container_4 .grid_4 
+	width: 899px
+
+.container_4 .prefix_1 
+	padding-left: 233px
+
+.container_4 .prefix_2 
+	padding-left: 466px
+
+.container_4 .prefix_3 
+	padding-left: 699px
+
+.container_4 .suffix_1 
+	padding-right: 233px
+
+.container_4 .suffix_2 
+	padding-right: 466px
+
+.container_4 .suffix_3 
+	padding-right: 699px
+
+.container_4 .push_1 
+	left: 233px
+
+.container_4 .push_2 
+	left: 466px
+
+.container_4 .push_3 
+	left: 699px
+
+.container_4 .pull_1 
+	left: -233px
+
+.container_4 .pull_2 
+	left: -466px
+
+.container_4 .pull_3 
+	left: -699px
+
+.clear 
+	clear: both
+	display: block
+	overflow: hidden
+	visibility: hidden
+	width: 0px
+	height: 0px
+
+.clearfix:before,
+.clearfix:after 
+	content: '\0020'
+	display: block
+	overflow: hidden
+	visibility: hidden
+	width: 0px
+	height: 0px
+
+.clearfix:after
+	clear: both
+
+.clearfix
+	zoom: 1
