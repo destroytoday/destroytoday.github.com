@@ -20,6 +20,9 @@ $nav-weight: 300
 $nav-selected-color: #FFF
 $nav-selected-weight: 300
 
+$footer-color: #666
+$footer-weight: 300
+
 $thumbnail-title-weight: 300
 
 @import "master"
@@ -43,5 +46,13 @@ $thumbnail-title-weight: 300
 		height: 340px
 
 	#filters_text
+		@extend .vertically_centered
+		height:  340px
+		
+	#preferences_img
+		background: url("/images/folio/destroytwitter/destroytwitter_preferences.png") no-repeat scroll 0 0
+		height: 340px
+
+	#preferences_text
 		@extend .vertically_centered
 		height:  340px

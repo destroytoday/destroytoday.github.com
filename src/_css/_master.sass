@@ -28,6 +28,9 @@ $nav-weight: 500 !default
 $nav-selected-color: #007998 !default
 $nav-selected-weight: 700 !default
 
+$footer-color: #999 !default
+$footer-weight: 500 !default
+
 $thumbnail-title-weight: 500 !default
 
 body
@@ -72,6 +75,7 @@ p
 a
 	color: $link-color
 	text-decoration: none
+	outline: none
 	
 .vertically_centered
 	display: table-cell
@@ -104,12 +108,12 @@ a
 	#navigation
 		+float-right
 		font-family: $nav-font
+		font-size: 0.75em
 	
 		ul
 			li
 				+float-left
 				margin: 12px 8px 0px 0px
-				font-size: 0.75em
 				
 				a
 					color: $nav-color
@@ -126,6 +130,19 @@ a
 					a
 						color: $nav-selected-color
 						font-weight: $nav-selected-weight
+						
+#content
+	+clearfix
+	min-height: 500px
+
+#footer
+	clear: both
+	font:
+		weight: $footer-weight
+		size: 0.75em
+	color: $footer-color
+	margin: 80px 0px 20px 0px
+	text-align: center
 
 .project_thumb
 	+float-left
@@ -165,7 +182,7 @@ a
 			line-height: 1.4em
 			color: $tag-color
 			
-.projects
+#projects
 	+clearfix
 	clear: both
 	margin: 30px 0px 40px 0px
