@@ -10,6 +10,3 @@ AddOutputFilterByType DEFLATE application/x-javascript
 
 FileETag none
 
-Options +FollowSymlinks
-RewriteEngine on
-RewriteRule ^([^./]+)/?$ $1.html [L]
