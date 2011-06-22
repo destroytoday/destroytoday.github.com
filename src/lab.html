@@ -3,4 +3,7 @@ layout: default
 title: Lab
 category: lab
 ---
-I experiment here.
+{% for project in site.categories.lab %}
+{% include project_thumb.html %}
+{% endfor %}
+<div class="clear"> </div>
