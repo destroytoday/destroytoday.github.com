@@ -5,33 +5,34 @@
 
 // variables
 $background-color: #FFF !default
-$text-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif !default
+$text-font: Verdana, sans-serif !default
 $text-color: #333 !default
-$text-weight: 500 !default
+$text-weight: 400 !default
 
-$identity-font: "museo-sans-1", "museo-sans-2", $text-font !default
+$identity-font: "museo-sans-1", "museo-sans-2", "Helvetica Neue", sans-serif !default
 $identity-weight: 700 !default
 $identity-destroy-color: #333 !default
 $identity-today-color: #007998 !default
 
 $header-font: $identity-font !default
-$header-weight: 700 !default
+$header-weight: $identity-weight !default
 $header-color: #333 !default
 $tag-color: #999 !default
 
 $link-color: #007998 !default
 $link-hover-color: #007998 !default
 
-$nav-font: "Helvetica Neue", sans-serif !default
+$nav-font: $text-font !default
 $nav-color: #333 !default
-$nav-weight: 500 !default
+$nav-weight: $text-weight !default
 $nav-selected-color: #007998 !default
-$nav-selected-weight: 700 !default
+$nav-selected-weight: $text-weight !default
 
 $footer-color: #999 !default
-$footer-weight: 500 !default
+$footer-weight: $text-weight !default
 
-$thumbnail-title-weight: 500 !default
+$thumbnail-font: "Helvetica Neue", sans-serif
+$thumbnail-weight: 500 !default
 
 body
 	font:
@@ -65,7 +66,7 @@ img
 	display: block
 
 p
-	font-size: 0.875em
+	font-size: 0.75em
 	line-height: 1.5em
 	margin: 0px 0px 12px 0px
 
@@ -111,7 +112,7 @@ a
 	#navigation
 		+float-right
 		font-family: $nav-font
-		font-size: 0.75em
+		font-size: 0.6875em
 	
 		ul
 			li
@@ -170,7 +171,8 @@ a
 		padding: 10px 0px 0px 0px
 		width: 100%
 		background: $background-color
-		font-weight: $thumbnail-title-weight
+		font-family: $thumbnail-font
+		font-weight: $thumbnail-weight
 		
 		.title
 			+float-left
