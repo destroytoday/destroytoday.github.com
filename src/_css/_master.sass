@@ -3,9 +3,14 @@
 @import "compass/utilities/general/float"
 @import "compass/css3"
 
-// variables
-$background-color: #FFF !default
-$text-font: Verdana, sans-serif !default
+//--------------------------------------------------------------------------
+//
+//  Variables
+//
+//--------------------------------------------------------------------------
+
+$background: #FFF !default
+$text-font: "Lucida Grande", Verdana, sans-serif !default
 $text-color: #333 !default
 $text-weight: 400 !default
 
@@ -22,17 +27,39 @@ $tag-color: #999 !default
 $link-color: #007998 !default
 $link-hover-color: #007998 !default
 
-$nav-font: $text-font !default
+$nav-font: "Helvetica Neue", $text-font !default
 $nav-color: #333 !default
 $nav-weight: $text-weight !default
 $nav-selected-color: #007998 !default
 $nav-selected-weight: $text-weight !default
 
+$arrow-color: $link-color !default
+$arrow-hover-color: $link-hover-color !default
+
 $footer-color: #999 !default
 $footer-weight: $text-weight !default
 
-$thumbnail-font: "Helvetica Neue", sans-serif
-$thumbnail-weight: 500 !default
+$thumbnail-font: "Helvetica Neue", sans-serif !default
+$thumbnail-weight: 400 !default
+
+//--------------------------------------------------------------------------
+//
+//  Mixins
+//
+//--------------------------------------------------------------------------
+
+=transparent-image($img, $width, $height)
+	width: $width
+	height: $height
+	background: url($img) no-repeat
+	_background: none
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$img',sizingMethod='crop')
+
+//--------------------------------------------------------------------------
+//
+//  Styles
+//
+//--------------------------------------------------------------------------
 
 body
 	font:
@@ -40,7 +67,7 @@ body
 		size: 1em
 		weight: $text-weight
 	color: $text-color
-	background: $background-color
+	background: $background
 	margin: 0px 0px 0px 0px
 	min-width: 980px
 	
@@ -85,6 +112,9 @@ a
 .top_margin
 	margin-top: 26px
 	
+.bottom_margin
+	margin-bottom: 26px
+	
 #page
 	margin: 0px auto 0px auto
 	width: 900px
@@ -112,12 +142,12 @@ a
 	#navigation
 		+float-right
 		font-family: $nav-font
-		font-size: 0.6875em
+		font-size: 0.75em
 	
 		ul
 			li
 				+float-left
-				margin: 12px 8px 0px 0px
+				margin: 12px 0px 0px 8px
 				
 				a
 					color: $nav-color
@@ -138,21 +168,44 @@ a
 #content
 	+clearfix
 	min-height: 500px
+	
+	#arrow
+		position: absolute
+		bottom: 50%
+		font:
+			family: "Lucida Grande", "museo-sans-1", "museo-sans-2", sans-serif
+			size: 64px
+			weight: 700
+			
+		a
+			color: $arrow-color
+			
+			&:hover
+				color: $arrow-hover-color
+		
+	#prev
+		@extend #arrow
+		left: 20px
+	
+	#next
+		@extend #arrow
+		right: 20px
 
 #footer
 	clear: both
 	font:
 		weight: $footer-weight
-		size: 0.75em
+		size: 0.625em
 	color: $footer-color
 	margin: 80px 0px 20px 0px
 	text-align: center
 
 .project_thumb
+	@extend .grid_1
 	+float-left
 	position: relative
 	width: 200px
-	margin: 0px 33px 50px 0px
+	margin-bottom: 64px
 	
 	.color_blocks
 		position: absolute
@@ -170,21 +223,22 @@ a
 		clear: both
 		padding: 10px 0px 0px 0px
 		width: 100%
-		background: $background-color
+		background: $background
 		font-family: $thumbnail-font
 		font-weight: $thumbnail-weight
 		
 		.title
 			+float-left
+			font-size: 0.875em
 			
 			a
 				color: $text-color
 		
 		.type
 			+float-right
-			font-size: 0.8em
+			font-size: 0.75em
 			font-style: italic
-			line-height: 1.4em
+			line-height: 1.25em
 			color: $tag-color
 			
 #content

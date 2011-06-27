@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/dev/web/destroytoday.com
+rake

@@ -1,36 +1,6 @@
 ---
 layout: default
 ---
-<div class="project">
-	<div class="container">
-		<div class="viewport">
-			<div class="images">
-				{% assign show = true %}
-				{% for image in page.images %}
-					<div class="image{% if show %} selected{% endif %}"><img src="/images/{{page.category}}/{{page.title | downcase | escape_once}}/{{image}}" /></div>
-					{% assign show = false %}
-				{% endfor %}
-			</div>
-			<div class="prev">
-				<div class="arrow"></div>
-			</div>
-			<div class="next">
-				<div class="arrow"></div>
-			</div>
-		</div>
-	</div>
-	<div class="metadata">
-		<h2>{{page.title}}</h2>
-		<div>{{content}}</div>
-		<div class="thumbs">
-			{% assign selected = true %}
-			{% for image in page.images %}
-				<div class="thumb {% if selected %}selected{% else %}unselected{% endif %}">
-					<a href="#n={{forloop.index | minus:1}}"><img src="/images/{{page.category}}/{{page.title | downcase | escape_once}}/{{image | replace: '_', '_sm_thumb_'}}" width="40" height="40" /></a>
-					<div class="overlay"></div>
-				</div>
-				{% assign selected = false %}
-			{% endfor %}
-		</div>
-	</div>
-</div>
+{{content}}
+{% if page.category == page.next.category %}<div id="prev"><a href="{{page.next.url}}">&lsaquo;</a></div>{% endif %}
+{% if page.category == page.previous.category %}<div id="next"><a href="{{page.previous.url}}">&rsaquo;</a></div>{% endif %}
