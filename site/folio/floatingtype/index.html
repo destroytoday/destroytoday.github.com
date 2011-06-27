@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
-		<title>Destroy Today / Calendar</title>
+		<title>Destroy Today / Floating Type</title>
 		
 		
-		<link href="/css/folio/calendar.css" rel="stylesheet" type="text/css" />
+		<link href="/css/folio/floatingtype.css" rel="stylesheet" type="text/css" />
 		
 	</head>
 	
@@ -44,11 +44,19 @@
 			</div>
 			<div id="content">
 				<div class='container_4' id='calendar'>
-  <div class='grid_4' id='header'></div>
+  <div class='grid_4' id='orange'>
+    <img height='254' src='/images/folio/floatingtype/floatingtype_orange.jpg' width='900' />
+  </div>
+  <div class='grid_4' id='apple'>
+    <img height='254' src='/images/folio/floatingtype/floatingtype_apple.jpg' width='900' />
+  </div>
+  <div class='grid_4' id='cherry'>
+    <img height='254' src='/images/folio/floatingtype/floatingtype_cherry.jpg' width='900' />
+  </div>
 </div>
 
-
-<div id="next"><a href="/folio/floatingtype">&rsaquo;</a></div>
+<div id="prev"><a href="/folio/calendar">&lsaquo;</a></div>
+<div id="next"><a href="/folio/destroytwitter">&rsaquo;</a></div>
 			</div>
 			<div id="footer">
 				copyright &copy; Jonnie Hallman 2005-2011
@@ -63,13 +71,23 @@
 		<script type="text/javascript" src="http://use.typekit.com/aeu3zes.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		
+		<script type="text/javascript">
+			$(document).keyup(function(event)
+			{
+				if (event.keyCode == '37')
+				{
+					window.location = "/folio/calendar"
+				} 
+			});
+		</script>
+		
 		
 		<script type="text/javascript">
 			$(document).keyup(function(event)
 			{
 				if (event.keyCode == '39')
 				{
-					window.location = "/folio/floatingtype"
+					window.location = "/folio/destroytwitter"
 				} 
 			});
 		</script>

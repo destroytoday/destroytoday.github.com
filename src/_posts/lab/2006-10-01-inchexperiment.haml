@@ -9,3 +9,13 @@ thumbnail:
 style: true
 ---
 #inchexperiment.container_4
+  #header.grid_4
+  .grid_4
+    :markdown
+      The Inch Experiment tells the user to click one of four words that describes them, but when the timer starts, it hides their cursor. The user's mouse movement is recorded for ten seconds, then drawn afterwords with red indicating clicks. Each participant's result is saved to a gallery for others to view. As expected, the experiment caused quite a bit of confusion, but once the users discovered the secret, they often retook it to make a drawing, write a message, or create complete chaos.
+  .grid_4
+    %img{:src => "/images{{page.id}}/inchexperiment_instructions.png", :width => 900, :height => 400}
+  {% for i in (0..4) %}
+  .grid_4.top_margin.bottom_margin
+    %img{:src => "/images{{page.id}}/inchexperiment_result_{{i}}.png", :width => 900, :height => 452}
+  {% endfor %}
