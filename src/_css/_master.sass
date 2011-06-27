@@ -91,6 +91,11 @@ body
 		
 img
 	display: block
+	
+h3
+	font-size: 0.75em
+	line-height: 1.5em
+	font-weight: 700
 
 p
 	font-size: 0.75em
@@ -105,9 +110,15 @@ a
 	text-decoration: none
 	outline: none
 	
+	&:hover
+		color: $link-hover-color
+	
 .vertically_centered
 	display: table-cell
 	vertical-align: middle
+	
+.center
+	text-align: center
 	
 .top_margin
 	margin-top: 26px
@@ -190,6 +201,16 @@ a
 	#next
 		@extend #arrow
 		right: 20px
+		
+	ul
+		li
+			font-size: 0.75em
+			line-height: 1.5em
+	
+	.tag
+		font-style: italic
+		color: $tag-color
+		margin: 16px 0px 0px 0px
 
 #footer
 	clear: both
