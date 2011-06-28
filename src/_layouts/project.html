@@ -2,5 +2,6 @@
 layout: default
 ---
 {{content}}
-{% if page.category == page.next.category %}<div id="prev"><a href="{{page.next.url}}">&lsaquo;</a></div>{% endif %}
-{% if page.category == page.previous.category %}<div id="next"><a href="{{page.previous.url}}">&rsaquo;</a></div>{% endif %}
+{% include project_direction.html %}
+{% if next_url %}<div id="prev"><a href="{{next_url}}">&lsaquo;</a></div>{% endif %}
+{% if previous_url %}<div id="next"><a href="{{previous_url}}">&rsaquo;</a></div>{% endif %}

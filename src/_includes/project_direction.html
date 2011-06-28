@@ -1,0 +1,24 @@
+{% assign direction = 'next' %}
+{% for project in site.posts %}
+	{% if project.id == page.id %}
+		{% assign direction = 'previous' %}
+	{% endif %}
+
+	{% if project.id != page.id %}
+	{% if direction == 'next' %}
+	{% if project.categories == page.categories %}
+		{% assign next_url = project.url %}<br/>
+	{% endif %}
+	{% endif %}
+	{% endif %}
+	
+	{% if project.id != page.id %}
+	{% if direction == 'previous' %}
+	{% if project.categories == page.categories %}
+	{% if previous_url == nil %}
+		{% assign previous_url = project.url %}<br/>
+	{% endif %}
+	{% endif %}
+	{% endif %}
+	{% endif %}
+{% endfor %}

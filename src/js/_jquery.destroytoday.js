@@ -57,4 +57,22 @@ $(document).ready(function()
           }
           $(this).html(finalTitle);
 	});
+	
+	function rgb2hex(rgb)
+	{
+		rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+		
+		return ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
+				("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
+				("0" + parseInt(rgb[3],10).toString(16)).slice(-2);
+	}
+	
+	$(".twitter-follow-button").attr('data-text-color', rgb2hex($("body").css('color')));
+	$(".twitter-follow-button").attr('data-link-color', rgb2hex($(".twitter-follow-button").css('color')));
+	
+	var twitterWidgets = document.createElement('script');
+	twitterWidgets.type = 'text/javascript';
+	twitterWidgets.async = true;
+	twitterWidgets.src = 'http://platform.twitter.com/widgets.js'
+	document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
 });
