@@ -7,7 +7,7 @@
 	{% if project.id != page.id %}
 	{% if direction == 'next' %}
 	{% if project.categories == page.categories %}
-		{% assign next_url = project.url %}<br/>
+		{% assign next_url = project.url %}
 	{% endif %}
 	{% endif %}
 	{% endif %}
@@ -16,7 +16,7 @@
 	{% if direction == 'previous' %}
 	{% if project.categories == page.categories %}
 	{% if previous_url == nil %}
-		{% assign previous_url = project.url %}<br/>
+		{% assign previous_url = project.url %}
 	{% endif %}
 	{% endif %}
 	{% endif %}

@@ -27,6 +27,9 @@ $tag-color: #999 !default
 $link-color: #007998 !default
 $link-hover-color: #007998 !default
 
+$selection-text-color: #FFF !default
+$selection-background-color: $link-color !default
+
 $nav-font: "Helvetica Neue", $text-font !default
 $nav-color: #333 !default
 $nav-weight: $text-weight !default
@@ -72,12 +75,12 @@ body
 	min-width: 980px
 	
 ::selection
-	color: #FFF
-	background: $link-color
+	color: $selection-text-color
+	background: $selection-background-color
 
 ::-moz-selection
-	color: #FFF
-	background: $link-color
+	color: $selection-text-color
+	background: $selection-background-color
 	
 // ie6 warning
 #_l
@@ -121,10 +124,13 @@ a
 	text-align: center
 	
 .top_margin
-	margin-top: 26px
+	margin-top: 33px
 	
 .bottom_margin
-	margin-bottom: 26px
+	margin-bottom: 33px
+	
+.caption
+	margin: 8px 0px 25px 0px
 	
 #page
 	margin: 0px auto 0px auto
