@@ -16,6 +16,6 @@ style: true
   .grid_4
     %img{:src => "/images{{page.id}}/inchexperiment_instructions.png", :width => 900, :height => 400}
   {% for i in (0..4) %}
-  .grid_4.top_margin.bottom_margin
+  .grid_4.tm1.bm1
     %img{:src => "/images{{page.id}}/inchexperiment_result_{{i}}.png", :width => 900, :height => 452}
   {% endfor %}

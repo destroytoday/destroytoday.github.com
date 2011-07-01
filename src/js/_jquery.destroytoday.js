@@ -44,20 +44,6 @@ $(document).ready(function()
 		});
 	});
 	
-	$("p").each(function() {
-         var wordArray = $(this).text().split(" ");
-         var finalTitle = "";
-         for (i=0;i<=wordArray.length-1;i++) {
-            finalTitle += wordArray[i];
-            if (i == (wordArray.length-2)) {
-                finalTitle += "&nbsp;";
-            } else {
-                finalTitle += " ";
-            }
-          }
-          $(this).html(finalTitle);
-	});
-	
 	function rgb2hex(rgb)
 	{
 		rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);

@@ -10,6 +10,22 @@ style: true
 ---
 #jpixel.container_4
   #header.grid_4
-  #description.grid_4
+  #description.grid_4.bm1
     :markdown
-      JPixel is a PHP web app that enlarges images using a series dot patterns. I built it in order to generate images that could be printed at a higher resolution, but still retain a degree of sharpness.
+      JPixel is a PHP web app that enlarges images using a series dot patterns. Each pixel is replaced with a 8x8 pixel dot pattern based on the pixel's greyscale value. I built it in order to generate images that could be printed at a higher resolution, but still retain a degree of sharpness. Oddly enough, I almost prefer the results produced by thumbnail images.
+  .clear
+  #source_wrapper
+    #source
+      :markdown
+        [Visit project](http://destroytoday.com/jpixel) + [View source code](https://gist.github.com/1057794)
+  .clear
+  .grid_4.tm1
+    %h3 Examples
+  .grid_1.alpha.tm1
+    %img{:src => "/images{{page.id}}/jpixel_source_jen.jpg", :width => 100, :height => 67}
+  .grid_4.tm2.bm2
+    %img{:src => "/images{{page.id}}/jpixel_result_jen.png", :width => 896, :height => 600}
+  .grid_4.tm1
+    %img{:src => "/images{{page.id}}/jpixel_source_macy.jpg", :width => 896, :height => 600}
+  .grid_4.tm2
+    %img{:src => "/images{{page.id}}/jpixel_result_macy.png", :width => 896, :height => 600}
