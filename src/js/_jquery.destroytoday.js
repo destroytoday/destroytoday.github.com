@@ -44,7 +44,42 @@ $(document).ready(function()
 		});
 	});
 	
-	$('.email').html("<a href=\"mailto:jonnie@destroytoday.com\">jonnie@destroytoday.com</a>");
+	$('.direction').mouseenter(function(event)
+	{
+		var title_wrapper = $(event.currentTarget).children('a').children('.title_wrapper');
+		var title = title_wrapper.children('.title');
+		
+		title_wrapper.stop();
+		title_wrapper.css('visibility', 'visible');
+		
+		title_wrapper.animate(
+		{
+		    'width': title.width()
+		}, 
+		{
+			duration: 350
+		});
+	});
+	
+	$('.direction').mouseleave(function(event)
+	{
+		var title_wrapper = $(event.currentTarget).children('a').children('.title_wrapper');
+		var title = title_wrapper.children('.title');
+	    
+		title_wrapper.stop();
+		
+		title_wrapper.animate(
+		{
+		    'width': 1
+		},
+		{
+			duration: 350,
+			complete: function()
+			{
+			    title_wrapper.css('visibility', 'hidden');
+		    }
+		});
+	});
 	
 	function rgb2hex(rgb)
 	{
@@ -54,6 +89,31 @@ $(document).ready(function()
 				("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
 				("0" + parseInt(rgb[3],10).toString(16)).slice(-2);
 	}
+	
+	/*
+	//Shaun Inman widon't, still need to figure out links
+	function widont(str)
+	{
+	   return str.replace(/([^\s])\s+([^\s<>]+)\s*$/g, '$1&nbsp;$2');
+    }
+    
+    $('p').each(function()
+    {
+        var str = $(this).html();
+        var matchList = str.match(/<(a|img)[^>]*>(.+)<\/\1>/ig);
+        
+        if (matchList)
+    	{	
+    		for (var match in matchList)
+    		{
+    			str = str.replace(match, widont(match));
+    		}
+    	}
+
+    	$(this).html(str);
+    });*/
+    
+	$('.email').html("<a href=\"mailto:jonnie@destroytoday.com\">jonnie@destroytoday.com</a>");
 	
 	$(".twitter-follow-button").attr('data-text-color', rgb2hex($("body").css('color')));
 	$(".twitter-follow-button").attr('data-link-color', rgb2hex($(".twitter-follow-button").css('color')));

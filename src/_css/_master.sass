@@ -52,11 +52,11 @@ $thumbnail-weight: 400 !default
 //--------------------------------------------------------------------------
 
 =transparent-image($img, $width, $height)
-	width: $width
-	height: $height
-	background: url($img) no-repeat
-	_background: none
-	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$img',sizingMethod='crop')
+    width: $width
+    height: $height
+    background: url($img) no-repeat
+    _background: none
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$img',sizingMethod='crop')
 
 //--------------------------------------------------------------------------
 //
@@ -65,394 +65,430 @@ $thumbnail-weight: 400 !default
 //--------------------------------------------------------------------------
 
 body
-	font:
-		family: $text-font
-		size: 1em
-		weight: $text-weight
-	color: $text-color
-	background: $background
-	margin: 0px 0px 0px 0px
-	min-width: 980px
-	
+    font:
+        family: $text-font
+        size: 1em
+        weight: $text-weight
+    color: $text-color
+    background: $background
+    margin: 0px 0px 0px 0px
+    min-width: 980px
+    
+html
+    min-width: 980px
+    
 ::selection
-	color: $selection-text-color
-	background: $selection-background-color
+    color: $selection-text-color
+    background: $selection-background-color
 
 ::-moz-selection
-	color: $selection-text-color
-	background: $selection-background-color
-	
+    color: $selection-text-color
+    background: $selection-background-color
+    
 // ie6 warning
 #_l
-	display: none
-		
+    display: none
+        
 #_d
-	width: 660px
-	
-	li
-		+float-left
-		
+    width: 660px
+    
+    li
+        +float-left
+        
 img
-	display: block
-	
+    display: block
+    
 h2
-	@extend .bm2
-	font-family: $header-font
-	font-size: 3em
-	font-weight: 700
-	
+    @extend .bm2
+    font-family: $header-font
+    font-size: 3em
+    font-weight: 700
+    
 h3
-	font-size: 0.875em
-	line-height: 1.5em
-	font-weight: 700
+    font-size: 0.875em
+    line-height: 1.5em
+    font-weight: 700
 
 p
-	font-size: 0.75em
-	line-height: 1.5em
-	margin: 0px 0px 12px 0px
+    font-size: 0.75em
+    line-height: 1.5em
+    margin: 0px 0px 12px 0px
 
-	a:hover
-		text-decoration: underline
-	
+    a:hover
+        text-decoration: underline
+    
 a
-	color: $link-color
-	text-decoration: none
-	outline: none
-	
-	&:hover
-		color: $link-hover-color
-	
+    color: $link-color
+    text-decoration: none
+    outline: none
+    
+    &:hover
+        color: $link-hover-color
+    
 .vertically_centered
-	display: table-cell
-	vertical-align: middle
-	
+    display: table-cell
+    vertical-align: middle
+    
 .center
-	text-align: center
-	
+    text-align: center
+    
 #gc-number-0
-	color: $link-color
-	text-decoration: none
-	outline: none
-	
-	&:hover
-		text-decoration: underline
-	
+    color: $link-color
+    text-decoration: none
+    outline: none
+    
+    &:hover
+        text-decoration: underline
+    
 .caption
-	margin: 8px 0px 25px 0px
-	
+    margin: 8px 0px 25px 0px
+    
 #page
-	margin: 0px auto 0px auto
-	width: 900px
-	
+    margin: 0px auto 0px auto
+    width: 900px
+    
 #top
-	clear: both
-	height: 42px
+    clear: both
+    height: 42px
 
-	#identity
-		+float-left
-		margin: 12px 0px 0px 0px
-		
-		h1
-			font:
-				family: $identity-font
-				weight: $identity-weight
-		
-			a.destroy
-				color: $identity-destroy-color
-		
-			a.today
-				margin-left: 0.0625em
-				color: $identity-today-color
-		
-	#navigation
-		+float-right
-		font-family: $nav-font
-		font-size: 0.75em
-	
-		ul
-			li
-				+float-left
-				margin: 12px 0px 0px 8px
-				
-				a
-					color: $nav-color
-					font-weight: $nav-weight
-					
-					&:hover
-						color: $nav-selected-color
-				
-				&.selected
-					margin-top: 0px
-					padding-top: 8px
-					border-top: solid 4px $nav-selected-color
-					
-					a
-						color: $nav-selected-color
-						font-weight: $nav-selected-weight
-						
+    #identity
+        +float-left
+        margin: 12px 0px 0px 0px
+        
+        h1
+            font:
+                family: $identity-font
+                weight: $identity-weight
+        
+            a.destroy
+                color: $identity-destroy-color
+        
+            a.today
+                margin-left: 0.0625em
+                color: $identity-today-color
+        
+    #navigation
+        +float-right
+        font-family: $nav-font
+        font-size: 0.75em
+    
+        ul
+            li
+                +float-left
+                margin: 12px 0px 0px 8px
+                
+                a
+                    color: $nav-color
+                    font-weight: $nav-weight
+                    
+                    &:hover
+                        color: $nav-selected-color
+                
+                &.selected
+                    margin-top: 0px
+                    padding-top: 8px
+                    border-top: solid 4px $nav-selected-color
+                    
+                    a
+                        color: $nav-selected-color
+                        font-weight: $nav-selected-weight
+                        
 #content
-	+clearfix
-	min-height: 450px
-	
-	#arrow
-		position: absolute
-		bottom: 50%
-		font:
-			family: "Lucida Grande", "museo-sans-1", "museo-sans-2", sans-serif
-			size: 64px
-			weight: 700
-			
-		a
-			color: $arrow-color
-			
-			&:hover
-				color: $arrow-hover-color
-		
-	#prev
-		@extend #arrow
-		left: 20px
-	
-	#next
-		@extend #arrow
-		right: 20px
-		
-	ul
-		li
-			font-size: 0.75em
-			line-height: 1.5em
-	
-	.tag
-		font-style: italic
-		color: $tag-color
-		margin: 16px 0px 0px 0px
+    +clearfix
+    min-height: 450px
+    
+    #arrow
+        position: absolute
+        bottom: 50%
+    
+        .arrow_wrapper
+            margin-top: -0.45em
+            
+            .arrow
+                font:
+                    family: "Lucida Grande", "museo-sans-1", "museo-sans-2", sans-serif
+                    size: 4em
+                    weight: 700
+
+        .title_wrapper
+            overflow: hidden
+            width: 1px
+            visibility: hidden
+        
+            .title
+                @extend .vertically_centered
+                font-size: 0.75em
+                line-height: 1.5em
+                white-space: nowrap
+                height: 64px
+
+        a
+            color: $arrow-color
+
+            &:hover
+                color: $arrow-hover-color
+        
+    #prev
+        @extend #arrow
+        
+        .arrow_wrapper
+            +float-right
+            margin-left: 10px
+            
+        .title_wrapper
+            +float-left
+        
+        left: 10px
+    
+    #next
+        @extend #arrow
+        
+        .arrow_wrapper
+            +float-left
+            margin-right: 10px
+            
+        .title_wrapper
+            +float-right
+        
+        right: 10px
+        
+    ul
+        li
+            font-size: 0.75em
+            line-height: 1.5em
+    
+    .tag
+        font-style: italic
+        color: $tag-color
+        margin: 16px 0px 0px 0px
 
 #footer
-	+float-left
-	position: relative
-	left: 50%
+    +float-left
+    position: relative
+    left: 50%
 
-	#footer_wrapper
-		position: relative
-		left: -35%
-		
-		#copyright_wrapper
-			+float-left
-			margin: 0px 5px 0px 0px
-	
-			#copyright
-				@extend .vertically_centered
-				height: 20px
-			
-		#twitter_follow_wrapper
-			+float-left
-			
-			#twitter_follow
-				@extend .vertically_centered
-				height: 20px
+    #footer_wrapper
+        position: relative
+        left: -35%
+        
+        #copyright_wrapper
+            +float-left
+            margin: 0px 5px 0px 0px
+    
+            #copyright
+                @extend .vertically_centered
+                height: 20px
+            
+        #twitter_follow_wrapper
+            +float-left
+            
+            #twitter_follow
+                @extend .vertically_centered
+                height: 20px
 
-		+clearfix
-		font:
-			weight: $footer-weight
-			size: 0.625em
-		color: $footer-color
-		margin: 40px auto 20px auto
+        +clearfix
+        font:
+            weight: $footer-weight
+            size: 0.625em
+        color: $footer-color
+        margin: 40px auto 20px auto
 
 .project_thumb
-	@extend .grid_1
-	+float-left
-	position: relative
-	width: 200px
-	margin-bottom: 64px
-	
-	.color_blocks
-		position: absolute
-		width: 100%
-		height: 10px
-		cursor: pointer
-		cursor: hand
-	
-		.color_block
-			+float-left
-			height: 100%
-			
-	.metadata
-		position: absolute
-		clear: both
-		padding: 10px 0px 0px 0px
-		width: 100%
-		background: $background
-		font-family: $thumbnail-font
-		font-weight: $thumbnail-weight
-		
-		.title
-			+float-left
-			font-size: 0.875em
-			
-			a
-				color: $text-color
-		
-		.type
-			+float-right
-			font-size: 0.75em
-			font-style: italic
-			line-height: 1.25em
-			color: $tag-color
-			
+    @extend .grid_1
+    +float-left
+    position: relative
+    width: 200px
+    margin-bottom: 64px
+    
+    .color_blocks
+        position: absolute
+        width: 100%
+        height: 10px
+        cursor: pointer
+        cursor: hand
+    
+        .color_block
+            +float-left
+            height: 100%
+            
+    .metadata
+        position: absolute
+        clear: both
+        padding: 10px 0px 0px 0px
+        width: 100%
+        background: $background
+        font-family: $thumbnail-font
+        font-weight: $thumbnail-weight
+        
+        .title
+            +float-left
+            font-size: 0.875em
+            
+            a
+                color: $text-color
+        
+        .type
+            +float-right
+            font-size: 0.75em
+            font-style: italic
+            line-height: 1.25em
+            color: $tag-color
+            
 #content
-	+clearfix
-	clear: both
-	margin: 30px 0px 40px 0px
-			
+    +clearfix
+    clear: both
+    margin: 30px 0px 40px 0px
+            
 //--------------------------------------
 //  Grid
 //--------------------------------------
 
 //
-//	Variable Grid System.
-//	Learn more ~ http://www.spry-soft.com/grids/
-//	Based on 960 Grid System - http://960.gs/
+//    Variable Grid System.
+//    Learn more ~ http://www.spry-soft.com/grids/
+//    Based on 960 Grid System - http://960.gs/
 //
-//	Licensed under GPL and MIT.
+//    Licensed under GPL and MIT.
 //
 
 .container_4 
-	margin-left: auto
-	margin-right: auto
-	width: 900px
+    margin-left: auto
+    margin-right: auto
+    width: 900px
 
 .grid_1,
 .grid_2,
 .grid_3
-	display: inline
-	float: left
-	position: relative
-	margin-left: 16px
-	margin-right: 17px
-	
+    display: inline
+    float: left
+    position: relative
+    margin-left: 16px
+    margin-right: 17px
+    
 .grid_4
-	@extend .grid_3
-	@extend .alpha
-	@extend .omega
-	
+    @extend .grid_3
+    @extend .alpha
+    @extend .omega
+    
 .alpha 
-	margin-left: 0
+    margin-left: 0
 
 .omega 
-	margin-right: 0
+    margin-right: 0
 
 .push_1, .pull_1,
 .push_2, .pull_2,
 .push_3, .pull_3,
 .push_4, .pull_4 
-	position: relative
+    position: relative
 
 .grid_1 
-	width: 200px
+    width: 200px
 
 .grid_2 
-	width: 433px
+    width: 433px
 
 .grid_3 
-	width: 666px
+    width: 666px
 
 .grid_4 
-	width: 900px
+    width: 900px
 
 .container_4 .prefix_1 
-	padding-left: 233px
+    padding-left: 233px
 
 .container_4 .prefix_2 
-	padding-left: 466px
+    padding-left: 466px
 
 .container_4 .prefix_3 
-	padding-left: 699px
+    padding-left: 699px
 
 .container_4 .suffix_1 
-	padding-right: 233px
+    padding-right: 233px
 
 .container_4 .suffix_2 
-	padding-right: 466px
+    padding-right: 466px
 
 .container_4 .suffix_3 
-	padding-right: 699px
+    padding-right: 699px
 
 .container_4 .push_1 
-	left: 233px
+    left: 233px
 
 .container_4 .push_2 
-	left: 466px
+    left: 466px
 
 .container_4 .push_3 
-	left: 699px
+    left: 699px
 
 .container_4 .pull_1 
-	left: -233px
+    left: -233px
 
 .container_4 .pull_2 
-	left: -466px
+    left: -466px
 
 .container_4 .pull_3 
-	left: -699px
+    left: -699px
 
 .clear 
-	clear: both
-	display: block
-	overflow: hidden
-	visibility: hidden
-	width: 0px
-	height: 0px
+    clear: both
+    display: block
+    overflow: hidden
+    visibility: hidden
+    width: 0px
+    height: 0px
 
 .clearfix:before,
 .clearfix:after 
-	content: '\0020'
-	display: block
-	overflow: hidden
-	visibility: hidden
-	width: 0px
-	height: 0px
+    content: '\0020'
+    display: block
+    overflow: hidden
+    visibility: hidden
+    width: 0px
+    height: 0px
 
 .clearfix:after
-	clear: both
+    clear: both
 
 .clearfix
-	zoom: 1
+    zoom: 1
 
 //--------------------------------------
 //  Margins
 //--------------------------------------
 
 .tm1
-	margin-top: 33px
-	
+    margin-top: 33px
+    
 .bm1
-	margin-bottom: 33px
-	
+    margin-bottom: 33px
+    
 .tm2
-	margin-top: 16px
-	
+    margin-top: 16px
+    
 .bm2
-	margin-bottom: 16px
-	
+    margin-bottom: 16px
+    
 .tm3
-	margin-top: 8px
-	
+    margin-top: 8px
+    
 .bm3
-	margin-bottom: 8px
-	
+    margin-bottom: 8px
+    
 .lm1
-	margin-left: 33px
+    margin-left: 33px
 
 .rm1
-	margin-right: 33px
+    margin-right: 33px
 
 .lm2
-	margin-left: 16px
+    margin-left: 16px
 
 .rm2
-	margin-right: 16px
+    margin-right: 16px
 
 .lm3
-	margin-left: 8px
+    margin-left: 8px
 
 .rm3
-	margin-right: 8px
+    margin-right: 8px

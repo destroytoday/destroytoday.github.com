@@ -10,30 +10,27 @@ style: true
 ---
 #destroytwitter.container_4
   #header.grid_4
-  .alpha.grid_2
-    :markdown
-      When I first signed up for Twitter in 2008, I didn't see the point. Why would I want to know what people were doing? After a few months, I looked into it again, but this time I discovered its value as a networking tool. I could easily and casually engage with others in the design/dev community, even if they are leaps and bounds above me.
-  .omega.grid_2
-    :markdown
-      Completely turned off by the Twitter website, I tried a few of the available apps that utilized its API. None of them felt right to me. The ones that looked great didn't have great features. And the ones with great features didn't look great. Because of this, I decided to make my own Twitter app, [DestroyTwitter](http://destroytwitter.com).
+    %img{:src => "/images{{page.id}}/destroytwitter_header.png", :width => 900, :height => 270}
+  #description.grid_4.bm2
+    :maruku
+      This is DestroyTwitter, yo.
+  #links.grid_4.center.bm1
+    :maruku
+      [Visit the product](http://destroytwitter.com) + [Download the app](http://destroytoday.com/destroytwitter/releases/prerelease/DestroyTwitter215p2.zip)
+  .grid_2.alpha.tm1.bm1
+    %img{:src => "/images{{page.id}}/destroytwitter_lightweight.png", :width => 433, :height => 300}
+    .tag.center
+      :maruku
+        Small, lightweight footprint
+  .grid_2.omega.tm1.bm1
   .clear
-  #lightweight_img.alpha.grid_2
-  .omega.grid_2
-    #lightweight_text
-      :markdown
-        I consider Twitter to be a background service, like instant messaging, so I focused heavily on an intuitive UX. Users should be able to tweet and get back to business in a matter of seconds. Better yet, they should be able to do so without even touching the mouse.
-
-        Because Twitter apps are persistent, open for hours or even days at a time, performance is key. I used every trick in the book to keep memory and CPU usage as low as possible. Even though DestroyTwitter runs on AIR, it performs as well as any native app.
-  .clear
-  .alpha.grid_2
-    #filters_text
-      :markdown
-        Once I implemented the expected features (tweeting, streaming, etc), I started adding features that I found useful. Tired of event tweeters and check-in services, I developed filtering. It allows users to hide tweets based on their user, source, or keywords. Filtering also provides users with a drama-free way to unfollow people.
-        
-        Along with filtering, I added other features that were new to Twitter apps. Auto-completing usernames introduced a dead simple way to reference users without the need to memorize the exact spelling. In-app image viewing let users see linked photos without opening a new browser window. These features help users tweet efficiently and consume content easily.
-  #filters_img.omega.grid_2
-  #preferences_img.alpha.grid_2
-  .omega.grid_2
-    #preferences_text
-      :markdown
-        As the user base grew, so did the number of requests. To accommodate the variety of use-cases, I provided a thorough list of preferences for users to customize their Twitter experience. This went as far as themes, giving the user complete control over DestroyTwitter's appearance. For an app that consists of a heavy amount of reading, the user should feel comfortable with its look.
+  .grid_2.alpha.tm1.bm1
+    %img{:src => "/images{{page.id}}/destroytwitter_filters.png", :width => 433, :height => 298}
+    .tag.center
+      :maruku
+        Filters
+  .grid_2.omega.tm1.bm1
+    %img{:src => "/images{{page.id}}/destroytwitter_preferences.png", :width => 433, :height => 298}
+    .tag.center
+      :maruku
+        Preferences

@@ -3,5 +3,13 @@ layout: default
 ---
 {{content}}
 {% include project_direction.html %}
-{% if next_url %}<div id="prev"><a href="{{next_url}}">&lsaquo;</a></div>{% endif %}
-{% if previous_url %}<div id="next"><a href="{{previous_url}}">&rsaquo;</a></div>{% endif %}
+{% if next_url %}
+<div id="prev" class="direction">
+	<a href="{{next_url}}"><span class="title_wrapper"><span class="title">{{next_title}}</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>
+</div>
+{% endif %}
+{% if previous_url %}
+<div id="next" class="direction">
+	<a href="{{previous_url}}"><span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">{{previous_title}}</span></span></a>
+</div>
+{% endif %}
