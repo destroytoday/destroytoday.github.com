@@ -44,6 +44,8 @@ $(document).ready(function()
 		});
 	});
 	
+	$('.email').html("<a href=\"mailto:jonnie@destroytoday.com\">jonnie@destroytoday.com</a>");
+	
 	function rgb2hex(rgb)
 	{
 		rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);

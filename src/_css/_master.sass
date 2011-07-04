@@ -95,6 +95,12 @@ body
 img
 	display: block
 	
+h2
+	@extend .bm2
+	font-family: $header-font
+	font-size: 3em
+	font-weight: 700
+	
 h3
 	font-size: 0.875em
 	line-height: 1.5em
@@ -123,45 +129,13 @@ a
 .center
 	text-align: center
 	
-//--------------------------------------
-//  Margins
-//--------------------------------------
-
-.tm1
-	margin-top: 33px
+#gc-number-0
+	color: $link-color
+	text-decoration: none
+	outline: none
 	
-.bm1
-	margin-bottom: 33px
-	
-.tm2
-	margin-top: 16px
-	
-.bm2
-	margin-bottom: 16px
-	
-.tm3
-	margin-top: 8px
-	
-.bm3
-	margin-bottom: 8px
-	
-.lm1
-	margin-left: 33px
-
-.rm1
-	margin-right: 33px
-
-.lm2
-	margin-left: 16px
-
-.rm2
-	margin-right: 16px
-
-.lm3
-	margin-left: 8px
-
-.rm3
-	margin-right: 8px
+	&:hover
+		text-decoration: underline
 	
 .caption
 	margin: 8px 0px 25px 0px
@@ -260,9 +234,10 @@ a
 	#footer_wrapper
 		position: relative
 		left: -35%
-	
+		
 		#copyright_wrapper
 			+float-left
+			margin: 0px 5px 0px 0px
 	
 			#copyright
 				@extend .vertically_centered
@@ -328,94 +303,6 @@ a
 	clear: both
 	margin: 30px 0px 40px 0px
 			
-.project
-	+float-left
-	margin: 0px 0px 40px 0px
-	min-width: 900px
-	
-	.container
-		+float-left
-		width: 600px
-
-		.viewport
-			+float-left
-			position: relative
-		
-			.images
-				.image
-					display: none
-				
-				.selected
-					display: block
-		
-			.prev
-				background: url("/images/assets/spacer.gif") repeat scroll 0 0 transparent
-				position: absolute
-				left: 0
-				top: 0
-				width: 50%
-				height: 100%
-			
-				.arrow
-					background: url("/images/assets/prev_arrow_lg.gif") no-repeat scroll 0 0 transparent
-					position: absolute
-					display: none
-					left: 30%
-					top: 50%
-					width: 60px
-					height: 90px
-					margin: -45px 0px 0px 0px
-			
-			.next
-				@extend .prev
-				left: 50%
-			
-				.arrow
-					background: url("/images/assets/next_arrow_lg.gif") no-repeat scroll 0 0 transparent
-					position: absolute
-					display: none
-					left: auto
-					right: 30%
-					top: 50%
-					width: 60px
-					height: 90px
-					margin: -45px 0px 0px 0px
-		
-	.metadata
-		+float-left
-		width: 300px
-		margin: 0px 0px 0px 30px
-	
-		h2
-			font:
-				family: $header-font
-				size: 2.25em
-				weight: $header-weight
-				
-			margin: -6px 0px 13px 0px
-			
-		.thumbs
-			margin: 30px 0px 0px 0px
-			
-			.thumb
-				+float-left
-				position: relative
-				margin: 0px 3px 3px 0px
-				
-				.overlay
-					position: absolute
-					left: 0px
-					top: 0px
-					width: 40px
-					height: 40px
-				
-			.unselected .overlay
-				display: none
-			
-			.selected .overlay
-				display: block
-				background: url("/images/assets/sm_thumb_selected.gif") no-repeat scroll 0 0 transparent
-				
 //--------------------------------------
 //  Grid
 //--------------------------------------
@@ -529,3 +416,43 @@ a
 
 .clearfix
 	zoom: 1
+
+//--------------------------------------
+//  Margins
+//--------------------------------------
+
+.tm1
+	margin-top: 33px
+	
+.bm1
+	margin-bottom: 33px
+	
+.tm2
+	margin-top: 16px
+	
+.bm2
+	margin-bottom: 16px
+	
+.tm3
+	margin-top: 8px
+	
+.bm3
+	margin-bottom: 8px
+	
+.lm1
+	margin-left: 33px
+
+.rm1
+	margin-right: 33px
+
+.lm2
+	margin-left: 16px
+
+.rm2
+	margin-right: 16px
+
+.lm3
+	margin-left: 8px
+
+.rm3
+	margin-right: 8px
