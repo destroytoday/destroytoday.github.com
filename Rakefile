@@ -20,6 +20,10 @@ task :jekyll do
 	system("jekyll")
 end
 
+task :server do
+  system("jekyll --server");
+end
+
 task :preview do
 	system("jekyll --auto --server")
 end
