@@ -2,6 +2,7 @@
 @import "compass/utilities/general/clearfix"
 @import "compass/utilities/general/float"
 @import "compass/css3"
+@import "compass/css3/transition"
 
 //--------------------------------------------------------------------------
 //
@@ -72,10 +73,10 @@ body
     color: $text-color
     background: $background
     margin: 0px 0px 0px 0px
-    min-width: 980px
+    min-width: 1100px
     
 html
-    min-width: 980px
+    min-width: 1100px
     
 ::selection
     color: $selection-text-color
@@ -118,6 +119,8 @@ p
         text-decoration: underline
     
 a
+    +transition-property(color)
+    +transition-duration(0.35s)
     color: $link-color
     text-decoration: none
     outline: none
@@ -217,15 +220,18 @@ a
         
             .title
                 @extend .vertically_centered
+                +transition-property(color)
+                +transition-duration(0.35s)
                 font-size: 0.75em
                 line-height: 1.5em
                 white-space: nowrap
                 height: 64px
 
         a
-            color: $arrow-color
+            .title
+                color: $background
 
-            &:hover
+            &:hover .title
                 color: $arrow-hover-color
         
     #prev

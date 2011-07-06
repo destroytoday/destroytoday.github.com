@@ -51,7 +51,6 @@ $(document).ready(function()
 		
 		title_wrapper.stop();
 		title_wrapper.css('visibility', 'visible');
-		
 		title_wrapper.animate(
 		{
 		    'width': title.width()
@@ -65,9 +64,8 @@ $(document).ready(function()
 	{
 		var title_wrapper = $(event.currentTarget).children('a').children('.title_wrapper');
 		var title = title_wrapper.children('.title');
-	    
-		title_wrapper.stop();
 		
+		title_wrapper.stop();
 		title_wrapper.animate(
 		{
 		    'width': 1
@@ -79,6 +77,11 @@ $(document).ready(function()
 			    title_wrapper.css('visibility', 'hidden');
 		    }
 		});
+	});
+	
+	$('.direction').click(function(event)
+	{
+		window.location = $(event.currentTarget).children('a').attr('href');
 	});
 	
 	function rgb2hex(rgb)
