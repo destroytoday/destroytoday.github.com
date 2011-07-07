@@ -10,7 +10,8 @@
 //
 //--------------------------------------------------------------------------
 
-$background: #FFF !default
+$background-color: #FFF !default
+$background: $background-color !default
 $text-font: "Lucida Grande", Verdana, sans-serif !default
 $text-color: #333 !default
 $text-weight: 400 !default
@@ -71,7 +72,12 @@ body
         size: 1em
         weight: $text-weight
     color: $text-color
-    background: $background
+
+    @if $background != $background-color
+        background: $background-color $background
+    @else
+        background-color: $background-color
+        
     margin: 0px 0px 0px 0px
     min-width: 1100px
     
@@ -229,7 +235,12 @@ a
 
         a
             .title
-                color: $background
+                color: $background-color
+
+            &:hover .arrow
+                +transition-property(color)
+                +transition-duration(0.35s)
+                color: $arrow-hover-color
 
             &:hover .title
                 color: $arrow-hover-color
@@ -239,7 +250,7 @@ a
         
         .arrow_wrapper
             +float-right
-            margin-left: 10px
+            padding-left: 10px
             
         .title_wrapper
             +float-left
@@ -251,7 +262,7 @@ a
         
         .arrow_wrapper
             +float-left
-            margin-right: 10px
+            padding-right: 10px
             
         .title_wrapper
             +float-right
