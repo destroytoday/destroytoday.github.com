@@ -16,15 +16,18 @@ $text-font: "Lucida Grande", Verdana, sans-serif !default
 $text-color: #333 !default
 $text-weight: 400 !default
 
-$identity-font: "museo-sans-1", "museo-sans-2", "Helvetica Neue", sans-serif !default
+$identity-font: "Helvetica Neue", sans-serif !default
 $identity-weight: 700 !default
 $identity-destroy-color: #333 !default
 $identity-today-color: #007998 !default
 
-$header-font: $identity-font !default
+$header-font: "museo-sans-1", "museo-sans-2", "Helvetica Neue", sans-serif !default
 $header-weight: $identity-weight !default
 $header-color: #333 !default
 $tag-color: #999 !default
+
+$subheader-font: "Helvetica Neue", sans-serif !default
+$subheader-weight: 700 !default
 
 $link-color: #007998 !default
 $link-hover-color: #007998 !default
@@ -112,10 +115,10 @@ h2
     font-weight: 700
     
 h3
-    font-family: $header-font
-    font-size: 1.25em
-    font-weight: 700
-    margin-bottom: 3px
+    font-family: $subheader-font
+    font-size: 1.125em
+    font-weight: $subheader-weight
+    line-height: 1.5em
 
 p
     font-size: 0.75em
@@ -163,7 +166,7 @@ a
 
     #identity
         +float-left
-        margin: 12px 0px 0px 0px
+        margin: 7px 0px 0px 0px
         
         h1
             font:
