@@ -4,6 +4,16 @@ $(document).ready(function()
 {
 	jQuery.easing.def = 'easeInOutCubic';
 	
+		/*CROP_CONFIG = {
+	maxHeight: 433, 
+	maxWidth: 433, 
+	selectionOpacity: 0, 
+	outerOpacity: 0.4, 
+	x1: 0, y1: 0, x2: 100, y2: 100
+};
+	
+	$('img').imgAreaSelect(CROP_CONFIG);*/
+	
 	$('.project_thumb').each(function(index)
 	{
 		$(this).children('.color_blocks').css('top', $(this).children('a').children('img').height());

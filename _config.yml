@@ -1,4 +1,5 @@
 source: ./src
 destination: ./site
 permalink: /:categories/:title
+paginate: 10
 sections: [about, blog, folio, lab, contact]

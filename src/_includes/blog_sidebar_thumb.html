@@ -1,0 +1,18 @@
+<div class="project_thumb alpha omega">
+	<a href="{{project.url}}"><img src="/images{{project.id}}/{{project.thumbnail.image}}" width="200" height="200" alt="{{project.title}}" /></a>
+	<div class="color_blocks" onclick="document.location='{{project.url}}'">
+		{% case project.thumbnail.colors.size %} 
+		{% when 3 %} 
+			<div class="color_block" style="width: 33%; background: #{{project.thumbnail.colors[0]}}"></div>
+			<div class="color_block" style="width: 33%; background: #{{project.thumbnail.colors[1]}}"></div>
+			<div class="color_block" style="width: 34%; background: #{{project.thumbnail.colors[2]}}"></div>
+		{% else %}
+			{% for color in project.thumbnail.colors %}
+				<div class="color_block" style="width: {{100.0 | divided_by:project.thumbnail.colors.size}}%; background: #{{color}}"></div>
+			{% endfor %}
+		{% endcase %}
+	</div>
+	<div class="metadata">
+		<div class="title"><a href="{{project.url}}">{{project.title}}</a></div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div id="blog">
+	<div id="primary" class="grid_3 alpha">
+		<h2>{{page.title}}</h2>
+		{{content}}
+	</div>
+	<div id="secondary" class="grid_1 omega">
+		{% assign project = page %}
+		{% include blog_sidebar_thumb.html %}
+	</div>
+	<!--per page: {{paginator.per_page}}<br/>
+	total posts: {{paginator.total_posts}}<br/>
+	total pages: {{paginator.total_pages}}<br/>
+	page: {{paginator.page}}<br/>
+	prev page: {{paginator.previous_page}}<br/>
+	next page: {{paginator.next_page}}<br/>-->
+</div>
