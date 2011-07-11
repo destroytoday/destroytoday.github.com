@@ -56,12 +56,12 @@ task :default => [:setup, :compress, :jekyll, :compass, :success]
 task :setup do
   setup if arduinoExists?
   
-	output = `cd ~/dev/web/destroytoday.com`; result = $?.success?
+	#output = `cd ~/dev/web/destroytoday.com`; result = $?.success?
   system('pwd')
   
-  puts output
+  #puts output
   
-	fail unless result
+	#fail unless result
 end
 
 task :compress do

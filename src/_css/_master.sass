@@ -122,6 +122,10 @@ html
     li
         +float-left
         
+hr
+    border: none
+    height: 33px
+        
 img
     display: block
     
@@ -130,6 +134,10 @@ h2
     font-family: $header-font
     font-size: 3em
     font-weight: 700
+    color: $text-color
+    
+    a
+        color: $text-color
     
 h3
     font-family: $subheader-font
@@ -331,7 +339,7 @@ a
         color: $footer-color
         margin: 40px auto 20px auto
 
-.project_thumb
+.thumb
     @extend .grid_1
     +float-left
     position: relative
@@ -377,6 +385,43 @@ a
     +clearfix
     clear: both
     margin: 30px 0px 40px 0px
+    
+//--------------------------------------
+//  Blog
+//--------------------------------------
+        
+#blog
+    .post
+        h2
+            @extend .bm3
+            
+        .metadata
+            @extend .bm2
+            +clearfix
+        
+            width: 100%
+            font-family: $text-font
+            font-size: 0.75em
+            color: $tag-color
+            
+            a
+                color: $tag-color
+                
+                &:hover
+                    color: $link-hover-color
+            
+            .date
+                +float-left
+                
+            .tags
+                +float-left
+                
+            .comment-count
+                +float-right
+                
+        img
+            @extend p
+            
             
 //--------------------------------------
 //  Grid

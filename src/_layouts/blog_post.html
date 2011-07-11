@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div id="blog">
+	<div id="primary" class="grid_3 alpha">
+		{% assign post = page %}
+		{% include blog_post.html %}
+	</div>
+	<div id="secondary" class="grid_1 omega">
+		{% for post in site.categories.blog %}
+		{% include blog_sidebar_thumb.html %}
+		{% if post != site.categories.blog.last %}
+		<hr/>
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>

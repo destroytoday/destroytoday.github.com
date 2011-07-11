@@ -14,13 +14,13 @@ $(document).ready(function()
 	
 	$('img').imgAreaSelect(CROP_CONFIG);*/
 	
-	$('.project_thumb').each(function(index)
+	function addColorBlocks(index)
 	{
 		$(this).children('.color_blocks').css('top', $(this).children('a').children('img').height());
 		$(this).children('.metadata').css('top', $(this).children('a').children('img').height() + 5);
-	});
+	}
 	
-	$('.project_thumb').mouseenter(function(event)
+	function thumb_mouseEnterHandler(event)
 	{
 		var image = $(event.currentTarget).children('a').children('img');
 		var color_blocks = $(event.currentTarget).children('.color_blocks');
@@ -35,9 +35,9 @@ $(document).ready(function()
 		{
 			duration: 350
 		});
-	});
-
-	$('.project_thumb').mouseleave(function(event)
+	}
+	
+	function thumb_mouseLeaveHandler(event)
 	{
 		var image = $(event.currentTarget).children('a').children('img');
 		var color_blocks = $(event.currentTarget).children('.color_blocks');
@@ -52,7 +52,11 @@ $(document).ready(function()
 		{
 			duration: 350
 		});
-	});
+	}
+	
+	$('.thumb').each(addColorBlocks);
+	$('.thumb').mouseenter(thumb_mouseEnterHandler);
+	$('.thumb').mouseleave(thumb_mouseLeaveHandler);
 	
 	$('.direction').mouseenter(function(event)
 	{

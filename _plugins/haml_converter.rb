@@ -14,7 +14,7 @@ module Jekyll
 
     def convert(content)
       begin
-        engine = Haml::Engine.new(content)
+        engine = Haml::Engine.new(content, {:attr_wrapper => '"', :escape_html => true})
         engine.render
       rescue StandardError => e
           puts "!!! HAML Error: " + e.message
