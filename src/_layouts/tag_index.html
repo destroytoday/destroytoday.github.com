@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div id="blog">
+	<div id="primary" class="grid_3 alpha">
+		{% for post in site.tags[page.tag] %}
+		{% include blog_post.html %}
+		{% if post != site.tags[page.tag].last %}
+		<hr/>
+		{% endif %}
+		{% endfor %}
+	</div>
+	<div id="secondary" class="grid_1 omega">
+		{% for post in site.tags[page.tag] %}
+		{% include blog_sidebar_thumb.html %}
+		{% if post != site.tags[page.tag].last %}
+		<hr/>
+		{% endif %}
+		{% endfor %}
+	</div>
+	<!--per page: {{paginator.per_page}}<br/>
+	total posts: {{paginator.total_posts}}<br/>
+	total pages: {{paginator.total_pages}}<br/>
+	page: {{paginator.page}}<br/>
+	prev page: {{paginator.previous_page}}<br/>
+	next page: {{paginator.next_page}}<br/>-->
+</div>

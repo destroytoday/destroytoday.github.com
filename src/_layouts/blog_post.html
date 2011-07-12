@@ -5,6 +5,13 @@ layout: default
 	<div id="primary" class="grid_3 alpha">
 		{% assign post = page %}
 		{% include blog_post.html %}
+		<!--<div id="related">
+			{% for post in site.related_posts %}
+			{% if post.category == 'blog' %}
+			{% include blog_sidebar_thumb.html %}
+			{% endif %}
+			{% endfor %}
+		</div>-->
 	</div>
 	<div id="secondary" class="grid_1 omega">
 		{% for post in site.categories.blog %}

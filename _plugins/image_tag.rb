@@ -1,4 +1,4 @@
-module Image
+module Jekyll
   class ImageTag < Liquid::Tag
     require 'RMagick'
 
@@ -23,4 +23,4 @@ module Image
   end
 end
 
-Liquid::Template.register_tag('image', Image::ImageTag)
+Liquid::Template.register_tag('image', Jekyll::ImageTag)

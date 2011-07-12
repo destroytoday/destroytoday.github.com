@@ -1,0 +1,1 @@
+{% for tag in post.tags %}{% if tag != post.tags.first %} + {% endif %}<a href="/tags/{{tag | downcase}}">{{tag}}</a>{% endfor %}
