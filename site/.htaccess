@@ -14,5 +14,5 @@ Options -Indexes
 RewriteEngine On
 
 RewriteCond %{REQUEST_URI} ^/?$ [OR]
-RewriteCond %{REQUEST_URI} ^/index.[\w]+$
+RewriteCond %{REQUEST_URI} ^/index\.[\w]+$
 RewriteRule ^.*$ /blog? [L]
