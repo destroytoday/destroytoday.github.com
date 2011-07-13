@@ -418,6 +418,33 @@ a
                 
             .comment-count
                 +float-right
+                position: relative
+                text-align: right
+                width: 150px
+                
+                a
+                    img.bubble-up
+                        +float-right
+                        margin: 1px 0px 0px 3px
+                        width: 10px
+                        height: 10px
+                        
+                        background: url("/images/assets/comment_up.png") no-repeat
+                        
+                    &:hover img.bubble-over
+                        opacity: 1
+                        
+                    img.bubble-over
+                        +transition-property(opacity)
+                        +transition-duration(0.35s)
+                        position: absolute
+                        top: 1px
+                        right: 0px
+                        width: 10px
+                        height: 10px
+                        opacity: 0
+                        
+                        background: url("/images/assets/comment_over.png") no-repeat
                 
         img
             @extend p
