@@ -10,7 +10,9 @@ layout: default
 		{% endif %}
 		{% endfor %}
 	</div>
-	<div id="secondary" class="grid_1 omega">
+	<div id="sidebar" class="grid_1 omega">
+		<input id="search" type="text" />
+		<hr/>
 		{% for post in site.categories.blog %}
 		{% include blog_sidebar_thumb.html %}
 		{% if post != site.categories.blog.last %}

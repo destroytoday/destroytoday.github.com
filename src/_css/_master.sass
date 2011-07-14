@@ -307,7 +307,7 @@ a
         font-style: italic
         color: $tag-color
         margin: 16px 0px 0px 0px
-
+        
 #footer
     +float-left
     position: relative
@@ -401,9 +401,18 @@ a
         hr
             height: 33px
             
-    #secondary
+    #sidebar
         hr
             height: 16px
+            
+        #search
+            +border-radius(10px)
+            border: solid 1px #666
+            outline: 0 none
+            background: url("/images/assets/sidebar_input.png") no-repeat 0 0
+            width: 168px
+            height: 14px
+            padding: 2px 8px 4px 22px
             
     .post
         h2
