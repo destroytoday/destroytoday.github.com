@@ -123,8 +123,8 @@ html
         +float-left
         
 hr
+    clear: both
     border: none
-    height: 33px
         
 img
     display: block
@@ -346,6 +346,12 @@ a
     width: 200px
     margin-bottom: 64px
     
+    &:hover .metadata .title a
+        color: $link-hover-color
+        
+    &:hover .metadata .type
+        color: $link-hover-color
+    
     .color_blocks
         position: absolute
         width: 100%
@@ -391,6 +397,14 @@ a
 //--------------------------------------
         
 #blog
+    #primary
+        hr
+            height: 33px
+            
+    #secondary
+        hr
+            height: 16px
+            
     .post
         h2
             @extend .bm3

@@ -86,7 +86,7 @@ task :jekyll do
 end
 
 task :server do
-  system("jekyll --server");
+  system("jekyll --server 1337");
 end
 
 task :preview do
