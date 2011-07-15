@@ -1,5 +1,6 @@
 source: ./src
 destination: ./site
 permalink: /:categories/:title
+url: http://staging.destroytoday.com
 paginate: 10
 sections: [about, blog, folio, lab, contact]
