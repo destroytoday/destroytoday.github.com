@@ -11,14 +11,23 @@ layout: default
 		{% endfor %}
 	</div>
 	<div id="sidebar" class="grid_1 omega">
-		<input id="search" type="text" />
-		<hr/>
-		{% for post in site.categories.blog %}
-		{% include blog_sidebar_thumb.html %}
-		{% if post != site.categories.blog.last %}
-		<hr/>
-		{% endif %}
-		{% endfor %}
+		<div id="search-wrapper">
+			<input id="search" type="text" />
+			<hr/>
+		</div>
+		<div id="latest-tweet">
+			<img src="/images/assets/twitter_avatar.jpg" width="32" height="32" alt="@destroytoday" />
+			<p></p>
+			<hr/>
+		</div>
+		<div id="related-posts">
+			{% for post in site.categories.blog %}
+			{% include blog_sidebar_thumb.html %}
+			{% if post != site.categories.blog.last %}
+			<hr/>
+			{% endif %}
+			{% endfor %}
+		</div>
 	</div>
 	<!--per page: {{paginator.per_page}}<br/>
 	total posts: {{paginator.total_posts}}<br/>

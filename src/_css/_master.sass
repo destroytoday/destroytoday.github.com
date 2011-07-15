@@ -402,17 +402,54 @@ a
             height: 33px
             
     #sidebar
-        hr
-            height: 16px
+        #search-wrapper
+            #search
+                +transition-property(border)
+                +transition-duration(0.35s)
+                +border-radius(10px)
+                border: solid 1px #999
+                outline: 0 none
+                background: url("/images/assets/sidebar_input.png") no-repeat 0 0
+                width: 168px
+                height: 14px
+                padding: 2px 8px 4px 22px
             
-        #search
-            +border-radius(10px)
-            border: solid 1px #666
-            outline: 0 none
-            background: url("/images/assets/sidebar_input.png") no-repeat 0 0
-            width: 168px
-            height: 14px
-            padding: 2px 8px 4px 22px
+                &:focus
+                    border: solid 1px #007998
+                
+            hr
+                height: 16px
+                
+        #latest-tweet
+            +transition-property(height)
+            +transition-duration(0.35s)
+            overflow: hidden
+            height: 0
+        
+            img
+                +float-left
+                margin: 0px 8px 4px 0px
+                
+            p
+                margin: 0px
+            
+                .plus
+                    color: $tag-color
+            
+                a.timestamp
+                    color: $tag-color
+                    font-style: italic
+                    font-size: 12px
+                
+                    &:hover
+                        color: $link-hover-color
+                        
+            hr
+                height: 27px
+                        
+        #related-posts
+            hr
+                height: 8px
             
     .post
         h2

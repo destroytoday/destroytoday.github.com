@@ -3,7 +3,7 @@ var hashTable = new Object();
 $(document).ready(function()
 {
 	jQuery.easing.def = 'easeInOutCubic';
-	
+
 		/*CROP_CONFIG = {
 	maxHeight: 433, 
 	maxWidth: 433, 
@@ -131,7 +131,60 @@ $(document).ready(function()
     });*/
     
 	$('.email').html("<a href=\"mailto:jonnie@destroytoday.com\">jonnie@destroytoday.com</a>");
-	
+
+    jQuery.timeago.settings.strings = {
+      prefixAgo: null,
+      prefixFromNow: "in",
+      suffixAgo: "ago",
+      suffixFromNow: null,
+      seconds: "several seconds",
+      minute: "a minute",
+      minutes: "%d minutes",
+      hour: "an hour",
+      hours: "%d hours",
+      day: "a day",
+      days: "%d days",
+      month: "a month",
+      months: "%d months",
+      year: "a year",
+      years: "%d years"
+    };
+
+    if ($('#latest-tweet'))
+    {
+        $.ajax({
+          url: "http://twitter.com/statuses/user_timeline/destroytoday.json",
+          dataType: 'jsonp',
+          success: function(data)
+          {
+              $.each(data, function(key, value)
+              {
+                  if (value.text.substring(0, 1) != "@")
+                  {
+                      function linkify(text) 
+                      {
+                          var exp = /((?:ftp|http|https):\/\/)((\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
+                          return text.replace(exp, "<a href=\"$1$2\">$2</a>"); 
+                      }
+                  
+                      var tweet = 
+                        "<a href=\"http://twitter.com/destroytoday\">@destroytoday</a>" +
+                        "<span class=\"plus\"> + </span>" + 
+                        linkify(value.text) +
+                        " <a class=\"timestamp\" href=\"http://twitter.com/destroytoday/status/" + value.id_str + "\">" + 
+                        jQuery.timeago(value.created_at).replace(/[\s]+/ig, '&nbsp;') +
+                        "</a>";
+                  
+                      $('#latest-tweet p').html(tweet);
+                      $('#latest-tweet').css('height', $('#latest-tweet p').height() + $('#latest-tweet hr').height());
+	           
+                      return false;
+                  }
+              });
+          }
+        });
+    }
+
 	$(".twitter-follow-button").attr('data-text-color', rgb2hex($("body").css('color')));
 	$(".twitter-follow-button").attr('data-link-color', rgb2hex($(".twitter-follow-button").css('color')));
 	
