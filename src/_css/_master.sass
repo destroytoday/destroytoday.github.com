@@ -162,6 +162,106 @@ a
     
     &:hover
         color: $link-hover-color
+        text-decoration: underline
+        
+#disqus_thread
+    margin-top: 66px
+        
+.dsq-post-area h3
+    @extend .bm2
+
+.dsq-request-user-info
+    position: absolute
+    left: 0
+        
+textarea, .dsq-textarea-wrapper
+    +transition-property(border)
+    +transition-duration(0.35s)
+    border: solid 1px #999
+    outline: 0 none
+    padding: 8px 8px 8px 8px
+
+    &:focus
+        border: solid 1px #007998
+        
+.dsq-textarea-wrapper
+    margin-left: 64px
+    
+#dsq-post-button
+    @extend .tm2
+    +float-right
+    
+button.dsq-button, button.dsq-button-small
+    +transition-property(background)
+    +transition-duration(0.35s)
+    +border-radius(2px)
+    font-family: "Helvetica Neue", Verdana, sans-serif
+    font-weight: 700
+    font-size: 14px
+    padding: 8px !important
+    color: #FFF !important
+    background: $text-color !important
+    border: none !important
+    text-shadow: none !important
+    
+    &:hover
+        background: $link-hover-color !important
+        
+.dsq-comment-cite
+    font-family: $subheader-font
+    font-size: 14px
+    font-weight: 700
+    
+.dsq-header-avatar
+    position: absolute
+    left: 0
+    padding: 0px 12px 0px 0px
+    
+.dsq-comment-header-meta
+    margin: 0px 0px 8px 64px
+    
+.dsq-comment-header-time a
+    color: $tag-color
+    font-size: 12px
+    font-style: italic
+    
+    &:hover
+        color: $link-hover-color
+        
+.dsq-comment-message
+    margin-left: 64px
+    font-size: 12px
+    line-height: 1.5em
+    
+.dsq-comment-footer
+    margin-top: 12px
+    
+.dsq-options
+    +float-left
+    font-size: 12px
+    margin: 16px 0px 0px 64px
+    
+.dsq-comment-footer-left
+    +float-left
+    font-size: 12px
+    margin-left: 64px
+    
+.dsq-comment-footer-right
+    +float-right
+    font-size: 12px
+    color: $tag-color
+    
+.dsq-pagination, .dsq-post-area
+    clear: both
+    
+.dsq-post-area
+    margin-top: 33px
+    
+input
+    @extend textarea
+    +border-radius(10px)
+    height: 14px
+    padding: 2px 8px 4px 8px
     
 .vertically_centered
     display: table-cell
@@ -399,18 +499,9 @@ a
     #sidebar
         #search-wrapper
             #search
-                +transition-property(border)
-                +transition-duration(0.35s)
-                +border-radius(10px)
-                border: solid 1px #999
-                outline: 0 none
                 background: url("/images/assets/sidebar_input.png") no-repeat 0 0
                 width: 168px
-                height: 14px
                 padding: 2px 8px 4px 22px
-            
-                &:focus
-                    border: solid 1px #007998
                 
             hr
                 height: 16px

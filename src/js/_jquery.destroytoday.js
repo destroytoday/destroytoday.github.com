@@ -153,7 +153,7 @@ $(document).ready(function()
     if ($('#latest-tweet'))
     {
         $.ajax({
-          url: "http://twitter.com/statuses/user_timeline/destroytoday.json",
+          url: "http://twitter.com/statuses/user_timeline/destroytoday.json?count=10",
           dataType: 'jsonp',
           success: function(data)
           {
