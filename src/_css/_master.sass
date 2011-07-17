@@ -125,6 +125,7 @@ html
 hr
     clear: both
     border: none
+    margin: 0px 0px 0px 0px
         
 img
     display: block
@@ -166,6 +167,13 @@ a
         
 #disqus_thread
     margin-top: 66px
+    
+#dsq-comments
+    hr
+        +clearfix
+        height: 33px
+        
+    margin-bottom: 33px
         
 .dsq-post-area h3
     @extend .bm2
@@ -187,9 +195,15 @@ textarea, .dsq-textarea-wrapper
 .dsq-textarea-wrapper
     margin-left: 64px
     
-#dsq-post-button
-    @extend .tm2
+.dsq-post-footer .dsq-button
     +float-right
+    margin: 16px 0px 0px 8px
+    
+.dsq-save-edit
+    margin-top: 16px
+    
+    .dsq-button
+        +float-right
     
 button.dsq-button, button.dsq-button-small
     +transition-property(background)
@@ -205,8 +219,14 @@ button.dsq-button, button.dsq-button-small
     text-shadow: none !important
     
     &:hover
-        background: $link-hover-color !important
-        
+        background: $link-hover-color !important        
+
+.dsq-comment
+    min-height: 48px
+    
+    &:hover .dsq-comment-actions
+        opacity: 1
+
 .dsq-comment-cite
     font-family: $subheader-font
     font-size: 14px
@@ -217,10 +237,17 @@ button.dsq-button, button.dsq-button-small
     left: 0
     padding: 0px 12px 0px 0px
     
-.dsq-comment-header-meta
-    margin: 0px 0px 8px 64px
+.dsq-comment-header
+    position: relative
     
-.dsq-comment-header-time a
+.dsq-comment-header-meta-wrapper
+    +float-left
+    
+.dsq-comment-header-meta
+    margin: 0px 0px 4px 64px
+    height: 16px
+    
+.dsq-comment-header-time a, a.dsq-reply-link
     color: $tag-color
     font-size: 12px
     font-style: italic
@@ -241,21 +268,24 @@ button.dsq-button, button.dsq-button-small
     font-size: 12px
     margin: 16px 0px 0px 64px
     
-.dsq-comment-footer-left
-    +float-left
-    font-size: 12px
-    margin-left: 64px
-    
-.dsq-comment-footer-right
+.dsq-comment-actions
+    +transition-property(opacity)
+    +transition-duration(0.2s)
     +float-right
     font-size: 12px
+    line-height: 14px
     color: $tag-color
+    opacity: 0
     
 .dsq-pagination, .dsq-post-area
     clear: both
     
 .dsq-post-area
+    position: relative
     margin-top: 33px
+    
+.dsq-append-post
+    margin-left: 64px
     
 input
     @extend textarea
