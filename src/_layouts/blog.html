@@ -3,12 +3,7 @@ layout: default
 ---
 <div id="blog">
 	<div id="primary" class="grid_3 alpha">
-		{% for post in site.categories.blog %}
-		{% include blog_post.html %}
-		{% if post != site.categories.blog.last %}
-		<hr/>
-		{% endif %}
-		{% endfor %}
+		{{content}}
 	</div>
 	<div id="sidebar" class="grid_1 omega">
 		<!--<div id="search-wrapper">
