@@ -20,6 +20,10 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+		var disqus_shortname = 'destroytodaystaging';
+		var disqus_developer = 1;
+		var disqus_container_id = 'disqus_thread';
+		var disqus_domain = 'disqus.com';
 </script>
 	</head>
 	
@@ -87,6 +91,16 @@
 					window.location = "{{previous_url}}"
 				} 
 			});
+		</script>
+		{% endif %}
+		{% if page.category == 'blog' %}
+		<script type="text/javascript">
+		    (function () {
+		        var s = document.createElement('script'); s.async = true;
+		        s.type = 'text/javascript';
+		        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+		        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		    }());
 		</script>
 		{% endif %}
 	</body>

@@ -168,10 +168,8 @@ $(document).ready(function()
                       }
                   
                       var tweet = 
-                        "<a href=\"http://twitter.com/destroytoday\">@destroytoday</a>" +
-                        "<span class=\"plus\"> + </span>" + 
                         linkify(value.text) +
-                        " <a class=\"timestamp\" href=\"http://twitter.com/destroytoday/status/" + value.id_str + "\">" + 
+                        "<br/><a href=\"http://twitter.com/destroytoday\">destroytoday</a> <a class=\"timestamp\" href=\"http://twitter.com/destroytoday/status/" + value.id_str + "\">" + 
                         jQuery.timeago(value.created_at).replace(/[\s]+/ig, '&nbsp;') +
                         "</a>";
                   
