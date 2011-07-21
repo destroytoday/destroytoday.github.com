@@ -1,9 +1,10 @@
 require 'rubygems'
 require 'growl'
 require "serialport"
+require 'coffee-script'
 
 def arduinoExists?
-  return File.exists? "/dev/tty.usbmodem411"
+  return File.exists?("/dev/tty.RN42-A82F-SPP")
 end
 
 def light color, delay=1
@@ -22,8 +23,8 @@ def flash color
 end
 
 def setup
-  port_str = "/dev/tty.usbmodem411"
-  baud_rate = 9600
+  port_str = "/dev/tty.RN42-A82F-SPP"
+  baud_rate = 115200
   data_bits = 8
   stop_bits = 1
   parity = SerialPort::NONE
@@ -51,7 +52,9 @@ def fail
   exit
 end
 
-task :default => [:setup, :compress, :jekyll, :compass, :success]
+task :default => [:javascript, :jekyll, :compass, :index, :success]
+
+task :arduino => [:setup, :default]
 
 task :setup do
   setup if arduinoExists?
@@ -64,9 +67,17 @@ task :setup do
 	#fail unless result
 end
 
-task :compress do
-	system("java -jar build/yuicompressor-2.4.6.jar src/js/_jquery.destroytoday.js -o src/js/jquery.destroytoday.min.js
-")
+task :javascript do
+  Dir.glob('src/js/*.coffee') do |path|
+    to_path = path.gsub('.coffee', '.js')
+    to_min_path = to_path.gsub('.js', '.min.js').gsub(/\/_/, '/')
+
+    File.open(to_path, 'w') {|f| 
+      f.write(CoffeeScript.compile File.read(path))
+    }
+    
+    system "java -jar build/yuicompressor-2.4.6.jar #{to_path} -o #{to_min_path}"
+  end
 end
 
 task :compass do
@@ -99,6 +110,37 @@ task :tidy do
 	puts output
 	  
 	fail unless result
+end
+
+task :index do
+  index = "["
+  n = 0
+  
+  Dir.glob('site/blog/*/index.html') do |path|
+    File.open(path) {|file|
+      content = file.read
+      
+      content = content.scan(/<p>(.+)<\/p>/i).to_s
+      content = content.gsub /(<[^>]+>|&#[^;]+;|\n|\r|")/i, ''
+      
+      if n > 0
+        index = index + ","
+      end
+        
+      index = index + "\"path\":\"#{file.path}\","
+      index = index + "\"content\":\"#{content}\"},"
+      #index = index + "\"thumbnail\":{"
+      #index = index + "\"image\":\"#{image}\"},"
+      #index = index + "\"colors\":\"#{image}\"},"
+      #index = index + "}"
+      
+      n = n + 1
+    }
+  end
+  
+  index = index + "]"
+  
+  File.open('site/js/blog_index.json', 'w') {|f| f.write(index) }
 end
 
 task :deploy do

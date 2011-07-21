@@ -103,5 +103,8 @@
 		    }());
 		</script>
 		{% endif %}
+		{% for js in page.js %}
+		<script src="/js/{{js}}" type="text/javascript"></script>
+		{% endfor %}
 	</body>
 </html>

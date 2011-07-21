@@ -1,0 +1,16 @@
+---
+layout: default
+js:
+  - search.js
+---
+{% assign i = '0' %}
+{% for project in site.categories.lab %}
+	{% include project_thumb.html %}
+	{% capture i %}{{ i | plus:1 }}{% endcapture %}
+	{% if i == '4' %}
+		<div class="clear"> </div>
+		{% assign i = '0' %}
+	{% elsif project == site.categories.lab.last %}
+		<div class="clear"> </div>
+	{% endif %}
+{% endfor %}
