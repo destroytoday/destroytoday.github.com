@@ -3,6 +3,7 @@
 	<head>
 		<title>Destroy Today / {{page.title}}</title>
 		
+		<link type="application/rss+xml" rel="alternate" title="Destroy Today" href="http://feeds.feedburner.com/destroytoday" />
 		{% if page.style %}
 		<link href="/css{% if page.id %}{{ page.id }}{% elsif page.title %}/{{page.title | downcase}}{% endif %}.css" rel="stylesheet" type="text/css" />
 		{% else %}
