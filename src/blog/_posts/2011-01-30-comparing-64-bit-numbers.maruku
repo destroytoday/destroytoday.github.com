@@ -1,0 +1,40 @@
+---
+layout: blog_post
+title: Comparing 64-bit numbers in AS3 and SQLite
+category: blog
+tags: [Code, AS3, SQLite]
+thumbnail: 
+  image: comparing-64-bit-numbers-lg-thumb.png
+  colors: [222222, FFFFFF]
+---
+When [Twitter introduced Snowflake](http://engineering.twitter.com/2010/06/announcing-snowflake.html), their new ID generator, they also introduced 64-bit IDs. At first, I didn't think much of this. When the [Twitpocalypse](http://www.google.com/search?q=twitpocalypse&#038;ie=utf-8&#038;oe=utf-8&#038;aq=t&#038;rls=org.mozilla:en-US:official&#038;client=firefox-a) occurred (Twitter IDs surpassing 32 bits), I updated [DestroyTwitter](http://destroytwitter.com/) to use floating point IDs instead of integer IDs. I figured with Snowflake that AS3's floating point class, Number, had me covered. I was wrong.
+
+It turns out AS3 doesn't support 64-bit numbers. To support Snowflake, I have to update DestroyTwitter to use string IDs instead of floating point IDs. A handful of problems arise because of this. For one, I must reformat DestroyTwitter's local SQLite database to use TEXT columns instead of REAL. Also, string comparison doesn't exactly behave the same as number comparison. For example, "9" > "1" because 9 comes after 1.
+
+To overcome this inconvenience, we need a more complex method of comparison than a simple < or >. We could left pad the string with zeros, but this is expensive in AS3 and impossible in SQLite. I prefer comparing the string lengths first, then the strings as numbers:
+
+    newID.length > oldID.length || newID > oldID
+
+Just like AS3, SQLite lacks support for 64-bit numbers. You would think the same comparison method in SQL syntax would work:
+
+    length(newID) > length(oldID) OR newID > oldID
+
+It doesn't. AS3 and SQL differ in the way each handles conditions. In AS3, the conditions relate to each other. If the first condition is false, the second condition assumes the first condition is false. For example:
+
+    booleanA || booleanB
+
+really means
+
+    booleanA || !booleanA && booleanB
+
+SQL, on the other hand, treats each condition separately. It acts like this if it were in AS3:
+
+    if (booleanA) callMethod();
+  
+    if (booleanB) callMethod();
+
+As a result, our SQL comparison must be a bit more explicit:
+
+    length(newID) > length(oldID) OR length(newID) = length(oldID) AND newID > oldID
+
+Hopefully, AS3 and SQLite will support 64-bit floating point in the near future. Until then, we'll have to resort to workarounds like the ones above.

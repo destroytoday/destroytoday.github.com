@@ -3,6 +3,7 @@
 	<head>
 		<title>Destroy Today / Blog</title>
 		
+		<link type="application/rss+xml" rel="alternate" title="Destroy Today" href="http://feeds.feedburner.com/destroytoday" />
 		
 		<link href="/css/screen.css" rel="stylesheet" type="text/css" />
 		
@@ -96,6 +97,50 @@
 	</div>
 </div>
 
+<hr/>
+
+
+<div class="post">
+	<h2><a href="/blog/comparing-64-bit-numbers">Comparing 64-bit numbers in AS3 and SQLite</a></h2>
+	<div class="metadata">
+		<div class="date"><a href="/blog/comparing-64-bit-numbers">01.30.11</a></div><div class="comment-count"><a href="/blog/comparing-64-bit-numbers#disqus_thread" data-disqus-identifier="http://staging.destroytoday.com/blog/comparing-64-bit-numbers">0</a> <a href="/blog/comparing-64-bit-numbers"><img class="bubble-up" src="/images/assets/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/images/assets/comment_over.png" width="10" height="10" /></a></div>
+	</div>
+	<p>When <a href='http://engineering.twitter.com/2010/06/announcing-snowflake.html'>Twitter introduced Snowflake</a>, their new ID generator, they also introduced 64-bit IDs. At first, I didn&#8217;t think much of this. When the <a href='http://www.google.com/search?q=twitpocalypse&amp;#038;ie=utf-8&amp;#038;oe=utf-8&amp;#038;aq=t&amp;#038;rls=org.mozilla:en-US:official&amp;#038;client=firefox-a'>Twitpocalypse</a> occurred (Twitter IDs surpassing 32 bits), I updated <a href='http://destroytwitter.com/'>DestroyTwitter</a> to use floating point IDs instead of integer IDs. I figured with Snowflake that AS3&#8217;s floating point class, Number, had me covered. I was wrong.</p>
+
+<p>It turns out AS3 doesn&#8217;t support 64-bit numbers. To support Snowflake, I have to update DestroyTwitter to use string IDs instead of floating point IDs. A handful of problems arise because of this. For one, I must reformat DestroyTwitter&#8217;s local SQLite database to use TEXT columns instead of REAL. Also, string comparison doesn&#8217;t exactly behave the same as number comparison. For example, &#8220;9&#8221; &gt; &#8220;1&#8221; because 9 comes after 1.</p>
+
+<p>To overcome this inconvenience, we need a more complex method of comparison than a simple &lt; or &gt;. We could left pad the string with zeros, but this is expensive in AS3 and impossible in SQLite. I prefer comparing the string lengths first, then the strings as numbers:</p>
+
+<pre><code>newID.length &gt; oldID.length || newID &gt; oldID</code></pre>
+
+<p>Just like AS3, SQLite lacks support for 64-bit numbers. You would think the same comparison method in SQL syntax would work:</p>
+
+<pre><code>length(newID) &gt; length(oldID) OR newID &gt; oldID</code></pre>
+
+<p>It doesn&#8217;t. AS3 and SQL differ in the way each handles conditions. In AS3, the conditions relate to each other. If the first condition is false, the second condition assumes the first condition is false. For example:</p>
+
+<pre><code>booleanA || booleanB</code></pre>
+
+<p>really means</p>
+
+<pre><code>booleanA || !booleanA &amp;&amp; booleanB</code></pre>
+
+<p>SQL, on the other hand, treats each condition separately. It acts like this if it were in AS3:</p>
+
+<pre><code>if (booleanA) callMethod();
+
+if (booleanB) callMethod();</code></pre>
+
+<p>As a result, our SQL comparison must be a bit more explicit:</p>
+
+<pre><code>length(newID) &gt; length(oldID) OR length(newID) = length(oldID) AND newID &gt; oldID</code></pre>
+
+<p>Hopefully, AS3 and SQLite will support 64-bit floating point in the near future. Until then, we&#8217;ll have to resort to workarounds like the ones above.</p>
+	<div class="metadata">
+		<div class="tags"><a href="/blog/tag/code">code</a> + <a href="/blog/tag/as3">as3</a> + <a href="/blog/tag/sqlite">sqlite</a></div>
+	</div>
+</div>
+
 
 	</div>
 	<div id="sidebar" class="grid_1 omega">
@@ -104,7 +149,7 @@
 			<hr/>
 		</div>-->
 		<div id="latest-tweet">
-			<img src="/images/assets/twitter_avatar.jpg" width="32" height="32" alt="@destroytoday" />
+			<a href="http://twitter.com/destroytoday"><img src="/images/assets/twitter_avatar.jpg" width="32" height="32" alt="@destroytoday" /></a>
 			<p></p>
 			<hr/>
 		</div>
@@ -151,11 +196,31 @@
 </div>
 
 			
+			<hr/>
+			
+			
+			<div class="thumb alpha omega" style="background: #FFFFFF">
+	<a href="/blog/comparing-64-bit-numbers"><img src="/images/blog/comparing-64-bit-numbers/comparing-64-bit-numbers-lg-thumb.png" width="200" height="200" alt="Comparing 64-bit numbers in AS3 and SQLite" /></a>
+	<div class="color_blocks" onclick="document.location='/blog/comparing-64-bit-numbers'">
+		
+			
+				<div class="color_block" style="width: 50.0%; background: #222222"></div>
+			
+				<div class="color_block" style="width: 50.0%; background: #FFFFFF"></div>
+			
+		
+	</div>
+	<div class="metadata">
+		<div class="title"><a href="/blog/comparing-64-bit-numbers">Comparing 64-bit numbers in AS3 and SQLite</a></div>
+	</div>
+</div>
+
+			
 			
 		</div>
 	</div>
 	<!--per page: 10<br/>
-	total posts: 12<br/>
+	total posts: 13<br/>
 	total pages: 2<br/>
 	page: 1<br/>
 	prev page: <br/>
@@ -183,6 +248,18 @@
 		<script type="text/javascript" src="http://use.typekit.com/aeu3zes.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
 
