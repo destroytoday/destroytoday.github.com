@@ -7,7 +7,11 @@
 	{% if project.id != page.id %}
 	{% if direction == 'next' %}
 	{% if project.categories == page.categories %}
+	{% if page.category != 'blog' %}
 		{% assign next_title = project.title %}
+	{% else %}
+	  {% assign next_title = project.shortname %}
+	{% endif %}
 		{% assign next_url = project.url %}
 	{% endif %}
 	{% endif %}
@@ -17,7 +21,11 @@
 	{% if direction == 'previous' %}
 	{% if project.categories == page.categories %}
 	{% if previous_url == nil %}
+	{% if page.category != 'blog' %}
 		{% assign previous_title = project.title %}
+	{% else %}
+	  {% assign previous_title = project.shortname %}
+	{% endif %}
 		{% assign previous_url = project.url %}
 	{% endif %}
 	{% endif %}

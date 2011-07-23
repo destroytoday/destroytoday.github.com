@@ -31,3 +31,16 @@ layout: default
 	prev page: {{paginator.previous_page}}<br/>
 	next page: {{paginator.next_page}}<br/>-->
 </div>
+{% if page.layout != 'blog' %}
+{% include project_direction.html %}
+{% if next_url %}
+<div id="prev" class="direction">
+	<a href="{{next_url}}"><span class="title_wrapper"><span class="title">{{next_title}}</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>
+</div>
+{% endif %}
+{% if previous_url %}
+<div id="next" class="direction">
+	<a href="{{previous_url}}"><span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">{{previous_title}}</span></span></a>
+</div>
+{% endif %}
+{% endif %}

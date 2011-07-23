@@ -1,6 +1,7 @@
 ---
 layout: blog_post
 title: Comparing 64-bit numbers in AS3 and SQLite
+shortname: 64-bit numbers
 category: blog
 tags: [Code, AS3, SQLite]
 thumbnail: 
