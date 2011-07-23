@@ -16,12 +16,21 @@ layout: default
 			<hr/>
 		</div>
 		<div id="related-posts">
-			{% for post in site.categories.blog %}
-			{% include blog_sidebar_thumb.html %}
-			{% if post != site.categories.blog.last %}
-			<hr/>
-			{% endif %}
-			{% endfor %}
+		  {% if paginator.posts %}
+		    {% for post in paginator.posts %}
+  			  {% if post != paginator.posts.first %}
+  			    {% include blog_sidebar_thumb.html %}
+  			    <hr/>
+  			  {% endif %}
+  			{% endfor %}
+		  {% else %}
+  			{% for post in site.categories.blog %}
+  			  {% if post.id != page.id %}
+  			    {% include blog_sidebar_thumb.html %}
+  			    <hr/>
+  			  {% endif %}
+  			{% endfor %}
+  		{% endif %}
 		</div>
 	</div>
 	<!--per page: {{paginator.per_page}}<br/>
