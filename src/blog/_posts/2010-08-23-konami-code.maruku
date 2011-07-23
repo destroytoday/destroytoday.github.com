@@ -1,0 +1,39 @@
+---
+layout: blog_post
+title: Konami Code added to DestroyFramework
+shortname: Konami Code
+category: blog
+tags: [Code, AS3, Open Source]
+thumbnail: 
+  image: konami-code-lg-thumb.png
+  colors: [E86600, EDD628, C8C8C8, '000000']
+---
+![Konami Code](/images/blog/konami-code/konami-code.png)
+
+Sure, I could have spent tonight working on useful features for DestroyTwitter, but no, I wrote a [KonamiCode](http://github.com/destroytoday/DestroyFramework/blob/master/src/com/destroytoday/desktop/KonamiCode.as). To use it, simply instantiate it with a stage and you're good to go.
+
+    package com.destroytoday.desktop
+    {
+    	import com.destroytoday.desktop.KonamiCode;
+
+    	import flash.display.Sprite;
+
+    	public class KonamiCodeTest extends Sprite
+    	{
+    		public var konamiCode:KonamiCode;
+
+    		public function KonamiCodeTest()
+    		{
+    			konamiCode = new KonamiCode(stage);
+
+    			konamiCode.executed.add(konamiCodeExecutedHandler);
+    		}
+
+    		protected function konamiCodeExecutedHandler():void
+    		{
+    			trace("woohoo!");
+    		}
+    	}
+    }
+
+On a related note, I realized I've been neglecting [GitHub](http://github.com/destroytoday) for months, but now I'm back! I also plan to return to the experimentation game after reminiscing about my convex hull, delaunay triangulation, and voronoi studies at work today. When you develop apps all day, writing experiments can be a breath of fresh air, allowing a level of creativity you simply can't get with apps.

@@ -32,3 +32,14 @@
 	{% endif %}
 	{% endif %}
 {% endfor %}
+{% if page.category == 'blog' %}
+	{% if paginator.previous_page %}
+	  {% capture next_title %}Page {{paginator.previous_page}}{% endcapture %}
+    {% capture next_url %}/blog{% if paginator.previous_page > 1 %}/page/{{paginator.previous_page}}{% endif %}{% endcapture %}
+  {% endif %}
+  
+  {% if paginator.next_page %}
+    {% capture previous_title %}Page {{paginator.next_page}}{% endcapture %}
+    {% capture previous_url %}/blog{% if paginator.next_page > 1 %}/page/{{paginator.next_page}}{% endif %}{% endcapture %}
+  {% endif %}
+{% endif %}

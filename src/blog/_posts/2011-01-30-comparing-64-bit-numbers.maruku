@@ -6,7 +6,7 @@ category: blog
 tags: [Code, AS3, SQLite]
 thumbnail: 
   image: comparing-64-bit-numbers-lg-thumb.png
-  colors: [222222, FFFFFF]
+  colors: [FFFFFF, 222222]
 ---
 When [Twitter introduced Snowflake](http://engineering.twitter.com/2010/06/announcing-snowflake.html), their new ID generator, they also introduced 64-bit IDs. At first, I didn't think much of this. When the [Twitpocalypse](http://www.google.com/search?q=twitpocalypse&#038;ie=utf-8&#038;oe=utf-8&#038;aq=t&#038;rls=org.mozilla:en-US:official&#038;client=firefox-a) occurred (Twitter IDs surpassing 32 bits), I updated [DestroyTwitter](http://destroytwitter.com/) to use floating point IDs instead of integer IDs. I figured with Snowflake that AS3's floating point class, Number, had me covered. I was wrong.
 

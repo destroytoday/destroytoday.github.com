@@ -22,7 +22,7 @@ module Jekyll
       if site.layouts.key? 'blog_tag'
         dir = site.config['tag_dir'] || 'blog/tag'
         site.tags.keys.each do |tag|
-          write_tag_index(site, File.join(dir, tag.downcase), tag)
+          write_tag_index(site, File.join(dir, tag.gsub(/ /, '-').downcase), tag)
         end
       end
     end

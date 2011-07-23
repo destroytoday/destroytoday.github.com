@@ -1,9 +1,9 @@
 ---
 layout: blog
 ---
-{% for post in site.categories.blog %}
+{% for post in paginator.posts %}
 {% include blog_post.html %}
-{% if post != site.categories.blog.last %}
+{% if post != paginator.posts.last %}
 <hr/>
 {% endif %}
 {% endfor %}

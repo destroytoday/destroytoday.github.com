@@ -141,6 +141,48 @@ if (booleanB) callMethod();</code></pre>
 	</div>
 </div>
 
+<hr/>
+
+
+<div class="post">
+	<h2><a href="/blog/konami-code">Konami Code added to DestroyFramework</a></h2>
+	<div class="metadata">
+		<div class="date"><a href="/blog/konami-code">08.23.10</a></div><div class="comment-count"><a href="/blog/konami-code#disqus_thread" data-disqus-identifier="http://staging.destroytoday.com/blog/konami-code">0</a> <a href="/blog/konami-code"><img class="bubble-up" src="/images/assets/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/images/assets/comment_over.png" width="10" height="10" /></a></div>
+	</div>
+	<p><img src='/images/blog/konami-code/konami-code.png' alt='Konami Code' /></p>
+
+<p>Sure, I could have spent tonight working on useful features for DestroyTwitter, but no, I wrote a <a href='http://github.com/destroytoday/DestroyFramework/blob/master/src/com/destroytoday/desktop/KonamiCode.as'>KonamiCode</a>. To use it, simply instantiate it with a stage and you&#8217;re good to go.</p>
+
+<pre><code>package com.destroytoday.desktop
+{
+	import com.destroytoday.desktop.KonamiCode;
+
+	import flash.display.Sprite;
+
+	public class KonamiCodeTest extends Sprite
+	{
+		public var konamiCode:KonamiCode;
+
+		public function KonamiCodeTest()
+		{
+			konamiCode = new KonamiCode(stage);
+
+			konamiCode.executed.add(konamiCodeExecutedHandler);
+		}
+
+		protected function konamiCodeExecutedHandler():void
+		{
+			trace(&quot;woohoo!&quot;);
+		}
+	}
+}</code></pre>
+
+<p>On a related note, I realized I&#8217;ve been neglecting <a href='http://github.com/destroytoday'>GitHub</a> for months, but now I&#8217;m back! I also plan to return to the experimentation game after reminiscing about my convex hull, delaunay triangulation, and voronoi studies at work today. When you develop apps all day, writing experiments can be a breath of fresh air, allowing a level of creativity you simply can&#8217;t get with apps.</p>
+	<div class="metadata">
+		<div class="tags"><a href="/blog/tag/code">code</a> + <a href="/blog/tag/as3">as3</a> + <a href="/blog/tag/open-source">open source</a></div>
+	</div>
+</div>
+
 
 	</div>
 	<div id="sidebar" class="grid_1 omega">
@@ -199,14 +241,14 @@ if (booleanB) callMethod();</code></pre>
 			<hr/>
 			
 			
-			<div class="thumb alpha omega" style="background: #FFFFFF">
+			<div class="thumb alpha omega" style="background: #222222">
 	<a href="/blog/comparing-64-bit-numbers"><img src="/images/blog/comparing-64-bit-numbers/comparing-64-bit-numbers-lg-thumb.png" width="200" height="200" alt="Comparing 64-bit numbers in AS3 and SQLite" /></a>
 	<div class="color_blocks" onclick="document.location='/blog/comparing-64-bit-numbers'">
 		
 			
-				<div class="color_block" style="width: 50.0%; background: #222222"></div>
-			
 				<div class="color_block" style="width: 50.0%; background: #FFFFFF"></div>
+			
+				<div class="color_block" style="width: 50.0%; background: #222222"></div>
 			
 		
 	</div>
@@ -216,15 +258,39 @@ if (booleanB) callMethod();</code></pre>
 </div>
 
 			
+			<hr/>
+			
+			
+			<div class="thumb alpha omega" style="background: #000000">
+	<a href="/blog/konami-code"><img src="/images/blog/konami-code/konami-code-lg-thumb.png" width="200" height="200" alt="Konami Code added to DestroyFramework" /></a>
+	<div class="color_blocks" onclick="document.location='/blog/konami-code'">
+		
+			
+				<div class="color_block" style="width: 25.0%; background: #E86600"></div>
+			
+				<div class="color_block" style="width: 25.0%; background: #EDD628"></div>
+			
+				<div class="color_block" style="width: 25.0%; background: #C8C8C8"></div>
+			
+				<div class="color_block" style="width: 25.0%; background: #000000"></div>
+			
+		
+	</div>
+	<div class="metadata">
+		<div class="title"><a href="/blog/konami-code">Konami Code added to DestroyFramework</a></div>
+	</div>
+</div>
+
+			
 			
 		</div>
 	</div>
 	<!--per page: 10<br/>
-	total posts: 13<br/>
-	total pages: 2<br/>
+	total posts: 4<br/>
+	total pages: 1<br/>
 	page: 1<br/>
 	prev page: <br/>
-	next page: 2<br/>-->
+	next page: <br/>-->
 </div>
 
 
@@ -384,6 +450,23 @@ if (booleanB) callMethod();</code></pre>
 	
 	
 	
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+  
+  
 
 
 
@@ -566,6 +649,23 @@ if (booleanB) callMethod();</code></pre>
 	
 	
 	
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+  
+  
 
 		
 		

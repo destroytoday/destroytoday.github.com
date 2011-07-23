@@ -3,7 +3,7 @@
 	<title>Destroy Today</title>
 	<link href="http://staging.destroytoday.com/blog/feed.xml" rel="self"/>
 	<link href="http://staging.destroytoday.com"/>
-	<updated>2011-07-22T20:35:56-07:00</updated>
+	<updated>2011-07-22T23:48:30-07:00</updated>
 	<id>http://staging.destroytoday.com</id>
 	<author>
 		<name>Jonnie Hallman</name>
@@ -71,6 +71,42 @@ if (booleanB) callMethod();&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;length(newID) &amp;gt; length(oldID) OR length(newID) = length(oldID) AND newID &amp;gt; oldID&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Hopefully, AS3 and SQLite will support 64-bit floating point in the near future. Until then, we&amp;#8217;ll have to resort to workarounds like the ones above.&lt;/p&gt;</content>
+	</entry>
+	
+	<entry>
+		<title><![CDATA[Konami Code added to DestroyFramework]]></title>
+		<link href="http://staging.destroytoday.com/blog/konami-code"/>
+		<updated>2010-08-23T00:00:00-07:00</updated>
+		<id>http://staging.destroytoday.com/blog/konami-code</id>
+		<content type="html">&lt;p&gt;&lt;img src='/images/blog/konami-code/konami-code.png' alt='Konami Code' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sure, I could have spent tonight working on useful features for DestroyTwitter, but no, I wrote a &lt;a href='http://github.com/destroytoday/DestroyFramework/blob/master/src/com/destroytoday/desktop/KonamiCode.as'&gt;KonamiCode&lt;/a&gt;. To use it, simply instantiate it with a stage and you&amp;#8217;re good to go.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.destroytoday.desktop
+{
+	import com.destroytoday.desktop.KonamiCode;
+
+	import flash.display.Sprite;
+
+	public class KonamiCodeTest extends Sprite
+	{
+		public var konamiCode:KonamiCode;
+
+		public function KonamiCodeTest()
+		{
+			konamiCode = new KonamiCode(stage);
+
+			konamiCode.executed.add(konamiCodeExecutedHandler);
+		}
+
+		protected function konamiCodeExecutedHandler():void
+		{
+			trace(&amp;quot;woohoo!&amp;quot;);
+		}
+	}
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On a related note, I realized I&amp;#8217;ve been neglecting &lt;a href='http://github.com/destroytoday'&gt;GitHub&lt;/a&gt; for months, but now I&amp;#8217;m back! I also plan to return to the experimentation game after reminiscing about my convex hull, delaunay triangulation, and voronoi studies at work today. When you develop apps all day, writing experiments can be a breath of fresh air, allowing a level of creativity you simply can&amp;#8217;t get with apps.&lt;/p&gt;</content>
 	</entry>
 	
 	
