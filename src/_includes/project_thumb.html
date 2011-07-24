@@ -1,5 +1,5 @@
 <div class="thumb{% if i == '0' %} alpha{% elsif i == '3' %} omega{% endif %}">
-	<a href="{{project.url}}"><img src="/images{{project.id}}/{{project.thumbnail.image}}" width="200" height="200" alt="{{project.title}}" /></a>
+	<a href="{{project.url}}"><img src="/assets{{project.id}}/{{project.thumbnail.image}}" width="200" height="200" alt="{{project.title}}" /></a>
 	<div class="color_blocks" onclick="document.location='{{project.url}}'">
 		{% case project.thumbnail.colors.size %} 
 		{% when 3 %} 

@@ -390,8 +390,11 @@ input
                         text-decoration: none
                         
 #content
-    +clearfix
     min-height: 450px
+    
+    hr
+        +clearfix
+        height: 33px
     
     #arrow
         position: absolute
@@ -541,7 +544,6 @@ input
             color: $tag-color
             
 #content
-    +clearfix
     clear: both
     margin: 30px 0px 40px 0px
     
@@ -557,7 +559,7 @@ input
     #sidebar
         #search-wrapper
             #search
-                background: url("/images/assets/sidebar_input.png") no-repeat 0 0
+                background: url("/assets/site/sidebar_input.png") no-repeat 0 0
                 width: 168px
                 padding: 2px 8px 4px 22px
                 
@@ -594,6 +596,10 @@ input
         #related-posts
             hr
                 height: 8px
+                
+        #latest-flickr
+            img
+                width: 100%
             
     .post
         h2
@@ -635,7 +641,7 @@ input
                     margin: 1px 0px 0px 3px
                     width: 10px
                     height: 10px
-                    background: url("/images/assets/comment_up.png") no-repeat
+                    background: url("/assets/site/comment_up.png") no-repeat
                     
                 &:hover a
                     @extend a:hover
@@ -654,7 +660,7 @@ input
                     height: 10px
                     opacity: 0
                     
-                    background: url("/images/assets/comment_over.png") no-repeat
+                    background: url("/assets/site/comment_over.png") no-repeat
                 
         img
             @extend p
@@ -714,6 +720,13 @@ input
 
 .grid_4 
     width: 900px
+    
+.container
+    div:first-child
+        margin-left: 0px
+        
+    div:last-child
+        margin-right: 0px
 
 .container_4 .prefix_1 
     padding-left: 233px
@@ -750,6 +763,26 @@ input
 
 .container_4 .pull_3 
     left: -699px
+    
+.spacer_1
+    +clearfix
+    clear: both
+    height: 66px
+    
+.spacer_2
+    +clearfix
+    clear: both
+    height: 33px
+    
+.spacer_3
+    +clearfix
+    clear: both
+    height: 16px
+    
+.spacer_4
+    +clearfix
+    clear: both
+    height: 8px
 
 .clear 
     clear: both

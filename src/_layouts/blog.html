@@ -11,7 +11,7 @@ layout: default
 			<hr/>
 		</div>-->
 		<div id="latest-tweet">
-			<a href="http://twitter.com/destroytoday"><img src="/images/assets/twitter_avatar.jpg" width="32" height="32" alt="@destroytoday" /></a>
+			<a href="http://twitter.com/destroytoday"><img src="/assets/site/twitter_avatar.jpg" width="32" height="32" alt="@destroytoday" /></a>
 			<p></p>
 			<hr/>
 		</div>
@@ -32,13 +32,8 @@ layout: default
   			{% endfor %}
   		{% endif %}
 		</div>
+		<!--<div id="latest-flickr">poop</div>-->
 	</div>
-	<!--per page: {{paginator.per_page}}<br/>
-	total posts: {{paginator.total_posts}}<br/>
-	total pages: {{paginator.total_pages}}<br/>
-	page: {{paginator.page}}<br/>
-	prev page: {{paginator.previous_page}}<br/>
-	next page: {{paginator.next_page}}<br/>-->
 </div>
 {% if page.layout != 'blog' %}
 {% include project_direction.html %}

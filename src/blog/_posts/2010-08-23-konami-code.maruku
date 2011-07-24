@@ -8,7 +8,7 @@ thumbnail:
   image: konami-code-lg-thumb.png
   colors: [E86600, EDD628, C8C8C8, '000000']
 ---
-![Konami Code](/images/blog/konami-code/konami-code.png)
+![Konami Code](/assets/blog/konami-code/konami-code.png)
 
 Sure, I could have spent tonight working on useful features for DestroyTwitter, but no, I wrote a [KonamiCode](http://github.com/destroytoday/DestroyFramework/blob/master/src/com/destroytoday/desktop/KonamiCode.as). To use it, simply instantiate it with a stage and you're good to go.
 

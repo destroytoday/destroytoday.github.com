@@ -78,6 +78,8 @@ task :javascript do
     
     system "java -jar build/yuicompressor-2.4.6.jar #{to_path} -o #{to_min_path}"
   end
+  
+  `java -jar build/yuicompressor-2.4.6.jar src/js/_jquery.destroytoday.js -o src/js/jquery.destroytoday.min.js`
 end
 
 task :compass do

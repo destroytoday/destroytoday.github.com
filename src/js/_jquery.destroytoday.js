@@ -1,22 +1,3 @@
-function search(str)
-{
-    $.ajax({
-      url: "/js/blog_index.json",
-      dataType: 'json',
-      cache: false,
-      success: function(data)
-      {
-        $.each(data, function(key, value)
-        {
-           if (value.content.indexOf(str) != -1)
-           {
-               $('#search').html("{% include blog_post.html %}");
-           } 
-        });
-      }
-  });
-}
-
 $(document).ready(function()
 {
 	jQuery.easing.def = 'easeInOutCubic';
@@ -105,6 +86,40 @@ $(document).ready(function()
 		window.location = $(event.currentTarget).children('a').attr('href');
 	});
 	
+	$('#flash-experiments .container .grid_2 .close-flash').click(function(event)
+	{
+	    event.preventDefault();
+	    
+	    var swf_container = $(event.currentTarget).siblings('.flash');
+	    
+	    swf_container.html('');
+	    swf_container.css('display', 'none');
+	    $(event.currentTarget).css('display', 'none');
+	    
+	    return false;
+    });
+    
+	$('#flash-experiments .container .grid_2 a').click(function(event)
+	{
+	    event.preventDefault();
+	    
+	    $('#flash-experiments .container .grid_2 .flash').html('');
+	    $('#flash-experiments .container .grid_2 .flash').css('display', 'none');
+	    $('#flash-experiments .container .grid_2 .close-flash').css('display', 'none');
+	    
+	    var swf_container = $(event.currentTarget).siblings('.flash');
+	    
+	    $(event.currentTarget).siblings('.close-flash').css('display', 'block');
+	    swf_container.css('display', 'block');
+	    swf_container.flash({
+	        swf: $(event.currentTarget).attr('alt'),
+	        width: swf_container.width(),
+	        height: swf_container.height()
+	    });
+	    
+	    return false;
+    });
+	
 	function rgb2hex(rgb)
 	{
 		rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
@@ -157,7 +172,7 @@ $(document).ready(function()
       years: "%d years"
     };
 
-    if ($('#latest-tweet'))
+    if ($('#latest-tweet').length > 0)
     {
         $.ajax({
           url: "http://twitter.com/statuses/user_timeline/destroytoday.json?count=10",
@@ -189,6 +204,19 @@ $(document).ready(function()
           }
         });
     }
+    
+    /*if ($("#latest-flickr"))
+    {
+        $.ajax({
+            url: "http://api.flickr.com/services/feeds/photos_public.gne?id=13185812@N03&lang=en-us&format=json",
+            dataType: "jsonp",
+            jsonpCallback: "jsonFlickrFeed",
+            success: function(data)
+            {
+                $('#latest-flickr').html('<img src="' + data.items[0].media.m + '" />');
+            }
+        });
+    }*/
 
 	$(".twitter-follow-button").attr('data-text-color', rgb2hex($("body").css('color')));
 	$(".twitter-follow-button").attr('data-link-color', rgb2hex($(".twitter-follow-button").css('color')));

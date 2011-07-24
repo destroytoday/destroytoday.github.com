@@ -3,7 +3,7 @@
 	<title>Destroy Today</title>
 	<link href="http://staging.destroytoday.com/blog/feed.xml" rel="self"/>
 	<link href="http://staging.destroytoday.com"/>
-	<updated>2011-07-23T00:11:30-07:00</updated>
+	<updated>2011-07-23T19:18:08-07:00</updated>
 	<id>http://staging.destroytoday.com</id>
 	<author>
 		<name>Jonnie Hallman</name>
@@ -16,7 +16,7 @@
 		<link href="http://staging.destroytoday.com/blog/luminant_point_arrays"/>
 		<updated>2011-03-30T00:00:00-07:00</updated>
 		<id>http://staging.destroytoday.com/blog/luminant_point_arrays</id>
-		<content type="html">&lt;p&gt;&lt;img src='/images/blog/luminant_point_arrays/luminant_point_arrays_header.jpg' alt='Luminant Point Arrays' /&gt;&lt;/p&gt;
+		<content type="html">&lt;p&gt;&lt;img src='/assets/blog/luminant_point_arrays/luminant_point_arrays_header.jpg' alt='Luminant Point Arrays' /&gt;&lt;/p&gt;
 
 &lt;p&gt;My buddy &lt;a href='http://lukelukeluke.com/'&gt;Luke&lt;/a&gt; pointed me to this series by &lt;a href='http://www.stephantillmans.com/'&gt;Stephan Tillmans&lt;/a&gt; entitled, &amp;#8217;&lt;a href='http://www.stephantillmans.com/index.php?/portfolio/leuchtpunktordnungen/'&gt;Luminant Point Array&lt;/a&gt;.&amp;#8217; Each photo represents the turning-off phase of a different television. I&amp;#8217;m in love with them and would die to have one hanging on my wall.&lt;/p&gt;</content>
 	</entry>
@@ -26,11 +26,11 @@
 		<link href="http://staging.destroytoday.com/blog/dayone"/>
 		<updated>2011-03-24T00:00:00-07:00</updated>
 		<id>http://staging.destroytoday.com/blog/dayone</id>
-		<content type="html">&lt;p&gt;&lt;img src='/images/blog/dayone/dayone_header.png' alt='Day One' /&gt;&lt;/p&gt;
+		<content type="html">&lt;p&gt;&lt;img src='/assets/blog/dayone/dayone_header.png' alt='Day One' /&gt;&lt;/p&gt;
 
 &lt;p&gt;A few weeks ago, I tweeted about creating a private Twitter account to use as a journal. I dropped the idea after realizing that Twitter limits the number of viewable tweets to 3200. Cue &lt;a href='http://dayoneapp.com/'&gt;Day One&lt;/a&gt;, a new OSX journal app. With a clean UI and simply gorgeous icon, the design alone sold me.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/images/blog/dayone/dayone_menubar.jpg' alt='Day One' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/assets/blog/dayone/dayone_menubar.jpg' alt='Day One' /&gt;&lt;/p&gt;
 
 &lt;p&gt;Its desktop version ($9.99) utilizes a menubar window for quick and easy entries, and an accompanying iOS version ($0.99) syncs through Dropbox. Notifications appear throughout the day, reminding me to make an entry, which is just the motivation I need to keep with it. The only downside I see so far is the lack of a global hotkey. No worries, as it&amp;#8217;s &lt;a href='https://twitter.com/#!/dayoneapp/statuses/51126957626236928'&gt;expected early April&lt;/a&gt;. Kudos to &lt;a href='http://paulmayne.org/'&gt;Paul Mayne&lt;/a&gt; on a job well-done.&lt;/p&gt;</content>
 	</entry>
@@ -78,7 +78,7 @@ if (booleanB) callMethod();&lt;/code&gt;&lt;/pre&gt;
 		<link href="http://staging.destroytoday.com/blog/konami-code"/>
 		<updated>2010-08-23T00:00:00-07:00</updated>
 		<id>http://staging.destroytoday.com/blog/konami-code</id>
-		<content type="html">&lt;p&gt;&lt;img src='/images/blog/konami-code/konami-code.png' alt='Konami Code' /&gt;&lt;/p&gt;
+		<content type="html">&lt;p&gt;&lt;img src='/assets/blog/konami-code/konami-code.png' alt='Konami Code' /&gt;&lt;/p&gt;
 
 &lt;p&gt;Sure, I could have spent tonight working on useful features for DestroyTwitter, but no, I wrote a &lt;a href='http://github.com/destroytoday/DestroyFramework/blob/master/src/com/destroytoday/desktop/KonamiCode.as'&gt;KonamiCode&lt;/a&gt;. To use it, simply instantiate it with a stage and you&amp;#8217;re good to go.&lt;/p&gt;
 
