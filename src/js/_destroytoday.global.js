@@ -35,7 +35,7 @@
     return text.replace(exp, "<a href=\"$1$2\">$2</a>");
   };
   $(document).ready(function() {
-    var getLatestTweet, twitterWidgets;
+    var ds_loaded, getLatestTweet, lazyLoadDisqus, top, twitterWidgets;
     $('.email').html('<a href="mailto:jonnie@destroytoday.com">jonnie@destroytoday.com</a>');
     $('.direction').mouseenter(function(event) {
       var title, title_wrapper;
@@ -148,6 +148,24 @@
             });
         }
         */
+    if ($('#disqus_thread').length > 0) {
+      ds_loaded = false;
+      top = $('.tags').offset().top;
+      lazyLoadDisqus = function() {
+        var dsq;
+        console.log($(window).scrollTop());
+        if (!ds_loaded && $(window).scrollTop() + $(window).height() > top) {
+          ds_loaded = true;
+          dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          return (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }
+      };
+      $(window).scroll(lazyLoadDisqus);
+      lazyLoadDisqus();
+    }
     $(".twitter-follow-button").attr('data-text-color', rgb2hex($("body").css('color')));
     $(".twitter-follow-button").attr('data-link-color', rgb2hex($(".twitter-follow-button").css('color')));
     twitterWidgets = document.createElement('script');
