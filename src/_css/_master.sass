@@ -1,3 +1,9 @@
+//--------------------------------------------------------------------------
+//
+//  Imports
+//
+//--------------------------------------------------------------------------
+
 @import "compass/reset"
 @import "compass/utilities/general/clearfix"
 @import "compass/utilities/general/float"
@@ -63,6 +69,10 @@ $thumbnail-weight: 400 !default
     background: url($img) no-repeat
     _background: none
     _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$img',sizingMethod='crop')
+    
+=cursor-hand
+    cursor: pointer
+    cursor: hand
 
 //--------------------------------------------------------------------------
 //
@@ -395,8 +405,8 @@ input
     hr
         +clearfix
         height: 33px
-    
-    #arrow
+        
+    .direction
         position: absolute
         bottom: 50%
     
@@ -422,7 +432,7 @@ input
                 line-height: 1.5em
                 white-space: nowrap
                 height: 64px
-
+                
         a
             text-decoration: none
         
@@ -438,8 +448,6 @@ input
                 color: $arrow-hover-color
         
     #prev
-        @extend #arrow
-        
         .arrow_wrapper
             +float-right
             padding-left: 10px
@@ -450,8 +458,6 @@ input
         left: 10px
     
     #next
-        @extend #arrow
-        
         .arrow_wrapper
             +float-left
             padding-right: 10px
@@ -502,13 +508,12 @@ input
     +float-left
     position: relative
     width: 200px
-    margin-bottom: 64px
     
-    &:hover .metadata .title a
-        color: $link-hover-color
-        
     .color_blocks
+        +transition-property("top,height")
+        +transition-duration(.35s)
         position: absolute
+        top: 200px
         width: 100%
         height: 10px
         cursor: pointer
@@ -521,6 +526,7 @@ input
     .metadata
         position: absolute
         clear: both
+        top: 205px
         padding: 10px 0px 0px 0px
         width: 100%
         background: $background
@@ -542,6 +548,37 @@ input
             font-style: italic
             line-height: 1.375em
             color: $tag-color
+            
+    .hidden-metadata
+        +clearfix
+        padding: 15px 0px 0px 0px
+        width: 100%
+        font-family: $thumbnail-font
+        font-weight: $thumbnail-weight
+        
+        .title
+            +float-left
+            font-size: 0.875em
+            line-height: 1.25em
+            
+            a
+                color: $text-color
+                text-decoration: none
+        
+        .type
+            +float-right
+            font-size: 0.75em
+            font-style: italic
+            line-height: 1.375em
+            color: $tag-color
+            
+    &:hover 
+        .color_blocks
+            top: 0
+            height: 210px
+            
+        .metadata .title a
+            color: $link-hover-color
             
 #content
     clear: both
@@ -595,7 +632,7 @@ input
                         
         #related-posts
             hr
-                height: 8px
+                height: 33px
                 
         #latest-flickr
             img

@@ -17,17 +17,21 @@ layout: default
 		</div>
 		<div id="related-posts">
 		  {% if paginator.posts %}
-		    {% for post in paginator.posts %}
+		    {% for post in paginator.posts limit:3 offset:1 %}
   			  {% if post != paginator.posts.first %}
   			    {% include blog_sidebar_thumb.html %}
   			    <hr/>
   			  {% endif %}
   			{% endfor %}
 		  {% else %}
-  			{% for post in site.categories.blog %}
-  			  {% if post.id != page.id %}
-  			    {% include blog_sidebar_thumb.html %}
-  			    <hr/>
+		    {% assign related_post_i = 0 %}
+  			{% for post in site.related_posts %}
+  			  {% if post.categories == page.categories %}
+  			    {% if related_post_i != '3' %}
+  			      {% include blog_sidebar_thumb.html %}
+  			      {% capture related_post_i %}{{ related_post_i | plus: 1 }}{% endcapture %}
+  			      <hr/>
+  			    {% endif %}
   			  {% endif %}
   			{% endfor %}
   		{% endif %}

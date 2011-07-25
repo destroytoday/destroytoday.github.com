@@ -1,5 +1,8 @@
 <div class="thumb alpha omega" style="background: #{{post.thumbnail.colors.last}}">
 	<a href="{{post.url}}"><img src="/assets{{post.id}}/{{post.thumbnail.image}}" width="200" height="200" alt="{{post.title}}" /></a>
+	<div class="hidden-metadata">
+		<div class="title"><a href="{{post.url}}">{{post.title}}</a></div>
+	</div>
 	<div class="color_blocks" onclick="document.location='{{post.url}}'">
 		{% case post.thumbnail.colors.size %} 
 		{% when 3 %} 

@@ -8,22 +8,22 @@ thumbnail:
   colors: [FFFF00, 007998, 222222]
 style: true
 experiments:
-   - {id: 'amoeba', title: 'Amoeba'}
-   - {id: 'amoeba-2', title: 'Amoeba 2'}
-   - {id: 'bezier', title: 'Bezier'}
-   - {id: 'explosion', title: 'Explosion'}
-   - {id: 'convex-hull', title: 'Convex Hull'}
-   - {id: 'delaunay-voronoi', title: 'Delaunay Triangulation / Voronoi Diagram'}
-   - {id: 'intersections', title: 'Intersections'}
-   - {id: 'intersections-2', title: 'Intersections 2'}
-   - {id: 'intersections-3', title: 'Intersections 3'}
-   - {id: 'ribbons', title: 'Ribbons'}
    - {id: 'magnetism', title: 'Magnetism'}
    - {id: 'magnetism-2', title: 'Magnetism 2'}
-   - {id: 'ripples', title: 'Ripples'}
-   - {id: 'trails', title: 'Trails'}
+   - {id: 'convex-hull', title: 'Convex Hull'}
+   - {id: 'delaunay-voronoi', title: 'Delaunay Triangulation + Voronoi Diagram'}
+   - {id: 'intersections', title: 'Intersections + click to create points'}
+   - {id: 'intersections-2', title: 'Intersections 2 + click to create points'}
+   - {id: 'intersections-3', title: 'Intersections 3 + click to create points'}
    - {id: 'triangle', title: 'Triangle'}
+   - {id: 'bezier', title: 'Bezier + click to create points'}
    - {id: 'wormtrail', title: 'Wormtrail'}
+   - {id: 'amoeba', title: 'Amoeba'}
+   - {id: 'amoeba-2', title: 'Amoeba 2'}
+   - {id: 'trails', title: 'Trails'}
+   - {id: 'explosion', title: 'Explosion + click & hold to create explosion'}
+   - {id: 'ribbons', title: 'Ribbons'}
+   - {id: 'ripples', title: 'Ripples'}
 ---
 #flash-experiments
   {% assign experiment_i = 0 %}
@@ -31,9 +31,6 @@ experiments:
   {% if experiment_i == 0 %}.container{% endif %}
     .grid_2
       .flash
-      .close-flash
-      %a{:href => "#", :alt => "/assets{{page.id}}/{{experiment.id}}.swf"}
-        .play-flash
         %img{:src => "/assets{{page.id}}/{{experiment.id}}.png", :alt => "{{experiment.title}}"}
       %p.tag.center {{experiment.title}}
   {% if experiment_i == '1' %}.spacer_1{% endif %}

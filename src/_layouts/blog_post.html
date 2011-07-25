@@ -3,13 +3,6 @@ layout: blog
 ---
 {% assign post = page %}
 {% include blog_post.html %}
-<!--<div id="related">
-	{% for post in site.related_posts %}
-	{% if post.category == 'blog' %}
-	{% include blog_sidebar_thumb.html %}
-	{% endif %}
-	{% endfor %}
-</div>-->
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_url = '{{site.url}}{{page.url}}';
