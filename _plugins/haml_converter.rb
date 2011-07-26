@@ -17,7 +17,7 @@ module Jekyll
         engine = Haml::Engine.new(content, {:attr_wrapper => '"', :escape_html => true})
         engine.render
       rescue StandardError => e
-          puts "!!! HAML Error: " + e.message
+          puts "!!! HAML Error: " + e.inspect
       end
     end
   end

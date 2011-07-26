@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'growl'
-require "serialport"
+#require "serialport"
 require 'coffee-script'
 
 def arduinoExists?
@@ -27,9 +27,9 @@ def setup
   baud_rate = 115200
   data_bits = 8
   stop_bits = 1
-  parity = SerialPort::NONE
+  #parity = SerialPort::NONE
 
-  @sp = SerialPort.new(port_str, baud_rate, data_bits, stop_bits, parity)
+  #@sp = SerialPort.new(port_str, baud_rate, data_bits, stop_bits, parity)
   light(' ')
   sleep(1)
   light('c')
@@ -53,6 +53,8 @@ def fail
 end
 
 task :default => [:javascript, :jekyll, :compass, :index, :success]
+
+task :release => [:javascript, :jekyll_release, :compass, :index, :success]
 
 task :arduino => [:setup, :default]
 
@@ -92,6 +94,14 @@ end
 
 task :jekyll do
 	output = `jekyll`; result = $?.success?
+	
+	puts output
+	
+	fail unless result
+end
+
+task :jekyll_release do
+	output = `jekyll --lsi`; result = $?.success?
 	
 	puts output
 	
