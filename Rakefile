@@ -1,10 +1,20 @@
 require 'rubygems'
 require 'growl'
-#require "serialport"
+require "serialport"
 require 'coffee-script'
+require 'fileutils'
+require 'rb-fsevent'
+
+task :watch do
+  fsevent = FSEvent.new
+  fsevent.watch Dir.pwd do |directories|
+    Rake.application.invoke_task("default")
+  end
+  fsevent.run
+end
 
 def arduinoExists?
-  return File.exists?("/dev/tty.RN42-A82F-SPP")
+  return false#File.exists?("/dev/tty.RN42-A82F-SPP")
 end
 
 def light color, delay=1
@@ -27,9 +37,9 @@ def setup
   baud_rate = 115200
   data_bits = 8
   stop_bits = 1
-  #parity = SerialPort::NONE
+  parity = SerialPort::NONE
 
-  #@sp = SerialPort.new(port_str, baud_rate, data_bits, stop_bits, parity)
+  @sp = SerialPort.new(port_str, baud_rate, data_bits, stop_bits, parity)
   light(' ')
   sleep(1)
   light('c')
@@ -52,9 +62,9 @@ def fail
   exit
 end
 
-task :default => [:javascript, :jekyll, :compass, :index, :success]
+task :default => [:javascript_debug, :compass, :success]
 
-task :release => [:javascript, :jekyll_release, :compass, :index, :success]
+task :release => [:jekyll_release, :javascript_release, :compass, :index, :success]
 
 task :arduino => [:setup, :default]
 
@@ -69,10 +79,12 @@ task :setup do
 	#fail unless result
 end
 
-task :javascript do
-  Dir.glob('src/js/*.coffee') do |path|
+task :javascript_release do
+  FileUtils.mkdir 'site/js' unless File.exists? 'site/js'
+  
+  Dir.glob('src/_js/*.coffee') do |path|
     to_path = path.gsub('.coffee', '.js')
-    to_min_path = to_path.gsub('.js', '.min.js').gsub(/\/_/, '/')
+    to_min_path = to_path.gsub('src/', 'site/').gsub(/_js/, 'js').gsub(/\.js/, '.min.js')
 
     File.open(to_path, 'w') {|f| 
       f.write(CoffeeScript.compile File.read(path))
@@ -81,7 +93,32 @@ task :javascript do
     system "java -jar build/yuicompressor-2.4.6.jar #{to_path} -o #{to_min_path}"
   end
   
-  `java -jar build/yuicompressor-2.4.6.jar src/js/_jquery.destroytoday.js -o src/js/jquery.destroytoday.min.js`
+  Dir.glob('src/_js/*.js') do |path|
+    to_path = path.gsub(/src\/_js\//, 'site/js/')
+
+    FileUtils.cp "#{path}", "#{to_path}"
+  end
+end
+
+task :javascript_debug do
+  FileUtils.mkdir 'site/js' unless File.exists? 'site/js'
+  
+  Dir.glob('src/_js/*.coffee') do |path|
+    to_path = path.gsub('.coffee', '.js')
+    to_min_path = to_path.gsub('src/', 'site/').gsub(/_js/, 'js').gsub(/\.js/, '.min.js')
+
+    File.open(to_path, 'w') {|f| 
+      f.write(CoffeeScript.compile File.read(path))
+    }
+    
+    FileUtils.cp "#{to_path}", "#{to_min_path}"
+  end
+  
+  Dir.glob('src/_js/*.js') do |path|
+    to_path = path.gsub(/src\/_js\//, 'site/js/')
+
+    FileUtils.cp "#{path}", "#{to_path}"
+  end
 end
 
 task :compass do

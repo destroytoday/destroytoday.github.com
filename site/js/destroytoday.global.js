@@ -32,7 +32,8 @@
   linkify = function(text) {
     var exp;
     exp = /((?:ftp|http|https):\/\/)((\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
-    return text.replace(exp, "<a href=\"$1$2\">$2</a>");
+    text = text.replace(exp, "<a href=\"$1$2\">$2</a>");
+    return text = text.replace(/@([a-z0-9_]+)/gi, "<a href=\"http://twitter.com/$1\">@$1</a>");
   };
   $(document).ready(function() {
     var ds_loaded, getLatestTweet, lazyLoadDisqus, top, twitterWidgets;
