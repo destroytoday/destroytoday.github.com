@@ -126,10 +126,9 @@ end
 task :tidy do
   Dir.glob('site/**/*.html') do |path|
     content = File.open(path).read
-    #content.gsub! /\n\n/, ''
     
     File.open(path, 'w') {|file|
-      file.write TidyFFI::Tidy.new(content, :numeric_entities => 1, :output_xhtml => 1, :merge_divs => 0, :clean => 1, :indent => 1, :wrap => 0).clean
+      file.write TidyFFI::Tidy.new(content, :numeric_entities => 1, :output_xhtml => 1, :merge_divs => 0, :clean => 1, :indent => 1, :wrap => 0, :drop_empty_paras => 0).clean
     }
   end
 end
