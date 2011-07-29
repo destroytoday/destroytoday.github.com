@@ -14,7 +14,7 @@ module Jekyll
 
     def convert(content)
       begin
-        engine = Sass::Engine.new(content)
+        engine = Sass::Engine.new(content, {:load_paths => ['./src/css/', '/Users/jhallman/dev/ruby/compass/frameworks/compass/stylesheets/']})
         engine.render
       rescue StandardError => e
         puts "!!! SASS Error: " + e.message

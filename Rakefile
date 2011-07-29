@@ -4,14 +4,7 @@ require "serialport"
 require 'coffee-script'
 require 'fileutils'
 require 'rb-fsevent'
-
-task :watch do
-  fsevent = FSEvent.new
-  fsevent.watch Dir.pwd do |directories|
-    Rake.application.invoke_task("default")
-  end
-  fsevent.run
-end
+require 'tidy_ffi'
 
 def arduinoExists?
   return false#File.exists?("/dev/tty.RN42-A82F-SPP")
@@ -62,9 +55,9 @@ def fail
   exit
 end
 
-task :default => [:javascript_debug, :compass, :success]
+task :default => [:jekyll_debug, :tidy, :success]
 
-task :release => [:jekyll_release, :javascript_release, :compass, :index, :success]
+task :release => [:jekyll_release, :index, :tidy, :success]
 
 task :arduino => [:setup, :default]
 
@@ -79,57 +72,7 @@ task :setup do
 	#fail unless result
 end
 
-task :javascript_release do
-  FileUtils.mkdir 'site/js' unless File.exists? 'site/js'
-  
-  Dir.glob('src/_js/*.coffee') do |path|
-    to_path = path.gsub('.coffee', '.js')
-    to_min_path = to_path.gsub('src/', 'site/').gsub(/_js/, 'js').gsub(/\.js/, '.min.js')
-
-    File.open(to_path, 'w') {|f| 
-      f.write(CoffeeScript.compile File.read(path))
-    }
-    
-    system "java -jar build/yuicompressor-2.4.6.jar #{to_path} -o #{to_min_path}"
-  end
-  
-  Dir.glob('src/_js/*.js') do |path|
-    to_path = path.gsub(/src\/_js\//, 'site/js/')
-
-    FileUtils.cp "#{path}", "#{to_path}"
-  end
-end
-
-task :javascript_debug do
-  FileUtils.mkdir 'site/js' unless File.exists? 'site/js'
-  
-  Dir.glob('src/_js/*.coffee') do |path|
-    to_path = path.gsub('.coffee', '.js')
-    to_min_path = to_path.gsub('src/', 'site/').gsub(/_js/, 'js').gsub(/\.js/, '.min.js')
-
-    File.open(to_path, 'w') {|f| 
-      f.write(CoffeeScript.compile File.read(path))
-    }
-    
-    FileUtils.cp "#{to_path}", "#{to_min_path}"
-  end
-  
-  Dir.glob('src/_js/*.js') do |path|
-    to_path = path.gsub(/src\/_js\//, 'site/js/')
-
-    FileUtils.cp "#{path}", "#{to_path}"
-  end
-end
-
-task :compass do
-	output = `compass compile`; result = $?.success?
-	
-	puts output
-	
-	fail unless result
-end
-
-task :jekyll do
+task :jekyll_debug do
 	output = `jekyll`; result = $?.success?
 	
 	puts output
@@ -146,19 +89,7 @@ task :jekyll_release do
 end
 
 task :server do
-  system("jekyll --server 1337");
-end
-
-task :preview do
-	system("jekyll --auto --server")
-end
-
-task :tidy do
-	output = `for i in ./site/*.html; do [ -e $i ] && tidy -imqcb ${i}; done`; result = $?.success?
-	  
-	puts output
-	  
-	fail unless result
+  system("jekyll --auto --server 1337");
 end
 
 task :index do
@@ -190,6 +121,17 @@ task :index do
   index = index + "]"
   
   File.open('site/js/blog_index.json', 'w') {|f| f.write(index) }
+end
+
+task :tidy do
+  Dir.glob('site/**/*.html') do |path|
+    content = File.open(path).read
+    #content.gsub! /\n\n/, ''
+    
+    File.open(path, 'w') {|file|
+      file.write TidyFFI::Tidy.new(content, :numeric_entities => 1, :output_xhtml => 1, :merge_divs => 0, :clean => 1, :indent => 1, :wrap => 0).clean
+    }
+  end
 end
 
 task :deploy do

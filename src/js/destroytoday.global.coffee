@@ -1,3 +1,5 @@
+---
+---
 #--------------------------------------------------------------------------
 #
 #  Config
@@ -44,6 +46,24 @@ linkify = (text) ->
     exp = /((?:ftp|http|https):\/\/)((\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi
     text = text.replace exp, "<a href=\"$1$2\">$2</a>"
     text = text.replace /@([a-z0-9_]+)/gi, "<a href=\"http://twitter.com/$1\">@$1</a>"
+    
+getLatestTweet = ->
+    $.ajax
+      url: "http://twitter.com/statuses/user_timeline/destroytoday.json?count=10"
+      dataType: 'jsonp'
+      success: (data) ->
+          $.each data, (key, value) ->
+              if value.text.substring(0, 1) != "@"
+                  tweet = 
+                    linkify(value.text) +
+                    "<br/><a href=\"http://twitter.com/destroytoday\">destroytoday</a> <a class=\"timestamp\" href=\"http://twitter.com/destroytoday/status/" + value.id_str + "\">" + 
+                    jQuery.timeago(value.created_at).replace(/[\s]+/ig, '&nbsp;') +
+                    "</a>"
+      
+                  $('#latest-tweet p').html tweet
+                  $('#latest-tweet').css 'height', $('#latest-tweet p').height() + $('#latest-tweet hr').height()
+   
+                  false     
 
 #--------------------------------------------------------------------------
 #
@@ -146,25 +166,7 @@ $(document).ready ->
             $(this).siblings('.play').css 'opacity', 1
             
     if $('#latest-tweet').length > 0
-        getLatestTweet = ->
-            $.ajax
-              url: "http://twitter.com/statuses/user_timeline/destroytoday.json?count=10"
-              dataType: 'jsonp'
-              success: (data) ->
-                  $.each data, (key, value) ->
-                      if value.text.substring(0, 1) != "@"
-                          tweet = 
-                            linkify(value.text) +
-                            "<br/><a href=\"http://twitter.com/destroytoday\">destroytoday</a> <a class=\"timestamp\" href=\"http://twitter.com/destroytoday/status/" + value.id_str + "\">" + 
-                            jQuery.timeago(value.created_at).replace(/[\s]+/ig, '&nbsp;') +
-                            "</a>"
-                  
-                          $('#latest-tweet p').html tweet
-                          $('#latest-tweet').css 'height', $('#latest-tweet p').height() + $('#latest-tweet hr').height()
-	           
-                          false
-        
-        getLatestTweet()
+        t = setTimeout getLatestTweet, 2000
     
     ###
     if ($("#latest-flickr"))
