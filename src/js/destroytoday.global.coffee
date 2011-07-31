@@ -48,6 +48,10 @@ linkify = (text) ->
     text = text.replace /@([a-z0-9_]+)/gi, "<a href=\"http://twitter.com/$1\">@$1</a>"
     
 getLatestTweet = ->
+    latest_tweet = $.cookie('latest-tweet')
+        
+    if latest_tweet
+        setLatestTweet latest_tweet
     $.ajax
       url: "http://twitter.com/statuses/user_timeline/destroytoday.json?count=10"
       dataType: 'jsonp'
@@ -59,11 +63,16 @@ getLatestTweet = ->
                     "<br/><a href=\"http://twitter.com/destroytoday\">destroytoday</a> <a class=\"timestamp\" href=\"http://twitter.com/destroytoday/status/" + value.id_str + "\">" + 
                     jQuery.timeago(value.created_at).replace(/[\s]+/ig, '&nbsp;') +
                     "</a>"
+                    
+                  $.cookie 'latest-tweet', tweet, { expires: 1 }
       
-                  $('#latest-tweet p').html tweet
-                  $('#latest-tweet').css 'height', $('#latest-tweet p').height() + $('#latest-tweet hr').height()
+                  setLatestTweet tweet
    
-                  false     
+                  false
+                  
+setLatestTweet = (tweet) ->
+    $('#latest-tweet p').html tweet
+    $('#latest-tweet').css 'height', $('#latest-tweet p').height() + $('#latest-tweet hr').height()
 
 #--------------------------------------------------------------------------
 #

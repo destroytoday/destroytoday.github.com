@@ -5,13 +5,14 @@ category: about
 style: true
 ---
 #about
-  .grid_4
+  .grid-4
     %h2 About
-  .grid_2.alpha
-    %img{:src => "/assets/about/profile.jpg", :width => 433, :height => 433}
-  #description.grid_2.omega
-    :maruku
-      ### Jonnie Hallman
-      I'm tough---I sit in an ergonomic kneeling chair and use a Wacom pen. As a UX developer at Adobe, I write mobile applications in the realm of digital magazine publishing and social networking. Prior to joining Adobe, I attended RISD and MICA, majoring in Graphic Design. While in school, I designed and developed several applications, including DestroyTwitter. In its first three months, DT's install count reached six figures. It currently sends over one million tweets per month. My day-to-day consists of ping pong, super burritos, and Alex Trebek. I look for jokes in every situation and consistently ruins tear-jerkers. If given a million dollars, I would request it in small, non-sequential, unmarked bills.
-      ### The Site
-      A venture into new grounds, this site is a first of many for me. It is built on [Jekyll](https://github.com/mojombo/jekyll), using [Haml](http://haml-lang.com), [Sass](http://sass-lang.com), and [CoffeeScript](http://jashkenas.github.com/coffee-script/) preprocessors, as well as [Liquid](https://github.com/Shopify/liquid/wiki) and [jQuery](http://jquery.com) for fanciness. It's completely static---Jekyll compiles every page to static HTML files, so there are none of the security vulnerabilities commonly found in popular CMSs. The pages also load much faster. Along with all the new tech, I'm thrilled to have carried over my app dev practices by source-controlling the site using [Git](http://git-scm.com). I also avoid FTP completely by deploying with [Beanstalk](http://bnst.lk/eI5GlZ), which has been a godsend. If any of this is gibberish, definitely check out the links.
+  .container
+    .grid-2
+      %img{:src => "/assets/about/profile.jpg", :width => 433, :height => 433}
+    #description.grid-2
+      :maruku
+        ### Jonnie Hallman
+        I'm tough---I sit in an ergonomic kneeling chair and use a Wacom pen. As a UX developer at Adobe, I write mobile applications in the realm of digital magazine publishing and social networking. Prior to joining Adobe, I attended RISD and MICA, majoring in Graphic Design. While in school, I designed and developed several applications, including DestroyTwitter. In its first three months, DT's install count reached six figures. It currently sends over one million tweets per month. My day-to-day consists of ping pong, super burritos, and Alex Trebek. I look for jokes in every situation and consistently ruins tear-jerkers. If given a million dollars, I would request it in small, non-sequential, unmarked bills.
+        ### The Site
+        A venture into new grounds, this site is a first of many for me. It is built on [Jekyll](https://github.com/mojombo/jekyll), using [Haml](http://haml-lang.com), [Sass](http://sass-lang.com), and [CoffeeScript](http://jashkenas.github.com/coffee-script/) preprocessors, as well as [Liquid](https://github.com/Shopify/liquid/wiki) and [jQuery](http://jquery.com) for fanciness. It's completely static---Jekyll compiles every page to static HTML files, so there are none of the security vulnerabilities commonly found in popular CMSs. The pages also load much faster. Along with all the new tech, I'm thrilled to have carried over my app dev practices by source-controlling the site using [Git](http://git-scm.com). I also avoid FTP completely by deploying with [Beanstalk](http://bnst.lk/eI5GlZ), which has been a godsend. If any of this is gibberish, definitely check out the links.
