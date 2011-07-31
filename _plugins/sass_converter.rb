@@ -17,10 +17,9 @@ module Jekyll
     def convert(content)
       begin
         engine = Sass::Engine.new(content, {:load_paths => ['./src/css/', '/Users/jhallman/dev/ruby/compass/frameworks/compass/stylesheets/']})
-        #content = engine.render
-        #compressor = YUI::CssCompressor.new
-        #compressor.compress content
-        engine.render
+        content = engine.render
+        compressor = YUI::CssCompressor.new
+        compressor.compress content
       rescue StandardError => e
         puts "!!! SASS Error: " + e.message
       end

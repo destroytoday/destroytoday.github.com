@@ -55,9 +55,9 @@ def fail
   exit
 end
 
-task :default => [:jekyll_debug, :tidy, :success]
+task :default => [:jekyll_debug, :success]
 
-task :release => [:jekyll_release, :index, :tidy, :success]
+task :release => [:jekyll_release, :index, :success]
 
 task :arduino => [:setup, :default]
 
@@ -73,7 +73,7 @@ task :setup do
 end
 
 task :jekyll_debug do
-	output = `jekyll`; result = $?.success?
+	output = `jekyll --no-auto`; result = $?.success?
 	
 	puts output
 	
