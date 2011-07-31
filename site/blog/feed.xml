@@ -3,13 +3,21 @@
 	<title>Destroy Today</title>
 	<link href="http://staging.destroytoday.com/blog/feed.xml" rel="self"/>
 	<link href="http://staging.destroytoday.com"/>
-	<updated>2011-07-28T22:17:16-07:00</updated>
+	<updated>2011-07-30T22:01:43-07:00</updated>
 	<id>http://staging.destroytoday.com</id>
 	<author>
 		<name>Jonnie Hallman</name>
 		<email>jonnie@destroytoday.com</email>
 	</author>
 
+	
+	<entry>
+		<title><![CDATA[Infinity File]]></title>
+		<link href="http://staging.destroytoday.com/blog/infinity-file"/>
+		<updated>2011-07-30T00:00:00-07:00</updated>
+		<id>http://staging.destroytoday.com/blog/infinity-file</id>
+		<content type="html">&lt;p&gt;&lt;img alt='Infinity File' src='/assets/blog/infinity-file/infinity-file.jpg' /&gt; I&amp;#8217;ve recently become addicted to &lt;a href='http://fab.com/mw3csr'&gt;Fab.com&lt;/a&gt;, a Groupon-esque website for designy products. I made my first purchase this past week, the Infinity File by designer &lt;a href='http://www.barbaraflanagan.com'&gt;Barbara Flanagan&lt;/a&gt;. It&amp;#8217;s a modular desk-top organizer for anything from business cards to loose nick-nacks. I find it to be the perfect solution for small items that lie awkward in a drawer, but appear messy on the desk-top. It&amp;#8217;s made from a single sheet of metal and holds a good weight. My only gripe is that the vertical stacking shown in its product shots is very wobbly.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title><![CDATA[Jekyll]]></title>
