@@ -173,6 +173,28 @@ if (booleanB) callMethod();</code></pre>
 
 
 <div class="post">
+	<h2><a href="/blog/todays-cuts">Today's Cuts</a></h2>
+	<div class="metadata">
+		<div class="date"><a href="/blog/todays-cuts">01.26.11</a></div><div class="comment-count"><a href="/blog/todays-cuts#disqus_thread" data-disqus-identifier="http://staging.destroytoday.com/blog/todays-cuts">0</a> <a href="/blog/todays-cuts"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
+	</div>
+	<p>While slicing the bread for my sandwich this morning, I forgot I was holding the bread and cut into my finger. In a race to meet the shuttle, I found this more inconvenient than painful. I wrapped a scrap of paper towel around the cut, tied it with a rubber band, then replaced it with an actual band-aid once I arrived at work.</p>
+
+<p>At lunch, I pierced my skin again while closing the refrigerator door—this time in the exact same spot on the opposite index finger. I recycled the previous cut&#8217;s band-aid, transferring it from one finger to the other.</p>
+
+<p>Hours later, I washed my hands and removed the now worthless band-aid. The cut must have re-opened some time thereafter, resulting in a dense scab, raised from the cut. These photographs depict today&#8217;s cuts.</p>
+
+<p><img alt='Todays Cuts' src='/assets/blog/todays-cuts/todays-cuts.jpg' width='666' height='444' /></p>
+
+<p><img alt='Todays Cuts' src='/assets/blog/todays-cuts/todays-cuts-1.jpg' width='666' height='444' /></p>
+	<div class="metadata">
+		<div class="tags"><a href="/blog/tag/photography">photography</a> + <a href="/blog/tag/story">story</a></div>
+	</div>
+</div>
+
+<hr/>
+
+
+<div class="post">
 	<h2><a href="/blog/letterpressed-indesign-icons">Letterpressed InDesign icons</a></h2>
 	<div class="metadata">
 		<div class="date"><a href="/blog/letterpressed-indesign-icons">01.06.11</a></div><div class="comment-count"><a href="/blog/letterpressed-indesign-icons#disqus_thread" data-disqus-identifier="http://staging.destroytoday.com/blog/letterpressed-indesign-icons">0</a> <a href="/blog/letterpressed-indesign-icons"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
@@ -182,6 +204,25 @@ if (booleanB) callMethod();</code></pre>
 <p><a href='http://www.flickr.com/photos/jonnie_hallman/5331858781/'><img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-full.jpg' width='666' height='982' /></a> <a href='http://www.flickr.com/photos/jonnie_hallman/5332472400/'><img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-zoom.jpg' width='666' height='444' /></a> <a href='http://www.flickr.com/photos/jonnie_hallman/5332472258/'><img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-macro.jpg' width='666' height='438' /></a></p>
 	<div class="metadata">
 		<div class="tags"><a href="/blog/tag/adobe">adobe</a> + <a href="/blog/tag/poster">poster</a></div>
+	</div>
+</div>
+
+<hr/>
+
+
+<div class="post">
+	<h2><a href="/blog/as3-function-path">A super ghetto way of getting a function path in AS3</a></h2>
+	<div class="metadata">
+		<div class="date"><a href="/blog/as3-function-path">11.30.10</a></div><div class="comment-count"><a href="/blog/as3-function-path#disqus_thread" data-disqus-identifier="http://staging.destroytoday.com/blog/as3-function-path">0</a> <a href="/blog/as3-function-path"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
+	</div>
+	<p>In my recent collaboration with Kristofer Joseph, CandyPants, we needed a way to get the path to any function. At first, I tried <code>describeType</code>, which returns an XML object with all sorts of useful goodies about the provided object. Unfortunately, it&#8217;s not possible to send it the function you&#8217;re in without knowing it already. Luckily, I still have a hacky side that will consider the grossest code as a last resort. Here&#8217;s the result:</p>
+
+<pre><code>public static function getFunctionPath():String
+{
+  return (new Error().getStackTrace().match(/at [^)]+\)/g)[1] as String).substr(3);
+}</code></pre>
+	<div class="metadata">
+		<div class="tags"><a href="/blog/tag/as3">as3</a> + <a href="/blog/tag/code">code</a> + <a href="/blog/tag/open-source">open source</a></div>
 	</div>
 </div>
 
@@ -242,8 +283,7 @@ if (booleanB) callMethod();</code></pre>
 		<div id="related-posts">
 		  
 		    
-  			  
-  			    <div class="thumb alpha omega" style="background: #899F5B">
+			    <div class="thumb alpha omega" style="background: #899F5B">
 	<a href="/blog/jekyll">
 	  <img src="/assets/blog/jekyll/jekyll-lg-thumb.jpg" width="200" height="200" alt="Jekyll" />
 	  <div class="hidden-metadata">
@@ -262,11 +302,9 @@ if (booleanB) callMethod();</code></pre>
   </a>
 </div>
 
-  			    <hr/>
-  			  
+			    <hr/>
   			
-  			  
-  			    <div class="thumb alpha omega" style="background: #000000">
+			    <div class="thumb alpha omega" style="background: #000000">
 	<a href="/blog/luminant_point_arrays">
 	  <img src="/assets/blog/luminant_point_arrays/luminant_point_arrays_lg_thumb.jpg" width="200" height="200" alt="Luminant Point Arrays by Stephan Tillmans" />
 	  <div class="hidden-metadata">
@@ -287,11 +325,9 @@ if (booleanB) callMethod();</code></pre>
   </a>
 </div>
 
-  			    <hr/>
-  			  
+			    <hr/>
   			
-  			  
-  			    <div class="thumb alpha omega" style="background: #52C8E6">
+			    <div class="thumb alpha omega" style="background: #52C8E6">
 	<a href="/blog/dayone">
 	  <img src="/assets/blog/dayone/dayone_lg_thumb.png" width="200" height="200" alt="Day One &mdash; potentially my first successful journal ever" />
 	  <div class="hidden-metadata">
@@ -316,11 +352,9 @@ if (booleanB) callMethod();</code></pre>
   </a>
 </div>
 
-  			    <hr/>
-  			  
+			    <hr/>
   			
-  			  
-  			    <div class="thumb alpha omega" style="background: #222222">
+			    <div class="thumb alpha omega" style="background: #222222">
 	<a href="/blog/comparing-64-bit-numbers">
 	  <img src="/assets/blog/comparing-64-bit-numbers/comparing-64-bit-numbers-lg-thumb.png" width="200" height="200" alt="Comparing 64-bit numbers in AS3 and SQLite" />
 	  <div class="hidden-metadata">
@@ -341,37 +375,28 @@ if (booleanB) callMethod();</code></pre>
   </a>
 </div>
 
-  			    <hr/>
-  			  
+			    <hr/>
   			
-  			  
-  			    <div class="thumb alpha omega" style="background: #FFFFFF">
-	<a href="/blog/letterpressed-indesign-icons">
-	  <img src="/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-lg-thumb.jpg" width="200" height="200" alt="Letterpressed InDesign icons" />
+			    <div class="thumb alpha omega" style="background: #E1A795">
+	<a href="/blog/todays-cuts">
+	  <img src="/assets/blog/todays-cuts/todays-cuts-thumb.jpg" width="200" height="200" alt="Today's Cuts" />
 	  <div class="hidden-metadata">
-  		<div class="title">Letterpressed InDesign icons</div>
+  		<div class="title">Today's Cuts</div>
   	</div>
   	<div class="color_blocks">
-  		
-  			
-  				<div class="color_block" style="width: 25.0%; background: #000000"></div>
-  			
-  				<div class="color_block" style="width: 25.0%; background: #666666"></div>
-  			
-  				<div class="color_block" style="width: 25.0%; background: #CCCCCC"></div>
-  			
-  				<div class="color_block" style="width: 25.0%; background: #FFFFFF"></div>
-  			
+  		 
+  			<div class="color_block" style="width: 33%; background: #290706"></div>
+  			<div class="color_block" style="width: 33%; background: #BC2E1A"></div>
+  			<div class="color_block" style="width: 34%; background: #E1A795"></div>
   		
   	</div>
   	<div class="metadata">
-  		<div class="title">Letterpressed InDesign icons</div>
+  		<div class="title">Today's Cuts</div>
   	</div>
   </a>
 </div>
 
-  			    <hr/>
-  			  
+			    <hr/>
   			
 		  
 		</div>
@@ -380,6 +405,30 @@ if (booleanB) callMethod();</code></pre>
 </div>
 
 
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
 
@@ -629,6 +678,30 @@ if (booleanB) callMethod();</code></pre>
 		<script type="text/javascript" src="http://use.typekit.com/aeu3zes.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
 

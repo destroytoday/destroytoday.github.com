@@ -166,10 +166,15 @@ pre
     font-family: monospace
     font-size: 0.825em
     line-height: 1.5em
-    background: #F6F6F6
-    border: solid 1px #CCC
+    background: #E5F1F4
     padding: 8px
     margin: 0px 0px 12px 0px
+    
+code
+    font-family: monospace
+    font-size: 11px
+    background: #E5F1F4
+    padding: 2px 5px
     
 a
     +transition-property(color)
@@ -200,19 +205,19 @@ a
     left: 0
         
 textarea, .dsq-textarea-wrapper
-    +transition-property(border)
-    +transition-duration(0.35s)
-    border: solid 1px #999
+    //+transition-property(background-color)
+    //+transition-duration(0.35s)
+    border: none
     outline: 0 none
     padding: 8px 8px 8px 8px
-
-    &:focus
-        border: solid 1px #007998
+    background-color: #EEE
+    min-height: 150px
         
 .dsq-textarea-wrapper
     margin-left: 64px
-    height: 150px
-    min-height: 150px
+    
+    iframe
+        height: 150px !important
     
 .dsq-post-footer .dsq-button
     +float-right

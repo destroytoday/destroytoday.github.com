@@ -18,10 +18,8 @@ layout: default
 		<div id="related-posts">
 		  {% if paginator.posts %}
 		    {% for post in paginator.posts limit:5 offset:1 %}
-  			  {% if post != paginator.posts.first %}
-  			    {% include blog_sidebar_thumb.html %}
-  			    <hr/>
-  			  {% endif %}
+			    {% include blog_sidebar_thumb.html %}
+			    <hr/>
   			{% endfor %}
 		  {% else %}
 		    {% assign related_post_i = 0 %}

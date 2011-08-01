@@ -1,0 +1,16 @@
+---
+layout: blog_post
+title: A super ghetto way of getting a function path in AS3
+shortname: AS3 Function Path
+category: blog
+tags: [AS3, Code, Open Source]
+thumbnail: 
+  image: as3-function-path-thumb.jpg
+  colors: ['b8190c', 'ccac7b', 'cee3eb', '899088']
+---
+In my recent collaboration with Kristofer Joseph, CandyPants, we needed a way to get the path to any function. At first, I tried `describeType`, which returns an XML object with all sorts of useful goodies about the provided object. Unfortunately, it's not possible to send it the function you're in without knowing it already. Luckily, I still have a hacky side that will consider the grossest code as a last resort. Here's the result:
+
+    public static function getFunctionPath():String
+    {
+      return (new Error().getStackTrace().match(/at [^)]+\)/g)[1] as String).substr(3);
+    }

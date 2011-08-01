@@ -1,31 +1,13 @@
 require 'rmagick'
 require 'fileutils'
 
-@img = Magick::Image.read(ARGV[0]).first
-
-exp = /\S+\/(\S+)\.(\w+)$/i
-@id = @img.filename.gsub(exp, '\\1')
-@img_dir = "src/assets/blog/#{@id}"
-@filename = @img.filename.gsub(exp, '\\1.\\2')
-
-FileUtils.mkdir @img_dir unless File.exists? @img_dir
-
-newimg = @img.resize_to_fit(666)
-newimg = newimg.unsharp_mask(1.1, 1.0, 0.4)
-newimg.write("#{@img_dir}/#{@filename}")
-
-@thumb_filename = @img.filename.gsub(exp, '\\1-thumb.\\2')
-newimg = @img.resize_to_fill(200, 200)
-newimg = newimg.unsharp_mask(1.1, 1.0, 0.4)
-newimg.write("#{@img_dir}/#{@thumb_filename}")
-
 class String
   def titleize
     split(/(\W)/).map(&:capitalize).join
   end
 end
 
-def write
+def write_post
   date = Time.new.strftime("%Y-%m-%d")
   path = "src/blog/_posts/#{date}-#{@id}.maruku"
   title = @id.gsub(/\-/i, ' ').titleize
@@ -93,7 +75,7 @@ def extract img
         c_diff += (c_rgba[i].to_i - uc_rgba[i].to_i).abs
       }
       
-      if c_diff / 4 < 25
+      if c_diff / 4 < 35
         valid = false
         break
       end
@@ -101,7 +83,7 @@ def extract img
     
     unique_colors.push(c) if valid
     
-    #break if unique_colors.length > 6
+    break if unique_colors.length >= 4
   }
   
   color_data = ''
@@ -128,4 +110,40 @@ def extract img
   color_data
 end
 
-write
+def resize_to_blog img
+  newimg = img.resize_to_fit(666)
+  newimg = newimg.unsharp_mask(1.1, 1.0, 0.4)
+  newimg.write("#{@img_dir}/#{@filename}")
+end
+
+def resize_to_thumb img
+  thumb_filename = img.filename.gsub(@exp, '\\1-thumb.\\2')
+  newimg = img.resize_to_fill(200, 200)
+  newimg = newimg.unsharp_mask(1.1, 1.0, 0.4)
+  newimg.write("#{@img_dir}/#{thumb_filename}")
+end
+
+def copy_hires img
+  filename = img.filename.gsub(@exp, '_\\1-hires.\\2')
+  FileUtils.cp img.filename, @img_dir + '/' + filename
+end
+
+@img = Magick::Image.read(ARGV[0]).first
+
+@exp = /\S+\/(\S+)\.(\w+)$/i
+@id = @img.filename.gsub(@exp, '\\1')
+@img_dir = "src/assets/blog/#{@id}"
+@filename = @img.filename.gsub(@exp, '\\1.\\2')
+
+FileUtils.mkdir @img_dir unless File.exists? @img_dir
+
+if ARGV.include? '--fit'
+  resize_to_blog @img
+elsif ARGV.include? '--thumb'
+  resize_to_thumb @img
+else
+  copy_hires @img
+  resize_to_blog @img
+  resize_to_thumb @img
+  write_post
+end
