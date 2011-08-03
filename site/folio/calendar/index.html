@@ -7,6 +7,7 @@
 		
 		<link href="/css/folio/calendar.css" rel="stylesheet" type="text/css" />
 		
+		<!--<link href="/css/chosen.css" rel="stylesheet" type="text/css" />-->
 		<script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -24,44 +25,47 @@
 		var disqus_container_id = 'disqus_thread';
 		var disqus_domain = 'disqus.com';
 </script>
+    <!--<script type="text/javascript" src="http://use.typekit.com/aeu3zes.js"></script>-->
+    <!--<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
 	</head>
 	
 	<body>
-		<div id="page">
-			<div id="top">
-			  <div id="identity">
-	  			<h1>
-	  				<a href="/" class="destroy">destroy</a><a href="/" class="today">today</a>
-	  			</h1>
-				</div>
-				<div id="navigation">
-					<ul>
-						
-							
-								<li><a href="/about">About</a></li>
-							
-						
-							
-								<li><a href="/blog">Blog</a></li>
-							
-						
-							
-								<li class="selected"><a href="/folio">Folio</a></li>
-							
-						
-							
-								<li><a href="/lab">Lab</a></li>
-							
-						
-							
-								<li><a href="/contact">Contact</a></li>
-							
-						
-					</ul>
-				</div>
-			</div>
-			<div id="content">
-				<div id="calendar">
+	  <div id="site">
+  		<div id="page">
+  			<div id="top">
+  			  <div id="identity">
+  	  			<h1>
+  	  				<a href="/" class="destroy">destroy</a><a href="/" class="today">today</a>
+  	  			</h1>
+  				</div>
+  				<div id="navigation">
+  					<ul>
+  						
+  							
+  								<li><a href="/about">About</a></li>
+  							
+  						
+  							
+  								<li><a href="/blog">Blog</a></li>
+  							
+  						
+  							
+  								<li class="selected"><a href="/folio">Folio</a></li>
+  							
+  						
+  							
+  								<li><a href="/lab">Lab</a></li>
+  							
+  						
+  							
+  								<li><a href="/contact">Contact</a></li>
+  							
+  						
+  					</ul>
+  				</div>
+  			</div>
+  			<div id="content">
+  				<div id="calendar">
   <div class="grid-4" id="header"></div>
   <div class="grid-4" id="description">
     <p>The calendar screensaver displays the time and date linearly, easing each line into place with every second that passes. Originally an experiment with a Flash-to-screensaver technology, the current version has been rewritten in Objective-C in order to work with the latest Mac OS. The transition to native code was a good idea as it let me add color preferences, which couldn&#8217;t be done with the previous version&#8217;s converter.</p>
@@ -91,7 +95,19 @@
   </div>
 </div>
 
-
+  			</div>
+  			<div id="footer">
+  				<div id="footer_wrapper">
+  					<div id="copyright_wrapper">
+  						<div id="copyright">copyright &copy; <a href="/contact">Jonnie Hallman</a> 2005-2011&nbsp;&nbsp;+</div>
+  					</div>
+  					<div id="twitter_follow_wrapper">
+  						<div id="twitter_follow"><a href="http://twitter.com/destroytoday" class="twitter-follow-button" data-show-count="false">Follow @destroytoday</a></div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		
 
 	
 
@@ -346,294 +362,26 @@
 	
 
 
-
-<div id="prev" class="direction">
-	<a href="/folio/adobedps"><span class="title_wrapper"><span class="title">Digital Publishing Suite</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>
-</div>
-
-
-<div id="next" class="direction">
-	<a href="/folio/destroytwitter"><span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">DestroyTwitter</span></span></a>
-</div>
-
-			</div>
-			<div id="footer">
-				<div id="footer_wrapper">
-					<div id="copyright_wrapper">
-						<div id="copyright">copyright &copy; <a href="/contact">Jonnie Hallman</a> 2005-2011&nbsp;&nbsp;+</div>
-					</div>
-					<div id="twitter_follow_wrapper">
-						<div id="twitter_follow"><a href="http://twitter.com/destroytoday" class="twitter-follow-button" data-show-count="false">Follow @destroytoday</a></div>
-					</div>
-				</div>
-			</div>
-		</div>
+  		
+      <div id="prev" class="direction">
+      	<a href="/folio/adobedps"><span class="title_wrapper"><span class="title">Digital Publishing Suite</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>
+      </div>
+      
+      
+      <div id="next" class="direction">
+      	<a href="/folio/destroytwitter"><span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">DestroyTwitter</span></span></a>
+      </div>
+      
+  	</div>
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
 		<script src="/js/jquery.swfobject.1.1.1.min.js" type="text/javascript"></script>
 		<script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
 		<script src="/js/jquery.timeago.js" type="text/javascript"></script>
 		<script src="/js/jquery.cookie.min.js" type="text/javascript"></script>
-		<!--<script src="/js/jquery.imgareaselect.min.js" type="text/javascript"></script>-->
+		<script src="/js/jquery.chosen.min.js" type="text/javascript"></script>
 		<script src="/js/destroytoday.global.min.js" type="text/javascript"></script>
 		<!--[if lte IE 6]><script src="/js/ie6warning.js" type="text/javascript"></script><script type="text/javascript">window.onload=function(){e("/assets/site/ie6warning/")}</script><![endif]-->
-		<script type="text/javascript" src="http://use.typekit.com/aeu3zes.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-		
-	
-		
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-		
-	
-
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
 		
 		<script type="text/javascript">
 			$(document).keyup(function(event)

@@ -92,10 +92,10 @@ body
         background-color: $background-color
         
     margin: 0px 0px 0px 0px
-    min-width: 1024px
+    min-width: 980px
     
 html
-    min-width: 1024px
+    min-width: 980px
     
 ::selection
     color: $selection-text-color
@@ -166,14 +166,14 @@ pre
     font-family: monospace
     font-size: 0.825em
     line-height: 1.5em
-    background: #E5F1F4
+    background: #EEE
     padding: 8px
     margin: 0px 0px 12px 0px
     
 code
     font-family: monospace
     font-size: 11px
-    background: #E5F1F4
+    background: #EEE
     padding: 2px 5px
     
 a
@@ -324,18 +324,18 @@ button.dsq-button, button.dsq-button-small
     .dsq-tooltip
         background: #333 !important
     
-input
-    @extend textarea
-    +border-radius(10px)
-    height: 14px
-    padding: 2px 8px 4px 8px
-    
 .vertically_centered
     display: table-cell
     vertical-align: middle
     
 .center
     text-align: center
+    
+#chzn-container
+    width: 200px
+    
+    input
+        height: 25px !important
     
 #gc-number-0
     color: $link-color
@@ -347,6 +347,72 @@ input
     
 .caption
     margin: 8px 0px 25px 0px
+    
+#site
+    position: relative
+    width: 100%
+    min-width: 980px
+
+    .direction
+        position: absolute
+        top: 50%
+    
+        .arrow_wrapper
+            margin-top: -0.45em
+            
+            .arrow
+                font:
+                    family: "Lucida Grande", "museo-sans-1", "museo-sans-2", sans-serif
+                    size: 4em
+                    weight: 700
+
+        .title_wrapper
+            overflow: hidden
+            width: 1px
+            visibility: hidden
+        
+            .title
+                @extend .vertically_centered
+                +transition-property(color)
+                +transition-duration(0.35s)
+                font-size: 0.75em
+                line-height: 1.5em
+                white-space: nowrap
+                height: 64px
+                
+        a
+            text-decoration: none
+        
+            .title
+                color: $background-color
+
+            &:hover .arrow
+                +transition-property(color)
+                +transition-duration(0.35s)
+                color: $arrow-hover-color
+
+            &:hover .title
+                color: $arrow-hover-color
+        
+    #prev
+        .arrow_wrapper
+            +float-right
+            padding-left: 10px
+            
+        .title_wrapper
+            +float-left
+        
+        left: 10px
+    
+    #next
+        .arrow_wrapper
+            +float-left
+            padding-right: 10px
+            
+        .title_wrapper
+            +float-right
+        
+        right: 10px
     
 #page
     margin: 0px auto 0px auto
@@ -409,67 +475,6 @@ input
     hr
         +clearfix
         height: 33px
-        
-    .direction
-        position: absolute
-        bottom: 50%
-    
-        .arrow_wrapper
-            margin-top: -0.45em
-            
-            .arrow
-                font:
-                    family: "Lucida Grande", "museo-sans-1", "museo-sans-2", sans-serif
-                    size: 4em
-                    weight: 700
-
-        .title_wrapper
-            overflow: hidden
-            width: 1px
-            visibility: hidden
-        
-            .title
-                @extend .vertically_centered
-                +transition-property(color)
-                +transition-duration(0.35s)
-                font-size: 0.75em
-                line-height: 1.5em
-                white-space: nowrap
-                height: 64px
-                
-        a
-            text-decoration: none
-        
-            .title
-                color: $background-color
-
-            &:hover .arrow
-                +transition-property(color)
-                +transition-duration(0.35s)
-                color: $arrow-hover-color
-
-            &:hover .title
-                color: $arrow-hover-color
-        
-    #prev
-        .arrow_wrapper
-            +float-right
-            padding-left: 10px
-            
-        .title_wrapper
-            +float-left
-        
-        left: 10px
-    
-    #next
-        .arrow_wrapper
-            +float-left
-            padding-right: 10px
-            
-        .title_wrapper
-            +float-right
-        
-        right: 10px
         
     .tag
         font-style: italic

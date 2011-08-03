@@ -7,7 +7,10 @@ layout: default
 	</div>
 	<div id="sidebar" class="grid-1">
 		<!--<div id="search-wrapper">
-			<input id="search" type="text" />
+			<select id="search" class="chzn-select" title="Search tags..." tabIndex="1">
+			  <option value=""></option>
+			  {% tags %}<option value="%tag%">%tag%</option>{% endtags %}
+			</select>
 			<hr/>
 		</div>-->
 		<div id="latest-tweet">
@@ -37,16 +40,3 @@ layout: default
 		<!--<div id="latest-flickr">poop</div>-->
 	</div>
 </div>
-{% if page.layout != 'blog' %}
-{% include project_direction.html %}
-{% if next_url %}
-<div id="prev" class="direction">
-	<a href="{{next_url}}"><span class="title_wrapper"><span class="title">{{next_title}}</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>
-</div>
-{% endif %}
-{% if previous_url %}
-<div id="next" class="direction">
-	<a href="{{previous_url}}"><span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">{{previous_title}}</span></span></a>
-</div>
-{% endif %}
-{% endif %}

@@ -9,6 +9,7 @@
 		{% else %}
 		<link href="/css/screen.css" rel="stylesheet" type="text/css" />
 		{% endif %}
+		<!--<link href="/css/chosen.css" rel="stylesheet" type="text/css" />-->
 		<script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -26,54 +27,66 @@
 		var disqus_container_id = 'disqus_thread';
 		var disqus_domain = 'disqus.com';
 </script>
+    <!--<script type="text/javascript" src="http://use.typekit.com/aeu3zes.js"></script>-->
+    <!--<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
 	</head>
 	
 	<body>
-		<div id="page">
-			<div id="top">
-			  <div id="identity">
-	  			<h1>
-	  				<a href="/" class="destroy">destroy</a><a href="/" class="today">today</a>
-	  			</h1>
-				</div>
-				<div id="navigation">
-					<ul>
-						{% for section in site.sections %}
-							{% if section == page.category %}
-								<li class="selected"><a href="/{{section}}">{{ section | capitalize }}</a></li>
-							{% else %}
-								<li><a href="/{{section}}">{{ section | capitalize }}</a></li>
-							{% endif %}
-						{% endfor %}
-					</ul>
-				</div>
-			</div>
-			<div id="content">
-				{{content}}
-			</div>
-			<div id="footer">
-				<div id="footer_wrapper">
-					<div id="copyright_wrapper">
-						<div id="copyright">copyright &copy; <a href="/contact">Jonnie Hallman</a> 2005-{{site.time | date: "%Y"}}&nbsp;&nbsp;+</div>
-					</div>
-					<div id="twitter_follow_wrapper">
-						<div id="twitter_follow"><a href="http://twitter.com/destroytoday" class="twitter-follow-button" data-show-count="false">Follow @destroytoday</a></div>
-					</div>
-				</div>
-			</div>
-		</div>
+	  <div id="site">
+  		<div id="page">
+  			<div id="top">
+  			  <div id="identity">
+  	  			<h1>
+  	  				<a href="/" class="destroy">destroy</a><a href="/" class="today">today</a>
+  	  			</h1>
+  				</div>
+  				<div id="navigation">
+  					<ul>
+  						{% for section in site.sections %}
+  							{% if section == page.category %}
+  								<li class="selected"><a href="/{{section}}">{{ section | capitalize }}</a></li>
+  							{% else %}
+  								<li><a href="/{{section}}">{{ section | capitalize }}</a></li>
+  							{% endif %}
+  						{% endfor %}
+  					</ul>
+  				</div>
+  			</div>
+  			<div id="content">
+  				{{content}}
+  			</div>
+  			<div id="footer">
+  				<div id="footer_wrapper">
+  					<div id="copyright_wrapper">
+  						<div id="copyright">copyright &copy; <a href="/contact">Jonnie Hallman</a> 2005-{{site.time | date: "%Y"}}&nbsp;&nbsp;+</div>
+  					</div>
+  					<div id="twitter_follow_wrapper">
+  						<div id="twitter_follow"><a href="http://twitter.com/destroytoday" class="twitter-follow-button" data-show-count="false">Follow @destroytoday</a></div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		{% include project_direction.html %}
+  		{% if next_url %}
+      <div id="prev" class="direction">
+      	<a href="{{next_url}}"><span class="title_wrapper"><span class="title">{{next_title}}</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>
+      </div>
+      {% endif %}
+      {% if previous_url %}
+      <div id="next" class="direction">
+      	<a href="{{previous_url}}"><span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">{{previous_title}}</span></span></a>
+      </div>
+      {% endif %}
+  	</div>
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
 		<script src="/js/jquery.swfobject.1.1.1.min.js" type="text/javascript"></script>
 		<script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
 		<script src="/js/jquery.timeago.js" type="text/javascript"></script>
 		<script src="/js/jquery.cookie.min.js" type="text/javascript"></script>
-		<!--<script src="/js/jquery.imgareaselect.min.js" type="text/javascript"></script>-->
+		<script src="/js/jquery.chosen.min.js" type="text/javascript"></script>
 		<script src="/js/destroytoday.global.min.js" type="text/javascript"></script>
 		<!--[if lte IE 6]><script src="/js/ie6warning.js" type="text/javascript"></script><script type="text/javascript">window.onload=function(){e("/assets/site/ie6warning/")}</script><![endif]-->
-		<script type="text/javascript" src="http://use.typekit.com/aeu3zes.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		{% include project_direction.html %}
 		{% if next_url %}
 		<script type="text/javascript">
 			$(document).keyup(function(event)

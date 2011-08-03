@@ -20,6 +20,7 @@ module Jekyll
         compressor.compress CoffeeScript.compile content
       rescue StandardError => e
           puts "!!! Coffeescript Error: " + e.inspect
+          puts content
       end
     end
   end

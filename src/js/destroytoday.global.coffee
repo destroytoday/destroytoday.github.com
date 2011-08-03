@@ -52,23 +52,24 @@ getLatestTweet = ->
         
     if latest_tweet
         setLatestTweet latest_tweet
-    $.ajax
-      url: "http://twitter.com/statuses/user_timeline/destroytoday.json?count=10"
-      dataType: 'jsonp'
-      success: (data) ->
-          $.each data, (key, value) ->
-              if value.text.substring(0, 1) != "@"
-                  tweet = 
-                    linkify(value.text) +
-                    "<br/><a href=\"http://twitter.com/destroytoday\">destroytoday</a> <a class=\"timestamp\" href=\"http://twitter.com/destroytoday/status/" + value.id_str + "\">" + 
-                    jQuery.timeago(value.created_at).replace(/[\s]+/ig, '&nbsp;') +
-                    "</a>"
+    else
+        $.ajax
+          url: "http://twitter.com/statuses/user_timeline/destroytoday.json?count=10"
+          dataType: 'jsonp'
+          success: (data) ->
+              $.each data, (key, value) ->
+                  if value.text.substring(0, 1) != "@"
+                      tweet = 
+                        linkify(value.text) +
+                        "<br/><a href=\"http://twitter.com/destroytoday\">destroytoday</a> <a class=\"timestamp\" href=\"http://twitter.com/destroytoday/status/" + value.id_str + "\">" + 
+                        jQuery.timeago(value.created_at).replace(/[\s]+/ig, '&nbsp;') +
+                        "</a>"
                     
-                  $.cookie 'latest-tweet', tweet, { expires: 1 }
+                      $.cookie 'latest-tweet', tweet, { expires: 1 }
       
-                  setLatestTweet tweet
+                      setLatestTweet tweet
    
-                  false
+                      false
                   
 setLatestTweet = (tweet) ->
     $('#latest-tweet p').html tweet
@@ -81,6 +82,9 @@ setLatestTweet = (tweet) ->
 #--------------------------------------------------------------------------
     
 $(document).ready ->
+    # chosen
+    #$(".chzn-select").chosen()
+    
     # inject email
     $('.email').html '<a href="mailto:jonnie@destroytoday.com">jonnie@destroytoday.com</a>'
     
@@ -92,10 +96,12 @@ $(document).ready ->
     $('.direction').mouseenter (event) ->
         title_wrapper = $(event.currentTarget).children('a').children('.title_wrapper')
         title = title_wrapper.children('.title')
+        arrow_wrapper = $(event.currentTarget).children('a').children('.arrow_wrapper')
         
-        title_wrapper.stop()
-        title_wrapper.css 'visibility', 'visible'
-        title_wrapper.animate { width: title.width() }, { duration: 350 }
+        if ($('body').width() - $('#page').width()) / 2 >= title.width() + arrow_wrapper.width() + 30
+            title_wrapper.stop()
+            title_wrapper.css 'visibility', 'visible'
+            title_wrapper.animate { width: title.width() }, { duration: 350 }
         
     # next/prev arrow out
     $('.direction').mouseleave (event) ->
@@ -173,7 +179,7 @@ $(document).ready ->
             $(this).siblings('.swf').html ''
             $(this).siblings('.swf').css 'display', 'none'
             $(this).siblings('.play').css 'opacity', 1
-            
+
     if $('#latest-tweet').length > 0
         t = setTimeout getLatestTweet, 2000
     
@@ -184,10 +190,8 @@ $(document).ready ->
             url: "http://api.flickr.com/services/feeds/photos_public.gne?id=13185812@N03&lang=en-us&format=json",
             dataType: "jsonp",
             jsonpCallback: "jsonFlickrFeed",
-            success: function(data)
-            {
+            success: (data) ->
                 $('#latest-flickr').html('<img src="' + data.items[0].media.m + '" />');
-            }
         });
     }
     ###
@@ -195,13 +199,11 @@ $(document).ready ->
     #--------------------------------------
     #  Disqus
     #--------------------------------------
-    
     if $('#disqus_thread').length > 0
         ds_loaded = false
         top = $('.tags').offset().top
  
         lazyLoadDisqus = ->
-            console.log($(window).scrollTop())
             if !ds_loaded && $(window).scrollTop() + $(window).height() > top
                 ds_loaded = true
                 dsq = document.createElement('script')
@@ -212,7 +214,6 @@ $(document).ready ->
         
         $(window).scroll lazyLoadDisqus
         lazyLoadDisqus()
-    
     #--------------------------------------
     #  Twitter Follow Button
     #--------------------------------------

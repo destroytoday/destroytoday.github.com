@@ -7,6 +7,7 @@
 		
 		<link href="/css/screen.css" rel="stylesheet" type="text/css" />
 		
+		<!--<link href="/css/chosen.css" rel="stylesheet" type="text/css" />-->
 		<script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -24,44 +25,47 @@
 		var disqus_container_id = 'disqus_thread';
 		var disqus_domain = 'disqus.com';
 </script>
+    <!--<script type="text/javascript" src="http://use.typekit.com/aeu3zes.js"></script>-->
+    <!--<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
 	</head>
 	
 	<body>
-		<div id="page">
-			<div id="top">
-			  <div id="identity">
-	  			<h1>
-	  				<a href="/" class="destroy">destroy</a><a href="/" class="today">today</a>
-	  			</h1>
-				</div>
-				<div id="navigation">
-					<ul>
-						
-							
-								<li><a href="/about">About</a></li>
-							
-						
-							
-								<li class="selected"><a href="/blog">Blog</a></li>
-							
-						
-							
-								<li><a href="/folio">Folio</a></li>
-							
-						
-							
-								<li><a href="/lab">Lab</a></li>
-							
-						
-							
-								<li><a href="/contact">Contact</a></li>
-							
-						
-					</ul>
-				</div>
-			</div>
-			<div id="content">
-				<div id="blog">
+	  <div id="site">
+  		<div id="page">
+  			<div id="top">
+  			  <div id="identity">
+  	  			<h1>
+  	  				<a href="/" class="destroy">destroy</a><a href="/" class="today">today</a>
+  	  			</h1>
+  				</div>
+  				<div id="navigation">
+  					<ul>
+  						
+  							
+  								<li><a href="/about">About</a></li>
+  							
+  						
+  							
+  								<li class="selected"><a href="/blog">Blog</a></li>
+  							
+  						
+  							
+  								<li><a href="/folio">Folio</a></li>
+  							
+  						
+  							
+  								<li><a href="/lab">Lab</a></li>
+  							
+  						
+  							
+  								<li><a href="/contact">Contact</a></li>
+  							
+  						
+  					</ul>
+  				</div>
+  			</div>
+  			<div id="content">
+  				<div id="blog">
 	<div id="primary" class="grid-3">
 		
 <div class="post">
@@ -92,7 +96,10 @@
 	</div>
 	<div id="sidebar" class="grid-1">
 		<!--<div id="search-wrapper">
-			<input id="search" type="text" />
+			<select id="search" class="chzn-select" title="Search tags..." tabIndex="1">
+			  <option value=""></option>
+			  ["<option value=\"Code\">Code</option>"]["<option value=\"AS3\">AS3</option>"]["<option value=\"Open Source\">Open Source</option>"]["<option value=\"Adobe\">Adobe</option>"]["<option value=\"Poster\">Poster</option>"]["<option value=\"Photography\">Photography</option>"]["<option value=\"Story\">Story</option>"]["<option value=\"SQLite\">SQLite</option>"]["<option value=\"Review\">Review</option>"]["<option value=\"iOS\">iOS</option>"]["<option value=\"OSX\">OSX</option>"]["<option value=\"Artist\">Artist</option>"]["<option value=\"Ruby\">Ruby</option>"]["<option value=\"Product\">Product</option>"]
+			</select>
 			<hr/>
 		</div>-->
 		<div id="latest-tweet">
@@ -217,8 +224,19 @@
 		<!--<div id="latest-flickr">poop</div>-->
 	</div>
 </div>
-
-
+  			</div>
+  			<div id="footer">
+  				<div id="footer_wrapper">
+  					<div id="copyright_wrapper">
+  						<div id="copyright">copyright &copy; <a href="/contact">Jonnie Hallman</a> 2005-2011&nbsp;&nbsp;+</div>
+  					</div>
+  					<div id="twitter_follow_wrapper">
+  						<div id="twitter_follow"><a href="http://twitter.com/destroytoday" class="twitter-follow-button" data-show-count="false">Follow @destroytoday</a></div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		
 
 	
 
@@ -497,319 +515,26 @@
   
   
 
-
-<div id="prev" class="direction">
-	<a href="/blog/comparing-64-bit-numbers"><span class="title_wrapper"><span class="title">64-bit numbers</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>
-</div>
-
-
-<div id="next" class="direction">
-	<a href="/blog/letterpressed-indesign-icons"><span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">Letterpressed InDesign icons</span></span></a>
-</div>
-
-
-			</div>
-			<div id="footer">
-				<div id="footer_wrapper">
-					<div id="copyright_wrapper">
-						<div id="copyright">copyright &copy; <a href="/contact">Jonnie Hallman</a> 2005-2011&nbsp;&nbsp;+</div>
-					</div>
-					<div id="twitter_follow_wrapper">
-						<div id="twitter_follow"><a href="http://twitter.com/destroytoday" class="twitter-follow-button" data-show-count="false">Follow @destroytoday</a></div>
-					</div>
-				</div>
-			</div>
-		</div>
+  		
+      <div id="prev" class="direction">
+      	<a href="/blog/comparing-64-bit-numbers"><span class="title_wrapper"><span class="title">64-bit numbers</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>
+      </div>
+      
+      
+      <div id="next" class="direction">
+      	<a href="/blog/letterpressed-indesign-icons"><span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">Letterpressed InDesign icons</span></span></a>
+      </div>
+      
+  	</div>
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
 		<script src="/js/jquery.swfobject.1.1.1.min.js" type="text/javascript"></script>
 		<script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
 		<script src="/js/jquery.timeago.js" type="text/javascript"></script>
 		<script src="/js/jquery.cookie.min.js" type="text/javascript"></script>
-		<!--<script src="/js/jquery.imgareaselect.min.js" type="text/javascript"></script>-->
+		<script src="/js/jquery.chosen.min.js" type="text/javascript"></script>
 		<script src="/js/destroytoday.global.min.js" type="text/javascript"></script>
 		<!--[if lte IE 6]><script src="/js/ie6warning.js" type="text/javascript"></script><script type="text/javascript">window.onload=function(){e("/assets/site/ie6warning/")}</script><![endif]-->
-		<script type="text/javascript" src="http://use.typekit.com/aeu3zes.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		
-
-	
-
-	
-	
-	
-	
-	  
-	
-		
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	  
-	
-		
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	  
-	
-		
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	  
-	
-		
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	  
-	
-		
-	
-	
-	
-	
-	
-	
-	
-
-	
-		
-	
-
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	  
-	
-		
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-	
-  
-  
-
 		
 		<script type="text/javascript">
 			$(document).keyup(function(event)
