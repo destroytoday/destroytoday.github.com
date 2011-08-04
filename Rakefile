@@ -1,77 +1,36 @@
 require 'rubygems'
 require 'growl'
-require "serialport"
 require 'coffee-script'
 require 'fileutils'
-require 'rb-fsevent'
 require 'tidy_ffi'
 
-def arduinoExists?
-  return false#File.exists?("/dev/tty.RN42-A82F-SPP")
-end
-
-def light color, delay=1
-  if arduinoExists?
-    @sp.putc(color)
-    puts color
-    sleep(delay)
-  end
-end
-
-def flash color
-  4.times do
-    light color, 0.5
-    light 'q', 0.5
-  end if arduinoExists?
-end
-
-def setup
-  port_str = "/dev/tty.RN42-A82F-SPP"
-  baud_rate = 115200
-  data_bits = 8
-  stop_bits = 1
-  parity = SerialPort::NONE
-
-  @sp = SerialPort.new(port_str, baud_rate, data_bits, stop_bits, parity)
-  light(' ')
-  sleep(1)
-  light('c')
-end
-
-def closeSerial
-  @sp.close if arduinoExists?
-end
-
-def success
-  flash 'g'
-  closeSerial
-end
+#--------------------------------------------------------------------------
+#
+#  Helper Methods
+#
+#--------------------------------------------------------------------------
 
 def fail
   Growl.notify 'Build failed', :title => 'destroytoday.com'
-  
-  flash 'y' #change to red when you get the red LED
-  closeSerial
-  exit
 end
+
+#--------------------------------------------------------------------------
+#
+#  Task Chains
+#
+#--------------------------------------------------------------------------
 
 task :default => [:jekyll_debug, :success]
 
 task :release => [:jekyll_release, :index, :success]
 
-task :arduino => [:setup, :default]
+#--------------------------------------------------------------------------
+#
+#  Tasks
+#
+#--------------------------------------------------------------------------
 
-task :setup do
-  setup if arduinoExists?
-  
-	#output = `cd ~/dev/web/destroytoday.com`; result = $?.success?
-  system('pwd')
-  
-  #puts output
-  
-	#fail unless result
-end
-
+desc "Runs Jekyll (debug)"
 task :jekyll_debug do
 	output = `jekyll --no-auto`; result = $?.success?
 	
@@ -80,6 +39,7 @@ task :jekyll_debug do
 	fail unless result
 end
 
+desc "Runs Jekyll (release)"
 task :jekyll_release do
 	output = `jekyll --lsi`; result = $?.success?
 	
@@ -88,10 +48,12 @@ task :jekyll_release do
 	fail unless result
 end
 
+desc "Runs Jekyll (server)"
 task :server do
   system("jekyll --auto --server 1337");
 end
 
+desc "Indexes blog posts"
 task :index do
   index = "["
   n = 0
@@ -123,6 +85,7 @@ task :index do
   File.open('site/js/blog_index.json', 'w') {|f| f.write(index) }
 end
 
+desc "Tidies HTML files"
 task :tidy do
   Dir.glob('site/**/*.html') do |path|
     content = File.open(path).read
@@ -133,11 +96,11 @@ task :tidy do
   end
 end
 
+desc "Deploys to Beanstalk"
 task :deploy do
 	system("git push beanstalk master")
 end
 
 task :success do
 	Growl.notify 'Build complete', :title => 'destroytoday.com'
-	success
 end
