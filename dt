@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require './libs/admin.rb'
+
+method_name = ARGV[0]
+
+action = "admin.#{method_name}"
+
+if ARGV.length > 1
+  action << " \"" + ARGV[1..ARGV.length].join('", "') + "\""
+end
+
+admin = Jekyll::Admin.new
+eval action
