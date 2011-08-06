@@ -4,6 +4,11 @@
 		<title>Destroy Today / {{page.title}}</title>
 		
 		<link type="application/rss+xml" rel="alternate" title="Destroy Today" href="http://feeds.feedburner.com/destroytoday" />
+		{% if site.server %}
+		<link rel="stylesheet" href="http://f.fontdeck.com/s/css/LM6ogP/lb7cBmA+dXw78TxjDQ+Q/localhost/8877.css" type="text/css" />
+		{% else %}
+		<link rel="stylesheet" href="http://f.fontdeck.com/s/css/LM6ogP/lb7cBmA+dXw78TxjDQ+Q/staging.destroytoday.com/8877.css" type="text/css" />
+		{% endif %}
 		{% if page.style %}
 		<link href="/css{% if page.id %}{{ page.id }}{% elsif page.title %}/{{page.title | downcase}}{% endif %}.css" rel="stylesheet" type="text/css" />
 		{% else %}

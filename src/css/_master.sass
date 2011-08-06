@@ -22,12 +22,12 @@ $text-font: "Lucida Grande", Verdana, sans-serif !default
 $text-color: #333 !default
 $text-weight: 400 !default
 
-$identity-font: "Helvetica Neue", sans-serif !default
+$identity-font: "Helvetica Neue", Helvetica, sans-serif !default
 $identity-weight: 700 !default
 $identity-destroy-color: #333 !default
 $identity-today-color: #007998 !default
 
-$header-font: "museo-sans-1", "museo-sans-2", "Helvetica Neue", sans-serif !default
+$header-font: "Museo Slab 700", "Helvetica Neue", Helvetica, sans-serif !default
 $header-weight: $identity-weight !default
 $header-color: #333 !default
 $tag-color: #999 !default
@@ -41,7 +41,7 @@ $link-hover-color: #007998 !default
 $selection-text-color: #FFF !default
 $selection-background-color: $link-color !default
 
-$nav-font: "Helvetica Neue", $text-font !default
+$nav-font: "Helvetica Neue", Helvetica, $text-font !default
 $nav-color: #333 !default
 $nav-weight: $text-weight !default
 $nav-selected-color: #007998 !default
@@ -53,7 +53,7 @@ $arrow-hover-color: $link-hover-color !default
 $footer-color: #999 !default
 $footer-weight: $text-weight !default
 
-$thumbnail-font: "Helvetica Neue", sans-serif !default
+$thumbnail-font: "Helvetica Neue", Helvetica, sans-serif !default
 $thumbnail-weight: 400 !default
 
 //--------------------------------------------------------------------------
@@ -139,6 +139,8 @@ hr
         
 img
     display: block
+    border: none
+    outline: none
     
 h2
     font-family: $header-font
