@@ -151,7 +151,7 @@ module Jekyll
     end
     
     def hires_filename
-      "#{slug}-hires.#{ext}"
+      "_#{slug}-hires.#{ext}"
     end
     
     def copy dir

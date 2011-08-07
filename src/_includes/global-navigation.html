@@ -1,0 +1,11 @@
+<div id="navigation">
+	<ul>
+		{% for section in site.sections %}
+			{% if section == page.category %}
+				<li class="selected"><a href="/{{section}}">{{ section | capitalize }}</a></li>
+			{% else %}
+				<li><a href="/{{section}}">{{ section | capitalize }}</a></li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</div>
