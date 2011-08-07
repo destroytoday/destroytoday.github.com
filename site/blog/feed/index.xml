@@ -3,7 +3,7 @@
 	<title>Destroy Today</title>
 	<link href="http://staging.destroytoday.com/blog/feed/index.xml" rel="self"/>
 	<link href="http://staging.destroytoday.com"/>
-	<updated>2011-08-07T11:54:55-07:00</updated>
+	<updated>2011-08-07T12:05:47-07:00</updated>
 	<id>http://staging.destroytoday.com</id>
 	<author>
 		<name>Jonnie Hallman</name>
@@ -12,7 +12,7 @@
 
 	
 	<entry>
-		<title><![CDATA[Infinity File]]></title>
+		<title type="html"><![CDATA[Infinity File]]></title>
 		<link href="http://staging.destroytoday.com/blog/infinity-file"/>
 		<updated>2011-07-30T00:00:00-07:00</updated>
 		<id>http://staging.destroytoday.com/blog/infinity-file</id>
@@ -20,7 +20,7 @@
 	</entry>
 	
 	<entry>
-		<title><![CDATA[Luminant Point Arrays by Stephan Tillmans]]></title>
+		<title type="html"><![CDATA[Luminant Point Arrays by Stephan Tillmans]]></title>
 		<link href="http://staging.destroytoday.com/blog/luminant-point-arrays"/>
 		<updated>2011-03-30T00:00:00-07:00</updated>
 		<id>http://staging.destroytoday.com/blog/luminant-point-arrays</id>
@@ -30,7 +30,7 @@
 	</entry>
 	
 	<entry>
-		<title><![CDATA[Day One &mdash; potentially my first successful journal ever]]></title>
+		<title type="html"><![CDATA[Day One &mdash; potentially my first successful journal ever]]></title>
 		<link href="http://staging.destroytoday.com/blog/dayone"/>
 		<updated>2011-03-24T00:00:00-07:00</updated>
 		<id>http://staging.destroytoday.com/blog/dayone</id>
@@ -44,7 +44,7 @@
 	</entry>
 	
 	<entry>
-		<title><![CDATA[Comparing 64-bit numbers in AS3 and SQLite]]></title>
+		<title type="html"><![CDATA[Comparing 64-bit numbers in AS3 and SQLite]]></title>
 		<link href="http://staging.destroytoday.com/blog/comparing-64-bit-numbers"/>
 		<updated>2011-01-30T00:00:00-08:00</updated>
 		<id>http://staging.destroytoday.com/blog/comparing-64-bit-numbers</id>
@@ -82,7 +82,7 @@ if (booleanB) callMethod();&lt;/code&gt;&lt;/pre&gt;
 	</entry>
 	
 	<entry>
-		<title><![CDATA[Today's Cuts]]></title>
+		<title type="html"><![CDATA[Today's Cuts]]></title>
 		<link href="http://staging.destroytoday.com/blog/todays-cuts"/>
 		<updated>2011-01-26T00:00:00-08:00</updated>
 		<id>http://staging.destroytoday.com/blog/todays-cuts</id>
@@ -98,7 +98,7 @@ if (booleanB) callMethod();&lt;/code&gt;&lt;/pre&gt;
 	</entry>
 	
 	<entry>
-		<title><![CDATA[Letterpressed InDesign icons]]></title>
+		<title type="html"><![CDATA[Letterpressed InDesign icons]]></title>
 		<link href="http://staging.destroytoday.com/blog/letterpressed-indesign-icons"/>
 		<updated>2011-01-06T00:00:00-08:00</updated>
 		<id>http://staging.destroytoday.com/blog/letterpressed-indesign-icons</id>
@@ -108,7 +108,7 @@ if (booleanB) callMethod();&lt;/code&gt;&lt;/pre&gt;
 	</entry>
 	
 	<entry>
-		<title><![CDATA[A super ghetto way of getting a function path in AS3]]></title>
+		<title type="html"><![CDATA[A super ghetto way of getting a function path in AS3]]></title>
 		<link href="http://staging.destroytoday.com/blog/as3-function-path"/>
 		<updated>2010-11-30T00:00:00-08:00</updated>
 		<id>http://staging.destroytoday.com/blog/as3-function-path</id>
@@ -121,7 +121,7 @@ if (booleanB) callMethod();&lt;/code&gt;&lt;/pre&gt;
 	</entry>
 	
 	<entry>
-		<title><![CDATA[Konami Code added to DestroyFramework]]></title>
+		<title type="html"><![CDATA[Konami Code added to DestroyFramework]]></title>
 		<link href="http://staging.destroytoday.com/blog/konami-code"/>
 		<updated>2010-08-23T00:00:00-07:00</updated>
 		<id>http://staging.destroytoday.com/blog/konami-code</id>

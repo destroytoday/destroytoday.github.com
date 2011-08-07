@@ -13,6 +13,8 @@ AddOutputFilterByType DEFLATE application/x-javascript
 
 FileETag none
 
+DirectoryIndex index.html index.htm index.xml
+
 Options -Indexes
 RewriteEngine On
 
