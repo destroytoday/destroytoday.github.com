@@ -3,18 +3,13 @@
 @import "master"
 
 #contact
-    #right
-        +float-right
-    
-        #email
-            @extend p
+    #email, #phone, #address
+        font-size: 0.75em
+        line-height: 1.5em
+        
+    #networks
+        margin: 18px 0px 0px 0px
 
-        #networks
-            margin: 14px 0px 0px 0px
-
-            ul li
-                +float-left
-                margin: 0px 4px 0px 0px
-
-        #address
-            @extend p
+        ul li
+            +float-left
+            margin: 0px 4px 0px 0px

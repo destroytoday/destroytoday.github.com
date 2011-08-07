@@ -20,9 +20,13 @@ end
 #
 #--------------------------------------------------------------------------
 
-task :default => [:jekyll_debug, :success]
+task :default => :local
 
-task :release => [:jekyll_release, :index, :success]
+task :local => [:jekyll_local, :success]
+
+task :staging => [:jekyll_staging, :success]
+
+task :production => [:jekyll_production, :index, :success]
 
 #--------------------------------------------------------------------------
 #
@@ -30,18 +34,27 @@ task :release => [:jekyll_release, :index, :success]
 #
 #--------------------------------------------------------------------------
 
-desc "Runs Jekyll (debug)"
-task :jekyll_debug do
-	output = `jekyll --no-auto`; result = $?.success?
+desc "Runs Jekyll (local)"
+task :jekyll_local do
+	output = `jekyll --url http://localhost:1337`; result = $?.success?
 	
 	puts output
 	
 	fail unless result
 end
 
-desc "Runs Jekyll (release)"
-task :jekyll_release do
-	output = `jekyll --lsi`; result = $?.success?
+desc "Runs Jekyll (staging)"
+task :jekyll_staging do
+	output = `jekyll --url http://staging.destroytoday.com`; result = $?.success?
+	
+	puts output
+	
+	fail unless result
+end
+
+desc "Runs Jekyll (production)"
+task :jekyll_production do
+	output = `jekyll --url http://destroytoday.com --lsi`; result = $?.success?
 	
 	puts output
 	
@@ -50,7 +63,7 @@ end
 
 desc "Runs Jekyll (server)"
 task :server do
-  system("jekyll --auto --server 1337");
+  system("jekyll --url http://localhost:1337 --auto --server 1337");
 end
 
 desc "Indexes blog posts"
