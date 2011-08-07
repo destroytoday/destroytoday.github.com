@@ -1,9 +1,0 @@
----
-layout: blog
----
-{% for post in paginator.posts %}
-{% include blog_post.html %}
-{% if post != paginator.posts.last %}
-<hr/>
-{% endif %}
-{% endfor %}

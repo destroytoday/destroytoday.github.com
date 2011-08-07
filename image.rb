@@ -15,7 +15,7 @@ def write_post
   
   content = <<EOF
 ---
-layout: blog_post
+layout: blog-post
 title: #{title}
 shortname: #{title}
 category: blog

@@ -21,7 +21,7 @@ layout: default
 		<div id="related-posts">
 		  {% if paginator.posts %}
 		    {% for post in paginator.posts limit:5 offset:1 %}
-			    {% include blog_sidebar_thumb.html %}
+			    {% include blog-sidebar-thumb.html %}
 			    <hr/>
   			{% endfor %}
 		  {% else %}
@@ -29,7 +29,7 @@ layout: default
   			{% for post in site.related_posts %}
   			  {% if post.categories == page.categories %}
   			    {% if related_post_i != '3' %}
-  			      {% include blog_sidebar_thumb.html %}
+  			      {% include blog-sidebar-thumb.html %}
   			      {% capture related_post_i %}{{ related_post_i | plus: 1 }}{% endcapture %}
   			      <hr/>
   			    {% endif %}

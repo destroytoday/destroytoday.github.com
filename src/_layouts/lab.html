@@ -3,7 +3,7 @@ layout: default
 ---
 {% assign i = '0' %}
 {% for project in site.categories.lab %}
-	{% include project_thumb.html %}
+	{% include project-thumb.html %}
 	{% capture i %}{{ i | plus:1 }}{% endcapture %}
 	{% if i == '4' %}
 		<hr />
