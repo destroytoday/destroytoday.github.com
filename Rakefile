@@ -26,7 +26,7 @@ task :local => [:jekyll_local, :success]
 
 task :staging => [:jekyll_staging, :success]
 
-task :production => [:jekyll_production, :index, :success]
+task :production => [:jekyll_production, :success]
 
 #--------------------------------------------------------------------------
 #
@@ -36,7 +36,7 @@ task :production => [:jekyll_production, :index, :success]
 
 desc "Runs Jekyll (local)"
 task :jekyll_local do
-	output = `jekyll --url http://localhost:1337`; result = $?.success?
+	output = `sudo jekyll --url http://localhost:1337 --lsi`; result = $?.success?
 	
 	puts output
 	
@@ -45,7 +45,7 @@ end
 
 desc "Runs Jekyll (staging)"
 task :jekyll_staging do
-	output = `jekyll --url http://staging.destroytoday.com`; result = $?.success?
+	output = `sudo jekyll --url http://staging.destroytoday.com --lsi`; result = $?.success?
 	
 	puts output
 	
@@ -54,7 +54,7 @@ end
 
 desc "Runs Jekyll (production)"
 task :jekyll_production do
-	output = `jekyll --url http://destroytoday.com --lsi`; result = $?.success?
+	output = `sudo jekyll --url http://destroytoday.com --lsi`; result = $?.success?
 	
 	puts output
 	
@@ -63,7 +63,7 @@ end
 
 desc "Runs Jekyll (server)"
 task :server do
-  system("jekyll --url http://localhost:1337 --auto --server 1337");
+  system("sudo jekyll --url http://localhost:1337 --auto --server 1337");
 end
 
 desc "Indexes blog posts"
@@ -104,7 +104,7 @@ task :tidy do
     content = File.open(path).read
     
     File.open(path, 'w') {|file|
-      file.write TidyFFI::Tidy.new(content, :numeric_entities => 1, :output_xhtml => 1, :merge_divs => 0, :clean => 1, :indent => 1, :wrap => 0, :drop_empty_paras => 0).clean
+      file.write TidyFFI::Tidy.new(content, :numeric_entities => 1, :output_html => 1, :merge_divs => 0, :join_styles => 0, :clean => 1, :indent => 1, :wrap => 0, :drop_empty_paras => 0, :literal_attributes => 1).clean
     }
   end
 end

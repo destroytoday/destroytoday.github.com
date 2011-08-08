@@ -8,9 +8,9 @@
 		
 
 
+  <link rel="stylesheet" href="http://f.fontdeck.com/s/css/Aa4uHlYiunplvlGC3xxxC30QQ2w/staging.destroytoday.com/8877.css" type="text/css" />
 
 
-  <link rel="stylesheet" href="http://f.fontdeck.com/s/css/LM6ogP/lb7cBmA+dXw78TxjDQ+Q/destroytoday.com/8877.css" type="text/css" />
 
 		
   <link href="/css/screen.css" rel="stylesheet" type="text/css" />
@@ -28,7 +28,7 @@
   })();
 </script>
 		<script type="text/javascript">
-		var disqus_shortname = 'destroytoday';
+		var disqus_shortname = 'destroytodaystaging';
 		var disqus_developer = 1;
 		var disqus_container_id = 'disqus_thread';
 		var disqus_domain = 'disqus.com';
@@ -79,13 +79,13 @@
 <div class="post">
 	<h2><a href="/blog/comparing-64-bit-numbers">Comparing 64-bit numbers in AS3 and SQLite</a></h2>
 	<div class="metadata">
-		<div class="date"><a href="/blog/comparing-64-bit-numbers">01.30.11</a></div><div class="comment-count"><a href="/blog/comparing-64-bit-numbers#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/comparing-64-bit-numbers">0</a> <a href="/blog/comparing-64-bit-numbers"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
+		<div class="date"><a href="/blog/comparing-64-bit-numbers">01.30.11</a></div><div class="comment-count"><a href="/blog/comparing-64-bit-numbers#disqus_thread" data-disqus-identifier="http://staging.destroytoday.com/blog/comparing-64-bit-numbers">0</a> <a href="/blog/comparing-64-bit-numbers"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
 	</div>
 	<p>When <a href='http://engineering.twitter.com/2010/06/announcing-snowflake.html'>Twitter introduced Snowflake</a>, their new ID generator, they also introduced 64-bit IDs. At first, I didn&#8217;t think much of this. When the <a href='http://www.google.com/search?q=twitpocalypse&amp;#038;ie=utf-8&amp;#038;oe=utf-8&amp;#038;aq=t&amp;#038;rls=org.mozilla:en-US:official&amp;#038;client=firefox-a'>Twitpocalypse</a> occurred (Twitter IDs surpassing 32 bits), I updated <a href='http://destroytwitter.com/'>DestroyTwitter</a> to use floating point IDs instead of integer IDs. I figured with Snowflake that AS3&#8217;s floating point class, Number, had me covered. I was wrong.</p>
 
-<p>It turns out AS3 doesn&#8217;t support 64-bit numbers. To support Snowflake, I have to update DestroyTwitter to use string IDs instead of floating point IDs. A handful of problems arise because of this. For one, I must reformat DestroyTwitter&#8217;s local SQLite database to use TEXT columns instead of REAL. Also, string comparison doesn&#8217;t exactly behave the same as number comparison. For example, &#8220;9&#8221; &gt; &#8220;1&#8221; because 9 comes after 1.</p>
+<p>It turns out AS3 doesn&#8217;t support 64-bit numbers. To support Snowflake, I have to update DestroyTwitter to use string IDs instead of floating point IDs. A handful of problems arise because of this. For one, I must reformat DestroyTwitter&#8217;s local SQLite database to use TEXT columns instead of REAL. Also, string comparison doesn&#8217;t exactly behave the same as number comparison. For example, <code>9 &gt; 1</code> because <code>9</code> comes after <code>1</code>.</p>
 
-<p>To overcome this inconvenience, we need a more complex method of comparison than a simple &lt; or &gt;. We could left pad the string with zeros, but this is expensive in AS3 and impossible in SQLite. I prefer comparing the string lengths first, then the strings as numbers:</p>
+<p>To overcome this inconvenience, we need a more complex method of comparison than a simple <code>&lt;</code> or <code>&gt;</code>. We could left pad the string with zeros, but this is expensive in AS3 and impossible in SQLite. I prefer comparing the string lengths first, then the strings as numbers:</p>
 
 <pre><code>newID.length &gt; oldID.length || newID &gt; oldID</code></pre>
 
@@ -118,47 +118,28 @@ if (booleanB) callMethod();</code></pre>
 </div>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-  var disqus_url = "http://destroytoday.com/blog/comparing-64-bit-numbers";
-	var disqus_identifier = "http://destroytoday.com/blog/comparing-64-bit-numbers";
+  var disqus_url = "http://staging.destroytoday.com/blog/comparing-64-bit-numbers";
+	var disqus_identifier = "http://staging.destroytoday.com/blog/comparing-64-bit-numbers";
 	var disqus_title = "Comparing 64-bit numbers in AS3 and SQLite";
 </script>
 
 	</div>
 	<div id="sidebar" class="grid-1">
-		<!--<div id="search-wrapper">
-			<select id="search" class="chzn-select" title="Search tags..." tabIndex="1">
-			  <option value=""></option>
-			  ["<option value=\"Code\">Code</option>"]["<option value=\"AS3\">AS3</option>"]["<option value=\"Open Source\">Open Source</option>"]["<option value=\"Adobe\">Adobe</option>"]["<option value=\"Poster\">Poster</option>"]["<option value=\"Photography\">Photography</option>"]["<option value=\"Story\">Story</option>"]["<option value=\"SQLite\">SQLite</option>"]["<option value=\"Review\">Review</option>"]["<option value=\"iOS\">iOS</option>"]["<option value=\"OSX\">OSX</option>"]["<option value=\"Artist\">Artist</option>"]["<option value=\"Product\">Product</option>"]
-			</select>
-			<hr/>
-		</div>-->
 		<div id="latest-tweet">
 			<a href="http://twitter.com/destroytoday"><img src="/assets/site/twitter_avatar.jpg" width="32" height="32" alt="@destroytoday" /></a>
 			<p></p>
 			<hr/>
 		</div>
 		<div id="related-posts">
-		  
-		    
-  			
-  			  
-  			
-  			  
-  			    
-  			      <div class="thumb alpha omega" style="background: #000000">
+		  <div class="thumb alpha omega" style="background: #000000">
 	<a href="/blog/luminant-point-arrays">
 	  <img src="/assets/blog/luminant-point-arrays/luminant-point-arrays-thumb.jpg" width="200" height="200" alt="Luminant Point Arrays by Stephan Tillmans" />
 	  <div class="hidden-metadata">
   		<div class="title">Luminant Point Arrays by Stephan Tillmans</div>
   	</div>
   	<div class="color_blocks">
-  		
-  			
   				<div class="color_block" style="width: 50.0%; background: #5A919F"></div>
-  			
   				<div class="color_block" style="width: 50.0%; background: #000000"></div>
-  			
-  		
   	</div>
   	<div class="metadata">
   		<div class="title">Luminant Point Arrays by Stephan Tillmans</div>
@@ -166,27 +147,17 @@ if (booleanB) callMethod();</code></pre>
   </a>
 </div>
 
-  			      
   			      <hr/>
-  			    
-  			  
-  			
-  			  
-  			
-  			  
-  			    
-  			      <div class="thumb alpha omega" style="background: #E1A795">
+<div class="thumb alpha omega" style="background: #E1A795">
 	<a href="/blog/todays-cuts">
 	  <img src="/assets/blog/todays-cuts/todays-cuts-thumb.jpg" width="200" height="200" alt="Today's Cuts" />
 	  <div class="hidden-metadata">
   		<div class="title">Today's Cuts</div>
   	</div>
   	<div class="color_blocks">
-  		 
   			<div class="color_block" style="width: 33%; background: #290706"></div>
   			<div class="color_block" style="width: 33%; background: #BC2E1A"></div>
   			<div class="color_block" style="width: 34%; background: #E1A795"></div>
-  		
   	</div>
   	<div class="metadata">
   		<div class="title">Today's Cuts</div>
@@ -194,35 +165,18 @@ if (booleanB) callMethod();</code></pre>
   </a>
 </div>
 
-  			      
   			      <hr/>
-  			    
-  			  
-  			
-  			  
-  			
-  			  
-  			
-  			  
-  			    
-  			      <div class="thumb alpha omega" style="background: #000000">
+<div class="thumb alpha omega" style="background: #000000">
 	<a href="/blog/konami-code">
 	  <img src="/assets/blog/konami-code/konami-code-thumb.png" width="200" height="200" alt="Konami Code added to DestroyFramework" />
 	  <div class="hidden-metadata">
   		<div class="title">Konami Code added to DestroyFramework</div>
   	</div>
   	<div class="color_blocks">
-  		
-  			
   				<div class="color_block" style="width: 25.0%; background: #E86600"></div>
-  			
   				<div class="color_block" style="width: 25.0%; background: #EDD628"></div>
-  			
   				<div class="color_block" style="width: 25.0%; background: #C8C8C8"></div>
-  			
   				<div class="color_block" style="width: 25.0%; background: #000000"></div>
-  			
-  		
   	</div>
   	<div class="metadata">
   		<div class="title">Konami Code added to DestroyFramework</div>
@@ -230,24 +184,9 @@ if (booleanB) callMethod();</code></pre>
   </a>
 </div>
 
-  			      
   			      <hr/>
-  			    
-  			  
-  			
-  			  
-  			    
-  			  
-  			
-  			  
-  			    
-  			  
-  			
-  			  
-  			
-  		
+
 		</div>
-		<!--<div id="latest-flickr">poop</div>-->
 	</div>
 </div>
 <script type="text/javascript">
@@ -272,264 +211,6 @@ if (booleanB) callMethod();</code></pre>
 </div>
   		</div>
   		
-
-	
-
-	
-	
-	
-	
-	  
-	
-		
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	  
-	
-		
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	  
-	
-		
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-		
-	
-
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	  
-	
-		
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-	
-  
-  
-
 
 <div id="prev" class="direction">
 	<a href="/blog/dayone"><span class="title_wrapper"><span class="title">Day One</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Destroy Today</title>
-	<link href="http://destroytoday.com/blog/feed/index.xml" rel="self"/>
-	<link href="http://destroytoday.com"/>
-	<updated>2011-08-07T13:53:00-07:00</updated>
-	<id>http://destroytoday.com</id>
+	<link href="http://staging.destroytoday.com/blog/feed/index.xml" rel="self"/>
+	<link href="http://staging.destroytoday.com"/>
+	<updated>2011-08-07T17:16:42-07:00</updated>
+	<id>http://staging.destroytoday.com</id>
 	<author>
 		<name>Jonnie Hallman</name>
 		<email>jonnie@destroytoday.com</email>
@@ -13,17 +13,17 @@
 	
 	<entry>
 		<title type="html"><![CDATA[Infinity File]]></title>
-		<link href="http://destroytoday.com/blog/infinity-file"/>
+		<link href="http://staging.destroytoday.com/blog/infinity-file"/>
 		<updated>2011-07-30T00:00:00-07:00</updated>
-		<id>http://destroytoday.com/blog/infinity-file</id>
+		<id>http://staging.destroytoday.com/blog/infinity-file</id>
 		<content type="html">&lt;p&gt;&lt;img alt='Infinity File' src='/assets/blog/infinity-file/infinity-file.jpg' /&gt; I&amp;#8217;ve recently become addicted to &lt;a href='http://fab.com/mw3csr'&gt;Fab.com&lt;/a&gt;, a Groupon-esque website for designy products. I made my first purchase this past week, the Infinity File by designer &lt;a href='http://www.barbaraflanagan.com'&gt;Barbara Flanagan&lt;/a&gt;. It&amp;#8217;s a modular desk-top organizer for anything from business cards to loose nick-nacks. I find it to be the perfect solution for small items that lie awkward in a drawer, but appear messy on the desk-top. It&amp;#8217;s made from a single sheet of metal and holds a good weight. My only gripe is that the vertical stacking shown in its product shots is very wobbly.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Luminant Point Arrays by Stephan Tillmans]]></title>
-		<link href="http://destroytoday.com/blog/luminant-point-arrays"/>
+		<link href="http://staging.destroytoday.com/blog/luminant-point-arrays"/>
 		<updated>2011-03-30T00:00:00-07:00</updated>
-		<id>http://destroytoday.com/blog/luminant-point-arrays</id>
+		<id>http://staging.destroytoday.com/blog/luminant-point-arrays</id>
 		<content type="html">&lt;p&gt;&lt;img alt='Luminant Point Arrays' src='/assets/blog/luminant-point-arrays/luminant-point-arrays-header.jpg' /&gt;&lt;/p&gt;
 
 &lt;p&gt;My buddy &lt;a href='http://lukelukeluke.com/'&gt;Luke&lt;/a&gt; pointed me to this series by &lt;a href='http://www.stephantillmans.com/'&gt;Stephan Tillmans&lt;/a&gt; entitled, &amp;#8217;&lt;a href='http://www.stephantillmans.com/index.php?/portfolio/leuchtpunktordnungen/'&gt;Luminant Point Array&lt;/a&gt;.&amp;#8217; Each photo represents the turning-off phase of a different television. I&amp;#8217;m in love with them and would die to have one hanging on my wall.&lt;/p&gt;</content>
@@ -31,9 +31,9 @@
 	
 	<entry>
 		<title type="html"><![CDATA[Day One &mdash; potentially my first successful journal ever]]></title>
-		<link href="http://destroytoday.com/blog/dayone"/>
+		<link href="http://staging.destroytoday.com/blog/dayone"/>
 		<updated>2011-03-24T00:00:00-07:00</updated>
-		<id>http://destroytoday.com/blog/dayone</id>
+		<id>http://staging.destroytoday.com/blog/dayone</id>
 		<content type="html">&lt;p&gt;&lt;img alt='Day One' src='/assets/blog/dayone/dayone-header.png' /&gt;&lt;/p&gt;
 
 &lt;p&gt;A few weeks ago, I tweeted about creating a private Twitter account to use as a journal. I dropped the idea after realizing that Twitter limits the number of viewable tweets to 3200. Cue &lt;a href='http://dayoneapp.com/'&gt;Day One&lt;/a&gt;, a new OSX journal app. With a clean UI and simply gorgeous icon, the design alone sold me.&lt;/p&gt;
@@ -45,14 +45,14 @@
 	
 	<entry>
 		<title type="html"><![CDATA[Comparing 64-bit numbers in AS3 and SQLite]]></title>
-		<link href="http://destroytoday.com/blog/comparing-64-bit-numbers"/>
+		<link href="http://staging.destroytoday.com/blog/comparing-64-bit-numbers"/>
 		<updated>2011-01-30T00:00:00-08:00</updated>
-		<id>http://destroytoday.com/blog/comparing-64-bit-numbers</id>
+		<id>http://staging.destroytoday.com/blog/comparing-64-bit-numbers</id>
 		<content type="html">&lt;p&gt;When &lt;a href='http://engineering.twitter.com/2010/06/announcing-snowflake.html'&gt;Twitter introduced Snowflake&lt;/a&gt;, their new ID generator, they also introduced 64-bit IDs. At first, I didn&amp;#8217;t think much of this. When the &lt;a href='http://www.google.com/search?q=twitpocalypse&amp;amp;#038;ie=utf-8&amp;amp;#038;oe=utf-8&amp;amp;#038;aq=t&amp;amp;#038;rls=org.mozilla:en-US:official&amp;amp;#038;client=firefox-a'&gt;Twitpocalypse&lt;/a&gt; occurred (Twitter IDs surpassing 32 bits), I updated &lt;a href='http://destroytwitter.com/'&gt;DestroyTwitter&lt;/a&gt; to use floating point IDs instead of integer IDs. I figured with Snowflake that AS3&amp;#8217;s floating point class, Number, had me covered. I was wrong.&lt;/p&gt;
 
-&lt;p&gt;It turns out AS3 doesn&amp;#8217;t support 64-bit numbers. To support Snowflake, I have to update DestroyTwitter to use string IDs instead of floating point IDs. A handful of problems arise because of this. For one, I must reformat DestroyTwitter&amp;#8217;s local SQLite database to use TEXT columns instead of REAL. Also, string comparison doesn&amp;#8217;t exactly behave the same as number comparison. For example, &amp;#8220;9&amp;#8221; &amp;gt; &amp;#8220;1&amp;#8221; because 9 comes after 1.&lt;/p&gt;
+&lt;p&gt;It turns out AS3 doesn&amp;#8217;t support 64-bit numbers. To support Snowflake, I have to update DestroyTwitter to use string IDs instead of floating point IDs. A handful of problems arise because of this. For one, I must reformat DestroyTwitter&amp;#8217;s local SQLite database to use TEXT columns instead of REAL. Also, string comparison doesn&amp;#8217;t exactly behave the same as number comparison. For example, &lt;code&gt;9 &amp;gt; 1&lt;/code&gt; because &lt;code&gt;9&lt;/code&gt; comes after &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;To overcome this inconvenience, we need a more complex method of comparison than a simple &amp;lt; or &amp;gt;. We could left pad the string with zeros, but this is expensive in AS3 and impossible in SQLite. I prefer comparing the string lengths first, then the strings as numbers:&lt;/p&gt;
+&lt;p&gt;To overcome this inconvenience, we need a more complex method of comparison than a simple &lt;code&gt;&amp;lt;&lt;/code&gt; or &lt;code&gt;&amp;gt;&lt;/code&gt;. We could left pad the string with zeros, but this is expensive in AS3 and impossible in SQLite. I prefer comparing the string lengths first, then the strings as numbers:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;newID.length &amp;gt; oldID.length || newID &amp;gt; oldID&lt;/code&gt;&lt;/pre&gt;
 
@@ -83,9 +83,9 @@ if (booleanB) callMethod();&lt;/code&gt;&lt;/pre&gt;
 	
 	<entry>
 		<title type="html"><![CDATA[Today's Cuts]]></title>
-		<link href="http://destroytoday.com/blog/todays-cuts"/>
+		<link href="http://staging.destroytoday.com/blog/todays-cuts"/>
 		<updated>2011-01-26T00:00:00-08:00</updated>
-		<id>http://destroytoday.com/blog/todays-cuts</id>
+		<id>http://staging.destroytoday.com/blog/todays-cuts</id>
 		<content type="html">&lt;p&gt;While slicing the bread for my sandwich this morning, I forgot I was holding the bread and cut into my finger. In a race to meet the shuttle, I found this more inconvenient than painful. I wrapped a scrap of paper towel around the cut, tied it with a rubber band, then replaced it with an actual band-aid once I arrived at work.&lt;/p&gt;
 
 &lt;p&gt;At lunch, I pierced my skin again while closing the refrigerator door&amp;#8212;this time in the exact same spot on the opposite index finger. I recycled the previous cut&amp;#8217;s band-aid, transferring it from one finger to the other.&lt;/p&gt;
@@ -99,9 +99,9 @@ if (booleanB) callMethod();&lt;/code&gt;&lt;/pre&gt;
 	
 	<entry>
 		<title type="html"><![CDATA[Letterpressed InDesign icons]]></title>
-		<link href="http://destroytoday.com/blog/letterpressed-indesign-icons"/>
+		<link href="http://staging.destroytoday.com/blog/letterpressed-indesign-icons"/>
 		<updated>2011-01-06T00:00:00-08:00</updated>
-		<id>http://destroytoday.com/blog/letterpressed-indesign-icons</id>
+		<id>http://staging.destroytoday.com/blog/letterpressed-indesign-icons</id>
 		<content type="html">&lt;p&gt;Today, a few of my co-workers at Adobe handed out these letterpressed posters of InDesign&amp;#8217;s type icons, as holiday gifts. Anyone can appreciate the detail on this print, but those who know the process should be in awe. I&amp;#8217;m in love with it and just had to take a closer look. At 500%, the black ink looks like iron filings and the grey looks like one of my dog&amp;#8217;s dirty stuffed-animal toys! I was told the local printers simply wouldn&amp;#8217;t take the job because it&amp;#8217;s too detailed, so they had it done in Santa Barbara&amp;#8212;doesn&amp;#8217;t surprise me. Seeing it in person makes me wish I took letterpress classes in college when I had the chance.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href='http://www.flickr.com/photos/jonnie_hallman/5331858781/'&gt;&lt;img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-full.jpg' /&gt;&lt;/a&gt; &lt;a href='http://www.flickr.com/photos/jonnie_hallman/5332472400/'&gt;&lt;img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-zoom.jpg' /&gt;&lt;/a&gt; &lt;a href='http://www.flickr.com/photos/jonnie_hallman/5332472258/'&gt;&lt;img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-macro.jpg' /&gt;&lt;/a&gt;&lt;/p&gt;</content>
@@ -109,9 +109,9 @@ if (booleanB) callMethod();&lt;/code&gt;&lt;/pre&gt;
 	
 	<entry>
 		<title type="html"><![CDATA[A super ghetto way of getting a function path in AS3]]></title>
-		<link href="http://destroytoday.com/blog/as3-function-path"/>
+		<link href="http://staging.destroytoday.com/blog/as3-function-path"/>
 		<updated>2010-11-30T00:00:00-08:00</updated>
-		<id>http://destroytoday.com/blog/as3-function-path</id>
+		<id>http://staging.destroytoday.com/blog/as3-function-path</id>
 		<content type="html">&lt;p&gt;In my recent collaboration with Kristofer Joseph, CandyPants, we needed a way to get the path to any function. At first, I tried &lt;code&gt;describeType&lt;/code&gt;, which returns an XML object with all sorts of useful goodies about the provided object. Unfortunately, it&amp;#8217;s not possible to send it the function you&amp;#8217;re in without knowing it already. Luckily, I still have a hacky side that will consider the grossest code as a last resort. Here&amp;#8217;s the result:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;public static function getFunctionPath():String
@@ -122,9 +122,9 @@ if (booleanB) callMethod();&lt;/code&gt;&lt;/pre&gt;
 	
 	<entry>
 		<title type="html"><![CDATA[Konami Code added to DestroyFramework]]></title>
-		<link href="http://destroytoday.com/blog/konami-code"/>
+		<link href="http://staging.destroytoday.com/blog/konami-code"/>
 		<updated>2010-08-23T00:00:00-07:00</updated>
-		<id>http://destroytoday.com/blog/konami-code</id>
+		<id>http://staging.destroytoday.com/blog/konami-code</id>
 		<content type="html">&lt;p&gt;&lt;img alt='Konami Code' src='/assets/blog/konami-code/konami-code.png' /&gt;&lt;/p&gt;
 
 &lt;p&gt;Sure, I could have spent tonight working on useful features for DestroyTwitter, but no, I wrote a &lt;a href='http://github.com/destroytoday/DestroyFramework/blob/master/src/com/destroytoday/desktop/KonamiCode.as'&gt;KonamiCode&lt;/a&gt;. To use it, simply instantiate it with a stage and you&amp;#8217;re good to go.&lt;/p&gt;
