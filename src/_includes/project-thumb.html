@@ -1,6 +1,6 @@
-<div class="thumb{% if i == '0' %} alpha{% elsif i == '3' %} omega{% endif %}" style="background: #{{project.thumbnail.colors.last}}">
+<div class="thumb{% if i == '0' %} alpha{% elsif i == '3' %} omega{% endif %}">
 	<a href="{{project.url}}">
-	  <img src="/assets{{project.id}}/{{project.thumbnail.image}}" width="200" height="200" alt="{{project.title}}" />
+	  <img src="/assets{{project.id}}/{{project.thumbnail.image}}" width="200" height="200" alt="{{project.title}}" style="background: #{{project.thumbnail.colors.last}}" />
   	<div class="hidden-metadata">
   		<div class="title">{{project.title}}</div>
   	</div>

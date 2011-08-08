@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require './libs/admin.rb'
+require './lib/admin.rb'
 
 method_name = ARGV[0]
 

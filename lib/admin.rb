@@ -18,12 +18,15 @@ module Jekyll
       @destination = config['destination']
     end
     
-    def post title, image_path, time=Time.now.to_s
+    def post title, image_path=nil, time=Time.now.to_s
       post = Post.new(title, image_path, Time.parse(time))
       
       post.write "#{@source}/blog/_posts"
-      post.copy_image "#{@source}/assets/blog"
-      post.create_thumb "#{@source}/assets/blog"
+      
+      if image_path
+        post.copy_image "#{@source}/assets/blog"
+        post.create_thumb "#{@source}/assets/blog"
+      end
 
       puts "Created new post: #{post.filename}"
     end
@@ -50,7 +53,7 @@ module Jekyll
   class Post
     def initialize title, image_path, time
       @title = title
-      @image = Magick::ImageList.new(image_path)
+      @image = image_path ? Magick::ImageList.new(image_path) : nil
       @time = time
     end
     
@@ -75,11 +78,11 @@ module Jekyll
     end
     
     def img_ext
-      @image.filename.gsub(img_regex, '\\2')
+      @image ? @image.filename.gsub(img_regex, '\\2') : ''
     end
     
     def thumb_hires_filename
-      "#{slug}-thumb-hires.#{img_ext}"
+      @image ? "#{slug}-thumb-hires.#{img_ext}" : ''
     end
     
     def thumb_filename
