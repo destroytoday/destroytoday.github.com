@@ -6,19 +6,13 @@ layout: default
 		{{content}}
 	</div>
 	<div id="sidebar" class="grid-1">
-		<!--<div id="search-wrapper">
-			<select id="search" class="chzn-select" title="Search tags..." tabIndex="1">
-			  <option value=""></option>
-			  {% tags %}<option value="%tag%">%tag%</option>{% endtags %}
-			</select>
-			<hr/>
-		</div>-->
 		<div id="latest-tweet">
 			<a href="http://twitter.com/destroytoday"><img src="/assets/site/twitter_avatar.jpg" width="32" height="32" alt="@destroytoday" /></a>
 			<p></p>
 			<hr/>
 		</div>
 		<div id="related-posts">
+		  {% spaceless %}
 		  {% if paginator.posts %}
 		    {% for post in paginator.posts limit:5 offset:1 %}
 			    {% include blog-sidebar-thumb.html %}
@@ -36,8 +30,8 @@ layout: default
   			  {% endif %}
   			{% endfor %}
   		{% endif %}
+  		{% endspaceless %}
 		</div>
-		<!--<div id="latest-flickr">poop</div>-->
 	</div>
 </div>
 <script type="text/javascript">
