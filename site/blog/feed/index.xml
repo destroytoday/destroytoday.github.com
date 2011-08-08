@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Destroy Today</title>
-	<link href="http://staging.destroytoday.com/blog/feed/index.xml" rel="self"/>
-	<link href="http://staging.destroytoday.com"/>
-	<updated>2011-08-07T23:05:04-07:00</updated>
-	<id>http://staging.destroytoday.com</id>
+	<link href="http://destroytoday.com/blog/feed/index.xml" rel="self"/>
+	<link href="http://destroytoday.com"/>
+	<updated>2011-08-07T23:08:22-07:00</updated>
+	<id>http://destroytoday.com</id>
 	<author>
 		<name>Jonnie Hallman</name>
 		<email>jonnie@destroytoday.com</email>
@@ -13,9 +13,9 @@
 	
 	<entry>
 		<title type="html"><![CDATA[Where's the dark grey background?]]></title>
-		<link href="http://staging.destroytoday.com/blog/wheres-the-dark-grey-background"/>
+		<link href="http://destroytoday.com/blog/wheres-the-dark-grey-background"/>
 		<updated>2011-08-07T20:45:03-07:00</updated>
-		<id>http://staging.destroytoday.com/blog/wheres-the-dark-grey-background</id>
+		<id>http://destroytoday.com/blog/wheres-the-dark-grey-background</id>
 		<content type="html">&lt;p&gt;Finally&amp;#8212;one word that encompasses the past four months. I&amp;#8217;ve been head-down redesigning and redeveloping, all the while relearning the web. A few years back, I took a break from all the HTML and CSS hoopla to focus on desktop and mobile development. It&amp;#8217;s incredible how much the web has improved in such a short period of time. Everyone is telling IE to get bent and new shorthand preprocessors pop up every day. I love it.&lt;/p&gt;
 
 &lt;p&gt;The new site features a number of those preprocessors and then some. I took it as a chance to acquaint myself with the new tech and build a creative outlet for the many side projects that don&amp;#8217;t see more than a single blog post. As an avid &lt;a href='http://github.com/destroytoday'&gt;Github user&lt;/a&gt;, I stumbled across &lt;a href='https://github.com/mojombo/jekyll/'&gt;Jekyll&lt;/a&gt;, a static site generator with endless possibilities. Great beauty lies in a CMS-less, database-less website. If its loose-configuration and recursive templating doesn&amp;#8217;t attract you, its generators, tags, and filters will.&lt;/p&gt;
