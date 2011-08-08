@@ -36,7 +36,7 @@ task :production => [:jekyll_production, :success]
 
 desc "Runs Jekyll (local)"
 task :jekyll_local do
-	output = `jekyll --url http://localhost:1337 --lsi`; result = $?.success?
+	output = `jekyll --url http://localhost:1337`; result = $?.success?
 	
 	puts output
 	
@@ -45,7 +45,7 @@ end
 
 desc "Runs Jekyll (staging)"
 task :jekyll_staging do
-	output = `jekyll --url http://staging.destroytoday.com --lsi`; result = $?.success?
+	output = `jekyll --url http://staging.destroytoday.com`; result = $?.success?
 	
 	puts output
 	
