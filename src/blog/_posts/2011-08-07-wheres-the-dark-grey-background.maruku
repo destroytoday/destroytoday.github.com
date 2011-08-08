@@ -1,0 +1,18 @@
+---
+layout: blog-post
+title: Where's the dark grey background?
+shortname: destroytoday.com reboot
+date: 2011-08-07 20:45:03
+category: blog
+tags: [Announcement]
+thumbnail: 
+  image: wheres-the-dark-grey-background-thumb.jpg
+  colors: ['FAFCFA', 'C2B2A1', '322F4A']
+---
+Finally---one word that encompasses the past four months. I've been head-down redesigning and redeveloping, all the while relearning the web. A few years back, I took a break from all the HTML and CSS hoopla to focus on desktop and mobile development. It's incredible how much the web has improved in such a short period of time. Everyone is telling IE to get bent and new shorthand preprocessors pop up every day. I love it.
+
+The new site features a number of those preprocessors and then some. I took it as a chance to acquaint myself with the new tech and build a creative outlet for the many side projects that don't see more than a single blog post. As an avid [Github user](http://github.com/destroytoday), I stumbled across [Jekyll](https://github.com/mojombo/jekyll/), a static site generator with endless possibilities. Great beauty lies in a CMS-less, database-less website. If its loose-configuration and recursive templating doesn't attract you, its generators, tags, and filters will.
+
+Regarding the visible change of the site, it now houses dedicated pages for [work](/folio) and [experiments](/lab)---no more lazy-linking to Github. The lab has a handful of throwback projects from my outside-the-box years. The plan is to rejuvenate the other side of my brain and get back into the short-commitment, highly experimental routine that I so very miss.
+
+As for blogging, Jekyll itself garners enough to write a book or two, but I don't have a publisher, so a few posts will have to suffice. I'll run through Jekyll, [Haml](http://haml-lang.com), [Sass](http://sass-lang.com), [Liquid](https://github.com/shopify/liquid/), and [CoffeeScript](http://jashkenas.github.com/coffee-script/) over the next few weeks, detailing how best to introduce yourself and get them all working together. Until then, check out the rest of the site and let me know what you think!
