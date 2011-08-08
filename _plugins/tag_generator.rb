@@ -16,8 +16,6 @@ module Jekyll
   end
 
   class TagGenerator < Generator
-    require 'fileutils'
-    
     safe true
     
     def generate(site)
@@ -26,8 +24,6 @@ module Jekyll
         site.tags.keys.each do |tag|
           write_tag_index(site, File.join(dir, tag.gsub(/ /, '-').downcase), tag)
         end
-        
-        FileUtils.chmod(0666, Dir.glob(dir + '/**/index.html'))
       end
     end
   

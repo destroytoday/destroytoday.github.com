@@ -36,7 +36,7 @@ task :production => [:jekyll_production, :success]
 
 desc "Runs Jekyll (local)"
 task :jekyll_local do
-	output = `sudo jekyll --url http://localhost:1337 --lsi`; result = $?.success?
+	output = `jekyll --url http://localhost:1337 --lsi`; result = $?.success?
 	
 	puts output
 	
@@ -45,7 +45,7 @@ end
 
 desc "Runs Jekyll (staging)"
 task :jekyll_staging do
-	output = `sudo jekyll --url http://staging.destroytoday.com --lsi`; result = $?.success?
+	output = `jekyll --url http://staging.destroytoday.com --lsi`; result = $?.success?
 	
 	puts output
 	
@@ -54,7 +54,7 @@ end
 
 desc "Runs Jekyll (production)"
 task :jekyll_production do
-	output = `sudo jekyll --url http://destroytoday.com --lsi`; result = $?.success?
+	output = `jekyll --url http://destroytoday.com --lsi`; result = $?.success?
 	
 	puts output
 	
@@ -63,7 +63,7 @@ end
 
 desc "Runs Jekyll (server)"
 task :server do
-  system("sudo jekyll --url http://localhost:1337 --auto --server 1337");
+  system("jekyll --url http://localhost:1337 --auto --server 1337");
 end
 
 desc "Indexes blog posts"
