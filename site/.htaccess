@@ -10,7 +10,7 @@ AddOutputFilterByType DEFLATE application/x-javascript
 
 FileETag none
 
-DirectoryIndex index.html index.htm index.xml
+DirectoryIndex index.html index.htm index.xml index.php
 
 Options -Indexes
 RewriteEngine On
