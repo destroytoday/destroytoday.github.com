@@ -6,6 +6,14 @@ require 'tidy_ffi'
 
 #--------------------------------------------------------------------------
 #
+#  Properties
+#
+#--------------------------------------------------------------------------
+
+@time = Time.now
+
+#--------------------------------------------------------------------------
+#
 #  Helper Methods
 #
 #--------------------------------------------------------------------------
@@ -115,5 +123,8 @@ task :deploy do
 end
 
 task :success do
-	Growl.notify 'Build complete', :title => 'destroytoday.com'
+  duration = (Time.now - @time).to_i
+  
+  puts "Compile time #{duration} seconds"
+	Growl.notify "Build complete (#{duration} sec)", :title => 'destroytoday.com'
 end

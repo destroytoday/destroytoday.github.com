@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
-		<title>Destroy Today / Comparing 64-bit numbers in AS3 and SQLite</title>
+		<title>Destroy Today / Blog</title>
 		
 		<link type="application/rss+xml" rel="alternate" title="Destroy Today" href="http://feeds.feedburner.com/destroytoday" />
 		
@@ -116,12 +116,106 @@ if (booleanB) callMethod();</code></pre>
 		<div class="tags"><a href="/blog/tag/code">code</a> + <a href="/blog/tag/as3">as3</a> + <a href="/blog/tag/sqlite">sqlite</a></div>
 	</div>
 </div>
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_url = "http://destroytoday.com/blog/comparing-64-bit-numbers";
-	var disqus_identifier = "http://destroytoday.com/blog/comparing-64-bit-numbers";
-	var disqus_title = "Comparing 64-bit numbers in AS3 and SQLite";
-</script>
+
+<hr/>
+
+
+<div class="post">
+	<h2><a href="/blog/todays-cuts">Today's Cuts</a></h2>
+	<div class="metadata">
+		<div class="date"><a href="/blog/todays-cuts">01.26.11</a></div><div class="comment-count"><a href="/blog/todays-cuts#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/todays-cuts">0</a> <a href="/blog/todays-cuts"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
+	</div>
+	<p>While slicing the bread for my sandwich this morning, I forgot I was holding the bread and cut into my finger. In a race to meet the shuttle, I found this more inconvenient than painful. I wrapped a scrap of paper towel around the cut, tied it with a rubber band, then replaced it with an actual band-aid once I arrived at work.</p>
+
+<p>At lunch, I pierced my skin again while closing the refrigerator door&#8212;this time in the exact same spot on the opposite index finger. I recycled the previous cut&#8217;s band-aid, transferring it from one finger to the other.</p>
+
+<p>Hours later, I washed my hands and removed the now worthless band-aid. The cut must have re-opened some time thereafter, resulting in a dense scab, raised from the cut. These photographs depict today&#8217;s cuts.</p>
+
+<p><img alt='Todays Cuts' src='/assets/blog/todays-cuts/todays-cuts.jpg' width='666' height='444' /></p>
+
+<p><img alt='Todays Cuts' src='/assets/blog/todays-cuts/todays-cuts-1.jpg' width='666' height='444' /></p>
+	<div class="metadata">
+		<div class="tags"><a href="/blog/tag/photography">photography</a> + <a href="/blog/tag/story">story</a></div>
+	</div>
+</div>
+
+<hr/>
+
+
+<div class="post">
+	<h2><a href="/blog/letterpressed-indesign-icons">Letterpressed InDesign icons</a></h2>
+	<div class="metadata">
+		<div class="date"><a href="/blog/letterpressed-indesign-icons">01.06.11</a></div><div class="comment-count"><a href="/blog/letterpressed-indesign-icons#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/letterpressed-indesign-icons">0</a> <a href="/blog/letterpressed-indesign-icons"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
+	</div>
+	<p>Today, a few of my co-workers at Adobe handed out these letterpressed posters of InDesign&#8217;s type icons, as holiday gifts. Anyone can appreciate the detail on this print, but those who know the process should be in awe. I&#8217;m in love with it and just had to take a closer look. At 500%, the black ink looks like iron filings and the grey looks like one of my dog&#8217;s dirty stuffed-animal toys! I was told the local printers simply wouldn&#8217;t take the job because it&#8217;s too detailed, so they had it done in Santa Barbara&#8212;doesn&#8217;t surprise me. Seeing it in person makes me wish I took letterpress classes in college when I had the chance.</p>
+
+<p><a href='http://www.flickr.com/photos/jonnie_hallman/5331858781/'><img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-full.jpg' width='666' height='982' /></a> <a href='http://www.flickr.com/photos/jonnie_hallman/5332472400/'><img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-zoom.jpg' width='666' height='444' /></a> <a href='http://www.flickr.com/photos/jonnie_hallman/5332472258/'><img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-macro.jpg' width='666' height='438' /></a></p>
+	<div class="metadata">
+		<div class="tags"><a href="/blog/tag/adobe">adobe</a> + <a href="/blog/tag/poster">poster</a></div>
+	</div>
+</div>
+
+<hr/>
+
+
+<div class="post">
+	<h2><a href="/blog/as3-function-path">A super ghetto way of getting a function path in AS3</a></h2>
+	<div class="metadata">
+		<div class="date"><a href="/blog/as3-function-path">11.30.10</a></div><div class="comment-count"><a href="/blog/as3-function-path#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/as3-function-path">0</a> <a href="/blog/as3-function-path"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
+	</div>
+	<p>In my recent collaboration with Kristofer Joseph, CandyPants, we needed a way to get the path to any function. At first, I tried <code>describeType</code>, which returns an XML object with all sorts of useful goodies about the provided object. Unfortunately, it&#8217;s not possible to send it the function you&#8217;re in without knowing it already. Luckily, I still have a hacky side that will consider the grossest code as a last resort. Here&#8217;s the result:</p>
+
+<pre><code>public static function getFunctionPath():String
+{
+  return (new Error().getStackTrace().match(/at [^)]+\)/g)[1] as String).substr(3);
+}</code></pre>
+	<div class="metadata">
+		<div class="tags"><a href="/blog/tag/as3">as3</a> + <a href="/blog/tag/code">code</a> + <a href="/blog/tag/open-source">open source</a></div>
+	</div>
+</div>
+
+<hr/>
+
+
+<div class="post">
+	<h2><a href="/blog/konami-code">Konami Code added to DestroyFramework</a></h2>
+	<div class="metadata">
+		<div class="date"><a href="/blog/konami-code">08.23.10</a></div><div class="comment-count"><a href="/blog/konami-code#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/konami-code">0</a> <a href="/blog/konami-code"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
+	</div>
+	<p><img alt='Konami Code' src='/assets/blog/konami-code/konami-code.png' width='666' height='500' /></p>
+
+<p>Sure, I could have spent tonight working on useful features for DestroyTwitter, but no, I wrote a <a href='http://github.com/destroytoday/DestroyFramework/blob/master/src/com/destroytoday/desktop/KonamiCode.as'>KonamiCode</a>. To use it, simply instantiate it with a stage and you&#8217;re good to go.</p>
+
+<pre><code>package com.destroytoday.desktop
+{
+	import com.destroytoday.desktop.KonamiCode;
+
+	import flash.display.Sprite;
+
+	public class KonamiCodeTest extends Sprite
+	{
+		public var konamiCode:KonamiCode;
+
+		public function KonamiCodeTest()
+		{
+			konamiCode = new KonamiCode(stage);
+
+			konamiCode.executed.add(konamiCodeExecutedHandler);
+		}
+
+		protected function konamiCodeExecutedHandler():void
+		{
+			trace(&quot;woohoo!&quot;);
+		}
+	}
+}</code></pre>
+
+<p>On a related note, I realized I&#8217;ve been neglecting <a href='http://github.com/destroytoday'>GitHub</a> for months, but now I&#8217;m back! I also plan to return to the experimentation game after reminiscing about my convex hull, delaunay triangulation, and voronoi studies at work today. When you develop apps all day, writing experiments can be a breath of fresh air, allowing a level of creativity you simply can&#8217;t get with apps.</p>
+	<div class="metadata">
+		<div class="tags"><a href="/blog/tag/code">code</a> + <a href="/blog/tag/as3">as3</a> + <a href="/blog/tag/open-source">open source</a></div>
+	</div>
+</div>
+
 
 	</div>
 	<div id="sidebar" class="grid-1">
@@ -148,7 +242,7 @@ if (booleanB) callMethod();</code></pre>
   </a>
 </div>
 
-  			      <hr/>
+			    <hr/>
 <div class="thumb alpha omega">
 	<a href="/blog/wheres-the-dark-grey-background">
 	  <img src="/assets/blog/wheres-the-dark-grey-background/wheres-the-dark-grey-background-thumb.jpg" width="200" height="200" alt="Where's the dark grey background?" style="background: #322F4A" />
@@ -166,7 +260,26 @@ if (booleanB) callMethod();</code></pre>
   </a>
 </div>
 
-  			      <hr/>
+			    <hr/>
+<div class="thumb alpha omega">
+	<a href="/blog/infinity-file">
+	  <img src="/assets/blog/infinity-file/infinity-file-thumb.jpg" width="200" height="200" alt="Infinity File" style="background: #2A2624" />
+	  <div class="hidden-metadata">
+  		<div class="title">Infinity File</div>
+  	</div>
+  	<div class="color_blocks">
+  				<div class="color_block" style="width: 25.0%; background: #DCDBE0"></div>
+  				<div class="color_block" style="width: 25.0%; background: #7C7C79"></div>
+  				<div class="color_block" style="width: 25.0%; background: #4E5C6A"></div>
+  				<div class="color_block" style="width: 25.0%; background: #2A2624"></div>
+  	</div>
+  	<div class="metadata">
+  		<div class="title">Infinity File</div>
+  	</div>
+  </a>
+</div>
+
+			    <hr/>
 <div class="thumb alpha omega">
 	<a href="/blog/luminant-point-arrays">
 	  <img src="/assets/blog/luminant-point-arrays/luminant-point-arrays-thumb.jpg" width="200" height="200" alt="Luminant Point Arrays by Stephan Tillmans" style="background: #000000" />
@@ -183,7 +296,26 @@ if (booleanB) callMethod();</code></pre>
   </a>
 </div>
 
-  			      <hr/>
+			    <hr/>
+<div class="thumb alpha omega">
+	<a href="/blog/dayone">
+	  <img src="/assets/blog/dayone/dayone-thumb.png" width="200" height="200" alt="Day One &mdash; potentially my first successful journal ever" style="background: #52C8E6" />
+	  <div class="hidden-metadata">
+  		<div class="title">Day One &mdash; potentially my first successful journal ever</div>
+  	</div>
+  	<div class="color_blocks">
+  				<div class="color_block" style="width: 25.0%; background: #C9412E"></div>
+  				<div class="color_block" style="width: 25.0%; background: #2D2D2D"></div>
+  				<div class="color_block" style="width: 25.0%; background: #E0E3E5"></div>
+  				<div class="color_block" style="width: 25.0%; background: #52C8E6"></div>
+  	</div>
+  	<div class="metadata">
+  		<div class="title">Day One &mdash; potentially my first successful journal ever</div>
+  	</div>
+  </a>
+</div>
+
+			    <hr/>
 
 		</div>
 	</div>
@@ -212,31 +344,18 @@ if (booleanB) callMethod();</code></pre>
   		
 
 <div id="prev" class="direction">
-	<a href="/blog/dayone"><span class="title_wrapper"><span class="title">Day One</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>
+	<a href="/blog"><span class="title_wrapper"><span class="title">Page 1</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>
 </div>
 <script type="text/javascript">
 	$(document).keyup(function(event)
 	{
 		if (event.keyCode == '37')
 		{
-			window.location = "/blog/dayone"
+			window.location = "/blog"
 		} 
 	});
 </script>
 
-
-<div id="next" class="direction">
-	<a href="/blog/todays-cuts"><span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">Today's Cuts</span></span></a>
-</div>
-<script type="text/javascript">
-	$(document).keyup(function(event)
-	{
-		if (event.keyCode == '39')
-		{
-			window.location = "/blog/todays-cuts"
-		} 
-	});
-</script>
 
   	</div>
 		

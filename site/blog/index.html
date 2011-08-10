@@ -77,6 +77,60 @@
 	<div id="primary" class="grid-3">
 		
 <div class="post">
+	<h2><a href="/blog/an-introduction-to-jekyll">An introduction to Jekyll</a></h2>
+	<div class="metadata">
+		<div class="date"><a href="/blog/an-introduction-to-jekyll">08.09.11</a></div><div class="comment-count"><a href="/blog/an-introduction-to-jekyll#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/an-introduction-to-jekyll">0</a> <a href="/blog/an-introduction-to-jekyll"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
+	</div>
+	<p>The most exciting aspect of the <a href='/blog/wheres-the-dark-grey-background'>destroytoday.com reboot</a> is the technology involved. I grew tired of the same old starting point of installing Wordpress, configuring, theming, and rushing the release. <strong>A half-designed website is twice as hard to maintain.</strong> With an unknown world to discover with <a href='http://jekyllrb.com'>Jekyll</a>, the exploration and experimentation fueled my interest and kept me on track to release a well-groomed site when the time was right.</p>
+
+<p>Now, what is Jekyll exactly? Its <a href='https://github.com/mojombo/jekyll/wiki'>Github page</a> describes Jekyll as &#8220;a simple, blog aware, static site generator.&#8221; Well said. It takes a source folder of templates and spews out HTML files using a number of helper languages&#8212;<a href='http://yaml.org/'>YAML</a>, <a href='http://liquidmarkup.org'>Liquid</a> and <a href='http://daringfireball.net/projects/markdown/'>Markdown</a> by default.</p>
+
+<pre><code>+ src
+  - index.html
+  + _layouts
+    - default.html
+    - blog-post.html
+  + blog
+    - index.haml
+    + _posts
+      - 2011-08-09-an-introduction-to-jekyll.maruku
++ site
+  - index.html
+  + blog
+    - index.html
+    + an-introduction-to-jekyll
+      - index.html</code></pre>
+
+<p>Upload the static pages to your FTP, pocket the source files locally, and now you have a site that is faster and more secure than any of the server-side blog engines out there. No CMS, no database&#8212;every page and blog post is a single file with a YAML config at the top and any content down below.</p>
+
+<p>Because Jekyll uses YAML, configuration is clean, easy, and flexible. A page&#8217;s config could merely indicate which template to use:</p>
+
+<pre><code>---
+layout: blog-post
+---</code></pre>
+
+<p>Or, it could reflect the mood you were in when writing the post (if you&#8217;re still nostalgic about LiveJournal):</p>
+
+<pre><code>---
+mood: nostalgic
+---</code></pre>
+
+<p>Simply put, <strong>there are no required parameters</strong>. And, if a post has a <code>mood</code> parameter, that doesn&#8217;t mean every post needs it. As opposed to traditional databases, the world won&#8217;t end if a post strays from the common scheme.</p>
+
+<p>Along with flexible configuration, Jekyll includes a versatile templating system&#8212;it&#8217;s dead simple too. The only requirement is a <code>content</code> tag, which tells Jekyll exactly where to put the page&#8217;s content. It supports nesting, so a template could have a template of its own, preventing the need for heavy, all-in-one templates. &#8220;Includes&#8221; are available as well to reduce boilerplate and de-clutter your code.</p>
+
+<p>The last thing I&#8217;ll touch on is plugins. If you&#8217;re familiar with <a href='http://shopify.com'>Shopify&#8217;s</a> Liquid templating system, you&#8217;ll feel right at home. Jekyll promotes Liquid &#8220;filters&#8221; and &#8220;tags&#8221; as a way to add additional functionality without having to fork it and tamper with the innards. There are also &#8220;generators&#8221; and &#8220;converters&#8221;. Generators create additional pages, like tag or category index pages. Converters let you to run code on a page&#8217;s content if it matches a specific extension. These are extremely helpful for those looking to use preproceesors like HAML, <a href='http://sass-lang.com'>SASS</a>, and <a href='http://jaigouk.com/nodetuts-coffeescript/'>CoffeeScript</a>.</p>
+
+<p>That&#8217;s Jekyll in a nutshell, without getting our hands too dirty. In the coming weeks, I&#8217;ll dive into each section on a deeper level, sharing code examples and tips I found extremely useful in the process of developing destroytoday.com. If there are specific topics you&#8217;d like to know more about, let me know in the comments and I&#8217;ll be sure to touch on them.</p>
+	<div class="metadata">
+		<div class="tags"><a href="/blog/tag/jekyll">jekyll</a> + <a href="/blog/tag/tutorial">tutorial</a></div>
+	</div>
+</div>
+
+<hr/>
+
+
+<div class="post">
 	<h2><a href="/blog/wheres-the-dark-grey-background">Where's the dark grey background?</a></h2>
 	<div class="metadata">
 		<div class="date"><a href="/blog/wheres-the-dark-grey-background">08.07.11</a></div><div class="comment-count"><a href="/blog/wheres-the-dark-grey-background#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/wheres-the-dark-grey-background">0</a> <a href="/blog/wheres-the-dark-grey-background"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
@@ -143,149 +197,6 @@
 	</div>
 </div>
 
-<hr/>
-
-
-<div class="post">
-	<h2><a href="/blog/comparing-64-bit-numbers">Comparing 64-bit numbers in AS3 and SQLite</a></h2>
-	<div class="metadata">
-		<div class="date"><a href="/blog/comparing-64-bit-numbers">01.30.11</a></div><div class="comment-count"><a href="/blog/comparing-64-bit-numbers#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/comparing-64-bit-numbers">0</a> <a href="/blog/comparing-64-bit-numbers"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
-	</div>
-	<p>When <a href='http://engineering.twitter.com/2010/06/announcing-snowflake.html'>Twitter introduced Snowflake</a>, their new ID generator, they also introduced 64-bit IDs. At first, I didn&#8217;t think much of this. When the <a href='http://www.google.com/search?q=twitpocalypse&amp;#038;ie=utf-8&amp;#038;oe=utf-8&amp;#038;aq=t&amp;#038;rls=org.mozilla:en-US:official&amp;#038;client=firefox-a'>Twitpocalypse</a> occurred (Twitter IDs surpassing 32 bits), I updated <a href='http://destroytwitter.com/'>DestroyTwitter</a> to use floating point IDs instead of integer IDs. I figured with Snowflake that AS3&#8217;s floating point class, Number, had me covered. I was wrong.</p>
-
-<p>It turns out AS3 doesn&#8217;t support 64-bit numbers. To support Snowflake, I have to update DestroyTwitter to use string IDs instead of floating point IDs. A handful of problems arise because of this. For one, I must reformat DestroyTwitter&#8217;s local SQLite database to use TEXT columns instead of REAL. Also, string comparison doesn&#8217;t exactly behave the same as number comparison. For example, <code>9 &gt; 1</code> because <code>9</code> comes after <code>1</code>.</p>
-
-<p>To overcome this inconvenience, we need a more complex method of comparison than a simple <code>&lt;</code> or <code>&gt;</code>. We could left pad the string with zeros, but this is expensive in AS3 and impossible in SQLite. I prefer comparing the string lengths first, then the strings as numbers:</p>
-
-<pre><code>newID.length &gt; oldID.length || newID &gt; oldID</code></pre>
-
-<p>Just like AS3, SQLite lacks support for 64-bit numbers. You would think the same comparison method in SQL syntax would work:</p>
-
-<pre><code>length(newID) &gt; length(oldID) OR newID &gt; oldID</code></pre>
-
-<p>It doesn&#8217;t. AS3 and SQL differ in the way each handles conditions. In AS3, the conditions relate to each other. If the first condition is false, the second condition assumes the first condition is false. For example:</p>
-
-<pre><code>booleanA || booleanB</code></pre>
-
-<p>really means</p>
-
-<pre><code>booleanA || !booleanA &amp;&amp; booleanB</code></pre>
-
-<p>SQL, on the other hand, treats each condition separately. It acts like this if it were in AS3:</p>
-
-<pre><code>if (booleanA) callMethod();
-
-if (booleanB) callMethod();</code></pre>
-
-<p>As a result, our SQL comparison must be a bit more explicit:</p>
-
-<pre><code>length(newID) &gt; length(oldID) OR length(newID) = length(oldID) AND newID &gt; oldID</code></pre>
-
-<p>Hopefully, AS3 and SQLite will support 64-bit floating point in the near future. Until then, we&#8217;ll have to resort to workarounds like the ones above.</p>
-	<div class="metadata">
-		<div class="tags"><a href="/blog/tag/code">code</a> + <a href="/blog/tag/as3">as3</a> + <a href="/blog/tag/sqlite">sqlite</a></div>
-	</div>
-</div>
-
-<hr/>
-
-
-<div class="post">
-	<h2><a href="/blog/todays-cuts">Today's Cuts</a></h2>
-	<div class="metadata">
-		<div class="date"><a href="/blog/todays-cuts">01.26.11</a></div><div class="comment-count"><a href="/blog/todays-cuts#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/todays-cuts">0</a> <a href="/blog/todays-cuts"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
-	</div>
-	<p>While slicing the bread for my sandwich this morning, I forgot I was holding the bread and cut into my finger. In a race to meet the shuttle, I found this more inconvenient than painful. I wrapped a scrap of paper towel around the cut, tied it with a rubber band, then replaced it with an actual band-aid once I arrived at work.</p>
-
-<p>At lunch, I pierced my skin again while closing the refrigerator door&#8212;this time in the exact same spot on the opposite index finger. I recycled the previous cut&#8217;s band-aid, transferring it from one finger to the other.</p>
-
-<p>Hours later, I washed my hands and removed the now worthless band-aid. The cut must have re-opened some time thereafter, resulting in a dense scab, raised from the cut. These photographs depict today&#8217;s cuts.</p>
-
-<p><img alt='Todays Cuts' src='/assets/blog/todays-cuts/todays-cuts.jpg' width='666' height='444' /></p>
-
-<p><img alt='Todays Cuts' src='/assets/blog/todays-cuts/todays-cuts-1.jpg' width='666' height='444' /></p>
-	<div class="metadata">
-		<div class="tags"><a href="/blog/tag/photography">photography</a> + <a href="/blog/tag/story">story</a></div>
-	</div>
-</div>
-
-<hr/>
-
-
-<div class="post">
-	<h2><a href="/blog/letterpressed-indesign-icons">Letterpressed InDesign icons</a></h2>
-	<div class="metadata">
-		<div class="date"><a href="/blog/letterpressed-indesign-icons">01.06.11</a></div><div class="comment-count"><a href="/blog/letterpressed-indesign-icons#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/letterpressed-indesign-icons">0</a> <a href="/blog/letterpressed-indesign-icons"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
-	</div>
-	<p>Today, a few of my co-workers at Adobe handed out these letterpressed posters of InDesign&#8217;s type icons, as holiday gifts. Anyone can appreciate the detail on this print, but those who know the process should be in awe. I&#8217;m in love with it and just had to take a closer look. At 500%, the black ink looks like iron filings and the grey looks like one of my dog&#8217;s dirty stuffed-animal toys! I was told the local printers simply wouldn&#8217;t take the job because it&#8217;s too detailed, so they had it done in Santa Barbara&#8212;doesn&#8217;t surprise me. Seeing it in person makes me wish I took letterpress classes in college when I had the chance.</p>
-
-<p><a href='http://www.flickr.com/photos/jonnie_hallman/5331858781/'><img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-full.jpg' width='666' height='982' /></a> <a href='http://www.flickr.com/photos/jonnie_hallman/5332472400/'><img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-zoom.jpg' width='666' height='444' /></a> <a href='http://www.flickr.com/photos/jonnie_hallman/5332472258/'><img alt='Letterpressed InDesign icons' src='/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-macro.jpg' width='666' height='438' /></a></p>
-	<div class="metadata">
-		<div class="tags"><a href="/blog/tag/adobe">adobe</a> + <a href="/blog/tag/poster">poster</a></div>
-	</div>
-</div>
-
-<hr/>
-
-
-<div class="post">
-	<h2><a href="/blog/as3-function-path">A super ghetto way of getting a function path in AS3</a></h2>
-	<div class="metadata">
-		<div class="date"><a href="/blog/as3-function-path">11.30.10</a></div><div class="comment-count"><a href="/blog/as3-function-path#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/as3-function-path">0</a> <a href="/blog/as3-function-path"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
-	</div>
-	<p>In my recent collaboration with Kristofer Joseph, CandyPants, we needed a way to get the path to any function. At first, I tried <code>describeType</code>, which returns an XML object with all sorts of useful goodies about the provided object. Unfortunately, it&#8217;s not possible to send it the function you&#8217;re in without knowing it already. Luckily, I still have a hacky side that will consider the grossest code as a last resort. Here&#8217;s the result:</p>
-
-<pre><code>public static function getFunctionPath():String
-{
-  return (new Error().getStackTrace().match(/at [^)]+\)/g)[1] as String).substr(3);
-}</code></pre>
-	<div class="metadata">
-		<div class="tags"><a href="/blog/tag/as3">as3</a> + <a href="/blog/tag/code">code</a> + <a href="/blog/tag/open-source">open source</a></div>
-	</div>
-</div>
-
-<hr/>
-
-
-<div class="post">
-	<h2><a href="/blog/konami-code">Konami Code added to DestroyFramework</a></h2>
-	<div class="metadata">
-		<div class="date"><a href="/blog/konami-code">08.23.10</a></div><div class="comment-count"><a href="/blog/konami-code#disqus_thread" data-disqus-identifier="http://destroytoday.com/blog/konami-code">0</a> <a href="/blog/konami-code"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
-	</div>
-	<p><img alt='Konami Code' src='/assets/blog/konami-code/konami-code.png' width='666' height='500' /></p>
-
-<p>Sure, I could have spent tonight working on useful features for DestroyTwitter, but no, I wrote a <a href='http://github.com/destroytoday/DestroyFramework/blob/master/src/com/destroytoday/desktop/KonamiCode.as'>KonamiCode</a>. To use it, simply instantiate it with a stage and you&#8217;re good to go.</p>
-
-<pre><code>package com.destroytoday.desktop
-{
-	import com.destroytoday.desktop.KonamiCode;
-
-	import flash.display.Sprite;
-
-	public class KonamiCodeTest extends Sprite
-	{
-		public var konamiCode:KonamiCode;
-
-		public function KonamiCodeTest()
-		{
-			konamiCode = new KonamiCode(stage);
-
-			konamiCode.executed.add(konamiCodeExecutedHandler);
-		}
-
-		protected function konamiCodeExecutedHandler():void
-		{
-			trace(&quot;woohoo!&quot;);
-		}
-	}
-}</code></pre>
-
-<p>On a related note, I realized I&#8217;ve been neglecting <a href='http://github.com/destroytoday'>GitHub</a> for months, but now I&#8217;m back! I also plan to return to the experimentation game after reminiscing about my convex hull, delaunay triangulation, and voronoi studies at work today. When you develop apps all day, writing experiments can be a breath of fresh air, allowing a level of creativity you simply can&#8217;t get with apps.</p>
-	<div class="metadata">
-		<div class="tags"><a href="/blog/tag/code">code</a> + <a href="/blog/tag/as3">as3</a> + <a href="/blog/tag/open-source">open source</a></div>
-	</div>
-</div>
-
 
 	</div>
 	<div id="sidebar" class="grid-1">
@@ -296,61 +207,6 @@ if (booleanB) callMethod();</code></pre>
 		</div>
 		<div id="related-posts">
 		  <div class="thumb alpha omega">
-	<a href="/blog/infinity-file">
-	  <img src="/assets/blog/infinity-file/infinity-file-thumb.jpg" width="200" height="200" alt="Infinity File" style="background: #2A2624" />
-	  <div class="hidden-metadata">
-  		<div class="title">Infinity File</div>
-  	</div>
-  	<div class="color_blocks">
-  				<div class="color_block" style="width: 25.0%; background: #DCDBE0"></div>
-  				<div class="color_block" style="width: 25.0%; background: #7C7C79"></div>
-  				<div class="color_block" style="width: 25.0%; background: #4E5C6A"></div>
-  				<div class="color_block" style="width: 25.0%; background: #2A2624"></div>
-  	</div>
-  	<div class="metadata">
-  		<div class="title">Infinity File</div>
-  	</div>
-  </a>
-</div>
-
-			    <hr/>
-<div class="thumb alpha omega">
-	<a href="/blog/luminant-point-arrays">
-	  <img src="/assets/blog/luminant-point-arrays/luminant-point-arrays-thumb.jpg" width="200" height="200" alt="Luminant Point Arrays by Stephan Tillmans" style="background: #000000" />
-	  <div class="hidden-metadata">
-  		<div class="title">Luminant Point Arrays by Stephan Tillmans</div>
-  	</div>
-  	<div class="color_blocks">
-  				<div class="color_block" style="width: 50.0%; background: #5A919F"></div>
-  				<div class="color_block" style="width: 50.0%; background: #000000"></div>
-  	</div>
-  	<div class="metadata">
-  		<div class="title">Luminant Point Arrays by Stephan Tillmans</div>
-  	</div>
-  </a>
-</div>
-
-			    <hr/>
-<div class="thumb alpha omega">
-	<a href="/blog/dayone">
-	  <img src="/assets/blog/dayone/dayone-thumb.png" width="200" height="200" alt="Day One &mdash; potentially my first successful journal ever" style="background: #52C8E6" />
-	  <div class="hidden-metadata">
-  		<div class="title">Day One &mdash; potentially my first successful journal ever</div>
-  	</div>
-  	<div class="color_blocks">
-  				<div class="color_block" style="width: 25.0%; background: #C9412E"></div>
-  				<div class="color_block" style="width: 25.0%; background: #2D2D2D"></div>
-  				<div class="color_block" style="width: 25.0%; background: #E0E3E5"></div>
-  				<div class="color_block" style="width: 25.0%; background: #52C8E6"></div>
-  	</div>
-  	<div class="metadata">
-  		<div class="title">Day One &mdash; potentially my first successful journal ever</div>
-  	</div>
-  </a>
-</div>
-
-			    <hr/>
-<div class="thumb alpha omega">
 	<a href="/blog/comparing-64-bit-numbers">
 	  <img src="/assets/blog/comparing-64-bit-numbers/comparing-64-bit-numbers-thumb.png" width="200" height="200" alt="Comparing 64-bit numbers in AS3 and SQLite" style="background: #222222" />
 	  <div class="hidden-metadata">
@@ -385,6 +241,63 @@ if (booleanB) callMethod();</code></pre>
 </div>
 
 			    <hr/>
+<div class="thumb alpha omega">
+	<a href="/blog/letterpressed-indesign-icons">
+	  <img src="/assets/blog/letterpressed-indesign-icons/letterpressed-indesign-icons-thumb.jpg" width="200" height="200" alt="Letterpressed InDesign icons" style="background: #FFFFFF" />
+	  <div class="hidden-metadata">
+  		<div class="title">Letterpressed InDesign icons</div>
+  	</div>
+  	<div class="color_blocks">
+  				<div class="color_block" style="width: 25.0%; background: #000000"></div>
+  				<div class="color_block" style="width: 25.0%; background: #666666"></div>
+  				<div class="color_block" style="width: 25.0%; background: #CCCCCC"></div>
+  				<div class="color_block" style="width: 25.0%; background: #FFFFFF"></div>
+  	</div>
+  	<div class="metadata">
+  		<div class="title">Letterpressed InDesign icons</div>
+  	</div>
+  </a>
+</div>
+
+			    <hr/>
+<div class="thumb alpha omega">
+	<a href="/blog/as3-function-path">
+	  <img src="/assets/blog/as3-function-path/as3-function-path-thumb.jpg" width="200" height="200" alt="A super ghetto way of getting a function path in AS3" style="background: #899088" />
+	  <div class="hidden-metadata">
+  		<div class="title">A super ghetto way of getting a function path in AS3</div>
+  	</div>
+  	<div class="color_blocks">
+  				<div class="color_block" style="width: 25.0%; background: #b8190c"></div>
+  				<div class="color_block" style="width: 25.0%; background: #ccac7b"></div>
+  				<div class="color_block" style="width: 25.0%; background: #cee3eb"></div>
+  				<div class="color_block" style="width: 25.0%; background: #899088"></div>
+  	</div>
+  	<div class="metadata">
+  		<div class="title">A super ghetto way of getting a function path in AS3</div>
+  	</div>
+  </a>
+</div>
+
+			    <hr/>
+<div class="thumb alpha omega">
+	<a href="/blog/konami-code">
+	  <img src="/assets/blog/konami-code/konami-code-thumb.png" width="200" height="200" alt="Konami Code added to DestroyFramework" style="background: #000000" />
+	  <div class="hidden-metadata">
+  		<div class="title">Konami Code added to DestroyFramework</div>
+  	</div>
+  	<div class="color_blocks">
+  				<div class="color_block" style="width: 25.0%; background: #E86600"></div>
+  				<div class="color_block" style="width: 25.0%; background: #EDD628"></div>
+  				<div class="color_block" style="width: 25.0%; background: #C8C8C8"></div>
+  				<div class="color_block" style="width: 25.0%; background: #000000"></div>
+  	</div>
+  	<div class="metadata">
+  		<div class="title">Konami Code added to DestroyFramework</div>
+  	</div>
+  </a>
+</div>
+
+			    <hr/>
 
 		</div>
 	</div>
@@ -412,6 +325,19 @@ if (booleanB) callMethod();</code></pre>
   		</div>
   		
 
+
+<div id="next" class="direction">
+	<a href="/blog/page/2"><span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">Page 2</span></span></a>
+</div>
+<script type="text/javascript">
+	$(document).keyup(function(event)
+	{
+		if (event.keyCode == '39')
+		{
+			window.location = "/blog/page/2"
+		} 
+	});
+</script>
 
   	</div>
 		

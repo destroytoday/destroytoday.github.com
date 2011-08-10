@@ -1,0 +1,51 @@
+---
+layout: blog-post
+title: An introduction to Jekyll
+shortname: An intro to Jekyll
+category: blog
+tags: [Jekyll, Tutorial]
+thumbnail: 
+  image: an-introduction-to-jekyll-thumb.jpg
+  colors: [0E0D15, F4B02D, 899F5B]
+---
+The most exciting aspect of the [destroytoday.com reboot](/blog/wheres-the-dark-grey-background) is the technology involved. I grew tired of the same old starting point of installing Wordpress, configuring, theming, and rushing the release. **A half-designed website is twice as hard to maintain.** With an unknown world to discover with [Jekyll](http://jekyllrb.com), the exploration and experimentation fueled my interest and kept me on track to release a well-groomed site when the time was right.
+
+Now, what is Jekyll exactly? Its [Github page](https://github.com/mojombo/jekyll/wiki) describes Jekyll as "a simple, blog aware, static site generator." Well said. It takes a source folder of templates and spews out HTML files using a number of helper languages---[YAML](http://yaml.org/), [Liquid](http://liquidmarkup.org) and [Markdown](http://daringfireball.net/projects/markdown/) by default. 
+
+    + src
+      - index.html
+      + _layouts
+        - default.html
+        - blog-post.html
+      + blog
+        - index.haml
+        + _posts
+          - 2011-08-09-an-introduction-to-jekyll.maruku
+    + site
+      - index.html
+      + blog
+        - index.html
+        + an-introduction-to-jekyll
+          - index.html
+
+Upload the static pages to your FTP, pocket the source files locally, and now you have a site that is faster and more secure than any of the server-side blog engines out there. No CMS, no database---every page and blog post is a single file with a YAML config at the top and any content down below.
+
+Because Jekyll uses YAML, configuration is clean, easy, and flexible. A page's config could merely indicate which template to use:
+
+    ---
+    layout: blog-post
+    ---
+
+Or, it could reflect the mood you were in when writing the post (if you're still nostalgic about LiveJournal):
+
+    ---
+    mood: nostalgic
+    ---
+
+Simply put, **there are no required parameters**. And, if a post has a `mood` parameter, that doesn't mean every post needs it. As opposed to traditional databases, the world won't end if a post strays from the common scheme.
+
+Along with flexible configuration, Jekyll includes a versatile templating system---it's dead simple too. The only requirement is a `content` tag, which tells Jekyll exactly where to put the page's content. It supports nesting, so a template could have a template of its own, preventing the need for heavy, all-in-one templates. "Includes" are available as well to reduce boilerplate and de-clutter your code.
+
+The last thing I'll touch on is plugins. If you're familiar with [Shopify's](http://shopify.com) Liquid templating system, you'll feel right at home. Jekyll promotes Liquid "filters" and "tags" as a way to add additional functionality without having to fork it and tamper with the innards. There are also "generators" and "converters". Generators create additional pages, like tag or category index pages. Converters let you to run code on a page's content if it matches a specific extension. These are extremely helpful for those looking to use preproceesors like HAML, [SASS](http://sass-lang.com), and [CoffeeScript](http://jaigouk.com/nodetuts-coffeescript/).
+
+That's Jekyll in a nutshell, without getting our hands too dirty. In the coming weeks, I'll dive into each section on a deeper level, sharing code examples and tips I found extremely useful in the process of developing destroytoday.com. If there are specific topics you'd like to know more about, let me know in the comments and I'll be sure to touch on them.
