@@ -3,13 +3,61 @@
 	<title>Destroy Today</title>
 	<link href="http://destroytoday.com/blog/feed/index.xml" rel="self"/>
 	<link href="http://destroytoday.com"/>
-	<updated>2011-08-08T20:33:50-07:00</updated>
+	<updated>2011-08-10T01:09:49-07:00</updated>
 	<id>http://destroytoday.com</id>
 	<author>
 		<name>Jonnie Hallman</name>
 		<email>jonnie@destroytoday.com</email>
 	</author>
 
+	
+	<entry>
+		<title type="html"><![CDATA[An introduction to Jekyll]]></title>
+		<link href="http://destroytoday.com/blog/an-introduction-to-jekyll"/>
+		<updated>2011-08-09T00:00:00-07:00</updated>
+		<id>http://destroytoday.com/blog/an-introduction-to-jekyll</id>
+		<content type="html">&lt;p&gt;The most exciting aspect of the &lt;a href='/blog/wheres-the-dark-grey-background'&gt;destroytoday.com reboot&lt;/a&gt; is the technology involved. I grew tired of the same old starting point of installing Wordpress, configuring, theming, and rushing the release. &lt;strong&gt;A half-designed website is twice as hard to maintain.&lt;/strong&gt; With an unknown world to discover with &lt;a href='http://jekyllrb.com'&gt;Jekyll&lt;/a&gt;, the exploration and experimentation fueled my interest and kept me on track to release a well-groomed site when the time was right.&lt;/p&gt;
+
+&lt;p&gt;Now, what is Jekyll exactly? Its &lt;a href='https://github.com/mojombo/jekyll/wiki'&gt;Github page&lt;/a&gt; describes Jekyll as &amp;#8220;a simple, blog aware, static site generator.&amp;#8221; Well said. It takes a source folder of templates and spews out HTML files using a number of helper languages&amp;#8212;&lt;a href='http://yaml.org/'&gt;YAML&lt;/a&gt;, &lt;a href='http://liquidmarkup.org'&gt;Liquid&lt;/a&gt; and &lt;a href='http://daringfireball.net/projects/markdown/'&gt;Markdown&lt;/a&gt; by default.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+ src
+  - index.html
+  + _layouts
+    - default.html
+    - blog-post.html
+  + blog
+    - index.haml
+    + _posts
+      - 2011-08-09-an-introduction-to-jekyll.maruku
++ site
+  - index.html
+  + blog
+    - index.html
+    + an-introduction-to-jekyll
+      - index.html&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Upload the static pages to your FTP, pocket the source files locally, and now you have a site that is faster and more secure than any of the server-side blog engines out there. No CMS, no database&amp;#8212;every page and blog post is a single file with a YAML config at the top and any content down below.&lt;/p&gt;
+
+&lt;p&gt;Because Jekyll uses YAML, configuration is clean, easy, and flexible. A page&amp;#8217;s config could merely indicate which template to use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+layout: blog-post
+---&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or, it could reflect the mood you were in when writing the post (if you&amp;#8217;re still nostalgic about LiveJournal):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+mood: nostalgic
+---&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simply put, &lt;strong&gt;there are no required parameters&lt;/strong&gt;. And, if a post has a &lt;code&gt;mood&lt;/code&gt; parameter, that doesn&amp;#8217;t mean every post needs it. As opposed to traditional databases, the world won&amp;#8217;t end if a post strays from the common scheme.&lt;/p&gt;
+
+&lt;p&gt;Along with flexible configuration, Jekyll includes a versatile templating system&amp;#8212;it&amp;#8217;s dead simple too. The only requirement is a &lt;code&gt;content&lt;/code&gt; tag, which tells Jekyll exactly where to put the page&amp;#8217;s content. It supports nesting, so a template could have a template of its own, preventing the need for heavy, all-in-one templates. &amp;#8220;Includes&amp;#8221; are available as well to reduce boilerplate and de-clutter your code.&lt;/p&gt;
+
+&lt;p&gt;The last thing I&amp;#8217;ll touch on is plugins. If you&amp;#8217;re familiar with &lt;a href='http://shopify.com'&gt;Shopify&amp;#8217;s&lt;/a&gt; Liquid templating system, you&amp;#8217;ll feel right at home. Jekyll promotes Liquid &amp;#8220;filters&amp;#8221; and &amp;#8220;tags&amp;#8221; as a way to add additional functionality without having to fork it and tamper with the innards. There are also &amp;#8220;generators&amp;#8221; and &amp;#8220;converters&amp;#8221;. Generators create additional pages, like tag or category index pages. Converters let you to run code on a page&amp;#8217;s content if it matches a specific extension. These are extremely helpful for those looking to use preproceesors like HAML, &lt;a href='http://sass-lang.com'&gt;SASS&lt;/a&gt;, and &lt;a href='http://jaigouk.com/nodetuts-coffeescript/'&gt;CoffeeScript&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#8217;s Jekyll in a nutshell, without getting our hands too dirty. In the coming weeks, I&amp;#8217;ll dive into each section on a deeper level, sharing code examples and tips I found extremely useful in the process of developing destroytoday.com. If there are specific topics you&amp;#8217;d like to know more about, let me know in the comments and I&amp;#8217;ll be sure to touch on them.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Where's the dark grey background?]]></title>

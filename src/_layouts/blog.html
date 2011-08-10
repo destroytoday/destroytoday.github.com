@@ -14,7 +14,14 @@ layout: default
 		<div id="related-posts">
 		  {% spaceless %}
 		  {% if paginator.posts %}
-		    {% for post in paginator.posts limit:5 offset:1 %}
+		    {% capture next_page_post %}
+		      {% if paginator.next_page %}
+		        {{ paginator.page | times: paginator.per_page }}
+		      {% else %}
+		        {{ paginator.page | minus: 2 | times: paginator.per_page }}
+		      {% endif %}
+		    {% endcapture %}
+		    {% for post in site.categories.blog limit:5 offset:next_page_post %}
 			    {% include blog-sidebar-thumb.html %}
 			    <hr/>
   			{% endfor %}

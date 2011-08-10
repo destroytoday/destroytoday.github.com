@@ -1,7 +1,7 @@
 source: ./src
 destination: ./site
 permalink: /:categories/:title
-paginate: 10
+paginate: 5
 sections: [about, blog, folio, lab, contact]
 env: 
   local: http://localhost:1337
