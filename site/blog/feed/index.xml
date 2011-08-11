@@ -3,13 +3,27 @@
 	<title>Destroy Today</title>
 	<link href="http://destroytoday.com/blog/feed/index.xml" rel="self"/>
 	<link href="http://destroytoday.com"/>
-	<updated>2011-08-10T01:09:49-07:00</updated>
+	<updated>2011-08-10T23:23:43-07:00</updated>
 	<id>http://destroytoday.com</id>
 	<author>
 		<name>Jonnie Hallman</name>
 		<email>jonnie@destroytoday.com</email>
 	</author>
 
+	
+	<entry>
+		<title type="html"><![CDATA[S'well + Freaker]]></title>
+		<link href="http://destroytoday.com/blog/swell-and-freaker"/>
+		<updated>2011-08-10T21:52:30-07:00</updated>
+		<id>http://destroytoday.com/blog/swell-and-freaker</id>
+		<content type="html">&lt;p&gt;&lt;img alt='Swell + Freaker' src='/assets/blog/swell-and-freaker/swell-and-freaker.jpg' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Today, I received my most recent &lt;a href='http://fab.com/mw3csr'&gt;Fab.com&lt;/a&gt; order, a &lt;a href='http://swellbottle.com/'&gt;S&amp;#8217;well water bottle&lt;/a&gt;. I&amp;#8217;ve been anxiously awaiting its arrival because of two reasons: 1) I am the reigning king of stacked cups at Adobe, and 2) I needed a bottle to use with my &lt;a href='http://www.freakerusa.com/'&gt;Freaker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The S&amp;#8217;well bottle has a beautiful, slim, steel design and the company donates 10% of its proceeds to &lt;a href='http://www.wateraid.org/'&gt;WaterAid&lt;/a&gt;. The Freaker is a cozy that fits any bottle size. It&amp;#8217;s also a &lt;a href='http://www.kickstarter.com/projects/freakerusa/freaker-usamaking-you-and-your-beverage-cooler?ref=live'&gt;Kickstarter success story&lt;/a&gt;, made in America, and determined to rid the world of moist handshakes. Mine has a Maniac Mansion-esque robot on it, and there&amp;#8217;s nothing greater than Maniac Mansion.&lt;/p&gt;
+
+&lt;p&gt;Why am I writing about these? Because I&amp;#8217;m a sucker for great products that support a good cause. And, when you love something, share it with the world.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[An introduction to Jekyll]]></title>
@@ -54,7 +68,7 @@ mood: nostalgic
 
 &lt;p&gt;Along with flexible configuration, Jekyll includes a versatile templating system&amp;#8212;it&amp;#8217;s dead simple too. The only requirement is a &lt;code&gt;content&lt;/code&gt; tag, which tells Jekyll exactly where to put the page&amp;#8217;s content. It supports nesting, so a template could have a template of its own, preventing the need for heavy, all-in-one templates. &amp;#8220;Includes&amp;#8221; are available as well to reduce boilerplate and de-clutter your code.&lt;/p&gt;
 
-&lt;p&gt;The last thing I&amp;#8217;ll touch on is plugins. If you&amp;#8217;re familiar with &lt;a href='http://shopify.com'&gt;Shopify&amp;#8217;s&lt;/a&gt; Liquid templating system, you&amp;#8217;ll feel right at home. Jekyll promotes Liquid &amp;#8220;filters&amp;#8221; and &amp;#8220;tags&amp;#8221; as a way to add additional functionality without having to fork it and tamper with the innards. There are also &amp;#8220;generators&amp;#8221; and &amp;#8220;converters&amp;#8221;. Generators create additional pages, like tag or category index pages. Converters let you to run code on a page&amp;#8217;s content if it matches a specific extension. These are extremely helpful for those looking to use preproceesors like HAML, &lt;a href='http://sass-lang.com'&gt;SASS&lt;/a&gt;, and &lt;a href='http://jaigouk.com/nodetuts-coffeescript/'&gt;CoffeeScript&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The last thing I&amp;#8217;ll touch on is plugins. If you&amp;#8217;re familiar with &lt;a href='http://shopify.com'&gt;Shopify&amp;#8217;s&lt;/a&gt; Liquid templating system, you&amp;#8217;ll feel right at home. Jekyll promotes Liquid &amp;#8220;filters&amp;#8221; and &amp;#8220;tags&amp;#8221; as a way to add additional functionality without having to fork it and tamper with the innards. There are also &amp;#8220;generators&amp;#8221; and &amp;#8220;converters&amp;#8221;. Generators create additional pages, like tag or category index pages. Converters let you to run code on a page&amp;#8217;s content if it matches a specific extension. These are extremely helpful for those looking to use preproceesors like HAML, &lt;a href='http://sass-lang.com'&gt;SASS&lt;/a&gt;, and &lt;a href='http://jashkenas.github.com/coffee-script/'&gt;CoffeeScript&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;That&amp;#8217;s Jekyll in a nutshell, without getting our hands too dirty. In the coming weeks, I&amp;#8217;ll dive into each section on a deeper level, sharing code examples and tips I found extremely useful in the process of developing destroytoday.com. If there are specific topics you&amp;#8217;d like to know more about, let me know in the comments and I&amp;#8217;ll be sure to touch on them.&lt;/p&gt;</content>
 	</entry>

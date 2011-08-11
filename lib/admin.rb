@@ -58,7 +58,7 @@ module Jekyll
     end
     
     def slug
-      @title.gsub(' ', '-').gsub(/[^a-z0-9\-_]+/i, '').downcase
+      @title.gsub(/[^a-z0-9\-_ ]+/i, '').gsub(/[ ]+/, '-').downcase
     end
     
     def filename
@@ -82,7 +82,7 @@ module Jekyll
     end
     
     def thumb_hires_filename
-      @image ? "#{slug}-thumb-hires.#{img_ext}" : ''
+      @image ? "_#{slug}-thumb-hires.#{img_ext}" : ''
     end
     
     def thumb_filename
@@ -138,7 +138,7 @@ module Jekyll
     end
     
     def slug
-      @post + "-" + @title.gsub(' ', '-').gsub(/[^a-z0-9\-_]+/i, '').downcase
+      @post + (!@title.empty? ? "-" + @title.gsub(' ', '-').gsub(/[^a-z0-9\-_]+/i, '').downcase : '')
     end
     
     def regex

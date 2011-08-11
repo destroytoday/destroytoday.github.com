@@ -83,7 +83,7 @@ def extract img
     
     unique_colors.push(c) if valid
     
-    break if unique_colors.length >= 4
+    break if unique_colors.length >= 7
   }
   
   color_data = ''
@@ -130,6 +130,9 @@ end
 
 @img = Magick::Image.read(ARGV[0]).first
 
+puts extract @img
+
+=begin
 @exp = /\S+\/(\S+)\.(\w+)$/i
 @id = @img.filename.gsub(@exp, '\\1')
 @img_dir = "src/assets/blog/#{@id}"
@@ -147,3 +150,4 @@ else
   resize_to_thumb @img
   write_post
 end
+=end
