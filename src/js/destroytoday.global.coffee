@@ -92,6 +92,11 @@ $(document).ready ->
     #  paging
     #--------------------------------------
     
+    $(window).resize ->
+        display = if $(window).width() < 1030 then display = 'none' else display = 'block'
+        
+        $('.direction').css('display', display)
+    
     # next/prev arrow over
     $('.direction').mouseenter (event) ->
         title_wrapper = $(event.currentTarget).children('a').children('.title_wrapper')
@@ -115,10 +120,6 @@ $(document).ready ->
     $('.direction').click (event) ->
         window.location = $(event.currentTarget).children('a').attr('href')
 
-    #--------------------------------------
-    #  on load
-    #--------------------------------------
-        
     #--------------------------------------
     #  flash
     #--------------------------------------
