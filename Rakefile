@@ -62,7 +62,7 @@ end
 
 desc "Runs Jekyll (production)"
 task :jekyll_production do
-	output = `jekyll --url http://destroytoday.com --lsi`; result = $?.success?
+	output = `sudo jekyll --url http://destroytoday.com --lsi`; result = $?.success?
 	
 	puts output
 	
