@@ -7,6 +7,7 @@ require 'fileutils'
 
 module Jekyll
   class Admin
+    
     def initialize
       load_config
     end
