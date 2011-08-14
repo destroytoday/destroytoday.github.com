@@ -16,7 +16,7 @@ module Jekyll
 
     def convert(content)
       begin
-        engine = Sass::Engine.new(content, {:load_paths => ['./src/css/', '/Users/jhallman/dev/ruby/compass/frameworks/compass/stylesheets/']})
+        engine = Sass::Engine.new(content, {:load_paths => ['./src/css/']})
         content = engine.render
         compressor = YUI::CssCompressor.new
         compressor.compress content
