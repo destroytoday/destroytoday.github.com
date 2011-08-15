@@ -65,7 +65,7 @@ getLatestTweet = ->
                         jQuery.timeago(value.created_at).replace(/[\s]+/ig, '&nbsp;') +
                         "</a>"
                     
-                      $.cookie 'latest-tweet', tweet, { expires: 1 }
+                      $.cookie 'latest-tweet', tweet
       
                       setLatestTweet tweet
    
