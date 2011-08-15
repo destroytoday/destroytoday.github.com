@@ -1,0 +1,18 @@
+---
+layout: blog-post
+title: destroytoday.com now running on Linode VPS
+shortname: destroytoday.com now running on Linode VPS
+date: 2011-08-14 20:59:08
+category: blog
+tags: [Announcement]
+thumbnail: 
+  image: destroytodaycom-now-running-on-linode-vps-thumb.png
+  colors: ['000000', '353535', '32BF41']
+---
+[![Linode VPS](/assets/blog/destroytodaycom-now-running-on-linode-vps/destroytodaycom-now-running-on-linode-vps.png)](http://www.linode.com/?r=fd4a4b1e9ce0b9d91c55837d0837f8a3cf0e6bb7)
+
+Now that destroytoday.com runs on [Jekyll](http://jekyllrb.com), there are two sets of files---source and destination. Source, in my case, consists of HAML, SASS, CoffeeScript, and Maruku files. They are converted into HTML, CSS, and JS---the destination files. When checking into Git, I would commit both sets so [Beanstalk](http://beanstalkapp.com) could deploy the destination files. This means changing a single source file results in a commit of potentially dozens of files and a nightmare of a changelist.
+
+I decided to improve the process a bit by investing in a [Linode virtual private server](http://www.linode.com/?r=fd4a4b1e9ce0b9d91c55837d0837f8a3cf0e6bb7)---a setup without restrictions. This weekend, I was able to configure a system that builds the destination files in the background whenever I push to Git. There goes the need for Beanstalk, saving me another monthly bill to pay, and by installing Git and [Gitosis](https://github.com/res0nat0r/gitosis), I get unlimited collaborators and repos free of charge.
+
+With Linode, I also get root access, so I can pretty much do anything I want without waiting on anyone to set something up for me. I choose the OS and partition size, then, with a single click, I have a server. If I ever need to reboot the server, I can with the press of a button. Even if I'm on the go, I can use the [Linode Manager iPhone app](http://itunes.apple.com/us/app/linode-manager/id352861751?mt=8) to check the server status and reboot if I need to. I've never had this level of freedom with a host before. If you're in the market for a new host, take a look at [Linode](http://www.linode.com/?r=fd4a4b1e9ce0b9d91c55837d0837f8a3cf0e6bb7)---they know what they're doing.
