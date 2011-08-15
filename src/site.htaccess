@@ -18,6 +18,18 @@ DirectoryIndex index.html index.htm index.xml index.php
 Options -Indexes
 RewriteEngine On
 
+RewriteCond %{REQUEST_URI} ^/destroytwitter/.*$ [NC]
+RewriteRule ^destroytwitter\/(.*)$ http://destroytwitter.com/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/download/.*$ [NC]
+RewriteRule ^download\/(.*)$ http://download.destroytoday.com/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/dwarf/update\.xml$ [NC]
+RewriteRule ^.*$ https://github.com/downloads/destroytoday/Dwarf/update.xml [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/lib/call\.php.*$ [NC]
+RewriteRule ^.*$ http://destroytwitter.com/destroyflickr.xml [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.+) - [PT,L]
