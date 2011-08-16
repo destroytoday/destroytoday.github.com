@@ -86,7 +86,7 @@ $(document).ready ->
     #$(".chzn-select").chosen()
     
     # inject email
-    $('.email').html '<a href="mailto:jonnie@destroytoday.com">jonnie@destroytoday.com</a>'
+    $('.email').html '<a href="mailto:jonnie.hallman@gmail.com">jonnie.hallman@gmail.com</a>'
     
     #--------------------------------------
     #  paging
