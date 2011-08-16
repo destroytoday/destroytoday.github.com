@@ -2,7 +2,7 @@ module Jekyll
   
   module Filters
     require 'RMagick'
-  
+    
     def size_images(input)
       newinput = input
 

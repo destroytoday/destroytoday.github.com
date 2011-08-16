@@ -74,6 +74,11 @@ task :server do
   system("jekyll --url http://localhost:1337 --auto --server 1337");
 end
 
+desc "Runs Jekyll (auto)"
+task :auto do
+  system("jekyll --url http://localhost:1337 --auto");
+end
+
 desc "Indexes blog posts"
 task :index do
   index = "["

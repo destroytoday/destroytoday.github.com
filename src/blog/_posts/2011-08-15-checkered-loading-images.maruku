@@ -1,0 +1,19 @@
+---
+layout: blog-post
+title: Use Photoshop's checkered canvas for loading images
+shortname: Checkered loading images
+date: 2011-08-15 21:08:15
+category: blog
+tags: [Code, CSS]
+thumbnail: 
+  image: checkered-loading-images-thumb.jpg
+  colors: ['000000', '0A7085', 'FFFFFF', 'CCCCCC']
+---
+![Photoshop's checkered canvas](/assets/blog/checkered-loading-images/checkered-loading-images.jpg)
+
+The best part of releasing a website or app is getting to the point where you can casually tweak things. I decided to have a little fun and set image backgrounds to the checkered canvas Photoshop uses to indicate transparency. It's incredibly simple, requiring only a repeat background in CSS, but effective nonetheless. Below is the code and you can download the checker asset [here](/assets/site/checker.png). Feel free to use it on your own site.
+
+    img
+    {
+      background: url(/assets/checker.png);
+    }

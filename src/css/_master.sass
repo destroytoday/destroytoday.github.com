@@ -528,6 +528,9 @@ button.dsq-button, button.dsq-button-small
     width: 200px
     
     a
+        img
+            background: url(/assets/site/checker.png)
+    
         .color_blocks
             +transition-property("top,height")
             +transition-duration(.35s)
@@ -663,7 +666,7 @@ button.dsq-button, button.dsq-button-small
             
     .post
         img
-            background: url(/assets/site/blank-img.png)
+            background: url(/assets/site/checker.png)
     
         h2
             margin-bottom: 8px
@@ -704,7 +707,7 @@ button.dsq-button, button.dsq-button-small
                     margin: 1px 0px 0px 3px
                     width: 10px
                     height: 10px
-                    background: url("/assets/site/comment_up.png") no-repeat
+                    background: url("/assets/site/comment_up.png") no-repeat !important
                     
                 &:hover a
                     @extend a:hover
@@ -723,7 +726,7 @@ button.dsq-button, button.dsq-button-small
                     height: 10px
                     opacity: 0
                     
-                    background: url("/assets/site/comment_over.png") no-repeat
+                    background: url("/assets/site/comment_over.png") no-repeat !important
                 
         img
             @extend p
