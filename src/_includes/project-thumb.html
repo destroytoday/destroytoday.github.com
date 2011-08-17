@@ -1,24 +1,23 @@
 <div class="thumb{% if i == '0' %} alpha{% elsif i == '3' %} omega{% endif %}">
-	<a href="{{project.url}}">
-	  <img src="/assets{{project.id}}/{{project.thumbnail.image}}" width="200" height="200" alt="{{project.title}}" style="background: #{{project.thumbnail.colors.last}}" />
-  	<div class="hidden-metadata">
-  		<div class="title">{{project.title}}</div>
-  	</div>
-  	<div class="color_blocks">
-  		{% case project.thumbnail.colors.size %} 
-  		{% when 3 %} 
-  			<div class="color_block" style="width: 33%; background: #{{project.thumbnail.colors[0]}}"></div>
-  			<div class="color_block" style="width: 33%; background: #{{project.thumbnail.colors[1]}}"></div>
-  			<div class="color_block" style="width: 34%; background: #{{project.thumbnail.colors[2]}}"></div>
-  		{% else %}
-  			{% for color in project.thumbnail.colors %}
-  				<div class="color_block" style="width: {{100.0 | divided_by:project.thumbnail.colors.size}}%; background: #{{color}}"></div>
-  			{% endfor %}
-  		{% endcase %}
-  	</div>
-  	<div class="metadata">
-  		<div class="title">{{project.title}}</div>
-  		<div class="type">{{project.type}}</div>
-  	</div>
-  </a>
+	<a class="hit-area" href="{{post.url}}"></a>
+  <img src="/assets{{project.id}}/{{project.thumbnail.image}}" width="200" height="200" alt="{{project.title}}" style="background: #{{project.thumbnail.colors.last}}" />
+	<div class="hidden-metadata">
+		<div class="title">{{project.title}}</div>
+	</div>
+	<div class="color_blocks">
+		{% case project.thumbnail.colors.size %} 
+		{% when 3 %} 
+			<div class="color_block" style="width: 33%; background: #{{project.thumbnail.colors[0]}}"></div>
+			<div class="color_block" style="width: 33%; background: #{{project.thumbnail.colors[1]}}"></div>
+			<div class="color_block" style="width: 34%; background: #{{project.thumbnail.colors[2]}}"></div>
+		{% else %}
+			{% for color in project.thumbnail.colors %}
+				<div class="color_block" style="width: {{100.0 | divided_by:project.thumbnail.colors.size}}%; background: #{{color}}"></div>
+			{% endfor %}
+		{% endcase %}
+	</div>
+	<div class="metadata">
+		<div class="title"><a href="{{project.url}}">{{project.title}}</a></div>
+		<div class="type">{{project.type}}</div>
+	</div>
 </div>
