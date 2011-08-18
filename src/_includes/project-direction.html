@@ -47,7 +47,8 @@
 {% endspaceless %}
 {% if next_url %}
 <div id="prev" class="direction">
-	<a href="{{next_url}}"><span class="title_wrapper"><span class="title">{{next_title}}</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span></a>
+  <a href="{{next_url}}"></a>
+	<span class="title_wrapper"><span class="title">{{next_title}}</span></span> <span class="arrow_wrapper"><span class="arrow">&lsaquo;</span></span>
 </div>
 <script type="text/javascript">
 	$(document).keyup(function(event)
@@ -61,7 +62,8 @@
 {% endif %}
 {% if previous_url %}
 <div id="next" class="direction">
-	<a href="{{previous_url}}"><span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">{{previous_title}}</span></span></a>
+	<a href="{{previous_url}}"></a>
+	<span class="arrow_wrapper"><span class="arrow">&rsaquo;</span></span> <span class="title_wrapper"><span class="title">{{previous_title}}</span></span>
 </div>
 <script type="text/javascript">
 	$(document).keyup(function(event)

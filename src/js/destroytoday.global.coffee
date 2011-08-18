@@ -99,9 +99,9 @@ $(document).ready ->
     
     # next/prev arrow over
     $('.direction').mouseenter (event) ->
-        title_wrapper = $(event.currentTarget).children('a').children('.title_wrapper')
+        title_wrapper = $(event.currentTarget).children('.title_wrapper')
         title = title_wrapper.children('.title')
-        arrow_wrapper = $(event.currentTarget).children('a').children('.arrow_wrapper')
+        arrow_wrapper = $(event.currentTarget).children('.arrow_wrapper')
         
         if ($('body').width() - $('#page').width()) / 2 >= title.width() + arrow_wrapper.width() + 30
             title_wrapper.stop()
@@ -110,7 +110,7 @@ $(document).ready ->
         
     # next/prev arrow out
     $('.direction').mouseleave (event) ->
-        title_wrapper = $(event.currentTarget).children('a').children('.title_wrapper')
+        title_wrapper = $(event.currentTarget).children('.title_wrapper')
         title = title_wrapper.children('.title')
         
         title_wrapper.stop()
