@@ -30,11 +30,11 @@ end
 
 task :default => :local
 
-task :local => [:jekyll_local, :success]
+task :local => [:jekyll_local, :tidy, :success]
 
-task :staging => [:jekyll_staging, :success]
+task :staging => [:jekyll_staging, :tidy, :success]
 
-task :production => [:jekyll_production, :success]
+task :production => [:jekyll_production, :tidy, :success]
 
 #--------------------------------------------------------------------------
 #
