@@ -117,7 +117,7 @@ task :tidy do
     content = File.open(path).read
     
     File.open(path, 'w') {|file|
-      file.write TidyFFI::Tidy.new(content, :numeric_entities => 1, :output_html => 1, :merge_divs => 0, :join_styles => 0, :clean => 1, :indent => 1, :wrap => 0, :drop_empty_paras => 0, :literal_attributes => 1).clean
+      file.write TidyFFI::Tidy.new(content, :numeric_entities => 1, :output_html => 1, :merge_divs => 0, :merge_spans => 0, :join_styles => 0, :clean => 1, :indent => 1, :wrap => 0, :drop_empty_paras => 0, :literal_attributes => 1).clean
     }
   end
 end
