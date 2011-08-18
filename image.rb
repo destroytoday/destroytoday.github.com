@@ -7,6 +7,7 @@ class String
   end
 end
 
+
 def write_post
   date = Time.new.strftime("%Y-%m-%d")
   path = "src/blog/_posts/#{date}-#{@id}.maruku"
