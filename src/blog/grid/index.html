@@ -1,0 +1,19 @@
+---
+layout: default
+title: All Posts
+category: blog
+---
+<div id="blog">
+  <h2>{{page.title}}</h2>
+  {% assign i = '0' %}
+  {% for project in site.categories.blog %}
+  	{% include project-thumb.html %}
+  	{% capture i %}{{ i | plus:1 }}{% endcapture %}
+  	{% if i == '4' %}
+  		<hr />
+  		{% assign i = '0' %}
+  	{% elsif project == site.categories.blog.last %}
+  		<div class="clear"> </div>
+  	{% endif %}
+  {% endfor %}
+</div>

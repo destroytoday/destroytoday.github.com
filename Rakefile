@@ -30,7 +30,7 @@ end
 
 task :default => :local
 
-task :local => [:jekyll_local, :tidy, :success]
+task :local => [:jekyll_local, :tidy_local, :success]
 
 task :staging => [:jekyll_staging, :tidy, :success]
 
@@ -109,6 +109,17 @@ task :index do
   index = index + "]"
   
   File.open('site/js/blog_index.json', 'w') {|f| f.write(index) }
+end
+
+desc "Tidies HTML files"
+task :tidy_local do
+  Dir.glob('site/**/*.html') do |path|
+    content = File.open(path).read
+    
+    File.open(path, 'w') {|file|
+      file.write TidyFFI::Tidy.new(content, :numeric_entities => 1, :output_html => 1, :merge_divs => 0, :join_styles => 0, :clean => 1, :indent => 1, :wrap => 0, :drop_empty_paras => 0, :literal_attributes => 1).clean
+    }
+  end
 end
 
 desc "Tidies HTML files"

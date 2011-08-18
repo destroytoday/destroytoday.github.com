@@ -12,7 +12,6 @@ layout: default
 			<hr/>
 		</div>
 		<div id="related-posts">
-		  {% spaceless %}
 		  {% if paginator.posts %}
 		    {% capture next_page_post %}
 		      {% if paginator.next_page %}
@@ -37,7 +36,11 @@ layout: default
   			  {% endif %}
   			{% endfor %}
   		{% endif %}
-  		{% endspaceless %}
+		</div>
+		<div id="view-all-posts">
+		  <div id="grid-view">
+		    <a href="/blog/grid" title="View all posts"></a>
+	    </div>
 		</div>
 	</div>
 </div>

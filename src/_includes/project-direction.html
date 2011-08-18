@@ -1,50 +1,50 @@
-{% spaceless %}
-  {% assign direction = 'next' %}
-  {% for project in site.posts %}
-  	{% if project.id == page.id %}
-  		{% assign direction = 'previous' %}
-  	{% endif %}
+{% assign direction = 'next' %}
+{% for project in site.posts %}
+	{% if project.id == page.id %}
+		{% assign direction = 'previous' %}
+	{% endif %}
 
-  	{% if project.id != page.id %}
-  	{% if direction == 'next' %}
-  	{% if project.categories == page.categories %}
-  	{% if page.category != 'blog' %}
-  		{% assign next_title = project.title %}
-  	{% else %}
-  	  {% assign next_title = project.shortname %}
-  	{% endif %}
-  		{% assign next_url = project.url %}
-  	{% endif %}
-  	{% endif %}
-  	{% endif %}
-	
-  	{% if project.id != page.id %}
-  	{% if direction == 'previous' %}
-  	{% if project.categories == page.categories %}
-  	{% if previous_url == nil %}
-  	{% if page.category != 'blog' %}
-  		{% assign previous_title = project.title %}
-  	{% else %}
-  	  {% assign previous_title = project.shortname %}
-  	{% endif %}
-  		{% assign previous_url = project.url %}
-  	{% endif %}
-  	{% endif %}
-  	{% endif %}
-  	{% endif %}
-  {% endfor %}
-  {% if page.category == 'blog' %}
+	{% if project.id != page.id %}
+	{% if direction == 'next' %}
+	{% if project.categories == page.categories %}
+	{% if page.category != 'blog' %}
+		{% assign next_title = project.title %}
+	{% else %}
+	  {% assign next_title = project.shortname %}
+	{% endif %}
+		{% assign next_url = project.url %}
+	{% endif %}
+	{% endif %}
+	{% endif %}
+
+	{% if project.id != page.id %}
+	{% if direction == 'previous' %}
+	{% if project.categories == page.categories %}
+	{% if previous_url == nil %}
+	{% if page.category != 'blog' %}
+		{% assign previous_title = project.title %}
+	{% else %}
+	  {% assign previous_title = project.shortname %}
+	{% endif %}
+		{% assign previous_url = project.url %}
+	{% endif %}
+	{% endif %}
+	{% endif %}
+	{% endif %}
+{% endfor %}
+{% if page.category == 'blog' %}
+  {% if page.title != 'All Posts' %}
   	{% if paginator.previous_page %}
   	  {% capture next_title %}Page {{paginator.previous_page}}{% endcapture %}
       {% capture next_url %}/blog{% if paginator.previous_page > 1 %}/page/{{paginator.previous_page}}{% endif %}{% endcapture %}
     {% endif %}
-  
+
     {% if paginator.next_page %}
       {% capture previous_title %}Page {{paginator.next_page}}{% endcapture %}
       {% capture previous_url %}/blog{% if paginator.next_page > 1 %}/page/{{paginator.next_page}}{% endif %}{% endcapture %}
     {% endif %}
   {% endif %}
-{% endspaceless %}
+{% endif %}
 {% if next_url %}
 <div id="prev" class="direction">
   <a href="{{next_url}}"></a>

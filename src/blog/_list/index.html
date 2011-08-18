@@ -1,0 +1,13 @@
+---
+layout: default
+title: All Posts
+category: blog
+---
+<div id="blog">
+  <h2>{{page.title}}</h2>
+  {% assign i = '0' %}
+  {% for post in site.categories.blog %}
+  	{% include blog-list-post.html %}
+  	<hr />
+  {% endfor %}
+</div>
