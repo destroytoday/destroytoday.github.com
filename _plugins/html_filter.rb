@@ -3,6 +3,14 @@ module Jekyll
   module Filters
     require 'RMagick'
     
+    def escape_liquid(input)
+      input.gsub!('\{\{', '{{')
+      input.gsub!('\}\}', '}}')
+      input.gsub!('\%', '%')
+      input.gsub!("\\\\", "\\")
+      input
+    end
+    
     def size_images(input)
       newinput = input
 
