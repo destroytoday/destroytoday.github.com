@@ -76,10 +76,10 @@ Copy the contents of your index page to this file, but replace the title and bod
   
     <html>
       <head>
-        <title>{{ page.title }}</title>
+        <title>\{\{ page.title \}\}</title>
       </head>
       <body>
-        {{ content }}
+        \{\{ content \}\}
       </body>
     </html>
     
@@ -116,4 +116,4 @@ Run `jekyll` one last time and it should generate the same content we had when u
 
 I'm going to stop myself here before I go beyond a simple 'hello world' example. If you have any questions, be my guest and ask away in the comments. In the series' next post, I'll help you build your first Jekyll blog, utilizing 'posts' instead of 'pages' and Liquid loops. Until then, experiment!
 
-*Photo by [oskay](http://www.flickr.com/photos/oskay/)*
+*Thumbnail photo by [oskay](http://www.flickr.com/photos/oskay/)*
