@@ -68,7 +68,11 @@ Note - Jekyll disregards any directory or file prefixed with an underscore, whic
 
 ### Layouts
 
-Layouts are one of Jekyll's high points, especially when nested. Start by creating a `_layouts` directory inside of the source folder. Make a `default.html` file, which will (obviously) be the default layout used by your pages. Copy the contents of your index page to this file, but replace the title and body, like so:
+Layouts are one of Jekyll's high points, especially when nested. Start by creating a `_layouts` directory inside of the source folder. Make a `default.html` file, which will (obviously) be the default layout used by your pages.
+
+![Jekyll layout file tree](/assets/blog/hello-world-im-jekyll/hello-world-im-jekyll-layout-file-tree.png)
+
+Copy the contents of your index page to this file, but replace the title and body, like so:
   
     <html>
       <head>
@@ -84,6 +88,8 @@ Jekyll utilizes [Shopify's](http://www.shopify.com/) [Liquid framework](https://
 Every layout must contain a `content` tag, telling Jekyll where to place a page's content. As mentioned in the intro, you can nest layouts, where a layout's code will replace its layout's content tag. It might sound a bit confusing right now, but once you use it first hand, you might find yourself tap-dancing with joy.
 
 The above code also inserts the page's title inside the `<title>` tag. Jekyll provides a slew of variables, detailed on their [template data wiki page](https://github.com/mojombo/jekyll/wiki/Template-Data). Pretty much any metadata you specify in a page's metadata can be accessed with the `page` variable.
+  
+- - -
   
 ### Pages
   
@@ -103,6 +109,8 @@ The metadata lives between two sets of three dashes, as seen above. Those dashes
 The content then lives below the metadata. For pages, the content must be HTML. It *could* be other formats, like HAML or Markdown, as long as you include the appropriate converter, which I'll touch on in a future post.
 
 Run `jekyll` one last time and it should generate the same content we had when using the plain HTML file.
+
+- - -
 
 ### Wrapping up
 
