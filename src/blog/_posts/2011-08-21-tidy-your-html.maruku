@@ -1,0 +1,49 @@
+---
+layout: blog-post
+title: Tidy your HTML
+shortname: Tidy your HTML
+date: 2011-08-21 22:48:39
+category: blog
+tags: [Code, HTML, Ruby]
+thumbnail: 
+  image: tidy-your-html-thumb.jpg
+  colors: ['FFFFFF', '92D3F9', 'CD0C0D']
+---
+Like many developers, I'm OCD about code quality---not only for performance, but appearance as well. When working with generated HTML, it's difficult to make sure every `mixin`, `include`, or `partial` is correctly indented. Enter [Tidy](http://tidy.sourceforge.net/), an HTML-cleaning executable that oddly enough comes bundled OS X. Here's an example of the syntax:
+
+    $ tidy -im index.html
+    
+In the above code, the `-i` flag tells Tidy to properly indent `index.html` and `-m` indicates that Tidy should directly modify the file.
+
+This is all well and good for an individual file, but what if you're working on a large website? Luckily, Bash makes it easy by using a glob, or wildcard. This snippet executes Tidy recursively over every HTML file in the working directory:
+
+    $ tidy -im ./**/*.html
+    
+Now, if you're working in a language like Ruby, you probably don't want to use the command line if you can help it. There are [several Ruby Gems](http://rubygems.org/search?utf8=%E2%9C%93&query=tidy) that can run Tidy on a string or file, but I've had the best luck with [Tidy FFI](http://rubygems.org/gems/tidy_ffi).
+
+For this site, I run Tidy FFI at the tail-end of my Rake script, automatically cleaning up the innards and giving my OCD side some peace of mind:
+
+    require 'tidy_ffi'
+    
+    desc "Tidies HTML files"
+    task :tidy do
+      Dir.glob('site/**/*.html') do |path|
+        content = File.open(path).read
+    
+        File.open(path, 'w') {|file|
+          file.write TidyFFI::Tidy.new(content, 
+            :numeric_entities => 1, 
+            :output_html => 1, 
+            :merge_divs => 0, 
+            :merge_spans => 0, 
+            :join_styles => 0, 
+            :clean => 1, 
+            :indent => 1, 
+            :wrap => 0, 
+            :drop_empty_paras => 0, 
+            :literal_attributes => 1).clean
+        }
+      end
+    end
+    
+My script sets a handful of parameters that actually prevent Tidy FFI from cleaning *too* much. If you're not careful, it will merge elements, and royally screw your CSS if you use nested selectors. View the site's source code and see first-hand how well Tidy cleans!

@@ -15,12 +15,12 @@ layout: default
 		  {% if paginator.posts %}
 		    {% capture next_page_post %}
 		      {% if paginator.next_page %}
-		        {{ paginator.page | times: paginator.per_page }}
+		        {{ paginator.page | minus: 1 | times: paginator.per_page | plus: 1 }}
 		      {% else %}
-		        {{ paginator.page | minus: 2 | times: paginator.per_page }}
+		        0
 		      {% endif %}
 		    {% endcapture %}
-		    {% for post in site.categories.blog limit:5 offset:next_page_post %}
+		    {% for post in site.categories.blog limit:10 offset:next_page_post %}
 			    {% include blog-sidebar-thumb.html %}
 			    <hr/>
   			{% endfor %}
