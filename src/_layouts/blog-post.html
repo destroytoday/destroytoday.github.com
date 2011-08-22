@@ -1,8 +1,11 @@
 ---
 layout: blog
 ---
-{% assign post = page %}
-{% include blog-post.html %}
+{% for post in site.categories.blog %}
+  {% if post.id == page.id %}
+    {% include blog-post.html %}
+  {% endif %}
+{% endfor %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_url = "{{site.url}}{{page.url}}";
