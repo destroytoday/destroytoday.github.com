@@ -59,7 +59,7 @@ module Jekyll
     end
     
     def slug
-      @title.gsub(/[^a-z0-9\-_ ]+/i, '').gsub(/[ ]+/, '-').downcase
+      @title.gsub(/[^a-z0-9\-_ ]+/i, '').gsub(/[ \-]+/, '-').downcase
     end
     
     def filename
