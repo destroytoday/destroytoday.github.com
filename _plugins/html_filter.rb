@@ -18,7 +18,7 @@ module Jekyll
         alt = match.first
         url = match.last
 
-        image = Magick::Image.read("#{@context.registers[:site].dest}#{url}").first
+        image = Magick::Image.read("#{@context.registers[:site].source}#{url}").first
 
         newinput = newinput.gsub("<img alt='#{alt}' src='#{url}'", "<img alt='#{alt}' src='#{url}' width='#{image.columns}' height='#{image.rows}'")
       }
