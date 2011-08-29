@@ -1,0 +1,18 @@
+---
+layout: blog-post
+title: Simon says "Success"
+shortname: Simon says build succeeds
+date: 2011-08-27 22:09:46
+category: blog
+tags: [Arduino, Lab]
+thumbnail: 
+  image: simon-says-build-succeeds-thumb.jpg
+  colors: ['00AA24', 'C30905', '008BC4', 'E9F000', '232722']
+---
+![Simon says](/assets/blog/simon-says-build-succeeds/simon-says-build-succeeds-sequence.jpg)
+
+Last month, Adobe's XD department held a 'hack day' for developers. Since we only had one day to produce something, I planned ahead and aimed to turn a vintage Simon Says into a [build server status indicator](/lab/status-indicator). Since patience isn't my greatest quality, I finished the project weeks before the hack day. I'm glad I did since I had to order many additional parts I didn't think I needed.
+
+The indicator works by cycling through the colors if the server is building. When the build succeeds, the indicator flashes green. When the build fails, the indicator flashes red. I used an [Arduino Uno](http://arduino.cc/en/Main/ArduinoBoardUno) with a battery and [bluetooth modem](http://www.sparkfun.com/products/582) to make it completely wireless, so it could just hang on the wall, waiting for a build to start. Unfortunately, bluetooth eats through batteries like I eat through burritos, so that foiled my plans. As a tethered device, it's not exactly practical, so it will lie in a box until the next time I show it off.
+
+If you'd like to take a closer look at the process, visit the [lab page](/lab/status-indicator).

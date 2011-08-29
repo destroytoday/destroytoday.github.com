@@ -1,0 +1,56 @@
+---
+layout: project
+title: Status Indicator
+shortname: Status Indicator
+category: lab
+type: physical
+thumbnail: 
+  image: status-indicator-thumb.jpg
+  colors: ['00AA24', 'C30905', '008BC4', 'E9F000', '232722']
+style: true
+---
+#status-indicator
+  .container
+    #green.grid-2
+      %img{:src => "/assets{{page.id}}/status-indicator-green.jpg", :width => 433, :height => 433}
+    #green.grid-2
+      %img{:src => "/assets{{page.id}}/status-indicator-red.jpg", :width => 433, :height => 433}
+  .spacer-2
+  .container  
+    #green.grid-2
+      %img{:src => "/assets{{page.id}}/status-indicator-yellow.jpg", :width => 433, :height => 433}
+    #green.grid-2
+      %img{:src => "/assets{{page.id}}/status-indicator-blue.jpg", :width => 433, :height => 433}
+  .spacer-2
+  #description.grid_4
+    :maruku
+      Adobe's XD department held a 'hack day' for developers. Since we only had one day to produce something, I planned ahead and aimed to turn a vintage Simon Says into a build server status indicator. Since patience isn't my greatest quality, I finished the project weeks before the hack day. I'm glad I did since I had to order many additional parts I didn't think I needed.
+
+      The indicator works by cycling through the colors if the server is building. When the build succeeds, the indicator flashes green. When the build fails, the indicator flashes red. I used an [Arduino Uno](http://arduino.cc/en/Main/ArduinoBoardUno) with a battery and [bluetooth modem](http://www.sparkfun.com/products/582) to make it completely wireless, so it could just hang on the wall, waiting for a build to start. Unfortunately, bluetooth eats through batteries like I eat through burritos, so that foiled my plans. As a tethered device, it's not exactly practical, so it will lie in a box until the next time I show it off.  
+  .spacer-2
+  .grid-4
+    %h3 Process
+  .spacer-3
+  .container  
+    #innards-case.grid-2
+      %img{:src => "/assets{{page.id}}/status-indicator-simon-case.jpg", :width => 433, :height => 433}
+      .caption
+        :maruku
+          Inside of the original Simon Says case
+    #innards-chip.grid-2
+      %img{:src => "/assets{{page.id}}/status-indicator-simon-chip.jpg", :width => 433, :height => 433}
+      .caption
+        :maruku
+          The original Simon Says circuitry
+  .spacer-2
+  .grid_4
+    %img{:src => "/assets{{page.id}}/status-indicator-internal.jpg", :width => 900, :height => 600}
+    .caption
+      :maruku
+        Internal circuitry, consisting of an Arduino UNO, bluetooth modem, and super bright LEDs.
+  .spacer-2
+  .grid_4
+    %iframe{:src => "http://player.vimeo.com/video/28254164?title=0&amp;byline=0&amp;portrait=0&amp;color=00AA24", :width => 900, :height => 506, :frameborder => 0}
+    .caption
+      :maruku
+        Music by YT Cracker
