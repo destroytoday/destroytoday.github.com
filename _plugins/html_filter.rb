@@ -4,11 +4,16 @@ module Jekyll
     require 'RMagick'
     
     def escape_liquid(input)
-      input.gsub!('\{\{', '{{')
-      input.gsub!('\}\}', '}}')
-      input.gsub!('\%', '%')
-      input.gsub!("\\\\", "\\")
-      input
+      newinput = input.gsub('\{\{', '{{')
+      newinput.gsub!('\}\}', '}}')
+      newinput.gsub!('\%', '%')
+      newinput.gsub!("\\\\", "\\")
+      newinput
+    end
+    
+    def remarry_widows(input)
+      newinput = input.gsub(/ ([^ ]+)$/, "&nbsp;\\1")
+      newinput
     end
     
     def size_images(input)
