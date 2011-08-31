@@ -4,8 +4,7 @@ module Jekyll
     
     def to_liquid
       super_to_liquid.deep_merge({
-        "slug" => self.slug,
-        "disqus_id" => "#{self.dir}/#{self.data["disqus_id"] || self.slug}" })
+        "slug" => self.slug })
     end
   end
 end

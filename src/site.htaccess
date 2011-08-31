@@ -30,9 +30,6 @@ RewriteRule ^.*$ https://github.com/downloads/destroytoday/Dwarf/update.xml [R=3
 RewriteCond %{REQUEST_URI} ^/lib/call\.php.*$ [NC]
 RewriteRule ^.*$ http://destroytwitter.com/destroyflickr.xml [R=301,L]
 
-RewriteCond %{REQUEST_URI} ^/blog/simon-says-build-succeeds.*$ [NC]
-RewriteRule ^blog\/simon-says-build-succeeds(.*)$ /blog/simon-says-success$1 [R=301,L]
-
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.+) - [PT,L]

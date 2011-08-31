@@ -6,11 +6,10 @@ date: 2011-08-27 22:09:46
 category: blog
 tags: [Arduino, Lab]
 thumbnail: 
-  image: simon-says-success-thumb.jpg
+  image: simon-says-build-succeeds-thumb.jpg
   colors: ['00AA24', 'C30905', '008BC4', 'E9F000', '232722']
-disqus_id: simon-says-build-succeeds
 ---
-[![Simon says](/assets/blog/simon-says-success/simon-says-success-sequence.jpg)](/lab/status-indicator)
+[![Simon says](/assets/blog/simon-says-build-succeeds/simon-says-build-succeeds-sequence.jpg)](/lab/status-indicator)
 
 Last month, Adobe's XD department held a 'hack day' for developers. Since we only had one day to produce something, I planned ahead and aimed to turn a vintage Simon Says into a [build server status indicator](/lab/status-indicator). Since patience isn't my greatest quality, I finished the project weeks before the hack day. I'm glad I did since I had to order many additional parts I didn't think I needed.
 
