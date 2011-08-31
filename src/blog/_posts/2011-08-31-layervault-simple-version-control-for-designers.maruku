@@ -1,0 +1,20 @@
+---
+layout: blog-post
+title: LayerVault - simple version control for designers
+shortname: LayerVault
+date: 2011-08-30 20:45:47
+category: blog
+tags: [Design, Link, Service, Tool, Web]
+thumbnail: 
+  image: layervault-simple-version-control-for-designers-thumb.png
+  colors: ['1D2730', '697986']
+---
+In my experience, version control is one issue that has always existed in the design world. Since devs are used to obscure commands and "mentally-challenged" user interfaces, typing `git add . & git commit -a` isn't a big deal. Designers are different. `Save as...` is the typical version control method for many, and any attempt to force designers to use p4v might lead to mass suicide.
+
+[LayerVault](http://www.layervault.com/) tries to solve this problem by plugging directly into Photoshop. A simple `Command + S` automatically saves a revision. Then, you can view the file's history in a timeline interface that shows a clear diff of the changes.
+
+Unfortunately, LayerVault is currently in a closed beta, so I don't have any invites to hand out, or even one for myself! For now, you can watch the video below, apply for access, and cross your fingers.
+
+[![LayerVault](/assets/blog/{{page.slug}}/{{page.slug}}-screenshot.png)](http://www.layervault.com/)
+
+<iframe src="http://player.vimeo.com/video/28332525?title=0&amp;byline=0&amp;portrait=0&amp;color=007998" width="665" height="374" frameborder="0"> </iframe>
