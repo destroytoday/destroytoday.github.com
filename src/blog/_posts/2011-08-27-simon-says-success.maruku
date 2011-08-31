@@ -8,6 +8,7 @@ tags: [Arduino, Lab]
 thumbnail: 
   image: simon-says-success-thumb.jpg
   colors: ['00AA24', 'C30905', '008BC4', 'E9F000', '232722']
+disqus_id: simon-says-build-succeeds
 ---
 [![Simon says](/assets/blog/simon-says-success/simon-says-success-sequence.jpg)](/lab/status-indicator)
 
