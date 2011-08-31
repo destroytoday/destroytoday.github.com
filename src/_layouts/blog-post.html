@@ -10,5 +10,5 @@ layout: blog
 <script type="text/javascript">
   var disqus_url = "{{site.url}}{{page.url}}";
 	var disqus_identifier = "{{site.url}}{{page.disqus_id}}";
-	var disqus_title = "{{page.title}}";
+	var disqus_title = "{{page.title | escape_doublequotes}}";
 </script>

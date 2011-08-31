@@ -11,6 +11,11 @@ module Jekyll
       newinput
     end
     
+    def escape_doublequotes(input)
+      newinput = input.gsub("\"", "\\\"")
+      newinput
+    end
+    
     def remarry_widows(input)
       newinput = input.gsub(/ ([^ ]+)$/, "&nbsp;\\1")
       newinput
