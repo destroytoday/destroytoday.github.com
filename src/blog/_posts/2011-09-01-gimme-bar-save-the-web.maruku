@@ -1,0 +1,22 @@
+---
+layout: blog-post
+title: Gimme Bar - save the web
+shortname: Gimme Bar - save the web
+date: 2011-08-31 15:42:45
+category: blog
+tags: [Link, Service, Web]
+thumbnail: 
+  image: gimme-bar-save-the-web-thumb.png
+  colors: ['D6156C', '333333', 'FFFFFF']
+---
+[gimmebar]: http://gimmebar.com
+
+These past few months, I've been beta testing [Gimme Bar][gimmebar], a new web service by [FictiveKin](http://fictivekin.com/) (the same dudes who developed [TeuxDeux](http://teuxdeux.com)). This time they're targeting internet content. At first, Gimme Bar might seem like just another bookmarking service, but instead of linking to the content, it actually saves it. You can save text, images, videos, and even capture an entire webpage.
+
+What I love most about Gimme Bar is that there's no specific way to use it. At first, I thought I'd make a wishlist for gadgets, but over time, it naturally became a collection of my favorite animated GIFs. There are countless ways you can use Gimme Bar and that's what excites me about its future.
+
+Gimme Bar is still in beta, but **you can sign up without an invite for today only**. Jump onboard while you can and try it out for yourself.
+
+[![Gimme Bar](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.jpg)][gimmebar]
+
+<iframe src="http://player.vimeo.com/video/28127437?title=0&amp;byline=0&amp;portrait=0&amp;color=007998" width="665" height="374" frameborder="0"> </iframe>
