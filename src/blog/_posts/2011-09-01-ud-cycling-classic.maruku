@@ -1,0 +1,19 @@
+---
+layout: blog-post
+title: UD Cycling Classic
+shortname: UD Cycling Classic
+date: 2011-09-01 22:40:42
+category: blog
+tags: [Awesome, Friend, Installation]
+thumbnail: 
+  image: ud-cycling-classic-thumb.jpg
+  colors: ['C77926', 'F6D839', '745B4B', '1D1D1B']
+---
+[cycling-classic]: http://vimeo.com/28425601
+
+[Charlie Whitney](http://charliewhitney.com/), an internet-friend-turned-real-life-friend, recently finished the [Urbandaddy Cycling Classic installation][cycling-classic] for the E2NY Music and Arts festival. It takes two racers on modded bikes and projects virtual environments mapped to their speeds. The concept is awesome, the execution is perfect, and it just looks so fun. If I still had birthday parties, I'd want to rent it for my upcoming 25th.
+
+[![Cycling Classic](/assets/blog/{{ page.slug }}/{{ page.slug }}-bike.jpg)][cycling-classic]
+[![Cycling Classic](/assets/blog/{{ page.slug }}/{{ page.slug }}-racing.jpg)][cycling-classic]
+
+<iframe src="http://player.vimeo.com/video/28425601?title=0&amp;byline=0&amp;portrait=0&amp;color=007998" width="665" height="374" frameborder="0"> </iframe>
