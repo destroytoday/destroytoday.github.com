@@ -203,7 +203,7 @@ a
 #disqus_thread
     margin-top: 66px
     
-#dsq-comments
+#dsq-comments, #dsq-reactions
     hr
         +clearfix
         height: 33px
@@ -218,8 +218,6 @@ a
     left: 0
         
 textarea, .dsq-textarea-wrapper
-    //+transition-property(background-color)
-    //+transition-duration(0.35s)
     border: none
     outline: 0 none
     padding: 8px 8px 8px 8px
@@ -361,6 +359,22 @@ button.dsq-button, button.dsq-button-small
 .caption
     margin: 8px 0px 25px 0px
     
+.button
+    +transition-property(background)
+    +transition-duration(0.35s)
+    +border-radius(4px)
+    font-family: "Helvetica Neue", Verdana, sans-serif
+    font-weight: 700
+    font-size: 14px
+    padding: 8px !important
+    color: #FFF !important
+    border: none !important
+    text-shadow: none !important
+    text-decoration: none
+    
+    &:hover
+        text-decoration: none
+
 #site
     position: relative
     width: 100%
@@ -502,25 +516,10 @@ button.dsq-button, button.dsq-button-small
     position: relative
     left: 50%
 
-    #footer_wrapper
+    #footer-wrapper
         position: relative
         left: -35%
-        
-        #copyright_wrapper
-            +float-left
-            margin: 0px 5px 0px 0px
-    
-            #copyright
-                @extend .vertically_centered
-                height: 20px
-            
-        #twitter_follow_wrapper
-            +float-left
-            
-            #twitter_follow
-                @extend .vertically_centered
-                height: 20px
-
+        height: 20px
         +clearfix
         font:
             weight: $footer-weight
