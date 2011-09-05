@@ -1,0 +1,14 @@
+---
+layout: default
+title: All Posts
+category: blog
+---
+<div id="blog">
+  <h2>{{page.title}}</h2>
+  {% for post in site.categories.blog %}
+    {% capture post_month %}{{post.date | date: "%m"}}{% endcapture %}
+    {% if post_month != prev_post_month %}{% if prev_post_month %}</ol>{% endif %}<h3>{{post.date | date: "%B %Y"}}</h3><ol class="blog-list">{% endif %}
+  	{% include blog-list-post.html %}
+  	{% capture prev_post_month %}{{post_month}}{% endcapture %}
+  {% endfor %}
+</div>

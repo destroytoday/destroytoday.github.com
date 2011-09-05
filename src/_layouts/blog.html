@@ -23,7 +23,7 @@ layout: default
 		    {% endcapture %}
 		    {% for post in site.categories.blog limit:10 offset:next_page_post %}
 			    {% include blog-sidebar-thumb.html %}
-			    <hr/>
+			    <div class="spacer-2"></div>
   			{% endfor %}
 		  {% else %}
 		    {% assign related_post_i = 0 %}
@@ -32,16 +32,16 @@ layout: default
   			    {% if related_post_i != '3' %}
   			      {% include blog-sidebar-thumb.html %}
   			      {% capture related_post_i %}{{ related_post_i | plus: 1 }}{% endcapture %}
-  			      <hr/>
+  			      <div class="spacer-2"></div>
   			    {% endif %}
   			  {% endif %}
   			{% endfor %}
   		{% endif %}
 		</div>
-		<div id="view-all-posts">
-		  <div id="grid-view">
-		    <a href="/blog/grid" title="View all posts"></a>
-	    </div>
+		<div id="blog-buttons">
+		  <a class="blog-button blog-stream-button" href="/blog"><img src="/assets/site/blog-stream-button.png" width="18" height="18" /></a>
+		  <a class="blog-button blog-grid-button" href="/blog/grid"><img src="/assets/site/blog-grid-button.png" width="18" height="18" /></a>
+		  <a class="blog-button blog-list-button" href="/blog/list"><img src="/assets/site/blog-list-button.png" width="18" height="18" /></a>
 		</div>
 	</div>
 </div>

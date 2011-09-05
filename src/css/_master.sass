@@ -366,6 +366,7 @@ button.dsq-button, button.dsq-button-small
     font-family: "Helvetica Neue", Verdana, sans-serif
     font-weight: 700
     font-size: 14px
+    line-height: 15px
     padding: 8px !important
     color: #FFF !important
     border: none !important
@@ -374,7 +375,23 @@ button.dsq-button, button.dsq-button-small
     
     &:hover
         text-decoration: none
-
+        
+#blog-buttons
+    +clearfix
+    
+    .blog-button
+        +transition-property(background)
+        +transition-duration(0.35s)
+        +float-left
+        background: $text-color
+        margin-right: 8px
+    
+        &:last-child
+            margin-right: 0px
+            
+        &:hover
+            background: $link-hover-color
+        
 #site
     position: relative
     width: 100%
@@ -624,6 +641,45 @@ button.dsq-button, button.dsq-button-small
 //--------------------------------------
         
 #blog
+    ol.blog-list
+        margin: 12px 0px 33px 0px
+        
+        li
+            +clearfix
+            height: 32px
+            margin-bottom: 16px
+            
+            &:last-child
+                margin-bottom: 0px
+                
+            img
+                +float-left
+                margin-right: 12px
+            
+            a.title
+                +float-left
+                
+                color: $text-color
+                text-decoration: none
+                
+                &:hover
+                    color: $link-hover-color
+                    text-decoration: none
+                
+            .tags 
+                +float-left
+                font-family: $text-font
+                font-size: 0.75em
+                line-height: 20px
+                color: $tag-color
+            
+                a
+                    color: $tag-color
+                    text-decoration: none
+                
+                    &:hover
+                        color: $link-hover-color
+
     #primary
         margin-left: 0px !important
     
@@ -633,30 +689,11 @@ button.dsq-button, button.dsq-button-small
     #sidebar
         margin-right: 0px !important
         
-        #view-all-posts
-            #grid-view
-                +transition-property(background-color)
-                +transition-duration(0.35s)
-                background-color: $text-color
-                width: 20px
-                height: 20px
-                
-                &:hover
-                    background-color: $link-hover-color
-            
-                a
-                    position: absolute
-                    +transparent-image("/assets/site/grid.png", 20px, 20px)
-            
-    
         #search-wrapper
             #search
                 background: url("/assets/site/sidebar_input.png") no-repeat 0 0
                 width: 168px
                 padding: 2px 8px 4px 22px
-                
-            hr
-                height: 33px
                 
         #latest-tweet
             +transition-property(height)
@@ -669,6 +706,8 @@ button.dsq-button, button.dsq-button-small
                 margin: 0px 8px 0px 0px
                 
             p
+                margin: 0px 0px 6px 0px
+            
                 .plus
                     color: $tag-color
             
@@ -679,21 +718,10 @@ button.dsq-button, button.dsq-button-small
                 
                     &:hover
                         color: $link-hover-color
-                        
-            hr
-                height: 27px
                 
             .twitter-follow
                 height: 20px
                         
-        #related-posts
-            hr
-                height: 33px
-                
-        #latest-flickr
-            img
-                width: 100%
-            
     .post
         hr
             height: 16px !important
