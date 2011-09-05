@@ -219,10 +219,11 @@ $(document).ready ->
     #  Twitter Follow Button
     #--------------------------------------
     
-    $(".twitter-follow-button").attr('data-text-color', rgb2hex($("body").css('color')))
-    $(".twitter-follow-button").attr('data-link-color', rgb2hex($(".twitter-follow-button").css('color')))
-    twitterWidgets = document.createElement 'script'
-    twitterWidgets.type = 'text/javascript'
-    twitterWidgets.async = true
-    twitterWidgets.src = 'http://platform.twitter.com/widgets.js'
-    document.getElementsByTagName('head')[0].appendChild(twitterWidgets)
+    if $('.twitter-follow-button').length > 0
+        $(".twitter-follow-button").attr('data-text-color', rgb2hex($("body").css('color')))
+        $(".twitter-follow-button").attr('data-link-color', rgb2hex($(".twitter-follow-button").css('color')))
+        twitterWidgets = document.createElement 'script'
+        twitterWidgets.type = 'text/javascript'
+        twitterWidgets.async = true
+        twitterWidgets.src = 'http://platform.twitter.com/widgets.js'
+        document.getElementsByTagName('head')[0].appendChild(twitterWidgets)

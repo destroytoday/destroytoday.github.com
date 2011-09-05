@@ -24,13 +24,13 @@ module Jekyll
     def size_images(input)
       newinput = input
 
-      input.scan(/<img alt='([^']+)' src='([^']+)'/) {|match|
-        alt = match.first
+      input.scan(/<img(.*) src=(?:'|")([^'"]+)(?:'|")/) {|match|
+        params = match.first
         url = match.last
 
         image = Magick::Image.read("#{@context.registers[:site].source}#{url}").first
 
-        newinput = newinput.gsub("<img alt='#{alt}' src='#{url}'", "<img alt='#{alt}' src='#{url}' width='#{image.columns}' height='#{image.rows}'")
+        newinput = newinput.gsub(/<img#{params} src=('|")#{url}('|")/, "<img#{params} src=\"#{url}\" width=\"#{image.columns}\" height=\"#{image.rows}\"")
       }
 
       newinput

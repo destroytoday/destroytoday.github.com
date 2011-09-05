@@ -32,7 +32,7 @@ experiments:
   {% if experiment_i == 0 %}.container{% endif %}
     .grid-2
       .flash
-        %img{:src => "/assets{{page.id}}/{{experiment.id}}.png", :alt => "{{experiment.title}}"}
+        %img.checkered{:src => "/assets{{page.id}}/{{experiment.id}}.png", :alt => "{{experiment.title}}"}
       %p.tag.center {{experiment.title}}
   {% if experiment_i == '1' %}.spacer-1{% endif %}
   {% capture experiment_i %}{{ experiment_i | plus:1 }}{% endcapture %}
