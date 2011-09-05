@@ -1,0 +1,89 @@
+---
+layout: project
+title: Color Sitemap
+category: lab
+type: web
+thumbnail: 
+  image: color-sitemap-thumb.png
+  colors: ['FFFFFF', 'CCCCCC']
+style: true
+---
+<div id="color-sitemap">
+  {% assign i = '0' %}
+  {% assign n = '0' %}
+  {% for section in site.sections %}
+    {% for post in site.categories[section] %}
+      {% if post.thumbnail.colors %}
+    	  <div class="swatch-set{% if i == '0' %} alpha{% elsif i == '3' %} omega{% endif %}">
+        	<div class="swatches">
+      			{% for color in post.thumbnail.colors %}
+      				<a class="swatch" href="{{ post.url }}" style="background: #{{color}}"></a>
+      			{% endfor %}
+        	</div>
+        	<div class="swatch-tooltip"><div class="swatch-hex"></div><div class="swatch-tooltip-arrow"></div></div>
+        </div>
+      	{% capture i %}{{ i | plus:1 }}{% endcapture %}
+      	{% if i == '4' %}
+      		<div class="spacer-2"></div>
+      		{% capture n %}{{ n | plus:1 }}{% endcapture %}
+      		{% if n == '4' %}
+      		<div id="description" class="grid-4">
+      		  <p><strong>Color Sitemap</strong> is a way to navigate the website using each page's color palette. Every time I add a new page to the site, this page auto-updates to include the new swatches. A tooltip appears when rolling over a swatch, indicating its hex value. Clicking a swatch will take you to its page.</p>
+      		</div>
+      		<div class="spacer-2"></div>
+      		{% endif %}
+      		{% assign i = '0' %}
+      	{% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  <script type="text/javascript">
+    $(document).ready(function()
+    {
+      var tooltipIndex = 999;
+      
+      function rgb2hex(rgb)
+      {
+        parse = function(c)
+        {
+          return ("0" + parseInt(c, 10).toString(16)).slice(-2);
+        }
+    
+        rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+        r = parse(rgb[1]);
+        g = parse(rgb[2]);
+        b = parse(rgb[3]);
+
+        return r + g + b;
+      }
+      
+      $(".swatch").mouseenter(function()
+      {
+        var swatchSet = $(this).parent().parent();
+        var tooltip = $(this).parent().siblings(".swatch-tooltip");
+        var arrow = tooltip.children(".swatch-tooltip-arrow");
+        var hex = tooltip.children(".swatch-hex");
+
+        var color = rgb2hex($(this).css('background-color')).toUpperCase();
+        hex.text("#" + color);
+        
+        var left = $(this).position().left + ($(this).width() - tooltip.width()) / 2;
+        var top = -(tooltip.height() + 4);
+
+        swatchSet.css('z-index', ++tooltipIndex);
+        tooltip.css('left', left);
+        tooltip.css('top', top);
+        tooltip.css('opacity', 0.85);
+        arrow.css('left', (tooltip.width() - arrow.width()) / 2);
+        arrow.css('top', tooltip.height());        
+      });
+      
+      $(".swatch").mouseleave(function()
+      {
+        var tooltip = $(this).parent().siblings(".swatch-tooltip");
+        
+        tooltip.css('opacity', 0);
+      });
+    });
+  </script>
+</div>

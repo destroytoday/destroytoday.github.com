@@ -1,0 +1,58 @@
+---
+---
+$background-color: #999 !default
+
+$text-color: #222 !default
+
+$identity-destroy-color: #FFF !default
+$identity-today-color: #222 !default
+
+$link-color: #FFF !default
+$link-hover-color: #222 !default
+$selection-background-color: #222
+
+$nav-color: #222 !default
+$nav-selected-color: #FFF !default
+
+$footer-color: #222 !default
+
+@import "master"
+
+#color-sitemap
+    #description
+        background: #FFF
+        width: 100%
+        
+        p
+            margin: 8px
+
+    .swatch-set
+        @extend .grid-1
+        +float-left
+        position: relative
+    
+        .swatches
+            .swatch
+                +float-left
+                width: 40px
+                height: 40px
+                
+        .swatch-tooltip
+            +transition-property("opacity,left")
+            +transition-duration(0.35s)
+            +border-radius(4px)
+            position: absolute
+            opacity: 0
+            background: #FFF
+            font-family: "Helvetica Neue", Verdana, sans-serif
+            font-weight: 700
+            font-size: 14px
+            line-height: 15px
+            color: #222
+        
+            .swatch-hex
+                margin: 10px 12px
+                
+            .swatch-tooltip-arrow
+                +transparent-image("/assets/lab/color-sitemap/color-sitemap-tooltip-arrow.png", 15px, 8px)
+                position: absolute
