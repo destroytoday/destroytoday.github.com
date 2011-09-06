@@ -4,7 +4,7 @@ title: Color Sitemap
 shortname: Color Sitemap
 date: 2011-09-05 21:14:14
 category: blog
-tags: []
+tags: [Color, Lab]
 thumbnail: 
   image: color-sitemap-thumb.png
   colors: ['FFFFFF', 'CCCCCC']
@@ -13,4 +13,4 @@ thumbnail:
 
 [![Color Sitemap](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.png)][color-sitemap]
 
-Lately, I've been playing with alternate ways of navigating the website. After accomplishing simple [grid](/blog/grid) and [list](/blog/list) views, I decided to stray from conventions and have a little fun. Since the site focuses heavily on color with each page assigned its own scheme, why not navigate by color? Instead of a typical list-based sitemap, I spent today working on a [color-based sitemap](/lab/color-sitemap). It displays every page on the site and auto-updates when I create new pages. Rolling over a swatch displays the corresponding page's title as well as the swatch's hex value. This small concept makes me think more about the idea of experimenting on the site itself. What else could I play with?
+Lately, I've been playing with alternate ways of navigating the website. After accomplishing simple [grid](/blog/grid) and [list](/blog/list) views, I decided to stray from conventions and have a little fun. Since the site focuses heavily on color with each page assigned its own scheme, why not navigate by color? Instead of a typical list-based sitemap, I spent today working on a [color-based sitemap][color-sitemap]. It displays every page on the site and auto-updates when I create new pages. Rolling over a swatch displays the corresponding page's title as well as the swatch's hex value. This small concept makes me think more about the idea of experimenting on the site itself. What else could I play with?
