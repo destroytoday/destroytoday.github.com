@@ -14,13 +14,13 @@ style: true
   {% for section in site.sections %}
     {% for post in site.categories[section] %}
       {% if post.thumbnail.colors %}
-    	  <div class="swatch-set{% if i == '0' %} alpha{% elsif i == '3' %} omega{% endif %}">
+    	  <div data-title="{% if post.shortname %}{{ post.shortname }}{% else %}{{ post.title }}{% endif %}" class="swatch-set{% if i == '0' %} alpha{% elsif i == '3' %} omega{% endif %}">
         	<div class="swatches">
       			{% for color in post.thumbnail.colors %}
       				<a class="swatch" href="{{ post.url }}" style="background: #{{color}}"></a>
       			{% endfor %}
         	</div>
-        	<div class="swatch-tooltip"><div class="swatch-hex"></div><div class="swatch-tooltip-arrow"></div></div>
+        	<div class="swatch-tooltip"><div class="swatch-tooltip-label"></div><div class="swatch-tooltip-arrow"></div></div>
         </div>
       	{% capture i %}{{ i | plus:1 }}{% endcapture %}
       	{% if i == '4' %}
@@ -62,10 +62,10 @@ style: true
         var swatchSet = $(this).parent().parent();
         var tooltip = $(this).parent().siblings(".swatch-tooltip");
         var arrow = tooltip.children(".swatch-tooltip-arrow");
-        var hex = tooltip.children(".swatch-hex");
+        var label = tooltip.children(".swatch-tooltip-label");
 
         var color = rgb2hex($(this).css('background-color')).toUpperCase();
-        hex.text("#" + color);
+        label.html(swatchSet.attr('data-title') + " <span class=\"hex\">#" + color + "</span>");
         
         var left = $(this).position().left + ($(this).width() - tooltip.width()) / 2;
         var top = -(tooltip.height() + 4);
