@@ -7,7 +7,7 @@ category: blog
 tags: [Color, Lab]
 thumbnail: 
   image: color-sitemap-thumb.png
-  colors: ['FFFFFF', 'CCCCCC']
+  colors: ['FFFFFF', '999999']
 ---
 [color-sitemap]: /lab/color-sitemap
 
