@@ -21,6 +21,11 @@ module Jekyll
       newinput
     end
     
+    def open_external_links_in_new_window(input)
+      newinput = input.gsub(/<a(.*) href=(?:'|")(http[^'"]+)(?:'|")/, "<a\\1 href=\"\\2\" target=\"_blank\"")
+      newinput
+    end
+    
     def size_images(input)
       newinput = input
 

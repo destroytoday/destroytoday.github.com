@@ -1,0 +1,20 @@
+---
+layout: blog-post
+title: If This Then That
+shortname: If This Then That
+date: 2011-09-07 21:20:53
+category: blog
+tags: [Link, Service, Web]
+thumbnail: 
+  image: if-this-then-that-thumb.png
+  colors: ['323232', 'F8FBFD']
+---
+[ifttt]: http://ifttt.com
+
+[![If This Then That](/assets/blog/{{ page.slug }}/{{ page.slug }}-instabox.png)][ifttt]
+
+[If This Then That][ifttt] makes me so excited for the future of the web because **it is the future of the web**. IFTTT uses the common programming conditional to tie two services together. In the example above, it polls Instagram for new photos by me, then automatically saves them to my Dropbox account. You can currently pick from 35 different "channels," which include web services like Facebook, Twitter, and Flickr, as well as tools like Date/Time, Phone, and SMS.
+
+I'm in love with the concept because the possibilities are both endless *and* up to the user. We no longer need to wait for one service to add support for another. We also no longer need a different middleman service for every combination---it's all in one. So far, IFTTT supports most of the main services, but I'm anxiously awaiting the integration of others, like [Gimmebar](http://gimmebar.com) and maybe even custom URL triggers.
+
+IFTTT is still young, but it has so much promise. Try it out and let me know what you think. I have a really good feeling about this one.

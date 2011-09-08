@@ -118,16 +118,21 @@ module Jekyll
     
     def create_thumb dir
       dir = "#{dir}/#{slug}"
+      path = "#{dir}/#{thumb_filename}"
       
       FileUtils.mkdir(dir) unless File.exists? dir
       
-      resized_thumb = @image.resize_to_fill(200, 200)
-      sharpened_thumb = resized_thumb.unsharp_mask(1.1, 1.0, 0.4)
+      if @image.columns > 200 || @image.rows > 200
+        resized_thumb = @image.resize_to_fill(200, 200)
+        sharpened_thumb = resized_thumb.unsharp_mask(1.1, 1.0, 0.4)
       
-      sharpened_thumb.write("#{dir}/#{thumb_filename}")
+        sharpened_thumb.write(path)
       
-      resized_thumb.destroy!
-      sharpened_thumb.destroy!
+        resized_thumb.destroy!
+        sharpened_thumb.destroy!
+      else
+        @image.write(path)
+      end
     end
   end
   
@@ -168,16 +173,21 @@ module Jekyll
     
     def create_fitted dir
       dir = "#{dir}/#{@post}"
+      path = "#{dir}/#{filename}"
       
       FileUtils.mkdir(dir) unless File.exists? dir
       
-      resized_image = @image.resize_to_fit(666)
-      sharpened_image = resized_image.unsharp_mask(1.1, 1.0, 0.4)
+      if @image.columns > 666
+        resized_image = @image.resize_to_fit(666)
+        sharpened_image = resized_image.unsharp_mask(1.1, 1.0, 0.4)
       
-      sharpened_image.write("#{dir}/#{filename}")
+        sharpened_image.write(path)
       
-      resized_image.destroy!
-      sharpened_image.destroy!
+        resized_image.destroy!
+        sharpened_image.destroy!
+      else
+        @image.write(path)
+      end
     end
   end
 end
