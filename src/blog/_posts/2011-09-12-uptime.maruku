@@ -1,0 +1,20 @@
+---
+layout: blog-post
+title: Uptime
+shortname: Uptime
+date: 2011-09-07 21:20:53
+category: blog
+tags: [Lab, Rails, Ruby, Web]
+thumbnail: 
+  image: uptime-thumb.png
+  colors: ['E3DBCC', '27634C']
+---
+[uptime]: http://uptime.destroytoday.com
+
+[![Uptime](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.png)][uptime]
+
+Lately, I've been dipping my toes in the Rails pool. It's been a bit overwhelming, to say the least, but I'm making some headway. To get the hang of things, I decided to create a dead simple app---no more than half dozen lines.
+
+Since switching to [Linode](http://www.linode.com/?r=fd4a4b1e9ce0b9d91c55837d0837f8a3cf0e6bb7), I noticed a display of the uptime in the admin. Curious, I investigated a bit and found that you can retrieve a UNIX machine's uptime with a single Bash call, `uptime`. It returns something like this: `23:12  up 14:04, 5 users, load averages: 1.25 1.40 1.63`. Sure, I could break this apart with regex and calculate the uptime myself, but there's an easier way.
+
+Linux has a separate file located at `/proc/uptime` that returns two values: uptime in seconds and idle time in seconds. With this, I could determine the number of uptime days no problem. I've always loved [those accident signs](http://gim.ie/aj1W) found in factories, so I combined the two and came up with [this web app][uptime].
