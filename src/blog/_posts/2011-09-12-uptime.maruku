@@ -11,7 +11,7 @@ thumbnail:
 ---
 [uptime]: http://uptime.destroytoday.com
 
-[![Uptime](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.png)][uptime]
+[![Uptime](/assets/blog/{{ page.slug }}/{{ page.slug }}-sidebyside.jpg)][uptime]
 
 Lately, I've been dipping my toes in the Rails pool. It's been a bit overwhelming, to say the least, but I'm making some headway. To get the hang of things, I decided to create a dead simple app---no more than half dozen lines.
 
