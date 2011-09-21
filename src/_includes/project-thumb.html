@@ -10,6 +10,13 @@
 			<div class="color_block" style="width: 33%; background: #{{project.thumbnail.colors[0]}}"></div>
 			<div class="color_block" style="width: 33%; background: #{{project.thumbnail.colors[1]}}"></div>
 			<div class="color_block" style="width: 34%; background: #{{project.thumbnail.colors[2]}}"></div>
+		{% when 6 %} 
+			<div class="color_block" style="width: 17%; background: #{{project.thumbnail.colors[0]}}"></div>
+			<div class="color_block" style="width: 16%; background: #{{project.thumbnail.colors[1]}}"></div>
+			<div class="color_block" style="width: 17%; background: #{{project.thumbnail.colors[2]}}"></div>
+			<div class="color_block" style="width: 16%; background: #{{project.thumbnail.colors[3]}}"></div>
+			<div class="color_block" style="width: 17%; background: #{{project.thumbnail.colors[4]}}"></div>
+			<div class="color_block" style="width: 17%; background: #{{project.thumbnail.colors[5]}}"></div>
 		{% else %}
 			{% for color in project.thumbnail.colors %}
 				<div class="color_block" style="width: {{100.0 | divided_by:project.thumbnail.colors.size}}%; background: #{{color}}"></div>

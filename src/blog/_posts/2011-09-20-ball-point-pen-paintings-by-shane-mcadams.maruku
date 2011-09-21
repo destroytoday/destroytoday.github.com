@@ -1,0 +1,18 @@
+---
+layout: blog-post
+title: Ball Point Pen Paintings by Shane McAdams
+shortname: Ball Point Pen Paintings by Shane McAdams
+date: 2011-09-20 22:05:00
+category: blog
+tags: [Art, Illustration, Link]
+thumbnail: 
+  image: ball-point-pen-paintings-by-shane-mcadams-thumb.jpg
+  colors: ['2e9288', '8e3d50', 'c6a34f', '04809c', 'FFFFFF', '000000']
+---
+[mcadams]: http://shanemcadams.com/work/gallery/1014
+
+I love [these paintings][mcadams] by [Shane McAdams](http://shanemcadams.com). Unlike traditional paintings, these are done entirely with ball point pens. Mind = blown, right? All I know is I'd *really* love to see some process videos.
+
+[![Shane McAdams](/assets/blog/{{ page.slug }}/{{ page.slug }}.jpg)][mcadams]
+[![Shane McAdams](/assets/blog/{{ page.slug }}/{{ page.slug }}-1.jpg)][mcadams]
+[![Shane McAdams](/assets/blog/{{ page.slug }}/{{ page.slug }}-2.jpg)][mcadams]
