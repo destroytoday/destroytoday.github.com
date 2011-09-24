@@ -9,6 +9,7 @@
 @import "compass/utilities/general/float"
 @import "compass/css3/transition"
 @import "compass/css3/border-radius"
+@import "pictos/pictos"
 
 //--------------------------------------------------------------------------
 //
@@ -55,6 +56,8 @@ $footer-weight: $text-weight !default
 
 $thumbnail-font: "Helvetica Neue", Helvetica, sans-serif !default
 $thumbnail-weight: 400 !default
+
+$readable-size: 0.75em
 
 //--------------------------------------------------------------------------
 //
@@ -122,6 +125,17 @@ html
 .imgareaselect-outer
     background-color: #333
     
+// pictos
+
+.pictos
+    font-family: 'Pictos', sans-serif
+    font-weight: normal
+    font-style: normal
+    line-height: normal 
+    
+a:hover .pictos, .pictos:hover
+    text-decoration: none
+
 // ie6 warning
 #_l
     display: none
@@ -202,6 +216,10 @@ a
         
 .checkered
     background: url(/assets/site/checker.png)
+    
+.interview
+    h3
+        margin: 2em 0 0.5em 0
         
 #disqus_thread
     margin-top: 66px
