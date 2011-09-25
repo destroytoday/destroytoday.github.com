@@ -1,7 +1,7 @@
 <div class="post">
 	<h2><a href="{{post.url}}">{{post.title | remarry_widows}}</a></h2>
 	<div class="metadata">
-		<div class="date"><a href="{{post.url}}">{{post.date | date: "%m.%d.%y"}}</a></div><div class="comment-count"><a href="{{post.url}}#disqus_thread" data-disqus-identifier="{{site.url}}{{post.url}}">0 <span class="pictos-comments">w</span> + 0 <span class="pictos-tweets">B</span></a></div>
+		<div class="date"><a href="{{post.url}}">{{post.date | date: "%m.%d.%y"}}</a></div><div class="comment-count"><a href="{{post.url}}#disqus_thread" data-disqus-identifier="{{site.url}}{{post.url}}">0 comments + 0 tweets</a> <a href="{{post.url}}"><img class="bubble-up" src="/assets/site/comment_up.png" width="10" height="10" /><img class="bubble-over" src="/assets/site/comment_over.png" width="10" height="10" /></a></div>
 	</div>
 	{{post.content | markdownify | size_images | open_external_links_in_new_window | escape_liquid}}
 	<div class="metadata">
