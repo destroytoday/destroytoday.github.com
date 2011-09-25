@@ -9,9 +9,17 @@ layout: default
 		<div id="latest-tweet">
 			<a href="http://twitter.com/destroytoday"><img src="/assets/site/twitter_avatar.jpg" width="32" height="32" alt="@destroytoday" /></a>
 			<p></p>
-			<div class="twitter-follow"><a href="http://twitter.com/destroytoday" class="twitter-follow-button" data-show-count="false">Follow @destroytoday</a></div>
-			<div class="spacer-2"></div>
+			<div class="spacer-3"></div>
 		</div>
+	  <div class="blog-buttons">
+	    <div class="twitter-follow">
+	      <a href="http://twitter.com/destroytoday" class="twitter-follow-button" data-show-count="false"></a>
+	    </div>
+	    <div class="subscribe-button">
+	      <a href="{{ site.feed }}" onclick="window.open(this.href); return false;"></a>
+	    </div>
+	  </div>
+	  <div class="spacer-3"></div>
 		<div id="related-posts">
 		  {% if paginator.posts %}
 		    {% capture next_page_post %}

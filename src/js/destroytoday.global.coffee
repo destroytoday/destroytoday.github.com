@@ -73,7 +73,7 @@ getLatestTweet = ->
                   
 setLatestTweet = (tweet) ->
     $('#latest-tweet p').html tweet
-    $('#latest-tweet').css 'height', $('#latest-tweet p').height() + 6 + $('#latest-tweet .twitter-follow').height() + $('#latest-tweet .spacer-2').height()
+    $('#latest-tweet').css 'height', $('#latest-tweet p').height() + $('#latest-tweet .spacer-3').height()
 
 #--------------------------------------------------------------------------
 #

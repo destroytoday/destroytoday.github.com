@@ -755,9 +755,74 @@ button.dsq-button, button.dsq-button-small
                 
                     &:hover
                         color: $link-hover-color
-                
+        
+        .blog-buttons
             .twitter-follow
+                +float-left
+                background: url(/assets/site/twitter-follow-button.png)
+                overflow: hidden
+                width: 61px
                 height: 20px
+            
+            .subscribe-button
+                +float-left
+                +cursor-hand
+                +transparent-image("/assets/site/button-sprites.png", 86px, 20px)
+                background-position: 0 0
+                position: relative
+                margin-left: 4px
+                
+                a
+                    position: absolute
+                    width: 86px
+                    height: 20px
+                    z-index: 999
+                
+                &:hover
+                    background-position: 0 -25px
+                    
+                &:active, &:focus
+                    background-position: 0 -50px
+            
+            .grid-button
+                +float-left
+                +cursor-hand
+                +transparent-image("/assets/site/button-sprites.png", 22px, 20px)
+                background-position: 0 -75px
+                position: relative
+                margin-left: 4px
+                
+                a
+                    position: absolute
+                    width: 22px
+                    height: 20px
+                    z-index: 999
+                
+                &:hover
+                    background-position: 0 -100px
+                    
+                &:active, &:focus
+                    background-position: 0 -125px
+                    
+            .list-button
+                +float-left
+                +cursor-hand
+                +transparent-image("/assets/site/button-sprites.png", 22px, 20px)
+                background-position: -27px -75px
+                position: relative
+                margin-left: 4px
+                
+                a
+                    position: absolute
+                    width: 22px
+                    height: 20px
+                    z-index: 999
+                
+                &:hover
+                    background-position: -27px -100px
+                    
+                &:active, &:focus
+                    background-position: -27px -125px
                         
     .post
         hr
