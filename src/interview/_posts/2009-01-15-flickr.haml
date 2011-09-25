@@ -1,0 +1,47 @@
+---
+layout: interview
+title: Flickr interview
+listname: Flickr Dev Blog
+category: interview
+type: text
+---
+%h2 Flickr Developer Blog - 5 Questions for Jonnie Hallman
+
+.metadata.date {{ page.date | date: "%m.%d.%y" }}
+
+:maruku
+  *by Kellan Elliott-McCrea*
+  
+  If you reach way back into the dusty, distant corners of your mind, you might remember 2008. Its fading but there. And back in 2008, Jonnie Hallman was tapped as our next [5 questions](http://code.flickr.com/blog/tag/5questions/) interviewee. And what better way to kick off 2009, then with these great answers.
+
+  [Jonnie Hallman](http://www.flickr.com/photos/jonnie_hallman/) has built a cult following around his award winning desktop app, [DestroyFlickr](/folio/destroyflickr): "alternative view of Flickr". He also recently turned his creative/destructive eye towards [Twitter](http://twitter.com), with [DestroyTwitter](/folio/destroytwitter). Download them, taken for a spin, come back with your understanding altered.
+
+  On a sad note, Jonnie tapped [Jonathan Harris](http://www.number27.org/) as the next link in the interview chain, but I was totally unable to get in touch with him, so we'll be kicking off a new chain soon.
+
+  But onward!
+
+  ### 1. What are you currently building that integrates with Flickr, or a past favorite that you think is cool, neat, popular and worth telling folks about? Or both.
+
+  **Jonnie:** I've spent the past year or so working on an [Adobe AIR](http://www.adobe.com/devnet/air/) app called [DestroyFlickr](/folio/destroyflickr). It takes an alternative approach to viewing Flickr content, focusing on the UI and its relationship to the photos. It actually began as a first-time experiment with both AIR and APIs in general. Prior to [DestroyFlickr](/folio/destroyflickr), I only had experience with programming websites, but quickly realized how much I prefer developing software---I like the idea of consistently improving a single project by adding new features and fixing bugs. The app uses a system of "workspaces" and "canvases" to organize the environment. Each user/contact has his/her own workspace with four canvases---"profile", "photos", "photo" and "contacts". A user can switch between canvases easily and return to previous ones without reloading them. 
+
+  In the beginning, I focused on features that felt obvious to me: a dark environment that's easy on the eyes and beneficial to the photographs, the ability to flip through pages of photos in a matter of seconds, and the option to see a photo at a larger resolution without reloading it altogether. About six months into development, when [DestroyFlickr](/folio/destroyflickr) started to get serious, I began implementing features that would really improve the average user's workflow: the ability to present fullscreen, drag and drop downloading and uploading, and one-click download-all for easy backup. I originally abandoned [DestroyFlickr](/folio/destroyflickr) after a few months because the only people using it were a handful of my friends who I actually had to persuade to use it. Learning of the [Adobe Design Achievement Awards](http://www.adobe.com/education/adaa/) competition really saved it. I can't thank them enough for all the attention [DestroyFlickr](/folio/destroyflickr) has gotten since. It went from 28 users to over 6,000 in a little over a month. Now, it's at about 7,500 and still going strong. 
+
+  ### 2. What are the best tricks or tips you've learned working with the Flickr API?
+
+  **Jonnie:** I think the most important thing to do before starting any Flickr project is to write a very simple and robust wrapper for calling methods. I use a "Method" class that has a single static function, "call", which handles everything and returns a loader. By setting up an adaptive system, I was able to avoid hundreds of lines of redundant code. Regarding specific methods, the [flickr.photos.search](http://www.flickr.com/services/api/flickr.photos.search.html) is certainly the APIs best kept secret. I've found it to be extremely useful on a number of levels and really wish the API had more methods like it.
+
+  ### 3. As a Flickr developer what would you like to see Flickr do more of and why?
+
+  **Jonnie:** I'd like to see more parameters and methods for groups and contacts. I know contacts is a touchy subject since you run the risk of apps that add contacts by the thousands, but I think Flickr's been on the ball with filtering out malicious keys. The majority of requests I get from users ask for features that can't be written because the API is a bit limited in those parts. Overall, I find the API to be extremely generous, but there are a few essential areas that aren't as open as others. Specifically, a parameter that's missing is the number of times a photo has been called someone's favorite. I'd also really like to be able to retrieve my API key stats. 
+
+  ### 4. What excites you about Flickr and hacking? What do you think you'll build next or would like someone else to build so you don't have to?
+
+  **Jonnie:** The endless possibilities excite me. Flickr provides such a cohesive and substantial API with both a testing ground and stat tracker. Regarding what's next, I'm going to continue adding onto DestroyFlickr between work and school, so anything new will be piled on top. I have plans of adding a workspace for groups and possibly a canvas for sets, but I need to approach both with caution and make sure I have a solid plan before I start any writing. I thought about making a separate uploader or backup app, but I think I'd rather make DestroyFlickr an all-in-one.
+
+  ### 5. Besides your own, what Flickr projects and hacks do you use on a regular basis? Who should we interview next?
+
+  **Jonnie:** Prior to DestroyFlickr, I tried out just about every Flickr app listed on the site just to see what's possible. What caught my eye, though dormant for about two years now, is [Jonathan Harris' Time Capsule](http://timecapsule.yahoo.com/capsule.php). I'd love to see what he has to say about the API as it is now and how he'd improve upon it.
+
+  ### Bonus question: what's up with the name "DestroyFlickr"?
+
+  **Jonnie:** DestroyFlickr's name is based off my mantra, "Destroy Today," meaning to make the most of each day by destroying it. I see destruction as a form of creation. DestroyFlickr is not out to literally destroy Flickr, but rather develop upon it and take advantage of what Flickr provides.
