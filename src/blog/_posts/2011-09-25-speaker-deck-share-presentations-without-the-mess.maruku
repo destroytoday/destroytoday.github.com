@@ -1,0 +1,16 @@
+---
+layout: blog-post
+title: Speaker Deck - share presentations without the mess
+shortname: Speaker Deck - share presentations without the mess
+date: 2011-09-25 15:33:51
+category: blog
+tags: [Link, Service, Web]
+thumbnail: 
+  image: speaker-deck-share-presentations-without-the-mess-thumb.png
+  colors: ['FEFEFE', '2E9C6E', '1E1D1E']
+---
+[speaker-deck]: http://speakerdeck.com
+
+After [speaking at Flash and The City](http://speakerdeck.com/u/destroytoday/p/one-man-dev-team-fatc-2011) this past June, I had a hard time finding an accurate and easy-to-use service for hosting my slides. I tried [SlideShare](http://www.slideshare.net/) and [Scribd](http://www.scribd.com/), but both butchered the embedded fonts. I just recently discovered [Speaker Deck][speaker-deck] while checking out the slides from [Zach Holman's](http://zachholman.com) [How Github Uses Github to Build Github talk](http://zachholman.com/talk/how-github-uses-github-to-build-github). After receiving an invite and trying it out for myself, I must say I **love** this service. It processed my slides verbatim and did so with such simplicity, which is their main selling point. So far, my only gripe is that it only supports PDFs, no Keynote yet, but I'm sure that's on the backlog. [Check it out][speaker-deck] and sign up for an invite.
+
+<script src="http://speakerdeck.com/embed/4d0bcd025753086fc2000002.js?size=preview"> </script>

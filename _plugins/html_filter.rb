@@ -22,7 +22,8 @@ module Jekyll
     end
     
     def open_external_links_in_new_window(input)
-      newinput = input.gsub(/<a(.*) href=(?:'|")(http[^'"]+)(?:'|")/, "<a\\1 href=\"\\2\" target=\"_blank\"")
+      newinput = input.gsub(/<a([a-z0-9\-]+="[^"]+")* href="(http[^"]+)"/, "<a\\1 href=\"\\2\" target=\"_blank\"")
+      newinput.gsub!(/<a([a-z0-9\-]+='[^']+')* href='(http[^']+)'/, "<a\\1 href=\"\\2\" target=\"_blank\"")
       newinput
     end
     
