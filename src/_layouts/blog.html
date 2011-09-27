@@ -9,7 +9,6 @@ layout: default
 		<div id="latest-tweet">
 			<a href="http://twitter.com/destroytoday"><img src="/assets/site/twitter_avatar.jpg" width="32" height="32" alt="@destroytoday" /></a>
 			<p></p>
-			<div class="spacer-3"></div>
 		</div>
 	  <div class="blog-buttons">
 	    <div class="twitter-follow">
@@ -19,7 +18,7 @@ layout: default
 	      <a href="{{ site.feed }}" onclick="window.open(this.href); return false;"></a>
 	    </div>
 	  </div>
-	  <div class="spacer-3"></div>
+	  <div class="spacer-2"></div>
 		<div id="related-posts">
 		  {% if paginator.posts %}
 		    {% capture next_page_post %}
@@ -53,11 +52,4 @@ layout: default
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
+<script type="text/javascript" async="true" src="http://platform.twitter.com/widgets.js"></script>
