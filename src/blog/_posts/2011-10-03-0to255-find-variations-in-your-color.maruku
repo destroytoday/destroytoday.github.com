@@ -1,0 +1,16 @@
+---
+layout: blog-post
+title: 0to255 - find variations in your color
+shortname: 0to255
+date: 2011-10-03 10:34:55
+category: blog
+tags: [Link, Service, Web]
+thumbnail: 
+  image: 0to255-find-variations-in-your-color-thumb.png
+  colors: ['FF0099', 'FFFFFF', 'FF99D6']
+---
+[0to255]: http://0to255.com
+
+[![0to255](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.png)][0to255]
+
+I've been experimenting with Rails lately, casually developing a color-centric web app in the after hours. I often brainstorm with my friend and fellow super-burrito-lover, [Jungho](http://transience.is/), and he pointed me to this color tool he swears by, [0to255][0to255]. I can't believe I didn't know about this earlier! I consistently find myself in Apple's sub-par color picker, sliding the brightness up and down to find highlights and shadows, but I never feel confident in its results. Most of the time, the color picker adapts its hue to normalize the brightness when I return to readjust it. 0to255 addresses all of my qualms, providing a white-to-black fade of any color, with a dead-simple click-to-copy interaction. I also love that its URLs use the hex values ([0to255.com/007998](http://0to255.com/007998) is my jam). A tip of the hat to [Shaun Chapman](http://shaunchapmanblog.com/) for developing and designing such a killer web app. We can never have too many makers out there.
