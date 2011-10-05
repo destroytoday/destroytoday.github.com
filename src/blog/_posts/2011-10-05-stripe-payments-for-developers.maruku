@@ -1,0 +1,18 @@
+---
+layout: blog-post
+title: Stripe - payments for developers
+shortname: Stripe - payments for developers
+date: 2011-10-05 09:54:44
+category: blog
+tags: [Dev, E-Commerce, Link, Service, Web]
+thumbnail: 
+  image: stripe-payments-for-developers-thumb.jpg
+  colors: ['FCFDFD', '7573F3', '262D43']
+---
+[stripe]: http://stripe.com
+
+[![Stripe](/assets/blog/{{ page.slug }}/{{ page.slug }}-header.jpg)][stripe]
+
+The way in which developers can accept payments is always on my mind. It's mainly out of pure curiosity because the thought of charging for apps brings with it a terrifying amount of responsibility---much more than my 9-2am slot for side projects can handle. Nevertheless, I keep my eyes open for services that might help.
+
+Enter [Stripe][stripe], a new service that "makes it easy to start accepting credit cards on the web today." And they're not kidding---you can get started before even seeing a sign up screen. Stripe supports one-time payments, subscriptions, you name it. It also handles customer and credit card storage using a dead-simple API that "gets out of your way." I love it. So much that I'm dying to find a reason to use it. Check it out and give her a whirl.
