@@ -1,0 +1,18 @@
+---
+layout: blog-post
+title: Quiption - your photos, designer postcards
+shortname: Quiption - your photos, designer postcards
+date: 2011-10-06 10:52:46
+category: blog
+tags: [Design, iOS, Link, Photo, Service]
+thumbnail: 
+  image: quiption-your-photos-designer-postcards-thumb.png
+  colors: ['2B2B2B', 'FECA00']
+---
+[quiption]: http://quiption.com
+
+[![Quiption](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.jpg)][quiption]
+
+[Andy Mangold](http://andymangold.com) was originally my intern at a small design studio in Baltimore. Ever since, he's been one of my closest friends. Now, he's living the dream, running a studio with his best friends, aptly named [Friends of The Web](http://friendsoftheweb.com). Today, they launched [Quiption][quiption], an iOS app that lets you take a photo, place designer type on top, and send it as a postcard, all from your iPhone.
+
+I've been beta testing it for a few weeks now and it's honestly one of the smoothest and cleanest apps on my 3GS. Most apps tend to crawl these days, but Quiption flies, all the while looking good. Friends of The Web partnered with [Sincerely](http://sincerely.com/) to make the shoot+print+ship process effortless. For less than the cost of a store-bought postcard, I was able to send one with my own photo to my parents in under a minute. Money. I can't wait to see where Quiption goes from here.
