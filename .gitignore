@@ -1,5 +1,7 @@
 .DS_Store
 .sass-cache/
+.idea/
+*.iml
 design
 bin
 site

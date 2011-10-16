@@ -1,0 +1,20 @@
+---
+layout: blog-post
+title: Present web work with browser-agnostic chrome
+shortname: Browser-agnostic chrome
+date: 2011-10-15 22:20:07
+category: blog
+tags: [App, Link, Resource, Web]
+thumbnail: 
+  image: browser-agnostic-chrome-thumb.png
+  colors: ['414246', 'D4D4D4', 'FAFAFA']
+---
+[psd]: http://www.premiumpixels.com/freebies/simple-browser-surround-psd/
+
+[![Premium Pixels](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.jpg)][psd]
+
+If you have any web work in your portfolio, I'm sure you've come across this scenario at least once: You need to update all of your images not because the content changed, but because the browser in the screenshot is out-dated. No one wants Netscape Communicator in their 2011 portfolio shots---maybe just me because NC is the bomb-diggity. You can easily avoid this situation by making the window chrome browser-agnostic. I first noticed this trick on [Dan Mall's website](http://danielmall.com/work/typedia/). Dan is so baller, he even uses a device-agnostic shell for [his mobile work](http://danielmall.com/work/extra/).
+
+Today, my buddy [Chris Jennings](http://twitter.com/ckj) at [Disqus](http://disqus.com) tweeted [this gem][psd] by [Orman Clark of Premium Pixels](http://premiumpixels.com). It's a PSD of browser-agnostic window chrome that can be used for displaying your web work---perfect. It's simple, easy, and subtle enough that it keeps the focus on your work.
+
+Since we're on the topic of capturing web work, I should also make you aware of [Paparazzi](http://derailer.org/paparazzi/), a terrific little OSX app that can save an entire web page as a PNG, PDF, or TIFF. It can also crop or scale a page to a given set of dimensions. Paparazzi combined with Premium Pixel's PSD makes the perfect duo. I made the dizzying screenshot above using them and it was easy as pie. Now someone just needs to write an app that automatically adds the chrome to the screenshot.
