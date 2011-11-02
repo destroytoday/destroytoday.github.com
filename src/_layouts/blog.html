@@ -7,10 +7,17 @@ layout: default
 	</div>
 	<div id="sidebar" class="grid-1">
 		<div id="latest-tweet">
-			<a href="http://twitter.com/destroytoday"><img src="/assets/site/twitter_avatar.jpg" width="32" height="32" alt="@destroytoday" /></a>
-			<p></p>
+		  <p class="tweet"></p>
+		  <img id="bubble-arrow" src="/assets/site/tweet-bubble-arrow.png" width="20" height="10" />
+			<div id="avatar">
+			  <a href="http://twitter.com/destroytoday"><img src="/assets/site/twitter_avatar.jpg" width="32" height="32" alt="@destroytoday" /></a>
+			  <div class="metadata">
+			    <a class="username" href="http://twitter.com/destroytoday">destroytoday</a>
+			    <p class="timestamp"> </p>
+			  </div>
+			</div>
 		</div>
-	  <div class="blog-buttons">
+	  <!--<div class="blog-buttons">
 	    <div class="twitter-follow">
 	      <a href="http://twitter.com/destroytoday" class="twitter-follow-button" data-show-count="false"></a>
 	    </div>
@@ -18,7 +25,7 @@ layout: default
 	      <a href="{{ site.feed }}" onclick="window.open(this.href); return false;"></a>
 	    </div>
 	  </div>
-	  <div class="spacer-2"></div>
+	  <div class="spacer-2"></div>-->
 		<div id="related-posts">
 		  {% if paginator.posts %}
 		    {% capture next_page_post %}

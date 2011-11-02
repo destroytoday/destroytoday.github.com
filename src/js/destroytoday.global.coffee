@@ -49,9 +49,10 @@ linkify = (text) ->
     
 getLatestTweet = ->
     latest_tweet = $.cookie('destroytoday-latest-tweet')
+    latest_tweet_timestamp = $.cookie('destroytoday-latest-tweet-timestamp')
 
-    if latest_tweet
-        setLatestTweet latest_tweet
+    if latest_tweet && latest_tweet_timestamp
+        setLatestTweet(latest_tweet, latest_tweet_timestamp)
     else
         $.ajax
           url: "http://twitter.com/statuses/user_timeline/destroytoday.json?count=30"
@@ -59,21 +60,24 @@ getLatestTweet = ->
           success: (data) ->
               $.each data, (key, value) ->
                   if value.text.substring(0, 1) != "@"
-                      tweet = 
-                        linkify(value.text) +
-                        " <a class=\"timestamp\" href=\"http://twitter.com/destroytoday/status/" + value.id_str + "\">" + 
-                        jQuery.timeago(value.created_at).replace(/[\s]+/ig, '&nbsp;') +
-                        "</a>"
+                      tweet = linkify(value.text)
+                      timestamp = value.created_at
+                        # +
+                        #" <a class=\"timestamp\" href=\"http://twitter.com/destroytoday/status/" + value.id_str + "\">" + 
+                        #jQuery.timeago(value.created_at).replace(/[\s]+/ig, '&nbsp;') +
+                        #"</a>"
                     
                       $.cookie 'destroytoday-latest-tweet', tweet
+                      $.cookie 'destroytoday-latest-tweet-timestamp', timestamp
       
-                      setLatestTweet tweet
+                      setLatestTweet tweet, timestamp
    
                       false
                   
-setLatestTweet = (tweet) ->
-    $('#latest-tweet p').html tweet
-    $('#latest-tweet').css 'height', $('#latest-tweet p').height() + 26
+setLatestTweet = (tweet, timestamp) ->
+    $('#latest-tweet p.tweet').html tweet
+    $('#latest-tweet .timestamp').html jQuery.timeago(timestamp)
+    $('#latest-tweet').css 'height', $('#latest-tweet p').height() + 20 + $('#latest-tweet img#bubble-arrow').height() + 8 + $('#latest-tweet #avatar img').height() + 37
 
 #--------------------------------------------------------------------------
 #
