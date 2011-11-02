@@ -9,6 +9,10 @@ thumbnail:
   image: nest-thermostat-thumb.jpg
   colors: ['97FD3D', 'C1BBBC', '010101', '71564A']
 ---
+[nest]: http://nest.com
+
+[![Nest](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.jpg)][nest]
+
 <iframe width="666" height="375" src="http://www.youtube.com/embed/QCJ1PnVlzIE?hd=1" frameborder="0"> </iframe>
 
-I realized recently that I care more and more about household appliances the older I become. To that question, "If your house were burning, which one item would you take with you?", I'd now say my Dyson vacuum. Everything's in the cloud these days, so I no longer need my computer, and my cats dart out the door as soon as it's opened. Getting back to the original purpose of this post, someone decided to reinvent the thermostat. The product is called [Nest](http://nest.com) and it's a beaut. Living in SF, I rarely have to change the thermostat, but when I do, it's a nuisance---even using a "smart" thermostats. Instead of requiring you to explicitly set the wake/sleep time for each and every day, Nest learns how you live. Whenever you change it, Nest takes note. As a renter, I don't see myself picking one up any time soon, but I'd love to see it in person.
+I realized recently that I care more and more about household appliances the older I become. To that question, "If your house were burning, which one item would you take with you?", I'd now say my Dyson vacuum. Everything's in the cloud these days, so I no longer need my computer, and my cats dart out the door as soon as it's opened. Getting back to the original purpose of this post, someone decided to reinvent the thermostat. The product is called [Nest][nest] and it's a beaut. Living in SF, I rarely have to change the thermostat, but when I do, it's a nuisance---even using a "smart" thermostats. Instead of requiring you to explicitly set the wake/sleep time for each and every day, Nest learns how you live. Whenever you change it, Nest takes note. As a renter, I don't see myself picking one up any time soon, but I'd love to see it in person.

@@ -9,6 +9,14 @@ thumbnail:
   image: no-handed-bike-moves-thumb.jpg
   colors: ['323C25', 'B5B8A9', 'EEFF13', '727D4A']
 ---
+[bikemoves]: http://vimeo.com/29106106
+
+[![{{ page.shortname }}](/assets/blog/{{ page.slug }}/{{ page.slug }}-zombie.jpg)][bikemoves]
+
+[![{{ page.shortname }}](/assets/blog/{{ page.slug }}/{{ page.slug }}-cello.jpg)][bikemoves]
+
+[![{{ page.shortname }}](/assets/blog/{{ page.slug }}/{{ page.slug }}-swan.jpg)][bikemoves]
+
 <iframe src="http://player.vimeo.com/video/29106106" width="665" height="374" frameborder="0"> </iframe>
 
-I intercepted this video from a [Twitter conversation](http://twitter.com/#!/laurenpadams/status/125585872082046977) between two Baltimore friends. It's a hilarious and fun music video for Martin Brooks' song "Golden Tree." After watching it, I'm now dying to go home to rural Pennsylvania and ride my bike past all the cornfields. I haven't tried riding no handed since I was a kid, but I imagine I could add a moves to the list.
+I intercepted this video from a [Twitter conversation](http://twitter.com/#!/laurenpadams/status/125585872082046977) between two Baltimore friends. It's a hilarious and fun [music video][bikemoves] for Martin Brooks' song "Golden Tree." After watching it, I'm now dying to go home to rural Pennsylvania and ride my bike past all the cornfields. I haven't tried riding no handed since I was a kid, but I imagine I could add a moves to the list.
