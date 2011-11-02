@@ -222,10 +222,11 @@ $(document).ready ->
     #--------------------------------------
     #  Twitter Follow Button
     #--------------------------------------
-    
-    if $('.twitter-follow-button').length || $('.twitter-share-button').length
-        $(".twitter-follow-button").attr('data-text-color', rgb2hex($("body").css('color')))
-        $(".twitter-follow-button").attr('data-link-color', rgb2hex($(".twitter-follow-button").css('color')))
+
+    # $('.twitter-follow-button').length || 
+    if $('.twitter-share-button').length
+        #$(".twitter-follow-button").attr('data-text-color', rgb2hex($("body").css('color')))
+        #$(".twitter-follow-button").attr('data-link-color', rgb2hex($(".twitter-follow-button").css('color')))
         twitterWidgets = document.createElement 'script'
         twitterWidgets.type = 'text/javascript'
         twitterWidgets.async = true
