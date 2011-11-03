@@ -19,4 +19,4 @@ Gimme Bar is still in beta, but **you can sign up without an invite for today on
 
 [![Gimme Bar](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.jpg)][gimmebar]
 
-<iframe src="http://player.vimeo.com/video/28127437?title=0&amp;byline=0&amp;portrait=0&amp;color=007998" width="665" height="374" frameborder="0"> </iframe>
+<iframe src="http://player.vimeo.com/video/28127437?title=0&amp;byline=0&amp;portrait=0&amp;color=007998" width="100%" height="374" frameborder="0"> </iframe>

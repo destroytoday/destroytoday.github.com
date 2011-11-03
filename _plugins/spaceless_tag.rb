@@ -16,8 +16,8 @@ module Jekyll
       array.each {|value|
         if value.kind_of?(Array)
           output << remove_space(value)
-        else
-          output << value.gsub(/^[\n\r\t ]+$/, '').gsub(/[\n\r]{2,}/, "\n")
+        elsif value.respond_to?('gsub')
+          output << value.gsub(/[\n\r\t ]+/, '')
         end
       }
       

@@ -16,4 +16,4 @@ thumbnail:
 [![Cycling Classic](/assets/blog/{{ page.slug }}/{{ page.slug }}-bike.jpg)][cycling-classic]
 [![Cycling Classic](/assets/blog/{{ page.slug }}/{{ page.slug }}-racing.jpg)][cycling-classic]
 
-<iframe src="http://player.vimeo.com/video/28425601?title=0&amp;byline=0&amp;portrait=0&amp;color=007998" width="665" height="374" frameborder="0"> </iframe>
+<iframe src="http://player.vimeo.com/video/28425601?title=0&amp;byline=0&amp;portrait=0&amp;color=007998" width="100%" height="374" frameborder="0"> </iframe>

@@ -1,5 +1,14 @@
 {% if page.style %}
-  <link href="/css{% if page.id %}{{ page.id }}{% elsif page.title %}/{{page.title | downcase}}{% endif %}.css" rel="stylesheet" type="text/css" />
+  {% capture css %}{% spaceless %}
+      {% if page.style != true %}
+        /{{ page.style }}
+      {% elsif page.id %}
+        {{ page.id }}
+      {% elsif page.title %}
+        /{{page.title | downcase }}
+      {% endif %}
+  {% endspaceless %}{% endcapture %}
+  <link href="/css{{ css }}.css" rel="stylesheet" type="text/css" />
 {% else %}
   <link href="/css/screen.css" rel="stylesheet" type="text/css" />
 {% endif %}
