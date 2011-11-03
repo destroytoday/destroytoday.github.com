@@ -9,3 +9,4 @@ env:
   staging: http://staging.destroytoday.com
   production: http://destroytoday.com
 feed: http://feeds.feedburner.com/destroytoday
+awesome: yup
