@@ -84,42 +84,26 @@ $readable-size: 0.75em
 //
 //--------------------------------------------------------------------------
 
+html, body
+    overflow-x: hidden
+    margin: 0px
+    padding: 0px
+
 body
     font:
         family: $text-font
         size: 1em
         weight: $text-weight
     color: $text-color
-    
+        
     @if $background != $background-color
         background: $background-color $background
     @else
         background-color: $background-color
     
-@media screen and (max-width: 732px)
-    body
-        margin: 0px 33px
-        
-    img
-        height: auto
-        
-    h2
-        font-size: 2em
-        
-@media screen and (min-width: 733px) and (max-width: 960px)
-    body
-        margin: 0px
-        
-    h2
-        font-size: 3em
-        
-@media screen and (min-width: 961px)
-    body
-        margin: 0px
-        
-    h2
-        font-size: 3em
-    
+h2
+    font-size: 3em
+  
 ::selection
     color: $selection-text-color
     background: $selection-background-color
@@ -274,79 +258,75 @@ textarea
     &:hover
         text-decoration: none
         
-#site
-    position: relative
-    width: 100%
-    
-    .direction
-        position: fixed
-        top: 250px
-    
-        .arrow_wrapper
-            margin-top: -0.45em
-            
-            .arrow
-                +transition-property(color)
-                +transition-duration(0.35s)
-            
-                font:
-                    family: "Lucida Grande", "Museo Slab 700", Helvetica, sans-serif
-                    size: 4em
-                    weight: 700
-                color: $arrow-color
+.direction
+    position: fixed
+    top: 250px
 
-        .title_wrapper
-            overflow: hidden
-            width: 1px
-            visibility: hidden
+    .arrow_wrapper
+        margin-top: -0.45em
         
-            .title
-                @extend .vertically_centered
-                +transition-property(color)
-                +transition-duration(0.35s)
-                font-size: 0.75em
-                line-height: 1.5em
-                white-space: nowrap
-                height: 64px
-                color: $background-color
-              
-        a
-            position: absolute
-            text-decoration: none
-            width: 100%
+        .arrow
+            +transition-property(color)
+            +transition-duration(0.35s)
+        
+            font:
+                family: "Lucida Grande", "Museo Slab 700", Helvetica, sans-serif
+                size: 4em
+                weight: 700
+            color: $arrow-color
+
+    .title_wrapper
+        overflow: hidden
+        width: 1px
+        visibility: hidden
+    
+        .title
+            @extend .vertically_centered
+            +transition-property(color)
+            +transition-duration(0.35s)
+            font-size: 0.75em
+            line-height: 1.5em
+            white-space: nowrap
             height: 64px
-            
-        &:hover .arrow
-            color: $arrow-hover-color
+            color: $background-color
+          
+    a
+        position: absolute
+        text-decoration: none
+        width: 100%
+        height: 64px
+        
+    &:hover .arrow
+        color: $arrow-hover-color
 
-        &:hover .title
-            color: $arrow-hover-color
-        
-    #prev
-        .arrow_wrapper
-            +float-right
-            padding-left: 10px
-            
-        .title_wrapper
-            +float-left
-        
-        left: 10px
+    &:hover .title
+        color: $arrow-hover-color
     
-    #next
-        .arrow_wrapper
-            +float-left
-            padding-right: 10px
-            
-        .title_wrapper
-            +float-right
+#prev
+    .arrow_wrapper
+        +float-right
+        padding-left: 10px
         
-        right: 10px
+    .title_wrapper
+        +float-left
+    
+    left: 10px
+
+#next
+    .arrow_wrapper
+        +float-left
+        padding-right: 10px
+        
+    .title_wrapper
+        +float-right
+    
+    right: 10px
     
 #page
     @media screen and (max-width: 732px)
         width: 100%
         margin: 0px
-        
+
     @media screen and (min-width: 733px) and (max-width: 960px)
         width: 666px
         margin: 0px auto 0px auto
@@ -377,7 +357,13 @@ textarea
             a.today
                 margin-left: 0.0625em
                 color: $identity-today-color
-        
+            
+            a#destroy, a#today
+                display: inline
+                
+            a#destroy-abbr, a#today-abbr
+                display: none
+                
     #navigation
         +float-right
         font-family: $nav-font
@@ -525,3 +511,33 @@ textarea
 #content
     clear: both
     margin: 30px 0px 40px 0px
+
+@media screen and (max-width: 480px)
+    body
+        margin: 0px 33px
+        
+    img
+        height: auto
+        
+    #top #identity h1
+        a#destroy-abbr, a#today-abbr
+            display: inline
+        
+        a#destroy, a#today
+            display: none
+        
+    h2
+        font-size: 1.5em
+    
+@media screen and (min-width: 481px) and (max-width: 732px)
+    body
+        margin: 0px 33px
+        
+    img
+        height: auto
+        
+    h2
+        font-size: 2em
+        
+//@media screen and (min-width: 733px) and (max-width: 960px)
+//@media screen and (min-width: 961px)

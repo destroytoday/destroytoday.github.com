@@ -16,20 +16,17 @@
 	</head>
 	
 	<body>
-	  <div id="site">
-  		<div id="page">
-  			<div id="top">
-  			  {% include identity.html %}
-  				{% include global-navigation.html %}
-  			</div>
-  			<div id="content">
-  				{{content}}
-  			</div>
-  			{% include footer.html %}
-  		</div>
-  		{% include project-direction.html %}
-  	</div>
-		
+		<div id="page">
+			<div id="top">
+			  {% include identity.html %}
+				{% include global-navigation.html %}
+			</div>
+			<div id="content">
+				{{content}}
+			</div>
+			{% include footer.html %}
+		</div>
+		<!--{% include project-direction.html %}-->
 		{% include external-js.html %}
 	</body>
 </html>
