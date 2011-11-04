@@ -2,22 +2,6 @@
 ---
 @import "master"
 
-@media screen and (max-width: 960px)
-    #blog
-        #primary
-            width: 100%
-
-        #sidebar
-            display: none
-
-@media screen and (min-width: 961px)
-    #blog
-        #primary
-            @extend .grid-3
-        
-        #sidebar
-            display: block
-    
 #blog
     ol.blog-list
         margin: 12px 0px 33px 0px
@@ -206,6 +190,10 @@
             
         iframe
             @extend p
+            
+        iframe.video
+            width: 100%
+            height: 375px
     
         h2
             margin-bottom: 8px
@@ -246,3 +234,35 @@
                 background: url(/assets/site/twitter-share-button.png) no-repeat
                 width: 110px
                 margin-right: -14px
+                
+@media screen and (max-width: 320px)
+    #blog
+        #primary
+            .post
+                iframe.video
+                    width: 100%
+                    height: 144px
+                    
+@media screen and (min-width: 321px) and (max-width: 480px)
+    #blog
+        #primary
+            .post
+                iframe.video
+                    width: 100%
+                    height: 234px                    
+
+@media screen and (max-width: 960px)
+    #blog
+        #primary
+            width: 100%
+
+        #sidebar
+            display: none
+
+@media screen and (min-width: 961px)
+    #blog
+        #primary
+            @extend .grid-3
+        
+        #sidebar
+            display: block                
