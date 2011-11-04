@@ -322,19 +322,6 @@ textarea
     
     right: 10px
     
-#page
-    @media screen and (max-width: 732px)
-        width: 100%
-        margin: 0px
-
-    @media screen and (min-width: 733px) and (max-width: 960px)
-        width: 666px
-        margin: 0px auto 0px auto
-        
-    @media screen and (min-width: 961px)
-        width: 900px
-        margin: 0px auto 0px auto
-    
 #top
     clear: both
     height: 42px
@@ -540,9 +527,20 @@ textarea
     h2
         font-size: 2em
         
-//@media screen and (min-width: 733px) and (max-width: 960px)
-//@media screen and (min-width: 961px)
+    #page
+        width: 433px
+        margin: 0px auto 0px auto
 
+@media screen and (min-width: 733px) and (max-width: 960px)
+    #page
+        width: 666px
+        margin: 0px auto 0px auto
+    
+@media screen and (min-width: 961px)
+    #page
+        width: 900px
+        margin: 0px auto 0px auto
+        
 @media only screen and (min-device-width: 320px) and (max-device-width: 1024px)
     html
         -webkit-text-size-adjust: none

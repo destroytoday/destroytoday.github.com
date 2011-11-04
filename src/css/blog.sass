@@ -235,34 +235,38 @@
                 width: 110px
                 margin-right: -14px
                 
-@media screen and (max-width: 320px)
-    #blog
+    @media screen and (max-width: 320px)
         #primary
             .post
                 iframe.video
                     width: 100%
                     height: 144px
-                    
-@media screen and (min-width: 321px) and (max-width: 480px)
-    #blog
+                
+    @media screen and (min-width: 321px) and (max-width: 480px)
         #primary
             .post
                 iframe.video
                     width: 100%
-                    height: 234px                    
+                    height: 234px     
+                
+    @media screen and (min-width: 481px) and (max-width: 732px)
+        #primary
+            .post
+                iframe.video
+                    width: 100%
+                    height: 260px
 
-@media screen and (max-width: 960px)
-    #blog
+    @media screen and (max-width: 960px)
         #primary
             width: 100%
 
         #sidebar
             display: none
 
-@media screen and (min-width: 961px)
-    #blog
+    @media screen and (min-width: 961px)
         #primary
             @extend .grid-3
-        
+    
         #sidebar
+            @extend .grid-1
             display: block                

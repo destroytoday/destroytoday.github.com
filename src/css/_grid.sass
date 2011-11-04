@@ -1,14 +1,11 @@
-.grid-1,
-.grid-2,
-.grid-3
-    display: inline
-    float: left
+.grid-item, .grid-1, .grid-2, .grid-3
+    +float-left
     position: relative
     margin-left: 16px
     margin-right: 17px
-    
+
 .grid-4
-    @extend .grid-3
+    @extend .grid-item
     @extend .alpha
     @extend .omega
     
@@ -36,14 +33,24 @@
 .grid-4 
     width: 900px
     
+.stretch-right
+    @extend .grid-item
+    @extend .omega
+    width: 100% !important
+    
+.stretch-left
+    @extend .grid-item
+    @extend .alpha
+    width: 100% !important
+    
 .container
     clear: both
 
-    div:first-child
-        margin-left: 0px
+    &div:first-child
+        margin-left: 0px !important
         
-    div:last-child
-        margin-right: 0px
+    &div:last-child
+        margin-right: 0px !important
 
 .spacer-1
     +clearfix

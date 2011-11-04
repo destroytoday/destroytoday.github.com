@@ -1,10 +1,10 @@
 {% include doctype.html %}
 <html>
 	<head>
-		<title>DestroyToday / {{page.title}}</title>
+		<title>DestroyToday / {{ page.title }}</title>
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
 		
-		<link type="application/rss+xml" rel="alternate" title="DestroyToday" href="{{site.feed}}" />
+		<link type="application/rss+xml" rel="alternate" title="DestroyToday" href="{{ site.feed }}" />
 		
 		{% include fontdeck-style.html %}
 		{% include style.html %}
@@ -22,7 +22,7 @@
 				{% include global-navigation.html %}
 			</div>
 			<div id="content">
-				{{content}}
+				{{ content }}
 			</div>
 			{% include footer.html %}
 		</div>

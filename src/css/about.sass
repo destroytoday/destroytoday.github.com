@@ -9,3 +9,30 @@
 
         .pictos
             color: #666
+            
+    #profile
+        @extend .grid-1
+        
+    #description
+        @extend .grid-3
+        
+    @media screen and (max-width: 480px), screen and (min-width: 481px) and (max-width: 732px)
+        #profile
+            float: none
+            width: 100%
+            height: auto
+            
+        #description
+            float: none
+            width: 100%
+    
+    @media screen and (min-width: 733px) and (max-width: 960px)
+        #description
+            width: 433px !important
+    
+    @media screen and (min-width: 961px)
+        #profile
+            width: 433px !important
+            
+        #description
+            width: 433px !important

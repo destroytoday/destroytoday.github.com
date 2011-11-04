@@ -13,3 +13,14 @@
         ul li
             +float-left
             margin: 0px 4px 0px 0px
+            
+    #description
+        @extend .grid-1
+        
+    #info
+        @extend .grid-1
+        
+    @media screen and (max-width: 480px)
+        #description, #info
+            width: 100%
+            float: none

@@ -6,7 +6,7 @@ style: blog
 	<div id="primary">
 		{{content}}
 	</div>
-	<div id="sidebar" class="grid-1">
+	<div id="sidebar">
 		<div id="latest-tweet">
 		  <p class="tweet"></p>
 		  <img id="bubble-arrow" src="/assets/site/tweet-bubble-arrow.png" width="20" height="10" />
@@ -36,7 +36,7 @@ style: blog
 		        0
 		      {% endif %}
 		    {% endcapture %}
-		    {% for post in site.categories.blog limit:10 offset:next_page_post %}
+		    {% for post in site.categories.blog limit:9 offset:next_page_post %}
 			    {% include blog-sidebar-thumb.html %}
 			    <div class="spacer-2"></div>
   			{% endfor %}
