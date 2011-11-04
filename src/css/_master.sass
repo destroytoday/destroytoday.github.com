@@ -408,6 +408,18 @@ textarea
         color: $footer-color
         margin: 40px auto 20px auto
 
+.spacer-1-2
+    @extend .spacer-2
+    
+.spacer-2-2
+    @extend .spacer-2
+    
+.spacer-3-2
+    @extend .spacer-2
+    
+.spacer-4-2
+    @extend .spacer-2
+
 .thumb
     @extend .grid-1
     +float-left
@@ -516,6 +528,16 @@ textarea
         
     h2
         font-size: 1.5em
+        
+    .thumb-2-0, .thumb-2-1, .thumb-3-0, .thumb-3-1, .thumb-3-2, .thumb-4-0, .thumb-4-1, .thumb-4-2, .thumb-4-3
+        margin-left: 0px
+        margin-right: 0px
+        
+    .spacer-1-2
+        display: block
+    
+    .spacer-2-2, .spacer-3-2, .spacer-4-2
+        display: none
     
 @media screen and (min-width: 481px) and (max-width: 732px)
     body
@@ -530,16 +552,64 @@ textarea
     #page
         width: 433px
         margin: 0px auto 0px auto
-
+        
+    .thumb-3-0, .thumb-3-1, .thumb-3-2, .thumb-4-0, .thumb-4-1, .thumb-4-2, .thumb-4-3
+        margin-left: 16px
+        margin-right: 17px
+        
+    .thumb-2-0
+        margin-left: 0px
+        
+    .thumb-2-1
+        margin-right: 0px
+        
+    .spacer-2-2
+        display: block
+    
+    .spacer-1-2, .spacer-3-2, .spacer-4-2
+        display: none
+        
 @media screen and (min-width: 733px) and (max-width: 960px)
     #page
         width: 666px
         margin: 0px auto 0px auto
     
+    .thumb-2-0, .thumb-2-1, .thumb-3-1, .thumb-4-0, .thumb-4-1, .thumb-4-2, .thumb-4-3
+        margin-left: 16px
+        margin-right: 17px
+    
+    .thumb-3-0
+        margin-left: 0px
+        
+    .thumb-3-2
+        margin-right: 0px
+        
+    .spacer-3-2
+        display: block
+    
+    .spacer-1-2, .spacer-2-2, .spacer-4-2
+        display: none
+        
 @media screen and (min-width: 961px)
     #page
         width: 900px
         margin: 0px auto 0px auto
+        
+    .thumb-2-0, .thumb-2-1, .thumb-3-0, .thumb-3-1, .thumb-3-2, .thumb-4-1, .thumb-4-2
+        margin-left: 16px
+        margin-right: 17px
+        
+    .thumb-4-0
+        margin-left: 0px
+        
+    .thumb-4-3
+        margin-right: 0px
+        
+    .spacer-4-2
+        display: block
+    
+    .spacer-1-2, .spacer-2-2, .spacer-3-2
+        display: none
         
 @media only screen and (min-device-width: 320px) and (max-device-width: 1024px)
     html

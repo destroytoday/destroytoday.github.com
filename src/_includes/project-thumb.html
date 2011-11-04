@@ -1,30 +1,30 @@
-<div class="thumb{% if i == '0' %} alpha{% elsif i == '3' %} omega{% endif %}">
-	<a class="hit-area" href="{{project.url}}"></a>
-  <img src="/assets{{project.id}}/{{project.thumbnail.image}}" width="200" height="200" alt="{{project.title}}" />
+<div class="thumb thumb-2-{{ t2 }} thumb-3-{{ t3 }} thumb-4-{{ t4 }}">
+	<a class="hit-area" href="{{ project.url }}"></a>
+  <img src="/assets{{ project.id }}/{{ project.thumbnail.image }}" width="200" height="200" alt="{{ project.title }}" />
 	<div class="hidden-metadata">
-		<div class="title">{{project.title}}</div>
+		<div class="title">{{ project.title }}</div>
 	</div>
 	<div class="color_blocks">
 		{% case project.thumbnail.colors.size %} 
 		{% when 3 %} 
-			<div class="color_block" style="width: 33%; background: #{{project.thumbnail.colors[0]}}"></div>
-			<div class="color_block" style="width: 33%; background: #{{project.thumbnail.colors[1]}}"></div>
-			<div class="color_block" style="width: 34%; background: #{{project.thumbnail.colors[2]}}"></div>
+			<div class="color_block" style="width: 33%; background: #{{ project.thumbnail.colors[0] }}"></div>
+			<div class="color_block" style="width: 33%; background: #{{ project.thumbnail.colors[1] }}"></div>
+			<div class="color_block" style="width: 34%; background: #{{ project.thumbnail.colors[2] }}"></div>
 		{% when 6 %} 
-			<div class="color_block" style="width: 17%; background: #{{project.thumbnail.colors[0]}}"></div>
-			<div class="color_block" style="width: 16%; background: #{{project.thumbnail.colors[1]}}"></div>
-			<div class="color_block" style="width: 17%; background: #{{project.thumbnail.colors[2]}}"></div>
-			<div class="color_block" style="width: 16%; background: #{{project.thumbnail.colors[3]}}"></div>
-			<div class="color_block" style="width: 17%; background: #{{project.thumbnail.colors[4]}}"></div>
-			<div class="color_block" style="width: 17%; background: #{{project.thumbnail.colors[5]}}"></div>
+			<div class="color_block" style="width: 17%; background: #{{ project.thumbnail.colors[0] }}"></div>
+			<div class="color_block" style="width: 16%; background: #{{ project.thumbnail.colors[1] }}"></div>
+			<div class="color_block" style="width: 17%; background: #{{ project.thumbnail.colors[2] }}"></div>
+			<div class="color_block" style="width: 16%; background: #{{ project.thumbnail.colors[3] }}"></div>
+			<div class="color_block" style="width: 17%; background: #{{ project.thumbnail.colors[4] }}"></div>
+			<div class="color_block" style="width: 17%; background: #{{ project.thumbnail.colors[5] }}"></div>
 		{% else %}
 			{% for color in project.thumbnail.colors %}
-				<div class="color_block" style="width: {{100.0 | divided_by:project.thumbnail.colors.size}}%; background: #{{color}}"></div>
+				<div class="color_block" style="width: {{ 100.0 | divided_by:project.thumbnail.colors.size }}%; background: #{{ color }}"></div>
 			{% endfor %}
 		{% endcase %}
 	</div>
 	<div class="metadata">
-		<div class="title"><a href="{{project.url}}">{{project.title}}</a></div>
-		<div class="type">{{project.type}}</div>
+		<div class="title"><a href="{{ project.url }}">{{ project.title }}</a></div>
+		<div class="type">{{ project.type }}</div>
 	</div>
 </div>
