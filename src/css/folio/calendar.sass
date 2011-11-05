@@ -6,5 +6,35 @@ $background: url("/assets/folio/calendar/calendar-background.png") no-repeat cen
 @import "dark"
 
 #calendar
-    #header
-        height: 400px
+    img
+        width: 100%
+        height: auto
+        
+@media screen and (max-width: 480px)
+    body
+        background-position: 50% -75px
+
+    #calendar
+        #header
+            height: 250px
+
+@media screen and (min-width: 481px) and (max-width: 732px)
+    body
+        background-position: 50% -50px
+
+    #calendar
+        #header
+            height: 300px
+    
+@media screen and (min-width: 733px) and (max-width: 960px)
+    body
+        background-position: 50% -25px
+
+    #calendar
+        #header
+            height: 350px
+    
+@media screen and (min-width: 961px)
+    #calendar
+        #header
+            height: 400px

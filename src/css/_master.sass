@@ -381,6 +381,7 @@ textarea
                         text-decoration: none
                         
 #content
+    +clearfix
     min-height: 450px
     
     hr
@@ -393,20 +394,14 @@ textarea
         margin: 16px 0px 0px 0px
         
 #footer
-    +float-left
-    position: relative
-    left: 50%
-
-    #footer-wrapper
-        position: relative
-        left: -50%
-        height: 20px
-        +clearfix
-        font:
-            weight: $footer-weight
-            size: 0.625em
-        color: $footer-color
-        margin: 40px auto 20px auto
+    @extend .center
+    clear: both
+    font-weight: $footer-weight
+    color: $footer-color
+    margin: 40px 0px 20px 0px
+    
+    p
+        font-size: 0.625em
 
 .spacer-1-2
     @extend .spacer-2

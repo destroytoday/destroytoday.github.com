@@ -9,13 +9,27 @@ $nav-color: #C5332E
 
 @import "dark"
 
-#content
-    overflow: visible
-    
 #dwarf
+    img
+        width: 100%
+        height: auto
+        
     .tag
-        margin-top: 33px
+        margin: 0px
 
-    #guides
-        width: 1100px
-        margin-left: -100px
+    .narrow
+        display: none !important
+
+    @media screen and (max-width: 480px)
+        .wide
+            display: none
+    
+        .narrow
+            display: block !important
+    
+    @media screen and (min-width: 481px) and (max-width: 732px)
+        .wide
+            display: none
+    
+        .narrow
+            display: block !important

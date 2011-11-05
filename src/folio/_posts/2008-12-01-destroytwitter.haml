@@ -9,42 +9,44 @@ thumbnail:
 style: true
 ---
 #destroytwitter
-  #header.grid-4
-    %img.checkered{:src => "/assets{{page.id}}/destroytwitter-header.png"}
-  #description.grid-4
+  #header
+    %img.checkered.wide{:src => "/assets{{page.id}}/destroytwitter-header.png"}
+    %img.checkered.narrow{:src => "/assets{{page.id}}/destroytwitter-header-narrow.png"}
+  #description
     :maruku
       I consider Twitter to be a background service, like instant messaging. Because of this, I wrote DestroyTwitter so I could tweet and get back to business without blinking an eye. I got the basics out of the way, then focused on a few of the more unique features, like filters and themes. Within a matter of months, the app took off, reaching an install count in the six figures. It currently sends more than a million tweets a month.
   .spacer-3
-  #links.grid-4.center
+  #links.center
     :maruku
-      [Visit the product](http://destroytwitter.com) + [Download the app](http://destroytoday.com/destroytwitter/releases/prerelease/DestroyTwitter215p2.zip) + [View the source code](https://github.com/destroytoday/destroytwitter)
+      {{ "[Visit the product](http://destroytwitter.com) +" | spaces_to_nbsp }} {{ "[Download the app](http://destroytoday.com/destroytwitter/releases/prerelease/DestroyTwitter215p2.zip) +" | spaces_to_nbsp }} {{ "[View the source code](https://github.com/destroytoday/destroytwitter)" | spaces_to_nbsp }}
   .spacer-1
   .container
-    .grid-2
+    %div
       %img.checkered{:src => "/assets{{page.id}}/destroytwitter-lightweight.png"}
       .tag.center
         :maruku
           Small, lightweight footprint
-    .grid-2
+    .spacer-1.narrow
+    %div
       %img.checkered{:src => "/assets{{page.id}}/destroytwitter-replying.png"}
       .tag.center
         :maruku
           In-context replying
   .spacer-1
   .container
-    .grid-2
+    %div
       %img.checkered{:src => "/assets{{page.id}}/destroytwitter-filters.png"}
       .tag.center
         :maruku
           Filters
-    .grid-2
+    .spacer-1.narrow
+    %div
       %img.checkered{:src => "/assets{{page.id}}/destroytwitter-preferences.png"}
       .tag.center
         :maruku
           Preferences
   .spacer-1
-  .grid-4
-    %img.checkered{:src => "/assets{{page.id}}/destroytwitter-themes.png"}
-    .tag.center
-      :maruku
-        Themes
+  %img.checkered{:src => "/assets{{page.id}}/destroytwitter-themes.png"}
+  .tag.center
+    :maruku
+      Themes

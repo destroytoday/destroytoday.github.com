@@ -9,25 +9,25 @@ thumbnail:
 style: true
 ---
 #calendar
-  #header.grid-4
-  #description.grid-4
+  #header
+  #description
     :maruku
       The calendar screensaver displays the time and date linearly, easing each line into place with every second that passes. Originally an experiment with a Flash-to-screensaver technology, the current version has been rewritten in Objective-C in order to work with the latest Mac OS. The transition to native code was a good idea as it let me add color preferences, which couldn't be done with the previous version's converter.
   .spacer-3
-  #links.grid-4.center
+  #links.center
     :maruku
-      [Download for Mac OS X 10.6](http://download.destroytoday.com/destroytoday_calendar_screensaver_mac_64bit.zip) + [Mac OS X 10.4/10.5](http://download.destroytoday.com/destroytoday_calendar_screensaver_mac_32bit.zip) + [Windows](http://download.destroytoday.com/destroytoday_calendar_screensaver_pc.zip)
+      {{ "[Download for Mac OS X 10.6](http://download.destroytoday.com/destroytoday_calendar_screensaver_mac_64bit.zip) +" | spaces_to_nbsp }} {{ "[Mac OS X 10.4/10.5](http://download.destroytoday.com/destroytoday_calendar_screensaver_mac_32bit.zip) +" | spaces_to_nbsp }} {{ "[Windows](http://download.destroytoday.com/destroytoday_calendar_screensaver_pc.zip)" | spaces_to_nbsp }}
   .spacer-1
-  #swissmiss.grid-4
+  #swissmiss
     %img.checkered{:src => "/assets{{page.id}}/calendar-swissmiss.png"}
   .spacer-1
-  #sky.grid-4
+  #sky
     %img.checkered{:src => "/assets{{page.id}}/calendar-sky.png"}
   .spacer-1
-  #pink.grid-4
+  #pink
     %img.checkered{:src => "/assets{{page.id}}/calendar-pink.png"}
   .spacer-1
-  #preferences.grid-4
+  #preferences
     %img.checkered{:src => "/assets{{page.id}}/calendar-preferences.png"}
     .tag.center
       :maruku
