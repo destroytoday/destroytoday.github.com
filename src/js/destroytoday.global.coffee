@@ -77,7 +77,7 @@ getLatestTweet = ->
 setLatestTweet = (tweet, timestamp) ->
     $('#latest-tweet p.tweet').html tweet
     $('#latest-tweet .timestamp').html jQuery.timeago(timestamp)
-    $('#latest-tweet').css 'height', $('#latest-tweet p').height() + 20 + $('#latest-tweet img#bubble-arrow').height() + 8 + $('#latest-tweet #avatar img').height() + 37
+    #$('#latest-tweet').css 'height', $('#latest-tweet p').height() + 20 + $('#latest-tweet img#bubble-arrow').height() + 8 + $('#latest-tweet #avatar img').height() + 37
 
 #--------------------------------------------------------------------------
 #
@@ -95,11 +95,6 @@ $(document).ready ->
     #--------------------------------------
     #  paging
     #--------------------------------------
-    
-    $(window).resize ->
-        display = if $(window).width() < 1030 then display = 'none' else display = 'block'
-        
-        $('.direction').css('display', display)
     
     # next/prev arrow over
     $('.direction').mouseenter (event) ->
@@ -186,7 +181,8 @@ $(document).ready ->
             $(this).siblings('.play').css 'opacity', 1
 
     if $('#latest-tweet').length > 0
-        t = setTimeout getLatestTweet, 2000
+        #t = setTimeout getLatestTweet, 2000
+        t = getLatestTweet()
     
     ###
     if ($("#latest-flickr"))
