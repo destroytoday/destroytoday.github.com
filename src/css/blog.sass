@@ -8,7 +8,6 @@
         
         li
             +clearfix
-            height: 32px
             margin-bottom: 16px
             
             &:last-child
@@ -18,29 +17,30 @@
                 +float-left
                 margin-right: 12px
             
-            a.title
-                +float-left
-                
-                color: $text-color
-                text-decoration: none
-                
-                &:hover
-                    color: $link-hover-color
-                    text-decoration: none
-                
-            .tags 
-                +float-left
-                font-family: $text-font
-                font-size: 0.75em
-                line-height: 20px
-                color: $tag-color
+            .metadata
+                margin-left: 44px
             
-                a
-                    color: $tag-color
+                a.title
+                    color: $text-color
                     text-decoration: none
+                    line-height: 1.25em
                 
                     &:hover
                         color: $link-hover-color
+                        text-decoration: none
+                
+                .tags 
+                    font-family: $text-font
+                    font-size: 0.75em
+                    line-height: 20px
+                    color: $tag-color
+            
+                    a
+                        color: $tag-color
+                        text-decoration: none
+                
+                        &:hover
+                            color: $link-hover-color
 
     #primary
         margin-left: 0px !important

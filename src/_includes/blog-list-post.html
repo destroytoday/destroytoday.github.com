@@ -1,3 +1,6 @@
 <li>
-	<a href="{{ post.url }}"><img src="/assets/blog/{{ post.slug }}/{{ post.thumbnail.image }}" width="32" height="32" /></a><a class="title" href="{{ post.url }}">{{ post.shortname }}</a><br/><span class="tags">{% include blog-post-tags.html %}</span>
+	<a href="{{ post.url }}"><img src="/assets/blog/{{ post.slug }}/{{ post.thumbnail.image }}" width="32" height="32" /></a>
+	<div class="metadata">
+	  <a class="title" href="{{ post.url }}">{{ post.title }}</a><br/><span class="tags">{% include blog-post-tags.html %}</span>
+	</div>
 </li>
