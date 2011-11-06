@@ -9,7 +9,7 @@ layout: blog
 <ol id="pages">
 {% for i in (1..paginator.total_pages) %}
   {% if i == paginator.page %}
-    <li class="selected">{{ i }}</li>
+    <li class="selected">{{i}}</li>
   {% elsif i == 1 %}
     <li><a href="/blog">{{ i }}</a></li>
   {% else %}
