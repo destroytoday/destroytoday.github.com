@@ -3,7 +3,18 @@ layout: blog
 ---
 {% for post in paginator.posts %}
 {% include blog-post.html %}
-{% if post != paginator.posts.last %}
-<hr/>
-{% endif %}
+<div class="spacer-2"></div>
 {% endfor %}
+{% if paginator.total_pages > 1 %}
+<ol id="pages">
+{% for i in (1..paginator.total_pages) %}
+  {% if i == paginator.page %}
+    <li class="selected">{{ i }}</li>
+  {% elsif i == 1 %}
+    <li><a href="/blog">{{ i }}</a></li>
+  {% else %}
+    <li><a href="/blog/page/{{ i }}">{{ i }}</a></li>
+  {% endif %}
+{% endfor %}
+</ol>
+{% endif %}

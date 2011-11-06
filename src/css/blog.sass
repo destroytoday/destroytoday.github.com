@@ -3,6 +3,43 @@
 @import "master"
 
 #blog
+    ol#pages
+        margin-bottom: 5px
+        text-align: center
+    
+        li
+            +transition-property(border-bottom)
+            +transition-duration(0.35s)
+            @extend p
+            display: inline
+            color: $tag-color
+            margin-left: 4px
+            padding-bottom: 3px
+            border-bottom: solid 4px $background-color
+            
+            &:first-child
+                margin-left: 0px
+                
+            &:hover, &.selected
+                border-bottom: solid 4px $link-hover-color
+                
+            &:hover a
+                color: $link-hover-color
+                
+            &.selected
+                color: $link-color
+                padding-left: 4px
+                padding-right: 4px
+            
+            a
+                +transition-property(border-bottom)
+                +transition-duration(0.35s)
+                color: $text-color
+                margin: 0px 4px
+                
+                &:hover
+                    text-decoration: none
+
     ol.blog-list
         margin: 12px 0px 33px 0px
         
@@ -44,9 +81,6 @@
 
     #primary
         margin-left: 0px !important
-    
-        hr
-            height: 33px
             
     #sidebar
         margin-right: 0px !important

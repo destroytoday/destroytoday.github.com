@@ -1,7 +1,7 @@
 source: ./src
 destination: ./site
 permalink: /:categories/:title
-paginate: 5
+paginate: 10
 sections: [about, blog, folio, lab, contact]
 #exclude: [about, folio, lab, contact]
 env: 
