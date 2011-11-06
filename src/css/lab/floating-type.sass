@@ -9,3 +9,27 @@ $link-hover-color: #333
 $nav-selected-color: #FF6801
 
 @import "master"
+
+#floating-type
+    img
+        width: 100%
+        height: auto
+        
+    .process
+        @extend .grid-2
+        
+    @media screen and (max-width: 480px)
+        .process
+            width: 100%
+            margin: 0px
+    
+    @media screen and (min-width: 481px) and (max-width: 732px)
+        .process
+            width: 100%
+            margin: 0px
+        
+    @media screen and (min-width: 733px) and (max-width: 960px)
+        .process
+            width: 316px
+            
+    //@media screen and (min-width: 961px)

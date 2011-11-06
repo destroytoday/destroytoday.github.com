@@ -14,7 +14,7 @@ style: true
   {% for section in site.sections %}
     {% for post in site.categories[section] %}
       {% if post.thumbnail.colors %}
-    	  <div data-title="{% if post.shortname %}{{ post.shortname }}{% else %}{{ post.title }}{% endif %}" class="swatch-set{% if i == '0' %} alpha{% elsif i == '3' %} omega{% endif %}">
+    	  <div data-title="{% if post.shortname %}{{ post.shortname }}{% else %}{{ post.title }}{% endif %}" class="swatch-set grid-item">
         	<div class="swatches">
       			{% for color in post.thumbnail.colors %}
       				<a class="swatch" href="{{ post.url }}" style="background: #{{color}}"></a>
@@ -22,18 +22,17 @@ style: true
         	</div>
         	<div class="swatch-tooltip"><div class="swatch-tooltip-label"></div><div class="swatch-tooltip-arrow"></div></div>
         </div>
-      	{% capture i %}{{ i | plus:1 }}{% endcapture %}
+      	<!--{% capture i %}{{ i | plus:1 }}{% endcapture %}
       	{% if i == '4' %}
-      		<div class="spacer-2"></div>
       		{% capture n %}{{ n | plus:1 }}{% endcapture %}
       		{% if n == '4' %}
-      		<div id="description" class="grid-4">
+      		<div id="description">
       		  <p><strong>Color Sitemap</strong> is a way to navigate the website using each page's color palette. Every time I add a new page to the site, this page auto-updates to include the new swatches. A tooltip appears when rolling over a swatch, indicating its hex value. Clicking a swatch will take you to its page.</p>
       		</div>
       		<div class="spacer-2"></div>
       		{% endif %}
       		{% assign i = '0' %}
-      	{% endif %}
+      	{% endif %}-->
       {% endif %}
     {% endfor %}
   {% endfor %}

@@ -9,42 +9,48 @@ thumbnail:
 style: true
 ---
 #destroyflickr
-  #header.grid-4
-    %img.checkered{:src => "/assets{{page.id}}/destroyflickr-header.png"}
-  #description.grid-4
+  #header
+    %img.wide.checkered{:src => "/assets{{ page.id }}/destroyflickr-header.png"}
+    %img.narrow.checkered{:src => "/assets{{ page.id }}/destroyflickr-header-narrow.png"}
+  #description
     :maruku
       Prior to DestroyFlickr, I only had experience with web development. Designing and coding for the desktop was completely new to me, and I loved that---the chance to experiment with a completely new platform. I targeted Flickr out of my frustration with the website. Its white background and static pages seemed like the wrong environment for photography. I changed everything I didn't like about the site and added a few extra features of my own. DestroyFlickr won an Adobe Design Achievement Award for Developer/Designer Collaboration.
   .spacer-3
-  #links.grid-4.center
+  #links.center
     :maruku
       [Download the app](http://destroytwitter.com/DestroyFlickr108B.zip)
   .spacer-2
-  .grid-4
+  #profile
     %img.checkered{:src => "/assets{{page.id}}/destroyflickr-profile.jpg"}
+    .spacer-3
     .tag.center
       :maruku
         Profile
   .spacer-2
-  .grid-4
+  #photos
     %img.checkered{:src => "/assets{{page.id}}/destroyflickr-photos.jpg"}
+    .spacer-3
     .tag.center
       :maruku
         Contact Sheet
   .spacer-2
-  .grid-4
+  #photo
     %img.checkered{:src => "/assets{{page.id}}/destroyflickr-photo.jpg"}
+    .spacer-3
     .tag.center
       :maruku
         Photo
   .spacer-2      
-  .grid-4
+  #photo-zoomed
     %img.checkered{:src => "/assets{{page.id}}/destroyflickr-photozoomed.jpg"}
+    .spacer-3
     .tag.center
       :maruku
         Zoomed Photo
   .spacer-2
-  .grid-4
+  #view-all
     %img.checkered{:src => "/assets{{page.id}}/destroyflickr-viewall.jpg"}
+    .spacer-3
     .tag.center
       :maruku
         View All

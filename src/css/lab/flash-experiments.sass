@@ -2,42 +2,74 @@
 ---
 @import "dark"
 
-.grid-2
-    .flash
-        width: 433px
-        height: 433px
-        
-        border: solid 1px #333
+#content
+    overflow: visible
+
+#flash-experiments
+    .experiment
+        @extend .grid-2
     
-        .stop
-            +transition-property(opacity)
-            +transition-duration(.35s)
-            +transparent-image("/assets/site/close.png", 33px, 33px)
-            +cursor-hand
-            position: absolute
-            opacity: 0
-            top: 10px
-            right: 10px
-            
-        .play
-            +transition-property(opacity)
-            +transition-duration(.35s)
-            +transparent-image("/assets/site/play.png", 33px, 33px)
-            +cursor-hand
-            position: absolute
-            opacity: 0
-            top: 10px
-            right: 10px
-            
-        .swf
-            position: absolute
-            display: none
+        .flash
             width: 433px
             height: 433px
         
-        .placeholder
-            +cursor-hand
-        
-            img
+            border: solid 1px #333
+    
+            .stop
+                +transition-property(opacity)
+                +transition-duration(.35s)
+                +transparent-image("/assets/site/close.png", 33px, 33px)
+                +cursor-hand
+                position: absolute
+                opacity: 0
+                top: 10px
+                right: 10px
+            
+            .play
+                +transition-property(opacity)
+                +transition-duration(.35s)
+                +transparent-image("/assets/site/play.png", 33px, 33px)
+                +cursor-hand
+                position: absolute
+                opacity: 0
+                top: 10px
+                right: 10px
+            
+            .swf
+                position: absolute
+                display: none
                 width: 433px
                 height: 433px
+        
+            .placeholder
+                +cursor-hand
+        
+                img
+                    width: 433px
+                    height: 433px
+                    
+    @media screen and (max-width: 480px)
+        .experiment
+            width: 256px
+        
+            .flash
+                width: 256px
+                height: 256px
+        
+                .swf
+                    width: 256px
+                    height: 256px
+        
+                .placeholder img
+                    width: 256px
+                    height: 256px
+    
+    //@media screen and (min-width: 481px) and (max-width: 732px)
+        
+    //@media screen and (min-width: 733px) and (max-width: 960px)
+    
+    @media screen and (max-width: 960px)   
+        .experiment
+            float: none
+            display: block
+            margin: 0px auto !important

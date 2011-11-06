@@ -30,11 +30,11 @@ experiments:
   {% assign experiment_i = 0 %}
   {% for experiment in page.experiments %}
   {% if experiment_i == 0 %}.container{% endif %}
-    .grid-2
+    .experiment
       .flash
-        %img.checkered{:src => "/assets{{page.id}}/{{experiment.id}}.png", :alt => "{{experiment.title}}"}
-      %p.tag.center {{experiment.title}}
-  {% if experiment_i == '1' %}.spacer-1{% endif %}
+        %img.checkered{:src => "/assets{{ page.id }}/{{ experiment.id }}.png", :alt => "{{ experiment.title }}"}
+      %p.tag.center {{ experiment.title }}
+      .spacer-1
   {% capture experiment_i %}{{ experiment_i | plus:1 }}{% endcapture %}
   {% if experiment_i == '2' %}{% assign experiment_i = 0 %}{% endif %}
   {% endfor %}

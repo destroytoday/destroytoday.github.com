@@ -10,3 +10,49 @@ $nav-color: #222
 $nav-selected-color: #008BC4
 
 @import "master"
+
+#status-indicator
+    img
+        width: 100%
+        height: auto
+        
+    .sequence
+        @extend .grid-2
+        
+    #video iframe
+        width: 100%
+        
+    @media screen and (max-width: 320px)
+        .sequence
+            width: 100%
+            margin: 0px
+            
+        #video iframe
+            height: 144px
+        
+    @media screen and (min-width: 321px) and (max-width: 480px)
+        .sequence
+            width: 100%
+            margin: 0px
+            
+        #video iframe
+            height: 234px
+    
+    @media screen and (min-width: 481px) and (max-width: 732px)
+        .sequence
+            width: 100%
+            margin: 0px
+            
+        #video iframe
+            height: 243px
+        
+    @media screen and (min-width: 733px) and (max-width: 960px)
+        .sequence
+            width: 316px
+            
+        #video iframe
+            height: 375px
+        
+    @media screen and (min-width: 961px)
+        #video iframe
+            height: 506px

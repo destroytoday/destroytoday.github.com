@@ -3,5 +3,26 @@
 @import "dark"
 
 #destroyflickr
+    img
+        width: 100%
+        height: auto
+
     .tag
-        margin: -16px 0px 0px 0px
+        margin: 0px
+        
+    .narrow
+        display: none !important
+
+    @media screen and (max-width: 480px)
+        .wide
+            display: none
+    
+        .narrow
+            display: block !important
+    
+    @media screen and (min-width: 481px) and (max-width: 732px)
+        .wide
+            display: none
+    
+        .narrow
+            display: block !important

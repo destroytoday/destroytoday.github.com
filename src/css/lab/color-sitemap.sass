@@ -18,7 +18,12 @@ $footer-color: #222 !default
 
 @import "master"
 
+#content
+    overflow: visible
+
 #color-sitemap
+    margin-left: -16px
+
     #description
         background: #FFF
         width: 100%
@@ -27,9 +32,7 @@ $footer-color: #222 !default
             margin: 8px
 
     .swatch-set
-        @extend .grid-1
-        +float-left
-        position: relative
+        margin-bottom: 2em
     
         .swatches
             .swatch
