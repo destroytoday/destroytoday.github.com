@@ -4,9 +4,9 @@ title: DesignChat interview
 listname: DesignChat
 category: interview
 type: video
+style: true
 ---
 #design-chat
-  .grid-4
-    %h2 {{ page.title }}
-    .metadata.date {{ page.date | date: "%m.%d.%y" }}
-    %iframe{:src => "http://player.vimeo.com/video/29515051?title=0&amp;byline=0&amp;portrait=0&amp;color=007998&amp;autoplay=1", :width => "900", :height => "506", :frameborder => "0", :webkitAllowFullScreen => "true", :allowFullScreen => "true"}
+  %h2 {{ page.title }}
+  .metadata.date {{ page.date | date: "%m.%d.%y" }}
+  %iframe.video{:src => "http://player.vimeo.com/video/29515051?title=0&amp;byline=0&amp;portrait=0&amp;color=007998&amp;autoplay=1", :frameborder => "0", :webkitAllowFullScreen => "true", :allowFullScreen => "true"}
