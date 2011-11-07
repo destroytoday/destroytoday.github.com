@@ -4,6 +4,7 @@ permalink: /:categories/:title
 paginate: 10
 sections: [about, blog, folio, lab, contact]
 #exclude: [about, folio, lab, contact]
+#limit_posts: 1
 env: 
   local: http://localhost:1337
   staging: http://staging.destroytoday.com

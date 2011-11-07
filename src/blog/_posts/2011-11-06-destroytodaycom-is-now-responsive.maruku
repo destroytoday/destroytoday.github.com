@@ -1,0 +1,16 @@
+---
+layout: blog-post
+title: destroytoday.com is now responsive
+shortname: destroytoday.com is now responsive
+date: 2011-11-06 19:52:22
+category: blog
+tags: [Announcement, CSS, Responsive Web, Web]
+thumbnail: 
+  image: destroytodaycom-is-now-responsive-thumb.jpg
+  colors: ['007998', '282830', 'FFFFFF']
+---
+![responsive](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.jpg)
+
+Like the rest of the world, I find myself using mobile devices more and more. In the morning, I check Twitter on my iPhone, then I run through the RSS feeds on my laptop when I arrive at work. At night, when I'm working or writing posts, Jen is on the iPad, browsing her favorite websites. All three of these devices have different resolutions and, consequently, different viewing experiences unless the content adapts.
+
+This past week, I spent a few days upgrading Destroy Today to handle these varying resolutions. Sure, I did this to ensure the site reads across all devices, but mostly, I wanted to learn how to do it. I plan to follow this up with a few posts on how to make your own site responsive. Keep an eye out.
