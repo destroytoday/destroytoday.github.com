@@ -22,7 +22,7 @@
             &:first-child
                 margin-left: 0px
                 
-            &:hover, &.selected
+            &.selected
                 border-bottom: solid 4px $link-hover-color
                 
             a
@@ -33,12 +33,12 @@
                 &:hover
                     text-decoration: none
                 
+            &.selected a
+                color: $link-color
+                
             &:hover a
                 color: $link-hover-color
                 
-            &.selected a
-                color: $link-color
-
     ol.blog-list
         margin: 12px 0px 33px 0px
         
