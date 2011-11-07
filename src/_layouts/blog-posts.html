@@ -8,13 +8,7 @@ layout: blog
 {% if paginator.total_pages > 1 %}
 <ol id="pages">
 {% for i in (1..paginator.total_pages) %}
-  {% if i == paginator.page %}
-    <li class="selected">{{i}}</li>
-  {% elsif i == 1 %}
-    <li><a href="/blog">{{ i }}</a></li>
-  {% else %}
-    <li><a href="/blog/page/{{ i }}">{{ i }}</a></li>
-  {% endif %}
+  <li{% if i == paginator.page %} class="selected"{% endif %}><a href="/blog{% if i > 1 %}/page/{{ i }}{% endif %}">{{ i }}</a></li>
 {% endfor %}
 </ol>
 {% endif %}
