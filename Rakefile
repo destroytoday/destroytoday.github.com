@@ -79,6 +79,11 @@ task :auto do
   system("jekyll --url http://localhost:1337 --auto");
 end
 
+desc "Runs Jekyll (latest post)"
+task :post do
+  system("jekyll --url http://localhost:1337 --auto --limit_posts=1");
+end
+
 desc "Indexes blog posts"
 task :index do
   index = "["

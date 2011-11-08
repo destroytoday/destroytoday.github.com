@@ -1,0 +1,16 @@
+---
+layout: blog-post
+title: GAget - Google Analytics widget
+shortname: GAget
+date: 2011-11-07 23:40:14
+category: blog
+tags: [Link, OS X, Widget]
+thumbnail: 
+  image: gaget-thumb.jpg
+  colors: ['018FC4', 'F3F3F3', '2C2C2C']
+---
+[gaget]: http://www.zoltanhosszu.com/gaget/
+
+[![GAget](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.jpg)][gaget]
+
+Today, I noticed a Google Analytics widget on fellow co-worker and bearded friend Kurz's screen. Considering the time it takes for me to check my site's analytics, I knew I needed one. Though his is simple and to the point, I instead found [GAget][gaget]. It displays the exact info I'm after, contained in a beautiful UI, emphasizing the numbers that matters. If GAget gets one thing right, it's to include the current day---one downside about the Google Analytics website that still boggles my mind.
