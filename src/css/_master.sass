@@ -101,9 +101,6 @@ body
     @else
         background-color: $background-color
     
-h2
-    font-size: 3em
-  
 ::selection
     color: $selection-text-color
     background: $selection-background-color
@@ -138,6 +135,7 @@ img
 h2
     font-family: $header-font
     font-weight: $header-weight
+    font-size: 3em
     line-height: 1.2em
     color: $text-color
     margin-bottom: 16px
@@ -150,6 +148,11 @@ h3
     font-size: 1.125em
     font-weight: $subheader-weight
     line-height: 1.5em
+    
+h4
+    font-size: 0.75em
+    line-height: 1.5em
+    font-weight: bold
 
 p
     font-size: 0.75em
@@ -392,6 +395,9 @@ textarea
         font-style: italic
         color: $tag-color
         margin: 16px 0px 0px 0px
+        
+    .secondary
+        color: $tag-color
         
 #footer
     @extend .center

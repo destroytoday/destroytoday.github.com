@@ -1,0 +1,70 @@
+---
+---
+@import "master"
+
+#resume
+    ul
+        font-size: $readable-size
+        line-height: 1.5em
+
+    .container
+        @extend .grid-2
+    
+    #info, #experience, #education, #proficiency
+        @extend .grid-1
+        
+    @media screen and (max-width: 480px)
+        .container
+            width: 100%
+            margin-left: 0px
+            margin-right: 0px
+        
+        #info, #experience, #education, #proficiency
+            float: none
+            margin-left: 0px
+            margin-right: 0px
+            
+    @media screen and (min-width: 481px) and (max-width: 732px)
+        .container
+            width: 200px
+            clear: none
+            
+        .container:first-of-type
+            margin-left: 0px
+            
+        .container:last-child
+            margin-right: 0px
+            
+        #info, #experience, #education, #proficiency
+            float: none
+            margin-left: 0px
+            margin-right: 0px
+    
+    @media screen and (min-width: 733px) and (max-width: 960px)
+        .container
+            width: 300px
+            clear: none
+            
+        .container:first-of-type
+            margin-left: 0px
+            
+        .container:last-child
+            margin-right: 0px
+            
+        #info, #experience, #education, #proficiency
+            float: none
+            margin-left: 0px
+            margin-right: 0px
+    
+    @media screen and (min-width: 961px)
+        .container
+            clear: none
+            
+        .container:first-of-type
+            margin-left: 0px
+            
+        .container:last-child
+            margin-right: 0px
+    
+        #info, #experience, #education, #proficiency
+            width: 200px !important
