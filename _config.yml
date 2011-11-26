@@ -3,7 +3,8 @@ destination: ./site
 permalink: /:categories/:title
 paginate: 10
 sections: [about, blog, folio, lab, contact]
-#exclude: [blog, folio, lab, contact]
+#exclude: [about, folio, lab, contact]
+#limit_posts: 3
 env: 
   local: http://localhost:1337
   staging: http://staging.destroytoday.com
