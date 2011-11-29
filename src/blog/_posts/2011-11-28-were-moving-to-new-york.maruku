@@ -1,0 +1,16 @@
+---
+layout: blog-post
+title: We're moving to New York!
+shortname: Moving to New York
+date: 2011-11-28 20:37:00
+category: blog
+tags: [Announcement]
+thumbnail: 
+  image: were-moving-to-new-york-thumb.jpg
+  colors: ['FF8760', '389B6F', '84D5EA']
+---
+![New York](/assets/blog/{{ page.slug }}/{{ page.slug}}-illustration.jpg)
+
+We're moving! At the end of January, Jen and I will head back east to live in NYC. For those wondering why, I think it's obvious---Monday Night Football at 5:30. In all seriousness, we felt the need to be closer to family ever since moving out west. In NYC, family is just an hour long train ride away.
+
+New York has always been a dream for us, and we can't wait to call it home.
