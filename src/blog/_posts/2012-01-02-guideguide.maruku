@@ -1,0 +1,18 @@
+---
+layout: blog-post
+title: Photoshop grids that don't suck so hard
+shortname: GuideGuide
+date: 2012-01-02 20:49:47
+category: blog
+tags: [Design, Tool]
+thumbnail: 
+  image: guideguide-thumb.png
+  colors: ['4CFFFF', 'FFFFFF']
+---
+[guideguide]: http://guideguide.me/
+
+[![GuideGuide](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.jpg)][guideguide]
+
+I love tools that improve the designer/developer workflow---[GuideGuide][guideguide] does just that. Instead of wasting (probably valuable) time manually dragging each guide into place, you can enter your grid specs and GuideGuide will place each guide for you. You can also clear everything with a single click and create a grid in a specific area using the marquee tool. It's clear that creator, [Cameron McEfee](http://www.cameronmcefee.com/), found Photoshop's guide management lacking and decided to fix it on his own---a true maker mentality.
+
+GuideGuide is completely free, but you should definitely donate. This tool is too good to give away.
