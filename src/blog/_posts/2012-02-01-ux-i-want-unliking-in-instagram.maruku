@@ -1,0 +1,18 @@
+---
+layout: blog-post
+title: UX I Want - Double tap to unlike in Instagram
+shortname: Unliking in Instagram
+date: 2012-02-01 15:37:20
+category: blog
+tags: [UX I Want, iOS]
+thumbnail: 
+  image: ux-i-want-unliking-in-instagram-thumb.jpg
+  colors: ['362D41', '8C7272', 'A69E8F', 'F2F2F2']
+---
+This post is the beginning of a series I [referenced](https://twitter.com/#!/destroytoday/status/161514463349063680) a few weeks back---[UX I Want](/blog/tag/ux-i-want). Instead of just hoping or requesting the makers behind an app introduce a specific UX I want, I'm going to design and mock it for them. This way, they almost have to implement it, right?
+
+I'm going to start things off easy and target [Instagram](http://instagram.com/). Here lies an app that lacks more features than I can shake a Wacom pen at. That said, Instagram has a very nice shorcut for liking a photo---just double tap it. The problem is that a second double tap does the unexpected and 'likes' the photo again. Since you can only 'like' a photo once, this means nothing---it's a waste of a gesture.
+
+For instances when you fumble your phone or scroll too fast, an accidental double tap might occur. Maybe you even have a change of heart. Sure, tapping the toggled 'like' button to unlike the photo would suffice, but to maintain a sense of consistency, the double tap gesture itself should be a toggle as well.
+
+![screenshot](/assets/blog/{{ page.slug }}/{{ page.slug }}-screenshot.jpg)
