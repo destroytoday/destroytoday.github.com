@@ -1,0 +1,20 @@
+---
+layout: blog-post
+title: UX I Want - Depth of Field drawing in Instagram
+shortname: DoF drawing in Instagram
+date: 2012-02-12 23:48:42
+category: blog
+tags: [UX I Want, iOS]
+thumbnail: 
+  image: ux-i-want-dof-drawing-in-instagram-thumb.jpg
+  colors: ['EEEEEE', '333333']
+---
+![UX I Want - DoF drawing in Instagram](/assets/blog/{{ page.slug }}/{{ page.slug }}-mockup.jpg)
+
+I know, I know. [Instagram](http://instagram.com) again? Yes. I originally intended to pick a different app each time, but I  find myself wanting this feature on a regular basis, so I just have to get it off my chest.
+
+Instagram has a feature that's pretty common among photo apps---tilt-shift. Now, tilt-shift is an advanced feature in the SLR world. TS lenses are typically used for architecture or interior photography to even the perspective and [a good one will run you a solid $2 grand](http://www.bhphotovideo.com/c/product/606803-USA/Canon_3553B002_Wide_Tilt_Shift_TS_E_17mm.html). Somewhat recently, tilt-shift became the hot new thing because it can [make a landscape look like an HO-scale train set](https://vimeo.com/9679622). As a result, every photo app added linear blur to fake the effect of tilt-shift.
+
+The problem here is that every app has this advanced feature, but they all lack a pretty basic one---depth of field. Sure, you could do what I do and use the tilt-shift tool to emphasize the depth of field, but if you shoot any organically shaped subjects, it's tough. That's why I call for 'depth of field drawing.' The concept is simple. Using your finger, draw the area you want to blur. This way, you can produce a stronger depth of field around any shaped subject or subjects.
+
+*pointing hand courtesy of [Gesturecons](http://gesturecons.com/)*
